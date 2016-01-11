@@ -1,5 +1,6 @@
 {
 	"deleteUser": {
+		"name": "deleteUser",
 		"type": "Users",
 		"isList": false,
 		"owner": "Page",

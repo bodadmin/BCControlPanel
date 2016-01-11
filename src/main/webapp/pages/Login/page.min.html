@@ -60,8 +60,8 @@ var _LoginPage_Variables_ ={
         <wm-layoutgrid name="headerlayout" height="6em">
             <wm-gridrow name="headerrow">
                 <wm-gridcolumn name="headerleft" verticalalign="middle" columnwidth="12">
-                    <wm-picture picturesource="resources/images/logos/logo.png" name="AppLogo" marginleft="5"></wm-picture>
-                    <wm-label caption="BCControlPanel" class="application-name" name="AppName" fontsize="20"></wm-label>
+                    <wm-picture picturesource="resources/images/logos/BoD-Logo-w122-h62.png" name="AppLogo" marginleft="5"></wm-picture>
+                    <wm-label caption="BoDconnect Control Panel" class="application-name" name="AppName" fontsize="20"></wm-label>
                 </wm-gridcolumn>
             </wm-gridrow>
         </wm-layoutgrid>
@@ -72,7 +72,8 @@ var _LoginPage_Variables_ ={
                 <wm-gridrow name="loginGridRow" height="100%">
                     <wm-gridcolumn name="paddingColumnLeft" columnwidth="4"></wm-gridcolumn>
                     <wm-gridcolumn name="loginContentColumn" columnwidth="4" horizontalalign="left">
-                        <wm-tile name="loginPanel" horizontalalign="left" backgroundcolor="#e3e3e3" bordercolor="#b8b8b8" borderstyle="solid" bordertop="1" borderright="1" borderleft="1" borderbottom="1" height="auto" width="100%" margintop="20" marginbottom="20" marginunit="%">
+                        <wm-tile name="loginPanel" horizontalalign="left" backgroundcolor="#e3e3e3" bordercolor="#b8b8b8" borderstyle="solid" bordertop="1" borderright="1" borderleft="1" borderbottom="1" height="auto" width="100%" margintop="20" marginbottom="20"
+                        marginunit="%">
                             <wm-login name="loginForm" data-ng-controller="loginFormController" on-submit="loginVariable">
                                 <wm-composite name="userNameField">
                                     <wm-label caption="Username" name="userNameLabel"></wm-label>
@@ -87,7 +88,7 @@ var _LoginPage_Variables_ ={
                                     <wm-checkbox caption="Remember Me" name="remembermeCheck"></wm-checkbox>
                                 </wm-composite>
                                 <wm-anchor caption="Forgot Password" class="app-login-forgotlink" name="forgetPassword"></wm-anchor>
-                                </wm-login>
+                            </wm-login>
                         </wm-tile>
                     </wm-gridcolumn>
                     <wm-gridcolumn name="paddingColumnRight" columnwidth="4"></wm-gridcolumn>

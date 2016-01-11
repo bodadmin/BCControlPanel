@@ -20,10 +20,10 @@
 		"dataBinding": [],
 		"saveInPhonegap": false,
 		"category": "wm.Variable",
-		"_id": "wm-supportedLocale-wm.Variable1402640443182",
-		"$$hashKey": "object:2464"
+		"_id": "wm-supportedLocale-wm.Variable1402640443182"
 	},
 	"FileServiceUploadFile": {
+		"name": "FileServiceUploadFile",
 		"type": "com.bccontrolpanel.fileservice.FileService.FileUploadResponse",
 		"isList": false,
 		"owner": "App",
@@ -66,8 +66,15 @@
 			]
 		},
 		"_id": "wm-FileServiceUploadFile-wm.ServiceVariable-1452527862137",
-		"name": "FileServiceUploadFile",
-		"$$hashKey": "object:2463",
 		"controller": "File"
+	},
+	"goToPage_Settings": {
+		"owner": "App",
+		"operation": "gotoPage",
+		"pageName": "Settings",
+		"dataBinding": {},
+		"pageTransitions": "none",
+		"category": "wm.NavigationVariable",
+		"_id": "wm-goToPage_Settings-wm.NavigationVariable-1452530558917"
 	}
 }

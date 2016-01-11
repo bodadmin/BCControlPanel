@@ -30,7 +30,7 @@ var _topnavPage_Variables_ ={};
 </script>
 <script id="topnav.html" type="text/ng-template">
 <wm-partial data-ng-controller="topnavPageController" name="topnav" type="top-nav">
-    <wm-navbar>
+    <wm-navbar name="navbar1">
         <wm-nav name="leftTopLinks" type="navbar" class="navbar-left">
             <wm-nav-item name="list_home">
                 <wm-anchor caption="Home" name="homeButton" iconclass="glyphicon glyphicon-home" on-click="goToPage_Main"></wm-anchor>
@@ -39,12 +39,15 @@ var _topnavPage_Variables_ ={};
                 <wm-anchor caption="Order" name="orderButton" iconclass="glyphicon glyphicon-list"></wm-anchor>
             </wm-nav-item>
         </wm-nav>
-        <wm-nav name="rightTopLinks" type="navbar" class="navbar-right">
-            <wm-nav-item name="list_home">
-                <wm-anchor caption="Help" name="helpButton" iconclass="glyphicon glyphicon-question-sign"></wm-anchor>
+        <wm-nav type="navbar" name="nav2" horizontalalign="right">
+            <wm-nav-item name="nav_item3">
+                <wm-anchor caption="Link 1" name="anchor3"></wm-anchor>
             </wm-nav-item>
-            <wm-nav-item name="list_services">
-                <wm-anchor caption="Logout" name="logoutButton" iconclass="glyphicon glyphicon-user" on-click="logoutVariable"></wm-anchor>
+            <wm-nav-item name="nav_item4">
+                <wm-anchor caption="Link 2" name="anchor4"></wm-anchor>
+            </wm-nav-item>
+            <wm-nav-item name="nav_item5">
+                <wm-anchor caption="Link 3" name="anchor5"></wm-anchor>
             </wm-nav-item>
         </wm-nav>
     </wm-navbar>

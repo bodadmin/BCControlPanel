@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans" xmlns:p="http://www.springframework.org/schema/p" xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:context="http://www.springframework.org/schema/context" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
 
-    <context:component-scan base-package="com.bccontrolpanel.db.controller,com.bccontrolpanel.db.service,com.bccontrolpanel.db.dao"/>
+    <context:component-scan base-package="com.bccontrolpanel.userdatabase.controller,com.bccontrolpanel.userdatabase.service,com.bccontrolpanel.userdatabase.dao"/>
     <bean class="com.wavemaker.runtime.data.spring.WMPropertyPlaceholderConfigurer">
         <property name="locations">
             <list>
                 <value>
-                    classpath:db.properties
+                    classpath:UserDatabase.properties
                 </value>
             </list>
         </property>
         <property name="ignoreUnresolvablePlaceholders" value="true"/>
     </bean>
-   <bean id="dbWMManagedDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close" depends-on="systemPropertyInitializer" lazy-init="true"
-                      p:driverClass="${db.driverClass}"
-                      p:jdbcUrl="${db.url}"
-                      p:user="${db.username}"
-                      p:password="${db.password}"
+   <bean id="UserDatabaseWMManagedDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close" depends-on="systemPropertyInitializer" lazy-init="true"
+                      p:driverClass="${UserDatabase.driverClass}"
+                      p:jdbcUrl="${UserDatabase.url}"
+                      p:user="${UserDatabase.username}"
+                      p:password="${UserDatabase.password}"
                       p:maxPoolSize="4"
                       p:minPoolSize="2"
                       p:maxIdleTime="600"
@@ -32,13 +32,13 @@
                       p:privilegeSpawnedThreads="true"
                       />
     
-    <bean id="dbSessionFactory" class="com.wavemaker.runtime.data.factory.TypeResolverSessionFactoryBean">
-        <property name="dataSource" ref="dbDataSource"/>
-        <property name="packagesToScan" value="com.bccontrolpanel.db"/>
+    <bean id="UserDatabaseSessionFactory" class="com.wavemaker.runtime.data.factory.TypeResolverSessionFactoryBean">
+        <property name="dataSource" ref="UserDatabaseDataSource"/>
+        <property name="packagesToScan" value="com.bccontrolpanel.userdatabase"/>
         <property name="mappingResources">
             <list>
                 <value>
-                    db-queries.hbm.xml
+                    UserDatabase-queries.hbm.xml
                 </value>
             </list>
         </property>
@@ -50,7 +50,7 @@
         <property name="hibernateProperties">
             <props>
                 <prop key="hibernate.dialect">
-                    ${db.dialect}
+                    ${UserDatabase.dialect}
                 </prop>
                 <prop key="hibernate.show_sql">
                     false
@@ -59,23 +59,23 @@
                     false
                 </prop>
                 <prop key="hibernate.hbm2ddl.auto">
-                    ${db.hbm2ddl}
+                    ${UserDatabase.hbm2ddl}
                 </prop>
             </props>
         </property>
     </bean>
-    <bean id="dbTransactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
-        <property name="sessionFactory" ref="dbSessionFactory"/>
+    <bean id="UserDatabaseTransactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+        <property name="sessionFactory" ref="UserDatabaseSessionFactory"/>
     </bean>
-    <bean id="dbTemplate" class="org.springframework.orm.hibernate4.HibernateTemplate">
-        <property name="sessionFactory" ref="dbSessionFactory"/>
+    <bean id="UserDatabaseTemplate" class="org.springframework.orm.hibernate4.HibernateTemplate">
+        <property name="sessionFactory" ref="UserDatabaseSessionFactory"/>
     </bean>
-    <bean id="dbWMQueryExecutor" class="com.wavemaker.runtime.data.dao.query.WMQueryExecutorImpl">
-        <property name="template" ref="dbTemplate"/>
+    <bean id="UserDatabaseWMQueryExecutor" class="com.wavemaker.runtime.data.dao.query.WMQueryExecutorImpl">
+        <property name="template" ref="UserDatabaseTemplate"/>
     </bean>
-    <bean id="dbWMProcedureExecutor" class="com.wavemaker.runtime.data.dao.procedure.WMProcedureExecutorImpl">
-        <property name="template" ref="dbTemplate"/>
-        <property name="serviceId" value="db" />
+    <bean id="UserDatabaseWMProcedureExecutor" class="com.wavemaker.runtime.data.dao.procedure.WMProcedureExecutorImpl">
+        <property name="template" ref="UserDatabaseTemplate"/>
+        <property name="serviceId" value="UserDatabase" />
     </bean>
 
     <bean id="persistentLocalDateTimeType" class="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime"/>
@@ -88,11 +88,11 @@
             </list>
         </property>
     </bean>
-    <bean id="dbPageableHandlerMethodResolver" class="com.wavemaker.runtime.resolver.WMPageableHandlerMethodArgumentResolver" >
+    <bean id="UserDatabasePageableHandlerMethodResolver" class="com.wavemaker.runtime.resolver.WMPageableHandlerMethodArgumentResolver" >
         <property name="pageParameterName" value="page"/>
         <property name="sizeParameterName" value="size"/>
         <property name="oneIndexedParameters" value="true"/>
-        <property name="maxPageSize" value="${db.maxPageSize}"/>
+        <property name="maxPageSize" value="${UserDatabase.maxPageSize}"/>
         <property name="fallbackPageable">
          <bean  class="org.springframework.data.domain.PageRequest">
             <constructor-arg  value="0"/>
@@ -101,10 +101,10 @@
          </property>
     </bean>
 
-    <bean id="dbDataSource" class="com.wavemaker.runtime.data.datasource.WMDataSource">
-           <property name="dataSourceType" value="${db.dataSourceType}"/>
-           <property name="jndiName" value="${db.jndiName}"/>
-           <property name="serviceId" value="db"/>
+    <bean id="UserDatabaseDataSource" class="com.wavemaker.runtime.data.datasource.WMDataSource">
+           <property name="dataSourceType" value="${UserDatabase.dataSourceType}"/>
+           <property name="jndiName" value="${UserDatabase.jndiName}"/>
+           <property name="serviceId" value="UserDatabase"/>
     </bean>
 
 

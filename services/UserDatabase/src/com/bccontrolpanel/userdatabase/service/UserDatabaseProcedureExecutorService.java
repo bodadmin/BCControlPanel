@@ -2,7 +2,7 @@
  with the terms of the source code license agreement you entered into with Business on Demand Ltd.*/
 
 
-package com.bccontrolpanel.db.service;
+package com.bccontrolpanel.userdatabase.service;
 
 import java.util.Map;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.List;
 import com.wavemaker.runtime.data.model.CustomProcedure;
 import com.wavemaker.runtime.data.exception.QueryParameterMismatchException;
 
-public interface DbProcedureExecutorService {
+public interface UserDatabaseProcedureExecutorService {
 
 	
 	List<Object> executeWMCustomProcedure(CustomProcedure procedure) ;

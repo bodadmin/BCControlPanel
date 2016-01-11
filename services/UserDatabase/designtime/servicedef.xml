@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="db" type="DataService" springFile="db.spring.xml">
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="UserDatabase" type="DataService" springFile="UserDatabase.spring.xml">
     <dataobjects>
-        <dataobject javaType="com.bccontrolpanel.db.Users">
+        <dataobject javaType="com.bccontrolpanel.userdatabase.Users">
             <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
             <element name="username" typeRef="java.lang.String" isList="false" allowNull="false"/>
             <element name="password" typeRef="java.lang.String" isList="false" allowNull="false"/>

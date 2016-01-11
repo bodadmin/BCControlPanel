@@ -2,7 +2,7 @@
  with the terms of the source code license agreement you entered into with Business on Demand Ltd.*/
 
 
-package com.bccontrolpanel.db.service;
+package com.bccontrolpanel.userdatabase.service;
 
 
 import java.util.HashMap;
@@ -23,15 +23,15 @@ import com.wavemaker.runtime.data.dao.procedure.WMProcedureExecutor;
 import com.wavemaker.runtime.data.exception.QueryParameterMismatchException;
 
 @Service
-public class DbProcedureExecutorServiceImpl implements DbProcedureExecutorService {
-	private static final Logger LOGGER = LoggerFactory.getLogger(DbProcedureExecutorServiceImpl.class);
+public class UserDatabaseProcedureExecutorServiceImpl implements UserDatabaseProcedureExecutorService {
+	private static final Logger LOGGER = LoggerFactory.getLogger(UserDatabaseProcedureExecutorServiceImpl.class);
 
 	@Autowired
-	@Qualifier("dbWMProcedureExecutor")
+	@Qualifier("UserDatabaseWMProcedureExecutor")
 	private WMProcedureExecutor procedureExecutor;
 
 
-	@Transactional(value = "dbTransactionManager")
+	@Transactional(value = "UserDatabaseTransactionManager")
 	@Override
 	public List<Object> executeWMCustomProcedure(CustomProcedure procedure) {
 	    return procedureExecutor.executeCustomProcedure(procedure);

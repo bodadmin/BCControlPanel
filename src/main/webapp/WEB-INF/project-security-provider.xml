@@ -74,7 +74,7 @@
     </security:authentication-manager>
     <bean class="com.wavemaker.runtime.security.EnhancedJdbcDaoImpl" id="jdbcDaoImpl">
         <property name="dataSource">
-            <ref bean="dbDataSource"/>
+            <ref bean="UserDatabaseDataSource"/>
         </property>
         <property name="rolePrefix">
             <value>ROLE_</value>

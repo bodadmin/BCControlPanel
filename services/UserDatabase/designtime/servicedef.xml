@@ -3,9 +3,9 @@
     <dataobjects>
         <dataobject javaType="com.bccontrolpanel.userdatabase.Users">
             <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
-            <element name="username" typeRef="java.lang.String" isList="false" allowNull="false"/>
             <element name="password" typeRef="java.lang.String" isList="false" allowNull="false"/>
             <element name="role" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="username" typeRef="java.lang.String" isList="false" allowNull="false"/>
         </dataobject>
     </dataobjects>
 </service>

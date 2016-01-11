@@ -26,14 +26,14 @@ Application.$controller("headerPageController", ["$scope", function ($scope) {
 }]);
 </script>
 <script id="header.variables.json">
-var _headerPage_Variables_ ={};
+var _headerPage_Variables_ ={}
 </script>
 <script id="header.html" type="text/ng-template">
 <wm-partial data-ng-controller="headerPageController" name="header" type="header">
     <wm-layoutgrid name="headerlayout">
         <wm-gridrow name="headerrow">
             <wm-gridcolumn name="headerleft" verticalalign="middle" columnwidth="7">
-                <wm-picture picturesource="resources/images/logos/BoD-Logo-w122-h62.png" name="AppLogo" animation="rotateIn" marginbottom="10"></wm-picture>
+                <wm-picture picturesource="resources/images/logos/BoD-Logo-w122-h62.png" name="AppLogo" marginbottom="10"></wm-picture>
                 <wm-label caption="BoDconnect Control Panel" class="application-name" name="AppName" fontsize="20" margintop="0"></wm-label>
             </wm-gridcolumn>
             <wm-gridcolumn name="headerright" horizontalalign="right" verticalalign="middle" columnwidth="5" paddingunit="em" paddingtop="1" paddingright="1">

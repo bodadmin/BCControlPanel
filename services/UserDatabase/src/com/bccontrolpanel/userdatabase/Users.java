@@ -34,9 +34,9 @@ import javax.persistence.UniqueConstraint;
 public class Users  implements java.io.Serializable {
 
     private Integer id;
-    private String username;
     private String password;
     private String role;
+    private String username;
 
     public Users() {
     }
@@ -52,17 +52,6 @@ public class Users  implements java.io.Serializable {
     
     public void setId(Integer id) {
         this.id = id;
-    }
-
-    
-
-    @Column(name="`USERNAME`", nullable=false)
-    public String getUsername() {
-        return this.username;
-    }
-    
-    public void setUsername(String username) {
-        this.username = username;
     }
 
     
@@ -85,6 +74,17 @@ public class Users  implements java.io.Serializable {
     
     public void setRole(String role) {
         this.role = role;
+    }
+
+    
+
+    @Column(name="`USERNAME`", nullable=false)
+    public String getUsername() {
+        return this.username;
+    }
+    
+    public void setUsername(String username) {
+        this.username = username;
     }
 
 

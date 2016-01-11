@@ -6,14 +6,14 @@
       <column name="`ID`" length="255" not-null="true" precision="19"/>
       <generator class="identity"/>
     </id>
-    <property name="username" type="string">
-      <column name="`USERNAME`" length="255" not-null="true" precision="19"/>
-    </property>
     <property name="password" type="string">
       <column name="`PASSWORD`" length="255" not-null="true" precision="19"/>
     </property>
     <property name="role" type="string">
       <column name="`ROLE`" length="255" not-null="true" precision="19"/>
+    </property>
+    <property name="username" type="string">
+      <column name="`USERNAME`" length="255" not-null="true" precision="19"/>
     </property>
   </class>
 </hibernate-mapping>

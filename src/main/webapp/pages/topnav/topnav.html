@@ -1,34 +1,23 @@
 <wm-partial data-ng-controller="topnavPageController" name="topnav" type="top-nav">
-    <wm-navbar name="navbar1">
-        <wm-nav name="leftTopLinks" type="navbar" class="navbar-left">
-            <wm-nav-item name="list_home"></wm-nav-item>
-            <wm-nav-item name="list_services"></wm-nav-item>
-            <wm-nav-item name="nav_item18"></wm-nav-item>
+    <wm-navbar name="navbar">
+        <wm-nav name="navLeft" type="navbar" class="navbar-left">
+            <wm-nav-item name="nav_item1">
+                <wm-anchor on-click="goToPage_Main" caption="Home" iconclass="glyphicon glyphicon-home" name="buttonHome"></wm-anchor>
+            </wm-nav-item>
         </wm-nav>
-        <wm-navbar name="navbar2">
-            <wm-anchor name="anchor4" caption=""></wm-anchor>
-            <wm-nav name="nav6" type="navbar">
-                <wm-nav-item name="nav_item10">
-                    <wm-anchor name="anchor10" caption="Link 1"></wm-anchor>
-                </wm-nav-item>
-                <wm-nav-item name="nav_item11">
-                    <wm-anchor name="anchor11" caption="Link 2"></wm-anchor>
-                </wm-nav-item>
-                <wm-nav-item name="nav_item12">
-                    <wm-anchor name="anchor12" caption="Link 3"></wm-anchor>
-                </wm-nav-item>
-            </wm-nav>
-            <wm-nav name="nav5" type="navbar">
-                <wm-nav-item name="nav_item7">
-                    <wm-anchor name="anchor7" caption="Link 1"></wm-anchor>
-                </wm-nav-item>
-                <wm-nav-item name="nav_item8">
-                    <wm-anchor name="anchor8" caption="Link 2"></wm-anchor>
-                </wm-nav-item>
-                <wm-nav-item name="nav_item9">
-                    <wm-anchor name="anchor9" caption="Link 3"></wm-anchor>
-                </wm-nav-item>
-            </wm-nav>
-        </wm-navbar>
+        <wm-nav name="navRight" type="navbar" class="navbar-right">
+            <wm-nav-item name="nav_item2">
+                <wm-anchor caption="User Management" on-click="goToPage_UserManagement" iconclass="fa fa-user" name="buttonUserManagement"></wm-anchor>
+            </wm-nav-item>
+            <wm-nav-item name="nav_item3">
+                <wm-anchor on-click="goToPage_Settings" caption="Settings" iconclass="fa fa-cog" name="buttonSettings"></wm-anchor>
+            </wm-nav-item>
+            <wm-nav-item name="nav_item4">
+                <wm-anchor on-click="logoutVariable" caption="Logout" iconclass="glyphicon glyphicon-log-out" name="buttonLogout"></wm-anchor>
+            </wm-nav-item>
+            <wm-nav-item name="nav_item5">
+                <wm-anchor caption="Help" iconclass="glyphicon glyphicon-question-sign" name="buttonHelp"></wm-anchor>
+            </wm-nav-item>
+        </wm-nav>
     </wm-navbar>
 </wm-partial>

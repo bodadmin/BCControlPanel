@@ -5,38 +5,35 @@
 Application.$controller("MainPageController", ["$scope", function ($scope) {
     "use strict";
 
-    /* perform any action on the variables within this block(on-page-load) */
+    /* perform any action with the variables inside this block(on-page-load) */
     $scope.onPageVariablesReady = function () {
         /*
          * variables can be accessed through '$scope.Variables' property here
-         * e.g. to get dataSet in a staticVariable named 'loggedInUser' use following script
-         * $scope.Variables.loggedInUser.getData()
+         * e.g. $scope.Variables.staticVariable1.getData()
          */
     };
-    /* perform any action on widgets within this block */
+    
+    /* perform any action with widgets inside this block */
     $scope.onPageReady = function () {
         /*
          * widgets can be accessed through '$scope.Widgets' property here
-         * e.g. to get value of text widget named 'username' use following script
-         * '$scope.Widgets.username.datavalue'
+         * e.g. $scope.Widgets.byId(), $scope.Widgets.byName()or access widgets by $scope.Widgets.widgetName
          */
     };
 
 }]);
+
 </script>
 <script id="Main.variables.json">
 var _MainPage_Variables_ ={};
 </script>
 <script id="Main.html" type="text/ng-template">
-<wm-page data-ng-controller="MainPageController" name="mainpage" pagetitle="Main">
-    <wm-header content="header" name="header" height="auto"></wm-header>
-    <wm-top-nav name="topnav" content="topnav"></wm-top-nav>
-    <wm-content name="content">
-        <wm-left-panel columnwidth="2" name="leftpanel" content="leftnav"></wm-left-panel>
-        <wm-page-content columnwidth="8" paddingleft="15" paddingright="15" name="mainContent">
-        </wm-page-content>
-        <wm-right-panel columnwidth="2" name="rightpanel" content="rightnav"></wm-right-panel>
+<wm-page data-ng-controller="MainPageController" pagetitle="Main" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav>
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1"></wm-page-content>
     </wm-content>
-    <wm-footer name="footer" content="footer"></wm-footer>
+    <wm-footer content="footer" name="footer1"></wm-footer>
 </wm-page>
 </script>

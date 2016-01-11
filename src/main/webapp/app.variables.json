@@ -7,8 +7,7 @@
 		"dataBinding": {},
 		"pageTransitions": "none",
 		"category": "wm.NavigationVariable",
-		"_id": "wm-goToPage_Main-wm.NavigationVariable1389180517517",
-		"$$hashKey": "object:1740"
+		"_id": "wm-goToPage_Main-wm.NavigationVariable1389180517517"
 	},
 	"supportedLocale": {
 		"name": "supportedLocale",
@@ -77,8 +76,7 @@
 		"dataBinding": {},
 		"pageTransitions": "none",
 		"category": "wm.NavigationVariable",
-		"_id": "wm-goToPage_Settings-wm.NavigationVariable-1452530558917",
-		"$$hashKey": "object:1741"
+		"_id": "wm-goToPage_Settings-wm.NavigationVariable-1452530558917"
 	},
 	"loginVariable": {
 		"name": "loginVariable",

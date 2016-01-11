@@ -26,7 +26,7 @@ Application.$controller("topnavPageController", ["$scope", function ($scope) {
 }]);
 </script>
 <script id="topnav.variables.json">
-var _topnavPage_Variables_ ={};
+var _topnavPage_Variables_ ={}
 </script>
 <script id="topnav.html" type="text/ng-template">
 <wm-partial data-ng-controller="topnavPageController" name="topnav" type="top-nav">
@@ -44,7 +44,7 @@ var _topnavPage_Variables_ ={};
                 <wm-anchor caption="Settings" name="anchor3" iconclass="glyphicon glyphicon-tasks" on-click="goToPage_Settings"></wm-anchor>
             </wm-nav-item>
             <wm-nav-item name="nav_item4">
-                <wm-anchor caption="Logout" name="anchor4" iconclass="glyphicon glyphicon-log-out"></wm-anchor>
+                <wm-anchor caption="Logout" name="anchor4" iconclass="glyphicon glyphicon-log-out" on-click="logoutVariable"></wm-anchor>
             </wm-nav-item>
             <wm-nav-item name="nav_item5">
                 <wm-anchor caption="Help" name="anchor5" iconclass="glyphicon glyphicon-question-sign"></wm-anchor>

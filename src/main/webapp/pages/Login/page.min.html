@@ -33,25 +33,29 @@ Application.$controller("loginFormController", ["$scope",
 </script>
 <script id="Login.variables.json">
 var _LoginPage_Variables_ ={
-	"loginVariable": {
-		"type": "string",
-		"owner": "Page",
-		"dataSet": {
-			"username": "",
-			"password": ""
-		},
-		"dataBinding": {
-			"username": "bind:Widgets.usernametext.datavalue",
-			"password": "bind:Widgets.passwordtext.datavalue"
-		},
-		"saveInPhonegap": false,
-		"startUpdate": false,
-		"autoUpdate": false,
-		"onError": "Javascript",
-		"useDefaultSuccessHandler": true,
-		"category": "wm.LoginVariable",
-		"_id": "wm-loginVariable-wm.LoginVariable-1398237232072"
-	}
+  "loginVariable" : {
+    "onError" : "Javascript",
+    "category" : "wm.LoginVariable",
+    "autoUpdate" : false,
+    "dataBinding" : [ {
+      "target" : "username",
+      "value" : "bind:Widgets.usernametext.datavalue"
+    }, {
+      "target" : "password",
+      "value" : "bind:Widgets.passwordtext.datavalue"
+    } ],
+    "saveInPhonegap" : false,
+    "_id" : "wm-loginVariable-wm.LoginVariable-1398237232072",
+    "name" : "loginVariable",
+    "owner" : "Page",
+    "type" : "string",
+    "startUpdate" : false,
+    "dataSet" : {
+      "username" : "",
+      "password" : ""
+    },
+    "useDefaultSuccessHandler" : true
+  }
 }
 </script>
 <script id="Login.html" type="text/ng-template">

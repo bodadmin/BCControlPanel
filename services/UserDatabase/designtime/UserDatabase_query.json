@@ -1,1 +1,5 @@
-{"name":"UserDatabase","description":"Queries for UserDatabase","queries":[]}
+{
+  "name" : "UserDatabase",
+  "description" : "Queries for UserDatabase",
+  "queries" : [ ]
+}

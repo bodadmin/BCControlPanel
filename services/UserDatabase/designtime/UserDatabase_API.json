@@ -1,1 +1,700 @@
-{"swagger":"2.0","info":{"description":"Swagger API documentation for UserDatabase","version":"2.0","title":"UserDatabaseService Swagger Documentation","x-WM-SERVICE_TYPE":"DataService","x-WM-SERVICE_ID":"UserDatabase"},"basePath":"","tags":[{"name":"QueryExecutionController","description":"Controller class for query execution","x-WM-FULLY_QUALIFIED_NAME":"com.bccontrolpanel.userdatabase.controller.QueryExecutionController","x-WM-VERSION":""},{"name":"UsersController","description":"Exposes APIs to work with Users resource.","x-WM-FULLY_QUALIFIED_NAME":"com.bccontrolpanel.userdatabase.controller.UsersController","x-WM-VERSION":""},{"name":"ProcedureExecutionController","description":"Controller class for procedure execution","x-WM-FULLY_QUALIFIED_NAME":"com.bccontrolpanel.userdatabase.controller.ProcedureExecutionController","x-WM-VERSION":""}],"schemes":["https","http"],"paths":{"/UserDatabase/Users/":{"get":{"tags":["UsersController"],"description":"Returns the list of Users instances.","operationId":"getUserss","parameters":[{"name":"page","in":"query","required":false,"type":"integer","default":"0","format":"int32","x-WM-EDITABLE":false,"x-WM-RESOLVER":"org.springframework.data.domain.Pageable"},{"name":"size","in":"query","required":false,"type":"integer","default":"20","format":"int32","x-WM-EDITABLE":false},{"name":"sort","in":"query","required":false,"type":"string","x-WM-EDITABLE":false}],"responses":{"200":{"description":"Success","schema":{"$ref":"#/definitions/Page","x-WM-TYPE_ARGUMENTS":[{"$ref":"#/definitions/Users","x-WM-TYPE_ARGUMENTS":[]}]}}},"x-WM-OPERATION_UID":"a96688ad-d9b0-445d-8b25-8017e626ce5e","x-WM-ACCESS_SPECIFIER":"APP_ONLY","x-WM-METHOD_IDENTIFIER":"getUserss-1-934028971"},"post":{"tags":["UsersController"],"description":"Creates a new Users instance.","operationId":"createUsers","parameters":[{"in":"body","name":"Users","required":true,"schema":{"$ref":"#/definitions/Users","x-WM-TYPE_ARGUMENTS":[]},"x-WM-FULLY_QUALIFIED_TYPE":"com.bccontrolpanel.userdatabase.Users","x-WM-UUID":"128e1722-df2d-418d-8c0e-3fc4d05b870f","x-WM-EDITABLE":true}],"responses":{"200":{"description":"Success","schema":{"$ref":"#/definitions/Users","x-WM-TYPE_ARGUMENTS":[]}}},"x-WM-OPERATION_UID":"8bf5e47e-a36a-4b94-b8d5-a3b016d7cab3","x-WM-ACCESS_SPECIFIER":"APP_ONLY","x-WM-METHOD_IDENTIFIER":"createUsers-1--344650834"},"x-WM-TAG":"UsersController","x-WM-BASE_PATH":"/UserDatabase/Users","x-WM-COMPLETE_PATH":"//UserDatabase/Users/","x-WM-RELATIVE_PATH":"/"},"/UserDatabase/Users/count":{"get":{"tags":["UsersController"],"description":"Returns the total count of Users instances.","operationId":"countAllUserss","responses":{"200":{"description":"Success","schema":{"type":"integer","format":"int64"}}},"x-WM-OPERATION_UID":"2811c0cf-5769-4070-9d23-df9937e8953d","x-WM-ACCESS_SPECIFIER":"APP_ONLY","x-WM-METHOD_IDENTIFIER":"countAllUserss-0-17"},"x-WM-TAG":"UsersController","x-WM-BASE_PATH":"/UserDatabase/Users","x-WM-COMPLETE_PATH":"//UserDatabase/Users/count","x-WM-RELATIVE_PATH":"/count"},"/UserDatabase/Users/search":{"post":{"tags":["UsersController"],"description":"Returns the list of Users instances matching the search criteria.","operationId":"findUserss","parameters":[{"name":"page","in":"query","required":false,"type":"integer","default":"0","format":"int32","x-WM-EDITABLE":false,"x-WM-RESOLVER":"org.springframework.data.domain.Pageable"},{"name":"size","in":"query","required":false,"type":"integer","default":"20","format":"int32","x-WM-EDITABLE":false},{"name":"sort","in":"query","required":false,"type":"string","x-WM-EDITABLE":false},{"in":"body","name":"QueryFilter","required":true,"schema":{"type":"array","items":{"$ref":"#/definitions/QueryFilter","x-WM-TYPE_ARGUMENTS":[]},"x-WM-IS_LIST":false},"x-WM-FULLY_QUALIFIED_TYPE":"com.wavemaker.runtime.data.expression.QueryFilter","x-WM-UUID":"a83edecc-ddad-49b9-bd6c-52b5bab32211","x-WM-EDITABLE":true}],"responses":{"200":{"description":"Success","schema":{"$ref":"#/definitions/Page","x-WM-TYPE_ARGUMENTS":[{"$ref":"#/definitions/Users","x-WM-TYPE_ARGUMENTS":[]}]}}},"x-WM-OPERATION_UID":"4c060ef2-12f5-443d-9717-c23b23a1ef70","x-WM-ACCESS_SPECIFIER":"APP_ONLY","x-WM-METHOD_IDENTIFIER":"findUserss-2--1821969279"},"x-WM-TAG":"UsersController","x-WM-BASE_PATH":"/UserDatabase/Users","x-WM-COMPLETE_PATH":"//UserDatabase/Users/search","x-WM-RELATIVE_PATH":"/search"},"/UserDatabase/Users/{id:.+}":{"get":{"tags":["UsersController"],"description":"Returns the Users instance associated with the given id.","operationId":"getUsers","parameters":[{"name":"id","in":"path","required":true,"type":"integer","collectionFormat":"multi","format":"int32","x-WM-FULLY_QUALIFIED_TYPE":"java.lang.Integer","x-WM-UUID":"46d5094b-4b61-4ed7-9565-5b622680f93e","x-WM-EDITABLE":true}],"responses":{"200":{"description":"Success","schema":{"$ref":"#/definitions/Users","x-WM-TYPE_ARGUMENTS":[]}}},"x-WM-OPERATION_UID":"f1d2a056-a8c9-4005-83cb-1c56598ec93d","x-WM-ACCESS_SPECIFIER":"APP_ONLY","x-WM-METHOD_IDENTIFIER":"getUsers-1--2056816673"},"put":{"tags":["UsersController"],"description":"Updates the Users instance associated with the given id.","operationId":"editUsers","parameters":[{"name":"id","in":"path","required":true,"type":"integer","collectionFormat":"multi","format":"int32","x-WM-FULLY_QUALIFIED_TYPE":"java.lang.Integer","x-WM-UUID":"b213a423-3c60-4943-97d7-bbf53e56b5b1","x-WM-EDITABLE":true},{"in":"body","name":"Users","required":true,"schema":{"$ref":"#/definitions/Users","x-WM-TYPE_ARGUMENTS":[]},"x-WM-FULLY_QUALIFIED_TYPE":"com.bccontrolpanel.userdatabase.Users","x-WM-UUID":"ba2439e1-52c2-411e-9bcf-c85bffcd1ec7","x-WM-EDITABLE":true}],"responses":{"200":{"description":"Success","schema":{"$ref":"#/definitions/Users","x-WM-TYPE_ARGUMENTS":[]}}},"x-WM-OPERATION_UID":"5f8158cd-cb20-4504-9c14-538640f885f1","x-WM-ACCESS_SPECIFIER":"APP_ONLY","x-WM-METHOD_IDENTIFIER":"editUsers-2-862542964"},"delete":{"tags":["UsersController"],"description":"Deletes the Users instance associated with the given id.","operationId":"deleteUsers","parameters":[{"name":"id","in":"path","required":true,"type":"integer","collectionFormat":"multi","format":"int32","x-WM-FULLY_QUALIFIED_TYPE":"java.lang.Integer","x-WM-UUID":"62a48b81-957f-4055-a0d5-d4b36174d2f9","x-WM-EDITABLE":true}],"responses":{"200":{"description":"Success","schema":{"type":"boolean"}}},"x-WM-OPERATION_UID":"6654fa28-8c69-4de9-b5c0-b709c75e78ac","x-WM-ACCESS_SPECIFIER":"APP_ONLY","x-WM-METHOD_IDENTIFIER":"deleteUsers-1--2056816673"},"x-WM-TAG":"UsersController","x-WM-BASE_PATH":"/UserDatabase/Users","x-WM-COMPLETE_PATH":"//UserDatabase/Users/{id:.+}","x-WM-RELATIVE_PATH":"/{id:.+}"},"/UserDatabase/procedureExecutor/procedure/execute/wm_custom":{"post":{"tags":["ProcedureExecutionController"],"description":"Process request to execute custom Procedure","operationId":"executeWMCustomProcedure","parameters":[{"in":"body","name":"CustomProcedure","required":true,"schema":{"$ref":"#/definitions/CustomProcedure","x-WM-TYPE_ARGUMENTS":[]},"x-WM-FULLY_QUALIFIED_TYPE":"com.wavemaker.runtime.data.model.CustomProcedure","x-WM-UUID":"74cfed02-7fcf-47f0-bcd1-8a26b725b666","x-WM-EDITABLE":true}],"responses":{"200":{"description":"Success","schema":{"type":"array","uniqueItems":false,"items":{"$ref":"#/definitions/Object","x-WM-TYPE_ARGUMENTS":[]},"x-WM-IS_LIST":true}}},"x-WM-OPERATION_UID":"1062b203-1b0d-4048-89bf-11110363cad6","x-WM-ACCESS_SPECIFIER":"APP_ONLY","x-WM-METHOD_IDENTIFIER":"executeWMCustomProcedure-1--282256460"},"x-WM-TAG":"ProcedureExecutionController","x-WM-BASE_PATH":"/UserDatabase/procedureExecutor","x-WM-COMPLETE_PATH":"//UserDatabase/procedureExecutor/procedure/execute/wm_custom","x-WM-RELATIVE_PATH":"/procedure/execute/wm_custom"},"/UserDatabase/queryExecutor/queries/wm_custom":{"post":{"tags":["QueryExecutionController"],"description":"Process request to execute customer queries","operationId":"executeWMCustomQuery","parameters":[{"in":"body","name":"CustomQuery","required":true,"schema":{"$ref":"#/definitions/CustomQuery","x-WM-TYPE_ARGUMENTS":[]},"x-WM-FULLY_QUALIFIED_TYPE":"com.wavemaker.runtime.data.model.CustomQuery","x-WM-UUID":"93a0c472-648c-45ca-91c0-f6d9f1fc936d","x-WM-EDITABLE":true},{"name":"page","in":"query","required":false,"type":"integer","default":"0","format":"int32","x-WM-EDITABLE":false,"x-WM-RESOLVER":"org.springframework.data.domain.Pageable"},{"name":"size","in":"query","required":false,"type":"integer","default":"20","format":"int32","x-WM-EDITABLE":false},{"name":"sort","in":"query","required":false,"type":"string","x-WM-EDITABLE":false}],"responses":{"200":{"description":"Success","schema":{"$ref":"#/definitions/Page","x-WM-TYPE_ARGUMENTS":[{"$ref":"#/definitions/Object","x-WM-TYPE_ARGUMENTS":[]}]}}},"x-WM-OPERATION_UID":"1120b3b8-f0f5-4781-b330-0b833c8548d6","x-WM-ACCESS_SPECIFIER":"APP_ONLY","x-WM-METHOD_IDENTIFIER":"executeWMCustomQuery-2-107741091"},"x-WM-TAG":"QueryExecutionController","x-WM-BASE_PATH":"/UserDatabase/queryExecutor","x-WM-COMPLETE_PATH":"//UserDatabase/queryExecutor/queries/wm_custom","x-WM-RELATIVE_PATH":"/queries/wm_custom"},"/UserDatabase/queryExecutor/queries/wm_custom_update":{"post":{"tags":["QueryExecutionController"],"description":"Process request to execute customer queries","operationId":"executeWMCustomQuery","parameters":[{"in":"body","name":"CustomQuery","required":true,"schema":{"$ref":"#/definitions/CustomQuery","x-WM-TYPE_ARGUMENTS":[]},"x-WM-FULLY_QUALIFIED_TYPE":"com.wavemaker.runtime.data.model.CustomQuery","x-WM-UUID":"ed36849d-b6de-40a8-816f-025955b5986b","x-WM-EDITABLE":true}],"responses":{"200":{"description":"Success","schema":{"type":"integer","format":"int32"}}},"x-WM-OPERATION_UID":"916638b9-d425-44f9-965b-349a027fbda0","x-WM-ACCESS_SPECIFIER":"APP_ONLY","x-WM-METHOD_IDENTIFIER":"executeWMCustomQuery-1--718813271"},"x-WM-TAG":"QueryExecutionController","x-WM-BASE_PATH":"/UserDatabase/queryExecutor","x-WM-COMPLETE_PATH":"//UserDatabase/queryExecutor/queries/wm_custom_update","x-WM-RELATIVE_PATH":"/queries/wm_custom_update"}},"definitions":{"Sort":{"allOf":[{"$ref":"#/definitions/Iterable"},{"$ref":"#/definitions/Serializable"},{"properties":{"orders":{"type":"array","uniqueItems":false,"items":{"$ref":"#/definitions/Sort$Order","x-WM-TYPE_ARGUMENTS":[]},"x-WM-IS_LIST":true}}}],"x-WM-FULLY_QUALIFIED_NAME":"org.springframework.data.domain.Sort","x-WM-TAGS":["UsersController"]},"Users":{"allOf":[{"$ref":"#/definitions/Serializable"},{"properties":{"username":{"type":"string"},"id":{"type":"integer","format":"int32"},"role":{"type":"string"},"password":{"type":"string"}}}],"x-WM-FULLY_QUALIFIED_NAME":"com.bccontrolpanel.userdatabase.Users","x-WM-TAGS":["UsersController"]},"Iterable":{"x-WM-FULLY_QUALIFIED_NAME":"java.lang.Iterable","x-WM-TAGS":["UsersController"]},"CustomQueryParam":{"properties":{"paramValue":{"$ref":"#/definitions/Object","x-WM-TYPE_ARGUMENTS":[]},"paramName":{"type":"string"},"paramType":{"type":"string"},"isList":{"type":"boolean"}},"x-WM-FULLY_QUALIFIED_NAME":"com.wavemaker.runtime.data.model.CustomQueryParam","x-WM-TAGS":["QueryExecutionController"]},"CustomProcedure":{"properties":{"procedureStr":{"type":"string"},"procedureParams":{"type":"array","uniqueItems":false,"items":{"$ref":"#/definitions/CustomProcedureParam","x-WM-TYPE_ARGUMENTS":[]},"x-WM-IS_LIST":true}},"x-WM-FULLY_QUALIFIED_NAME":"com.wavemaker.runtime.data.model.CustomProcedure","x-WM-TAGS":["ProcedureExecutionController"]},"QueryFilter":{"properties":{"attributeType":{"type":"string","enum":["BIG_DECIMAL","BIG_INTEGER","BLOB","BOOLEAN","BYTE","CALENDAR","CALENDAR_DATE","CHARACTER","CLOB","CURRENCY","DATE","DOUBLE","FLOAT","INTEGER","LOCALE","STRING","SHORT","TEXT","TIME","DATETIME","TIMESTAMP","TIMEZONE","TRUE_FALSE","YES_NO"]},"filterCondition":{"type":"string","enum":["STARTING_WITH","ENDING_WITH","CONTAINING","EQUALS"]},"attributeValue":{"$ref":"#/definitions/Object","x-WM-TYPE_ARGUMENTS":[]},"attributeName":{"type":"string"}},"x-WM-FULLY_QUALIFIED_NAME":"com.wavemaker.runtime.data.expression.QueryFilter","x-WM-TAGS":["UsersController"]},"Page":{"allOf":[{"$ref":"#/definitions/Slice"},{"properties":{"size":{"type":"integer","format":"int32"},"numberOfElements":{"type":"integer","format":"int32"},"totalPages":{"type":"integer","format":"int32"},"first":{"type":"boolean"},"totalElements":{"type":"integer","format":"int64"},"number":{"type":"integer","format":"int32"},"sort":{"$ref":"#/definitions/Sort","x-WM-TYPE_ARGUMENTS":[]},"content":{"type":"array","uniqueItems":false,"items":{"$ref":"#/definitions/Object","x-WM-TYPE_ARGUMENTS":[]},"x-WM-IS_LIST":true},"last":{"type":"boolean"}}}],"x-WM-FULLY_QUALIFIED_NAME":"org.springframework.data.domain.Page","x-WM-TAGS":["UsersController","QueryExecutionController"]},"Sort$Order":{"allOf":[{"$ref":"#/definitions/Serializable"},{"properties":{"direction":{"type":"string","enum":["ASC","DESC"]},"nullHandling":{"type":"string","enum":["NATIVE","NULLS_FIRST","NULLS_LAST"]},"ignoreCase":{"type":"boolean"},"property":{"type":"string"}}}],"x-WM-FULLY_QUALIFIED_NAME":"org.springframework.data.domain.Sort.Order","x-WM-TAGS":["UsersController"]},"Serializable":{"x-WM-FULLY_QUALIFIED_NAME":"java.io.Serializable","x-WM-TAGS":["UsersController"]},"CustomQuery":{"properties":{"queryStr":{"type":"string"},"nativeSql":{"type":"boolean"},"queryParams":{"type":"array","uniqueItems":false,"items":{"$ref":"#/definitions/CustomQueryParam","x-WM-TYPE_ARGUMENTS":[]},"x-WM-IS_LIST":true}},"x-WM-FULLY_QUALIFIED_NAME":"com.wavemaker.runtime.data.model.CustomQuery","x-WM-TAGS":["QueryExecutionController"]},"CustomProcedureParam":{"properties":{"paramValue":{"$ref":"#/definitions/Object","x-WM-TYPE_ARGUMENTS":[]},"paramName":{"type":"string"},"valueType":{"type":"string"},"procedureParamType":{"type":"string","enum":["IN","OUT","IN_OUT"]}},"x-WM-FULLY_QUALIFIED_NAME":"com.wavemaker.runtime.data.model.CustomProcedureParam","x-WM-TAGS":["ProcedureExecutionController"]},"Slice":{"allOf":[{"$ref":"#/definitions/Iterable"},{"properties":{"size":{"type":"integer","format":"int32"},"numberOfElements":{"type":"integer","format":"int32"},"first":{"type":"boolean"},"number":{"type":"integer","format":"int32"},"sort":{"$ref":"#/definitions/Sort","x-WM-TYPE_ARGUMENTS":[]},"content":{"type":"array","uniqueItems":false,"items":{"$ref":"#/definitions/Object","x-WM-TYPE_ARGUMENTS":[]},"x-WM-IS_LIST":true},"last":{"type":"boolean"}}}],"x-WM-FULLY_QUALIFIED_NAME":"org.springframework.data.domain.Slice","x-WM-TAGS":["UsersController"]}}}
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "Swagger API documentation for UserDatabase",
+    "version" : "2.0",
+    "title" : "UserDatabaseService Swagger Documentation",
+    "x-WM-SERVICE_TYPE" : "DataService",
+    "x-WM-SERVICE_ID" : "UserDatabase"
+  },
+  "basePath" : "",
+  "tags" : [ {
+    "name" : "ProcedureExecutionController",
+    "description" : "Controller class for procedure execution",
+    "x-WM-FULLY_QUALIFIED_NAME" : "com.bccontrolpanel.userdatabase.controller.ProcedureExecutionController",
+    "x-WM-VERSION" : ""
+  }, {
+    "name" : "QueryExecutionController",
+    "description" : "Controller class for query execution",
+    "x-WM-FULLY_QUALIFIED_NAME" : "com.bccontrolpanel.userdatabase.controller.QueryExecutionController",
+    "x-WM-VERSION" : ""
+  }, {
+    "name" : "UsersController",
+    "description" : "Exposes APIs to work with Users resource.",
+    "x-WM-FULLY_QUALIFIED_NAME" : "com.bccontrolpanel.userdatabase.controller.UsersController",
+    "x-WM-VERSION" : ""
+  } ],
+  "schemes" : [ "http", "https" ],
+  "paths" : {
+    "/UserDatabase/Users/" : {
+      "get" : {
+        "tags" : [ "UsersController" ],
+        "description" : "Returns the list of Users instances.",
+        "operationId" : "getUserss",
+        "parameters" : [ {
+          "name" : "page",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : "0",
+          "format" : "int32",
+          "x-WM-EDITABLE" : false,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable"
+        }, {
+          "name" : "size",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : "20",
+          "format" : "int32",
+          "x-WM-EDITABLE" : false
+        }, {
+          "name" : "sort",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "x-WM-EDITABLE" : false
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Page",
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "$ref" : "#/definitions/Users",
+                "x-WM-TYPE_ARGUMENTS" : [ ]
+              } ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "d080c486-6e77-4e54-865b-a6369160dc5e",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-METHOD_IDENTIFIER" : "getUserss-1-934028971"
+      },
+      "post" : {
+        "tags" : [ "UsersController" ],
+        "description" : "Creates a new Users instance.",
+        "operationId" : "createUsers",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "Users",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/Users",
+            "x-WM-TYPE_ARGUMENTS" : [ ]
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.bccontrolpanel.userdatabase.Users",
+          "x-WM-UUID" : "444d638b-8916-4ad8-bc2e-c436fc7bf0f1",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Users",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "5b2cdc3f-a1b5-46ea-883b-453bf1f70bec",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-METHOD_IDENTIFIER" : "createUsers-1--344650834"
+      },
+      "x-WM-TAG" : "UsersController",
+      "x-WM-BASE_PATH" : "/UserDatabase/Users",
+      "x-WM-COMPLETE_PATH" : "//UserDatabase/Users/",
+      "x-WM-RELATIVE_PATH" : "/"
+    },
+    "/UserDatabase/Users/count" : {
+      "get" : {
+        "tags" : [ "UsersController" ],
+        "description" : "Returns the total count of Users instances.",
+        "operationId" : "countAllUserss",
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "integer",
+              "format" : "int64"
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "ac91c729-de80-4078-b95c-705c369ca117",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-METHOD_IDENTIFIER" : "countAllUserss-0-17"
+      },
+      "x-WM-TAG" : "UsersController",
+      "x-WM-BASE_PATH" : "/UserDatabase/Users",
+      "x-WM-COMPLETE_PATH" : "//UserDatabase/Users/count",
+      "x-WM-RELATIVE_PATH" : "/count"
+    },
+    "/UserDatabase/Users/search" : {
+      "post" : {
+        "tags" : [ "UsersController" ],
+        "description" : "Returns the list of Users instances matching the search criteria.",
+        "operationId" : "findUserss",
+        "parameters" : [ {
+          "name" : "page",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : "0",
+          "format" : "int32",
+          "x-WM-EDITABLE" : false,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable"
+        }, {
+          "name" : "size",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : "20",
+          "format" : "int32",
+          "x-WM-EDITABLE" : false
+        }, {
+          "name" : "sort",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "x-WM-EDITABLE" : false
+        }, {
+          "in" : "body",
+          "name" : "QueryFilter",
+          "required" : true,
+          "schema" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/definitions/QueryFilter",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            },
+            "x-WM-IS_LIST" : false
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.expression.QueryFilter",
+          "x-WM-UUID" : "ed98102d-14ca-439d-aa67-f04e09193a7e",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Page",
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "$ref" : "#/definitions/Users",
+                "x-WM-TYPE_ARGUMENTS" : [ ]
+              } ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "26480df9-06c8-4916-8be9-bc4810e0eea5",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-METHOD_IDENTIFIER" : "findUserss-2--1821969279"
+      },
+      "x-WM-TAG" : "UsersController",
+      "x-WM-BASE_PATH" : "/UserDatabase/Users",
+      "x-WM-COMPLETE_PATH" : "//UserDatabase/Users/search",
+      "x-WM-RELATIVE_PATH" : "/search"
+    },
+    "/UserDatabase/Users/{id:.+}" : {
+      "get" : {
+        "tags" : [ "UsersController" ],
+        "description" : "Returns the Users instance associated with the given id.",
+        "operationId" : "getUsers",
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "collectionFormat" : "multi",
+          "format" : "int32",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
+          "x-WM-UUID" : "ea8fd76b-e220-4d23-92c6-465dfde2894c",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Users",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "fabe42ff-9fec-4214-9a91-89ab401f5e79",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-METHOD_IDENTIFIER" : "getUsers-1--2056816673"
+      },
+      "put" : {
+        "tags" : [ "UsersController" ],
+        "description" : "Updates the Users instance associated with the given id.",
+        "operationId" : "editUsers",
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "collectionFormat" : "multi",
+          "format" : "int32",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
+          "x-WM-UUID" : "fe29915d-dee0-4934-a91e-308039d42f33",
+          "x-WM-EDITABLE" : true
+        }, {
+          "in" : "body",
+          "name" : "Users",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/Users",
+            "x-WM-TYPE_ARGUMENTS" : [ ]
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.bccontrolpanel.userdatabase.Users",
+          "x-WM-UUID" : "a6d08832-2c9f-41b6-9c75-2f8fa281d091",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Users",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "ee43df47-6435-48a1-a32c-fd4159c82097",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-METHOD_IDENTIFIER" : "editUsers-2-862542964"
+      },
+      "delete" : {
+        "tags" : [ "UsersController" ],
+        "description" : "Deletes the Users instance associated with the given id.",
+        "operationId" : "deleteUsers",
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "collectionFormat" : "multi",
+          "format" : "int32",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
+          "x-WM-UUID" : "9bcd1107-c151-4129-a6e5-59b03b30bfa8",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "boolean"
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "3f3f074f-5945-4038-afe5-bdb8dc2677e9",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-METHOD_IDENTIFIER" : "deleteUsers-1--2056816673"
+      },
+      "x-WM-TAG" : "UsersController",
+      "x-WM-BASE_PATH" : "/UserDatabase/Users",
+      "x-WM-COMPLETE_PATH" : "//UserDatabase/Users/{id:.+}",
+      "x-WM-RELATIVE_PATH" : "/{id:.+}"
+    },
+    "/UserDatabase/procedureExecutor/procedure/execute/wm_custom" : {
+      "post" : {
+        "tags" : [ "ProcedureExecutionController" ],
+        "description" : "Process request to execute custom Procedure",
+        "operationId" : "executeWMCustomProcedure",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "CustomProcedure",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/CustomProcedure",
+            "x-WM-TYPE_ARGUMENTS" : [ ]
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.model.CustomProcedure",
+          "x-WM-UUID" : "9b1732d4-2048-486a-b58c-71f4782c0c79",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "array",
+              "uniqueItems" : false,
+              "items" : {
+                "$ref" : "#/definitions/Object",
+                "x-WM-TYPE_ARGUMENTS" : [ ]
+              },
+              "x-WM-IS_LIST" : true
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "763538d7-dbab-42ed-8d55-c90fb943b0d5",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-METHOD_IDENTIFIER" : "executeWMCustomProcedure-1--282256460"
+      },
+      "x-WM-TAG" : "ProcedureExecutionController",
+      "x-WM-BASE_PATH" : "/UserDatabase/procedureExecutor",
+      "x-WM-COMPLETE_PATH" : "//UserDatabase/procedureExecutor/procedure/execute/wm_custom",
+      "x-WM-RELATIVE_PATH" : "/procedure/execute/wm_custom"
+    },
+    "/UserDatabase/queryExecutor/queries/wm_custom" : {
+      "post" : {
+        "tags" : [ "QueryExecutionController" ],
+        "description" : "Process request to execute customer queries",
+        "operationId" : "executeWMCustomQuery",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "CustomQuery",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/CustomQuery",
+            "x-WM-TYPE_ARGUMENTS" : [ ]
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.model.CustomQuery",
+          "x-WM-UUID" : "9a2d6476-f487-46ee-83fa-0ae192ae35e5",
+          "x-WM-EDITABLE" : true
+        }, {
+          "name" : "page",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : "0",
+          "format" : "int32",
+          "x-WM-EDITABLE" : false,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable"
+        }, {
+          "name" : "size",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : "20",
+          "format" : "int32",
+          "x-WM-EDITABLE" : false
+        }, {
+          "name" : "sort",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "x-WM-EDITABLE" : false
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Page",
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "$ref" : "#/definitions/Object",
+                "x-WM-TYPE_ARGUMENTS" : [ ]
+              } ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "854cb372-42a9-4c6f-9264-5bf634e6d5ed",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-METHOD_IDENTIFIER" : "executeWMCustomQuery-2-107741091"
+      },
+      "x-WM-TAG" : "QueryExecutionController",
+      "x-WM-BASE_PATH" : "/UserDatabase/queryExecutor",
+      "x-WM-COMPLETE_PATH" : "//UserDatabase/queryExecutor/queries/wm_custom",
+      "x-WM-RELATIVE_PATH" : "/queries/wm_custom"
+    },
+    "/UserDatabase/queryExecutor/queries/wm_custom_update" : {
+      "post" : {
+        "tags" : [ "QueryExecutionController" ],
+        "description" : "Process request to execute customer queries",
+        "operationId" : "executeWMCustomQuery",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "CustomQuery",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/CustomQuery",
+            "x-WM-TYPE_ARGUMENTS" : [ ]
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.model.CustomQuery",
+          "x-WM-UUID" : "60ec423d-e2be-4e63-935d-cd9960ac8dfa",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "integer",
+              "format" : "int32"
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "c0119ba7-6059-4aea-9e8d-e2c08b968569",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-METHOD_IDENTIFIER" : "executeWMCustomQuery-1--718813271"
+      },
+      "x-WM-TAG" : "QueryExecutionController",
+      "x-WM-BASE_PATH" : "/UserDatabase/queryExecutor",
+      "x-WM-COMPLETE_PATH" : "//UserDatabase/queryExecutor/queries/wm_custom_update",
+      "x-WM-RELATIVE_PATH" : "/queries/wm_custom_update"
+    }
+  },
+  "definitions" : {
+    "Sort" : {
+      "allOf" : [ {
+        "$ref" : "#/definitions/Iterable"
+      }, {
+        "$ref" : "#/definitions/Serializable"
+      }, {
+        "properties" : {
+          "orders" : {
+            "type" : "array",
+            "uniqueItems" : false,
+            "items" : {
+              "$ref" : "#/definitions/Sort$Order",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            },
+            "x-WM-IS_LIST" : true
+          }
+        }
+      } ],
+      "x-WM-FULLY_QUALIFIED_NAME" : "org.springframework.data.domain.Sort",
+      "x-WM-TAGS" : [ "UsersController" ]
+    },
+    "Users" : {
+      "allOf" : [ {
+        "$ref" : "#/definitions/Serializable"
+      }, {
+        "properties" : {
+          "username" : {
+            "type" : "string"
+          },
+          "id" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "role" : {
+            "type" : "string"
+          },
+          "password" : {
+            "type" : "string"
+          }
+        }
+      } ],
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.bccontrolpanel.userdatabase.Users",
+      "x-WM-TAGS" : [ "UsersController" ]
+    },
+    "Iterable" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "java.lang.Iterable",
+      "x-WM-TAGS" : [ "UsersController" ]
+    },
+    "CustomQueryParam" : {
+      "properties" : {
+        "paramValue" : {
+          "$ref" : "#/definitions/Object",
+          "x-WM-TYPE_ARGUMENTS" : [ ]
+        },
+        "paramName" : {
+          "type" : "string"
+        },
+        "paramType" : {
+          "type" : "string"
+        },
+        "isList" : {
+          "type" : "boolean"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.runtime.data.model.CustomQueryParam",
+      "x-WM-TAGS" : [ "QueryExecutionController" ]
+    },
+    "CustomProcedure" : {
+      "properties" : {
+        "procedureStr" : {
+          "type" : "string"
+        },
+        "procedureParams" : {
+          "type" : "array",
+          "uniqueItems" : false,
+          "items" : {
+            "$ref" : "#/definitions/CustomProcedureParam",
+            "x-WM-TYPE_ARGUMENTS" : [ ]
+          },
+          "x-WM-IS_LIST" : true
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.runtime.data.model.CustomProcedure",
+      "x-WM-TAGS" : [ "ProcedureExecutionController" ]
+    },
+    "QueryFilter" : {
+      "properties" : {
+        "attributeType" : {
+          "type" : "string",
+          "enum" : [ "BIG_DECIMAL", "BIG_INTEGER", "BLOB", "BOOLEAN", "BYTE", "CALENDAR", "CALENDAR_DATE", "CHARACTER", "CLOB", "CURRENCY", "DATE", "DOUBLE", "FLOAT", "INTEGER", "LOCALE", "STRING", "SHORT", "TEXT", "TIME", "DATETIME", "TIMESTAMP", "TIMEZONE", "TRUE_FALSE", "YES_NO" ]
+        },
+        "filterCondition" : {
+          "type" : "string",
+          "enum" : [ "STARTING_WITH", "ENDING_WITH", "CONTAINING", "EQUALS" ]
+        },
+        "attributeValue" : {
+          "$ref" : "#/definitions/Object",
+          "x-WM-TYPE_ARGUMENTS" : [ ]
+        },
+        "attributeName" : {
+          "type" : "string"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.runtime.data.expression.QueryFilter",
+      "x-WM-TAGS" : [ "UsersController" ]
+    },
+    "Page" : {
+      "allOf" : [ {
+        "$ref" : "#/definitions/Slice"
+      }, {
+        "properties" : {
+          "size" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "numberOfElements" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "totalPages" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "first" : {
+            "type" : "boolean"
+          },
+          "totalElements" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "number" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "sort" : {
+            "$ref" : "#/definitions/Sort",
+            "x-WM-TYPE_ARGUMENTS" : [ ]
+          },
+          "content" : {
+            "type" : "array",
+            "uniqueItems" : false,
+            "items" : {
+              "$ref" : "#/definitions/Object",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            },
+            "x-WM-IS_LIST" : true
+          },
+          "last" : {
+            "type" : "boolean"
+          }
+        }
+      } ],
+      "x-WM-FULLY_QUALIFIED_NAME" : "org.springframework.data.domain.Page",
+      "x-WM-TAGS" : [ "UsersController", "QueryExecutionController" ]
+    },
+    "Sort$Order" : {
+      "allOf" : [ {
+        "$ref" : "#/definitions/Serializable"
+      }, {
+        "properties" : {
+          "direction" : {
+            "type" : "string",
+            "enum" : [ "ASC", "DESC" ]
+          },
+          "nullHandling" : {
+            "type" : "string",
+            "enum" : [ "NATIVE", "NULLS_FIRST", "NULLS_LAST" ]
+          },
+          "ignoreCase" : {
+            "type" : "boolean"
+          },
+          "property" : {
+            "type" : "string"
+          }
+        }
+      } ],
+      "x-WM-FULLY_QUALIFIED_NAME" : "org.springframework.data.domain.Sort.Order",
+      "x-WM-TAGS" : [ "UsersController" ]
+    },
+    "Serializable" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "java.io.Serializable",
+      "x-WM-TAGS" : [ "UsersController" ]
+    },
+    "CustomQuery" : {
+      "properties" : {
+        "queryStr" : {
+          "type" : "string"
+        },
+        "nativeSql" : {
+          "type" : "boolean"
+        },
+        "queryParams" : {
+          "type" : "array",
+          "uniqueItems" : false,
+          "items" : {
+            "$ref" : "#/definitions/CustomQueryParam",
+            "x-WM-TYPE_ARGUMENTS" : [ ]
+          },
+          "x-WM-IS_LIST" : true
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.runtime.data.model.CustomQuery",
+      "x-WM-TAGS" : [ "QueryExecutionController" ]
+    },
+    "CustomProcedureParam" : {
+      "properties" : {
+        "paramValue" : {
+          "$ref" : "#/definitions/Object",
+          "x-WM-TYPE_ARGUMENTS" : [ ]
+        },
+        "paramName" : {
+          "type" : "string"
+        },
+        "valueType" : {
+          "type" : "string"
+        },
+        "procedureParamType" : {
+          "type" : "string",
+          "enum" : [ "IN", "OUT", "IN_OUT" ]
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.runtime.data.model.CustomProcedureParam",
+      "x-WM-TAGS" : [ "ProcedureExecutionController" ]
+    },
+    "Slice" : {
+      "allOf" : [ {
+        "$ref" : "#/definitions/Iterable"
+      }, {
+        "properties" : {
+          "size" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "numberOfElements" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "first" : {
+            "type" : "boolean"
+          },
+          "number" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "sort" : {
+            "$ref" : "#/definitions/Sort",
+            "x-WM-TYPE_ARGUMENTS" : [ ]
+          },
+          "content" : {
+            "type" : "array",
+            "uniqueItems" : false,
+            "items" : {
+              "$ref" : "#/definitions/Object",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            },
+            "x-WM-IS_LIST" : true
+          },
+          "last" : {
+            "type" : "boolean"
+          }
+        }
+      } ],
+      "x-WM-FULLY_QUALIFIED_NAME" : "org.springframework.data.domain.Slice",
+      "x-WM-TAGS" : [ "UsersController" ]
+    }
+  }
+}

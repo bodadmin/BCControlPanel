@@ -244,18 +244,6 @@
         "isRelated" : false,
         "defaultValue" : ""
       }, {
-        "fieldName" : "username",
-        "type" : "string",
-        "hibernateType" : "string",
-        "fullyQualifiedType" : "string",
-        "columnName" : "USERNAME",
-        "isPrimaryKey" : false,
-        "notNull" : true,
-        "length" : 255,
-        "precision" : 19,
-        "generator" : "assigned",
-        "isRelated" : false
-      }, {
         "fieldName" : "password",
         "type" : "string",
         "hibernateType" : "string",
@@ -273,6 +261,18 @@
         "hibernateType" : "string",
         "fullyQualifiedType" : "string",
         "columnName" : "ROLE",
+        "isPrimaryKey" : false,
+        "notNull" : true,
+        "length" : 255,
+        "precision" : 19,
+        "generator" : "assigned",
+        "isRelated" : false
+      }, {
+        "fieldName" : "username",
+        "type" : "string",
+        "hibernateType" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "USERNAME",
         "isPrimaryKey" : false,
         "notNull" : true,
         "length" : 255,

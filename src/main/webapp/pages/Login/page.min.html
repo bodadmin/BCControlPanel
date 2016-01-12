@@ -34,9 +34,14 @@ Application.$controller("loginFormController", ["$scope",
 <script id="Login.variables.json">
 var _LoginPage_Variables_ ={
   "loginVariable" : {
-    "onError" : "Javascript",
+    "_id" : "wm-loginVariable-wm.LoginVariable-1398237232072",
+    "name" : "loginVariable",
+    "owner" : "Page",
     "category" : "wm.LoginVariable",
-    "autoUpdate" : false,
+    "dataSet" : {
+      "username" : "",
+      "password" : ""
+    },
     "dataBinding" : [ {
       "target" : "username",
       "value" : "bind:Widgets.usernametext.datavalue"
@@ -44,16 +49,11 @@ var _LoginPage_Variables_ ={
       "target" : "password",
       "value" : "bind:Widgets.passwordtext.datavalue"
     } ],
-    "saveInPhonegap" : false,
-    "_id" : "wm-loginVariable-wm.LoginVariable-1398237232072",
-    "name" : "loginVariable",
-    "owner" : "Page",
     "type" : "string",
+    "saveInPhonegap" : false,
     "startUpdate" : false,
-    "dataSet" : {
-      "username" : "",
-      "password" : ""
-    },
+    "autoUpdate" : false,
+    "onError" : "Javascript",
     "useDefaultSuccessHandler" : true
   }
 }

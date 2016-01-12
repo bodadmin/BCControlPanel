@@ -6,11 +6,49 @@
             <wm-tabs name="tabs1">
                 <wm-tabpane name="tabpane1">
                     <wm-tabheader name="tabheader1" heading="Users"></wm-tabheader>
-                    <wm-tabcontent name="tabcontent1"></wm-tabcontent>
+                    <wm-tabcontent name="tabcontent1">
+                        <wm-grid readonlygrid="true" dataset="bind:Variables.UserDatabaseUsersData.dataSet" name="grid1" enablesort="true" shownavigation="false" height="400px">
+                            <wm-grid-column binding="username" caption="Username" type="string" backgroundcolor="" textcolor="" primary-key="" readonly="readonly" col-class="" col-ng-class="" search-placeholder="Search" disable-inline-editing="false" is-related-pk="false"
+                            pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                            <wm-grid-column binding="password" caption="Password" type="string" backgroundcolor="" textcolor="" primary-key="" readonly="readonly" col-class="" col-ng-class="" search-placeholder="Search" disable-inline-editing="false"
+                            is-related-pk="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                            <wm-grid-column binding="role" caption="Role" type="string" backgroundcolor="" textcolor="" primary-key="" readonly="readonly" col-class="" col-ng-class="" search-placeholder="Search" disable-inline-editing="false"
+                            is-related-pk="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                            <wm-grid-column binding="Delete User" caption="Delete User" type="custom" widget-type="button" pcdisplay="true" mobiledisplay="false">
+                                <wm-button caption="Delete User" show="true" class="btn-sm btn-danger" iconname="" on-click="deleteUser" data-ng-class=""></wm-button>
+                            </wm-grid-column>
+                        </wm-grid>
+                    </wm-tabcontent>
                 </wm-tabpane>
                 <wm-tabpane name="tabpane2">
                     <wm-tabheader name="tabheader2" heading="Add User"></wm-tabheader>
-                    <wm-tabcontent name="tabcontent2"></wm-tabcontent>
+                    <wm-tabcontent name="tabcontent2">
+                        <wm-liveform title="Details" name="liveform1" dataset="bind:Variables.UserDatabaseUsersData.dataSet" defaultmode="Edit" on-success="UserDatabaseUsersData">
+                            <wm-layoutgrid name="layoutgrid1">
+                                <wm-gridrow name="gridrow1">
+                                    <wm-gridcolumn show="hide" name="gridcolumn1" columnwidth="12"></wm-gridcolumn>
+                                    <wm-gridcolumn show="show" name="gridcolumn2" columnwidth="12">
+                                        <wm-form-field name="username" displayname="Username" show="true" primary-key="false" generator="assigned" key="username" type="string" is-related="false" required="true" pc-display="true" mobile-display="true" widget="text"
+                                        maxchars="255" inputtype="text" regexp=".*" placeholder="Enter value"></wm-form-field>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow2">
+                                    <wm-gridcolumn show="show" name="gridcolumn3" columnwidth="12">
+                                        <wm-form-field name="password" displayname="Password" show="true" primary-key="false" generator="assigned" key="password" type="string" is-related="false" required="true" pc-display="true" mobile-display="true" widget="text"
+                                        maxchars="255" inputtype="text" regexp=".*" placeholder="Enter value"></wm-form-field>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow3">
+                                    <wm-gridcolumn show="show" name="gridcolumn4" columnwidth="12">
+                                        <wm-form-field name="role" displayname="Role" show="true" primary-key="false" generator="assigned" key="role" type="string" is-related="false" required="true" pc-display="true" mobile-display="true" widget="select"
+                                        maxchars="255" inputtype="text" regexp=".*" placeholder="Enter value" dataset="1,2,3"></wm-form-field>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                            </wm-layoutgrid>
+                            <wm-form-action key="cancel" display-name="Cancel" show="true" class="form-cancel btn-secondary" iconclass="glyphicon glyphicon-remove-circle" action="cancel()" type="button" update-mode="true"></wm-form-action>
+                            <wm-form-action key="save" display-name="Save" show="true" class="form-save btn-success" iconclass="glyphicon glyphicon-save" type="submit" update-mode="true"></wm-form-action>
+                        </wm-liveform>
+                    </wm-tabcontent>
                 </wm-tabpane>
             </wm-tabs>
         </wm-page-content>

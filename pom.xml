@@ -1,34 +1,59 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <modelVersion>4.0.0</modelVersion>
-
     <groupId>com.wavemaker.project</groupId>
     <artifactId>BCControlPanel</artifactId>
-    <version>1.0</version>
     <packaging>war</packaging>
-    <properties>
-        <spring.version>{{spring.version}}</spring.version>
-        <spring.security.version>{{spring.security.version}}</spring.security.version>
-        <wavemaker.studio.version>{{wavemaker.studio.version}}</wavemaker.studio.version>
-        <profile.props.file>development.properties</profile.props.file>
-    </properties>
+    <version>1.0</version>
     <build>
+        <resources>
+            <resource>
+                <filtering>true</filtering>
+                <directory>target/services/resources</directory>
+            </resource>
+            <resource>
+                <filtering>false</filtering>
+                <directory>src/main/resources</directory>
+            </resource>
+        </resources>
         <finalName>BCControlPanel</finalName>
         <filters>
             <filter>profiles/${profile.props.file}/</filter>
         </filters>
-        <resources>
-            <resource>
-                <directory>target/services/resources</directory>
-                <filtering>true</filtering>
-            </resource>
-            <resource>
-                <directory>src/main/resources</directory>
-                <filtering>false</filtering>
-            </resource>
-        </resources>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.eclipse.m2e</groupId>
+                    <artifactId>lifecycle-mapping</artifactId>
+                    <version>1.0.0</version>
+                    <configuration>
+                        <lifecycleMappingMetadata>
+                            <pluginExecutions>
+                                <pluginExecution>
+                                    <pluginExecutionFilter>
+                                        <groupId>
+                                            org.apache.maven.plugins
+                                        </groupId>
+                                        <artifactId>
+                                            maven-antrun-plugin
+                                        </artifactId>
+                                        <versionRange>
+                                            [1.7,)
+                                        </versionRange>
+                                        <goals>
+                                            <goal>run</goal>
+                                        </goals>
+                                    </pluginExecutionFilter>
+                                    <action>
+                                        <ignore/>
+                                    </action>
+                                </pluginExecution>
+                            </pluginExecutions>
+                        </lifecycleMappingMetadata>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -42,7 +67,6 @@
                 </executions>
                 <configuration>
                     <filesets>
-                        <!-- Cleanup any war:inplace output -->
                         <fileset>
                             <directory>${basedir}/src/main/webapp/WEB-INF/lib</directory>
                         </fileset>
@@ -93,14 +117,14 @@
                     <execution>
                         <id>Copy init</id>
                         <phase>initialize</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
                         <configuration>
                             <target>
                                 <ant antfile="${basedir}/build.xml" target="init"/>
                             </target>
                         </configuration>
-                        <goals>
-                            <goal>run</goal>
-                        </goals>
                     </execution>
                     <execution>
                         <id>generate export file</id>
@@ -138,42 +162,62 @@
                 </configuration>
             </plugin>
         </plugins>
-        <pluginManagement>
-            <plugins>
-                <!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
-                <plugin>
-                    <groupId>org.eclipse.m2e</groupId>
-                    <artifactId>lifecycle-mapping</artifactId>
-                    <version>1.0.0</version>
-                    <configuration>
-                        <lifecycleMappingMetadata>
-                            <pluginExecutions>
-                                <pluginExecution>
-                                    <pluginExecutionFilter>
-                                        <groupId>
-                                            org.apache.maven.plugins
-                                        </groupId>
-                                        <artifactId>
-                                            maven-antrun-plugin
-                                        </artifactId>
-                                        <versionRange>
-                                            [1.7,)
-                                        </versionRange>
-                                        <goals>
-                                            <goal>run</goal>
-                                        </goals>
-                                    </pluginExecutionFilter>
-                                    <action>
-                                        <ignore></ignore>
-                                    </action>
-                                </pluginExecution>
-                            </pluginExecutions>
-                        </lifecycleMappingMetadata>
-                    </configuration>
-                </plugin>
-            </plugins>
-        </pluginManagement>
     </build>
+    <profiles>
+        <profile>
+            <id>development</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <profile.props.file>development.properties</profile.props.file>
+            </properties>
+        </profile>
+        <profile>
+            <id>production</id>
+            <properties>
+                <profile.props.file>production.properties</profile.props.file>
+            </properties>
+        </profile>
+        <profile>
+            <id>runtime-dependency</id>
+            <activation>
+                <property>
+                    <name>!exclude-runtime-dependency</name>
+                </property>
+            </activation>
+            <dependencies>
+                <dependency>
+                    <groupId>com.wavemaker.studio</groupId>
+                    <artifactId>wavemaker-app-runtime-core</artifactId>
+                    <version>${wavemaker.studio.version}</version>
+                </dependency>
+            </dependencies>
+        </profile>
+    </profiles>
+    <repositories>
+        <repository>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>central</id>
+            <name>Maven Repository Switchboard</name>
+            <url>http://repo1.maven.org/maven2</url>
+            <layout>default</layout>
+        </repository>
+        <repository>
+            <releases>
+                <enabled>true</enabled>
+                <checksumPolicy>ignore</checksumPolicy>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>wavemaker-maven-repo</id>
+            <name>wavemaker-maven-repo</name>
+            <url>http://s3.amazonaws.com/maven.wavemaker.com/release</url>
+        </repository>
+    </repositories>
     <dependencies>
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -200,65 +244,10 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
-    <repositories>
-        <repository>
-            <id>central</id>
-            <name>Maven Repository Switchboard</name>
-            <layout>default</layout>
-            <url>http://repo1.maven.org/maven2</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>wavemaker-maven-repo</id>
-            <name>wavemaker-maven-repo</name>
-            <releases>
-                <enabled>true</enabled>
-                <checksumPolicy>ignore</checksumPolicy>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-            <url>http://s3.amazonaws.com/maven.wavemaker.com/release</url>
-        </repository>
-    </repositories>
-
-    <profiles>
-        <profile>
-            <id>development</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <properties>
-                <profile.props.file>development.properties</profile.props.file>
-            </properties>
-        </profile>
-        <profile>
-            <id>production</id>
-            <properties>
-                <profile.props.file>production.properties</profile.props.file>
-            </properties>
-        </profile>
-
-        <!-- These two are Studio Managed Profiles. DO NOT EDIT THIS PROFILES -->
-        <profile>
-            <id>runtime-dependency</id>
-            <activation>
-                <property>
-                    <name>!exclude-runtime-dependency</name>
-                </property>
-            </activation>
-            <dependencies>
-                <dependency>
-                    <groupId>com.wavemaker.studio</groupId>
-                    <artifactId>wavemaker-app-runtime-core</artifactId>
-                    <version>${wavemaker.studio.version}</version>
-                </dependency>
-            </dependencies>
-        </profile>
-
-    </profiles>
-
+    <properties>
+        <spring.version>{{spring.version}}</spring.version>
+        <spring.security.version>{{spring.security.version}}</spring.security.version>
+        <wavemaker.studio.version>{{wavemaker.studio.version}}</wavemaker.studio.version>
+        <profile.props.file>development.properties</profile.props.file>
+    </properties>
 </project>

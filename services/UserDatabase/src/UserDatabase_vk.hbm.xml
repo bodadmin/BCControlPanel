@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.bccontrolpanel.userdatabase">
+  <class table="`USERS`" name="com.bccontrolpanel.userdatabase.Users" entity-name="com.bccontrolpanel.userdatabase.Users" schema="UserDatabase">
+    <id name="id" type="integer">
+      <column name="`ID`" length="255" not-null="true" precision="19"/>
+      <generator class="identity"/>
+    </id>
+    <property name="password" type="string">
+      <column name="`PASSWORD`" length="255" not-null="true" precision="19"/>
+    </property>
+    <property name="role" type="string">
+      <column name="`ROLE`" length="255" not-null="true" precision="19"/>
+    </property>
+    <property name="username" type="string">
+      <column name="`USERNAME`" length="255" not-null="true" precision="19"/>
+    </property>
+  </class>
+</hibernate-mapping>

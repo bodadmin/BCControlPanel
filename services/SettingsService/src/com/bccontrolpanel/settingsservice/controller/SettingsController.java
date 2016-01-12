@@ -19,7 +19,8 @@ public class SettingsController {
     private SettingsService settingsservice;
 
     @RequestMapping(value = "/files", method = RequestMethod.GET)
-    public int listFiles(@RequestParam(value = "relativePath", required = false) String relativePath) throws IOException {
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    public String[] listFiles(@RequestParam(value = "relativePath", required = false) String relativePath) throws IOException {
         return settingsservice.listFiles(relativePath);
     }
 }

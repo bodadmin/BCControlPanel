@@ -47,23 +47,47 @@ public class SettingsService {
     }
     
     protected File getUploadDir() {
-       String uploadDir = WMAppContext.getInstance().getContext().getRealPath("/resources/uploads");
-       File f = new File(uploadDir);
-       f.mkdirs();
-       return f;
+        String uploadDir = WMAppContext.getInstance().getContext().getRealPath("/resources/uploads");
+        File f = new File(uploadDir);
+        f.mkdirs();
+        return f;
     }
     
-    public int listFiles(String relativePath) throws IOException {
+    public String[] listFiles(String relativePath) throws IOException {
         MimetypesFileTypeMap m = new MimetypesFileTypeMap();
         File[] files = fileServiceManager.listFiles(relativePath == null ? uploadDirectory : new File(uploadDirectory, relativePath));
         
-        int result = files.length;
+        String[] result = new String[files.length];
         /* Iterate over every file, creating a WMFile object to be returned */
-        //WMFile[] result = new WMFile[files.length];
-        //for (int i = 0; i < files.length; i++) {
-        //    String filteredPath = WMRuntimeUtils.getContextRelativePath(files[i], httpServletRequest, relativePath);
-        //    result[i] = new WMFile(filteredPath, files[i].getName(), files[i].length(), m.getContentType(files[i]));
-        //}
+        //WMFile[] result = new WMFile[files.length]; 
+        for (int i = 0; i < files.length; i++) {
+            result[i] = files[i].getName(); 
+        }
         return result;
     }
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
 }

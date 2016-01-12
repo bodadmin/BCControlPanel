@@ -26,19 +26,22 @@
           "type" : "string",
           "collectionFormat" : "multi",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
-          "x-WM-UUID" : "9806835f-e37a-4a25-82ab-d78061c4900e",
+          "x-WM-UUID" : "dfd0d7b4-efd6-4b92-ba75-5baafdfb7a61",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
           "200" : {
             "description" : "Success",
             "schema" : {
-              "type" : "integer",
-              "format" : "int32"
+              "type" : "array",
+              "uniqueItems" : false,
+              "items" : {
+                "type" : "string"
+              }
             }
           }
         },
-        "x-WM-OPERATION_UID" : "5beea1cd-64ee-4a47-894a-4e8d9503afc9",
+        "x-WM-OPERATION_UID" : "f59a6f78-b46f-4a2e-8560-642cd572a3d2",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "listFiles-1-1195260122"
       },

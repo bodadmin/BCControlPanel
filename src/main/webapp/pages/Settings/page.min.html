@@ -22,7 +22,6 @@ Application.$controller("SettingsPageController", ["$scope", function ($scope) {
     };
 
 }]);
-
 </script>
 <script id="Settings.variables.json">
 var _SettingsPage_Variables_ ={ }
@@ -32,7 +31,9 @@ var _SettingsPage_Variables_ ={ }
     <wm-header content="header" name="header1"></wm-header>
     <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav>
     <wm-content name="content1">
-        <wm-page-content columnwidth="12" name="page_content1"></wm-page-content>
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-label name="label1" caption="bind:Variables.SettingsServiceListFiles.dataSet.value"></wm-label>
+        </wm-page-content>
     </wm-content>
     <wm-footer content="footer" name="footer1"></wm-footer>
 </wm-page>

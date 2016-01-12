@@ -2,7 +2,7 @@
 <service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="SettingsService" class="com.bccontrolpanel.settingsservice.SettingsService" type="JavaService" springFile="SettingsService.spring.xml">
     <operation name="listFiles">
         <parameter name="relativePath" typeRef="java.lang.String" isList="false"/>
-        <return typeRef="int" isList="false"/>
+        <return typeRef="java.lang.String" isList="true"/>
     </operation>
     <dataobjects/>
 </service>

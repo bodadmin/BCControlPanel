@@ -1,13 +1,8 @@
 {
   "loginVariable" : {
-    "_id" : "wm-loginVariable-wm.LoginVariable-1398237232072",
-    "name" : "loginVariable",
-    "owner" : "Page",
+    "onError" : "Javascript",
     "category" : "wm.LoginVariable",
-    "dataSet" : {
-      "username" : "",
-      "password" : ""
-    },
+    "autoUpdate" : false,
     "dataBinding" : [ {
       "target" : "username",
       "value" : "bind:Widgets.usernametext.datavalue"
@@ -15,11 +10,16 @@
       "target" : "password",
       "value" : "bind:Widgets.passwordtext.datavalue"
     } ],
-    "type" : "string",
     "saveInPhonegap" : false,
+    "_id" : "wm-loginVariable-wm.LoginVariable-1398237232072",
+    "name" : "loginVariable",
+    "owner" : "Page",
+    "type" : "string",
     "startUpdate" : false,
-    "autoUpdate" : false,
-    "onError" : "Javascript",
+    "dataSet" : {
+      "username" : "",
+      "password" : ""
+    },
     "useDefaultSuccessHandler" : true
   }
 }

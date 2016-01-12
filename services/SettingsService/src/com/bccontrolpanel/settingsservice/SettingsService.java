@@ -34,7 +34,6 @@ import org.slf4j.LoggerFactory;
 @ExposeToClient
 public class SettingsService {
     
-    private String 
 
     private static final Logger logger=LoggerFactory.getLogger(SettingsService.class);
     

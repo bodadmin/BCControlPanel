@@ -1,299 +1,221 @@
 {
-	"goToPage_Main": {
-		"name": "goToPage_Main",
-		"owner": "App",
-		"operation": "gotoPage",
-		"pageName": "Main",
-		"dataBinding": {},
-		"pageTransitions": "none",
-		"category": "wm.NavigationVariable",
-		"_id": "wm-goToPage_Main-wm.NavigationVariable1389180517517"
-	},
-	"supportedLocale": {
-		"name": "supportedLocale",
-		"type": "string",
-		"isList": false,
-		"owner": "App",
-		"dataSet": {
-			"en": "English"
-		},
-		"dataBinding": [],
-		"saveInPhonegap": false,
-		"category": "wm.Variable",
-		"_id": "wm-supportedLocale-wm.Variable1402640443182"
-	},
-	"FileServiceUploadFile": {
-		"name": "FileServiceUploadFile",
-		"type": "com.bccontrolpanel.fileservice.FileService.FileUploadResponse",
-		"isList": false,
-		"owner": "App",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": [],
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"service": "FileService",
-		"operation": "uploadFile",
-		"operationType": "post",
-		"startUpdate": false,
-		"autoUpdate": true,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"serviceType": "JavaService",
-		"category": "wm.ServiceVariable",
-		"isDefault": true,
-		"wmServiceOperationInfo": {
-			"httpMethod": "post",
-			"name": "uploadFile",
-			"relativePath": "/file/uploadFile",
-			"consumes": [
-				"multipart/form-data"
-			],
-			"parameters": [
-				{
-					"name": "files",
-					"parameterType": "formData",
-					"type": "file"
-				},
-				{
-					"name": "relativePath",
-					"parameterType": "query",
-					"type": "string"
-				}
-			]
-		},
-		"_id": "wm-FileServiceUploadFile-wm.ServiceVariable-1452527862137",
-		"controller": "File"
-	},
-	"goToPage_Settings": {
-		"name": "goToPage_Settings",
-		"owner": "App",
-		"operation": "gotoPage",
-		"pageName": "Settings",
-		"dataBinding": {},
-		"pageTransitions": "none",
-		"category": "wm.NavigationVariable",
-		"_id": "wm-goToPage_Settings-wm.NavigationVariable-1452530558917"
-	},
-	"loginVariable": {
-		"name": "loginVariable",
-		"type": "string",
-		"owner": "App",
-		"dataSet": {
-			"username": "",
-			"password": ""
-		},
-		"dataBinding": [],
-		"saveInPhonegap": false,
-		"startUpdate": false,
-		"autoUpdate": false,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"onError": "Javascript",
-		"useDefaultSuccessHandler": false,
-		"category": "wm.LoginVariable",
-		"_id": "wm-loginVariable-wm.LoginVariable-1452531620417"
-	},
-	"logoutVariable": {
-		"name": "logoutVariable",
-		"type": "string",
-		"owner": "App",
-		"saveInPhonegap": false,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"redirectTo": "Login",
-		"useDefaultSuccessHandler": true,
-		"category": "wm.LogoutVariable",
-		"_id": "wm-logoutVariable-wm.LogoutVariable-1452531620418"
-	},
-	"loggedInUser": {
-		"name": "loggedInUser",
-		"type": "string",
-		"isList": false,
-		"owner": "App",
-		"dataSet": {
-			"name": "",
-			"id": "",
-			"tenantId": "",
-			"isAuthenticated": false,
-			"isSecurityEnabled": true,
-			"roles": []
-		},
-		"dataBinding": [],
-		"saveInPhonegap": false,
-		"category": "wm.Variable",
-		"_id": "wm-loggedInUser-wm.Variable-1452531620418"
-	},
-	"UserDatabaseUsersData": {
-		"name": "UserDatabaseUsersData",
-		"type": "Users",
-		"isList": true,
-		"owner": "App",
-		"dataSet": {
-			"data": [],
-			"propertiesMap": {
-				"columns": [
-					{
-						"fieldName": "id",
-						"type": "integer",
-						"hibernateType": "integer",
-						"fullyQualifiedType": "integer",
-						"columnName": "ID",
-						"isPrimaryKey": true,
-						"notNull": true,
-						"length": 255,
-						"generator": "identity",
-						"isRelated": false,
-						"defaultValue": ""
-					},
-					{
-						"fieldName": "username",
-						"type": "string",
-						"hibernateType": "string",
-						"fullyQualifiedType": "string",
-						"columnName": "USERNAME",
-						"isPrimaryKey": false,
-						"notNull": true,
-						"length": 255,
-						"generator": "assigned",
-						"isRelated": false,
-						"defaultValue": null
-					},
-					{
-						"fieldName": "password",
-						"type": "string",
-						"hibernateType": "string",
-						"fullyQualifiedType": "string",
-						"columnName": "PASSWORD",
-						"isPrimaryKey": false,
-						"notNull": true,
-						"length": 255,
-						"generator": "assigned",
-						"isRelated": false,
-						"defaultValue": null
-					},
-					{
-						"fieldName": "role",
-						"type": "string",
-						"hibernateType": "string",
-						"fullyQualifiedType": "string",
-						"columnName": "ROLE",
-						"isPrimaryKey": false,
-						"notNull": true,
-						"length": 255,
-						"generator": "assigned",
-						"isRelated": false,
-						"defaultValue": null
-					}
-				],
-				"primaryFields": [
-					"id"
-				],
-				"entityName": "Users",
-				"fullyQualifiedName": "com.bccontrolpanel.userdatabase.Users",
-				"tableType": "TABLE"
-			},
-			"pagingOptions": {
-				"dataSize": 0,
-				"maxResults": 20
-			}
-		},
-		"dataBinding": [],
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"operation": "read",
-		"startUpdate": true,
-		"autoUpdate": true,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"liveSource": "UserDatabase",
-		"ignoreCase": false,
-		"matchMode": "start",
-		"category": "wm.LiveVariable",
-		"isDefault": true,
-		"dbSystem": "MySQL",
-		"_id": "wm-UserDatabaseUsersData-wm.LiveVariable-1452531736413",
-		"package": "com.bccontrolpanel.userdatabase.Users",
-		"tableName": "USERS",
-		"tableType": "TABLE",
-		"propertiesMap": {
-			"columns": [
-				{
-					"fieldName": "id",
-					"type": "integer",
-					"hibernateType": "integer",
-					"fullyQualifiedType": "integer",
-					"columnName": "ID",
-					"isPrimaryKey": true,
-					"notNull": true,
-					"length": 255,
-					"generator": "identity",
-					"isRelated": false,
-					"defaultValue": ""
-				},
-				{
-					"fieldName": "password",
-					"type": "string",
-					"hibernateType": "string",
-					"fullyQualifiedType": "string",
-					"columnName": "PASSWORD",
-					"isPrimaryKey": false,
-					"notNull": true,
-					"length": 255,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "role",
-					"type": "string",
-					"hibernateType": "string",
-					"fullyQualifiedType": "string",
-					"columnName": "ROLE",
-					"isPrimaryKey": false,
-					"notNull": true,
-					"length": 255,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "username",
-					"type": "string",
-					"hibernateType": "string",
-					"fullyQualifiedType": "string",
-					"columnName": "USERNAME",
-					"isPrimaryKey": false,
-					"notNull": true,
-					"length": 255,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				}
-			],
-			"primaryFields": [
-				"id"
-			],
-			"entityName": "Users",
-			"fullyQualifiedName": "com.bccontrolpanel.userdatabase.Users",
-			"tableType": "TABLE"
-		},
-		"bindCount": 1
-	},
-	"goToPage_UserManagement": {
-		"owner": "App",
-		"operation": "gotoPage",
-		"pageName": "UserManagement",
-		"dataBinding": {
-			"pageName": ""
-		},
-		"pageTransitions": "none",
-		"category": "wm.NavigationVariable",
-		"_id": "wm-goToPage_UserManagement-wm.NavigationVariable-1452532769225"
-	}
+  "FileServiceUploadFile" : {
+    "_id" : "wm-FileServiceUploadFile-wm.ServiceVariable-1452527862137",
+    "name" : "FileServiceUploadFile",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "type" : "com.bccontrolpanel.fileservice.FileService.FileUploadResponse",
+    "service" : "FileService",
+    "operation" : "uploadFile",
+    "operationType" : "post",
+    "serviceType" : "JavaService",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/file/uploadFile",
+      "httpMethod" : "post",
+      "name" : "uploadFile",
+      "consumes" : [ "multipart/form-data" ],
+      "parameters" : [ {
+        "name" : "files",
+        "parameterType" : "formData",
+        "type" : "file"
+      }, {
+        "name" : "relativePath",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "controller" : "File"
+  },
+  "goToPage_Main" : {
+    "_id" : "wm-goToPage_Main-wm.NavigationVariable1389180517517",
+    "name" : "goToPage_Main",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Main",
+    "pageTransitions" : "none"
+  },
+  "goToPage_Settings" : {
+    "_id" : "wm-goToPage_Settings-wm.NavigationVariable-1452530558917",
+    "name" : "goToPage_Settings",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Settings",
+    "pageTransitions" : "none"
+  },
+  "goToPage_UserManagement" : {
+    "_id" : "wm-goToPage_UserManagement-wm.NavigationVariable-1452532769225",
+    "name" : "goToPage_UserManagement",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "UserManagement",
+    "pageTransitions" : "none"
+  },
+  "loggedInUser" : {
+    "_id" : "wm-loggedInUser-wm.Variable-1452531620418",
+    "name" : "loggedInUser",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataSet" : {
+      "id" : "",
+      "tenantId" : "",
+      "isAuthenticated" : false,
+      "isSecurityEnabled" : true,
+      "name" : "",
+      "roles" : [ ]
+    },
+    "dataBinding" : [ ],
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "loginVariable" : {
+    "_id" : "wm-loginVariable-wm.LoginVariable-1452531620417",
+    "name" : "loginVariable",
+    "owner" : "App",
+    "category" : "wm.LoginVariable",
+    "dataSet" : {
+      "username" : "",
+      "password" : ""
+    },
+    "dataBinding" : [ ],
+    "type" : "string",
+    "saveInPhonegap" : false,
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "onError" : "Javascript",
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "useDefaultSuccessHandler" : false
+  },
+  "logoutVariable" : {
+    "_id" : "wm-logoutVariable-wm.LogoutVariable-1452531620418",
+    "name" : "logoutVariable",
+    "owner" : "App",
+    "category" : "wm.LogoutVariable",
+    "type" : "string",
+    "saveInPhonegap" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "redirectTo" : "Login",
+    "useDefaultSuccessHandler" : true
+  },
+  "supportedLocale" : {
+    "_id" : "wm-supportedLocale-wm.Variable1402640443182",
+    "name" : "supportedLocale",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataSet" : {
+      "en" : "English"
+    },
+    "dataBinding" : [ ],
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "UserDatabaseUsersData" : {
+    "_id" : "wm-UserDatabaseUsersData-wm.LiveVariable-1452531736413",
+    "name" : "UserDatabaseUsersData",
+    "owner" : "App",
+    "category" : "wm.LiveVariable",
+    "operation" : "read",
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "dataBinding" : [ ],
+    "type" : "Users",
+    "isList" : true,
+    "saveInPhonegap" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "liveSource" : "UserDatabase",
+    "ignoreCase" : false,
+    "matchMode" : "start",
+    "propertiesMap" : {
+      "columns" : [ {
+        "fieldName" : "id",
+        "type" : "integer",
+        "hibernateType" : "integer",
+        "fullyQualifiedType" : "integer",
+        "columnName" : "ID",
+        "isPrimaryKey" : true,
+        "notNull" : true,
+        "length" : 255,
+        "precision" : 19,
+        "generator" : "identity",
+        "isRelated" : false,
+        "defaultValue" : ""
+      }, {
+        "fieldName" : "username",
+        "type" : "string",
+        "hibernateType" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "USERNAME",
+        "isPrimaryKey" : false,
+        "notNull" : true,
+        "length" : 255,
+        "precision" : 19,
+        "generator" : "assigned",
+        "isRelated" : false
+      }, {
+        "fieldName" : "password",
+        "type" : "string",
+        "hibernateType" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "PASSWORD",
+        "isPrimaryKey" : false,
+        "notNull" : true,
+        "length" : 255,
+        "precision" : 19,
+        "generator" : "assigned",
+        "isRelated" : false
+      }, {
+        "fieldName" : "role",
+        "type" : "string",
+        "hibernateType" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "ROLE",
+        "isPrimaryKey" : false,
+        "notNull" : true,
+        "length" : 255,
+        "precision" : 19,
+        "generator" : "assigned",
+        "isRelated" : false
+      } ],
+      "entityName" : "Users",
+      "fullyQualifiedName" : "com.bccontrolpanel.userdatabase.Users",
+      "tableType" : "TABLE",
+      "primaryFields" : [ "id" ]
+    },
+    "isDefault" : true,
+    "bindCount" : 1,
+    "tableName" : "USERS",
+    "tableType" : "TABLE",
+    "dbSystem" : "MySQL",
+    "package" : "com.bccontrolpanel.userdatabase.Users"
+  }
 }

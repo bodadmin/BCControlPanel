@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="BoD_Database" type="DataService" springFile="BoD_Database.spring.xml">
+    <dataobjects>
+        <dataobject javaType="com.bccontrolpanel.bod_database.Users">
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="username" typeRef="java.lang.String" allowNull="true"/>
+            <element name="role" typeRef="java.lang.String" allowNull="true"/>
+            <element name="password" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+    </dataobjects>
+</service>

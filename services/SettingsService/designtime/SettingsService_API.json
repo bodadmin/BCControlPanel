@@ -1,0 +1,52 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "Swagger API documentation for SettingsService",
+    "version" : "2.0",
+    "title" : "SettingsServiceService Swagger Documentation",
+    "x-WM-SERVICE_TYPE" : "JavaService",
+    "x-WM-SERVICE_ID" : "SettingsService"
+  },
+  "basePath" : "",
+  "tags" : [ {
+    "name" : "SettingsController",
+    "x-WM-FULLY_QUALIFIED_NAME" : "com.bccontrolpanel.settingsservice.controller.SettingsController",
+    "x-WM-VERSION" : ""
+  } ],
+  "schemes" : [ "http", "https" ],
+  "paths" : {
+    "/settings/files" : {
+      "get" : {
+        "tags" : [ "SettingsController" ],
+        "operationId" : "listFiles",
+        "parameters" : [ {
+          "name" : "relativePath",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "collectionFormat" : "multi",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "x-WM-UUID" : "a0e75b22-ecd0-4cb2-9c22-5d1638cdd7f0",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "integer",
+              "format" : "int32"
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "5ff57d46-4b63-4d3f-a2ab-272e2e76a2cb",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-METHOD_IDENTIFIER" : "listFiles-1-1195260122"
+      },
+      "x-WM-TAG" : "SettingsController",
+      "x-WM-BASE_PATH" : "/settings",
+      "x-WM-COMPLETE_PATH" : "//settings/files",
+      "x-WM-RELATIVE_PATH" : "/files"
+    }
+  },
+  "definitions" : { }
+}

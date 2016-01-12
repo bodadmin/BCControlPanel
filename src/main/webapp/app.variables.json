@@ -248,6 +248,67 @@
     "isList" : false,
     "saveInPhonegap" : false
   },
+  "UserDatabaseRolesData" : {
+    "_id" : "wm-UserDatabaseRolesData-wm.LiveVariable-1452608682212",
+    "name" : "UserDatabaseRolesData",
+    "owner" : "App",
+    "category" : "wm.LiveVariable",
+    "operation" : "read",
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "dataBinding" : [ ],
+    "type" : "Roles",
+    "isList" : true,
+    "saveInPhonegap" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "liveSource" : "UserDatabase",
+    "ignoreCase" : false,
+    "matchMode" : "start",
+    "propertiesMap" : {
+      "columns" : [ {
+        "fieldName" : "id",
+        "type" : "integer",
+        "hibernateType" : "integer",
+        "fullyQualifiedType" : "integer",
+        "columnName" : "ID",
+        "isPrimaryKey" : true,
+        "notNull" : true,
+        "length" : 255,
+        "precision" : 19,
+        "generator" : "identity",
+        "isRelated" : false,
+        "defaultValue" : ""
+      }, {
+        "fieldName" : "roleDescription",
+        "type" : "string",
+        "hibernateType" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "RoleDescription",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 255,
+        "precision" : 19,
+        "generator" : "assigned",
+        "isRelated" : false
+      } ],
+      "entityName" : "Roles",
+      "fullyQualifiedName" : "com.bccontrolpanel.userdatabase.Roles",
+      "tableType" : "TABLE",
+      "primaryFields" : [ "id" ]
+    },
+    "isDefault" : true,
+    "tableName" : "ROLES",
+    "tableType" : "TABLE",
+    "dbSystem" : "MySQL",
+    "package" : "com.bccontrolpanel.userdatabase.Roles"
+  },
   "UserDatabaseUsersData" : {
     "_id" : "wm-UserDatabaseUsersData-wm.LiveVariable-1452531736413",
     "name" : "UserDatabaseUsersData",
@@ -298,18 +359,6 @@
         "generator" : "assigned",
         "isRelated" : false
       }, {
-        "fieldName" : "role",
-        "type" : "string",
-        "hibernateType" : "string",
-        "fullyQualifiedType" : "string",
-        "columnName" : "ROLE",
-        "isPrimaryKey" : false,
-        "notNull" : true,
-        "length" : 255,
-        "precision" : 19,
-        "generator" : "assigned",
-        "isRelated" : false
-      }, {
         "fieldName" : "username",
         "type" : "string",
         "hibernateType" : "string",
@@ -321,6 +370,19 @@
         "precision" : 19,
         "generator" : "assigned",
         "isRelated" : false
+      }, {
+        "fieldName" : "role",
+        "type" : "integer",
+        "hibernateType" : "integer",
+        "fullyQualifiedType" : "integer",
+        "columnName" : "ROLE",
+        "isPrimaryKey" : false,
+        "notNull" : true,
+        "length" : 255,
+        "precision" : 19,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "defaultValue" : "0"
       } ],
       "entityName" : "Users",
       "fullyQualifiedName" : "com.bccontrolpanel.userdatabase.Users",

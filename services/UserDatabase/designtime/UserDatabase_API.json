@@ -9,14 +9,19 @@
   },
   "basePath" : "",
   "tags" : [ {
+    "name" : "QueryExecutionController",
+    "description" : "Controller class for query execution",
+    "x-WM-FULLY_QUALIFIED_NAME" : "com.bccontrolpanel.userdatabase.controller.QueryExecutionController",
+    "x-WM-VERSION" : ""
+  }, {
     "name" : "ProcedureExecutionController",
     "description" : "Controller class for procedure execution",
     "x-WM-FULLY_QUALIFIED_NAME" : "com.bccontrolpanel.userdatabase.controller.ProcedureExecutionController",
     "x-WM-VERSION" : ""
   }, {
-    "name" : "QueryExecutionController",
-    "description" : "Controller class for query execution",
-    "x-WM-FULLY_QUALIFIED_NAME" : "com.bccontrolpanel.userdatabase.controller.QueryExecutionController",
+    "name" : "RolesController",
+    "description" : "Exposes APIs to work with Roles resource.",
+    "x-WM-FULLY_QUALIFIED_NAME" : "com.bccontrolpanel.userdatabase.controller.RolesController",
     "x-WM-VERSION" : ""
   }, {
     "name" : "UsersController",
@@ -24,8 +29,275 @@
     "x-WM-FULLY_QUALIFIED_NAME" : "com.bccontrolpanel.userdatabase.controller.UsersController",
     "x-WM-VERSION" : ""
   } ],
-  "schemes" : [ "http", "https" ],
+  "schemes" : [ "https", "http" ],
   "paths" : {
+    "/UserDatabase/Roles/" : {
+      "get" : {
+        "tags" : [ "RolesController" ],
+        "description" : "Returns the list of Roles instances.",
+        "operationId" : "getRoless",
+        "parameters" : [ {
+          "name" : "page",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : "0",
+          "format" : "int32",
+          "x-WM-EDITABLE" : false,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable"
+        }, {
+          "name" : "size",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : "20",
+          "format" : "int32",
+          "x-WM-EDITABLE" : false
+        }, {
+          "name" : "sort",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "x-WM-EDITABLE" : false
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Page",
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "$ref" : "#/definitions/Roles",
+                "x-WM-TYPE_ARGUMENTS" : [ ]
+              } ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "278ddcff-47ef-4466-9455-a4f25924fb13",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-METHOD_IDENTIFIER" : "getRoless-1-934028971"
+      },
+      "post" : {
+        "tags" : [ "RolesController" ],
+        "description" : "Creates a new Roles instance.",
+        "operationId" : "createRoles",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "Roles",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/Roles",
+            "x-WM-TYPE_ARGUMENTS" : [ ]
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.bccontrolpanel.userdatabase.Roles",
+          "x-WM-UUID" : "905634ff-db73-4d56-b17d-cebe37727358",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Roles",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "9c82c777-8bdb-4db9-901a-5aea3d2a55a4",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-METHOD_IDENTIFIER" : "createRoles-1--347534237"
+      },
+      "x-WM-TAG" : "RolesController",
+      "x-WM-BASE_PATH" : "/UserDatabase/Roles",
+      "x-WM-COMPLETE_PATH" : "//UserDatabase/Roles/",
+      "x-WM-RELATIVE_PATH" : "/"
+    },
+    "/UserDatabase/Roles/count" : {
+      "get" : {
+        "tags" : [ "RolesController" ],
+        "description" : "Returns the total count of Roles instances.",
+        "operationId" : "countAllRoless",
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "integer",
+              "format" : "int64"
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "63fa1660-c15d-4d3c-babf-4687decc27e1",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-METHOD_IDENTIFIER" : "countAllRoless-0-17"
+      },
+      "x-WM-TAG" : "RolesController",
+      "x-WM-BASE_PATH" : "/UserDatabase/Roles",
+      "x-WM-COMPLETE_PATH" : "//UserDatabase/Roles/count",
+      "x-WM-RELATIVE_PATH" : "/count"
+    },
+    "/UserDatabase/Roles/search" : {
+      "post" : {
+        "tags" : [ "RolesController" ],
+        "description" : "Returns the list of Roles instances matching the search criteria.",
+        "operationId" : "findRoless",
+        "parameters" : [ {
+          "name" : "page",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : "0",
+          "format" : "int32",
+          "x-WM-EDITABLE" : false,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable"
+        }, {
+          "name" : "size",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : "20",
+          "format" : "int32",
+          "x-WM-EDITABLE" : false
+        }, {
+          "name" : "sort",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "x-WM-EDITABLE" : false
+        }, {
+          "in" : "body",
+          "name" : "QueryFilter",
+          "required" : true,
+          "schema" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/definitions/QueryFilter",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            },
+            "x-WM-IS_LIST" : false
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.expression.QueryFilter",
+          "x-WM-UUID" : "58106534-0f8f-4ae0-a381-d169f60e384b",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Page",
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "$ref" : "#/definitions/Roles",
+                "x-WM-TYPE_ARGUMENTS" : [ ]
+              } ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "158d8ee8-a74d-4c24-ba88-68b5223c1af8",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-METHOD_IDENTIFIER" : "findRoless-2--1821969279"
+      },
+      "x-WM-TAG" : "RolesController",
+      "x-WM-BASE_PATH" : "/UserDatabase/Roles",
+      "x-WM-COMPLETE_PATH" : "//UserDatabase/Roles/search",
+      "x-WM-RELATIVE_PATH" : "/search"
+    },
+    "/UserDatabase/Roles/{id:.+}" : {
+      "get" : {
+        "tags" : [ "RolesController" ],
+        "description" : "Returns the Roles instance associated with the given id.",
+        "operationId" : "getRoles",
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "collectionFormat" : "multi",
+          "format" : "int32",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
+          "x-WM-UUID" : "131152f5-2303-4585-925c-0d7f618bad6e",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Roles",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "01dd7615-d194-4f54-9a54-c5f0f7297fca",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-METHOD_IDENTIFIER" : "getRoles-1--2056816673"
+      },
+      "put" : {
+        "tags" : [ "RolesController" ],
+        "description" : "Updates the Roles instance associated with the given id.",
+        "operationId" : "editRoles",
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "collectionFormat" : "multi",
+          "format" : "int32",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
+          "x-WM-UUID" : "df27151c-998a-4714-a070-ab73954feaeb",
+          "x-WM-EDITABLE" : true
+        }, {
+          "in" : "body",
+          "name" : "Roles",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/Roles",
+            "x-WM-TYPE_ARGUMENTS" : [ ]
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.bccontrolpanel.userdatabase.Roles",
+          "x-WM-UUID" : "76ea3464-fc7e-4b73-a6c5-fbb6fc339d85",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Roles",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "1faa4e25-df0b-4b26-9c35-c4c4a178134e",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-METHOD_IDENTIFIER" : "editRoles-2-859659561"
+      },
+      "delete" : {
+        "tags" : [ "RolesController" ],
+        "description" : "Deletes the Roles instance associated with the given id.",
+        "operationId" : "deleteRoles",
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "collectionFormat" : "multi",
+          "format" : "int32",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
+          "x-WM-UUID" : "9d4aff7e-7c42-4f05-bf10-84821f08226a",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "boolean"
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "b093e327-40eb-41b1-8403-6162484b1100",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-METHOD_IDENTIFIER" : "deleteRoles-1--2056816673"
+      },
+      "x-WM-TAG" : "RolesController",
+      "x-WM-BASE_PATH" : "/UserDatabase/Roles",
+      "x-WM-COMPLETE_PATH" : "//UserDatabase/Roles/{id:.+}",
+      "x-WM-RELATIVE_PATH" : "/{id:.+}"
+    },
     "/UserDatabase/Users/" : {
       "get" : {
         "tags" : [ "UsersController" ],
@@ -67,7 +339,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "16525088-97d1-4cae-850d-7bee04363453",
+        "x-WM-OPERATION_UID" : "c0b91982-6c51-4ada-b8e6-6ed9601720d1",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "getUserss-1-934028971"
       },
@@ -84,7 +356,7 @@
             "x-WM-TYPE_ARGUMENTS" : [ ]
           },
           "x-WM-FULLY_QUALIFIED_TYPE" : "com.bccontrolpanel.userdatabase.Users",
-          "x-WM-UUID" : "4b18ed30-45ee-4d66-ad9a-e459e592ff87",
+          "x-WM-UUID" : "7d49ca6f-4276-49d6-ad92-cfe0de9cb9f7",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -96,7 +368,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "1c0f6815-9022-4606-94fb-8882532f6fe3",
+        "x-WM-OPERATION_UID" : "503a735d-bd02-4b74-8c5a-339a1969ed5f",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "createUsers-1--344650834"
       },
@@ -119,7 +391,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "7cc7f1dd-7318-41ed-89e8-3f17649c6481",
+        "x-WM-OPERATION_UID" : "7b5f5055-e168-48d0-820f-7e2e0461c7d5",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "countAllUserss-0-17"
       },
@@ -169,7 +441,7 @@
             "x-WM-IS_LIST" : false
           },
           "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.expression.QueryFilter",
-          "x-WM-UUID" : "5fb45367-68ed-49a6-9b85-07e8bebc395f",
+          "x-WM-UUID" : "37e9c6e4-8e74-410c-aa77-70baef7f9324",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -184,7 +456,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "56dca036-9a1a-48f5-ac4d-7d76117de491",
+        "x-WM-OPERATION_UID" : "241eb747-b9f5-42e9-8745-e4caf21dfa50",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "findUserss-2--1821969279"
       },
@@ -206,7 +478,7 @@
           "collectionFormat" : "multi",
           "format" : "int32",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
-          "x-WM-UUID" : "c93ee9fb-69d4-4f0b-bd64-56e65ad02db5",
+          "x-WM-UUID" : "c05d7f4b-c157-41bc-8707-90b5a2352ca9",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -218,7 +490,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "8e10c47c-4262-448d-8a21-2b8ef3d36f80",
+        "x-WM-OPERATION_UID" : "d6bef609-2b27-4795-93a7-91bc2fa28de4",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "getUsers-1--2056816673"
       },
@@ -234,7 +506,7 @@
           "collectionFormat" : "multi",
           "format" : "int32",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
-          "x-WM-UUID" : "137ce1d8-3d23-4c05-9980-f2cf0e89a2d2",
+          "x-WM-UUID" : "3a33396d-d240-44a7-a95f-ee1207708df1",
           "x-WM-EDITABLE" : true
         }, {
           "in" : "body",
@@ -245,7 +517,7 @@
             "x-WM-TYPE_ARGUMENTS" : [ ]
           },
           "x-WM-FULLY_QUALIFIED_TYPE" : "com.bccontrolpanel.userdatabase.Users",
-          "x-WM-UUID" : "0648978c-2613-4eec-baf6-38d265eb4fd1",
+          "x-WM-UUID" : "41a8d963-754e-40a8-8133-3fee9da9fc11",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -257,7 +529,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "6e7a7c40-46fb-42cb-9d62-f673ac7b6467",
+        "x-WM-OPERATION_UID" : "b5edc649-138e-40c7-90ea-8f9630f55775",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "editUsers-2-862542964"
       },
@@ -273,7 +545,7 @@
           "collectionFormat" : "multi",
           "format" : "int32",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
-          "x-WM-UUID" : "ce5c329d-da9d-46d4-97c7-a66532c12b07",
+          "x-WM-UUID" : "52c06976-f4b3-44ca-87c8-e5b223129b27",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -284,7 +556,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "6447c491-18f0-4cd3-af88-68b23c9e8c19",
+        "x-WM-OPERATION_UID" : "edac1389-185a-4cf9-abda-a23ec988bc1d",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "deleteUsers-1--2056816673"
       },
@@ -307,7 +579,7 @@
             "x-WM-TYPE_ARGUMENTS" : [ ]
           },
           "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.model.CustomProcedure",
-          "x-WM-UUID" : "1b8cf025-a7b6-47ea-9c2c-82e4d5c6daf7",
+          "x-WM-UUID" : "75ca0df8-e55f-4410-8c79-2e3ac7073d4d",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -324,7 +596,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "0906ee22-d585-40b7-a635-26a76b5ed5e1",
+        "x-WM-OPERATION_UID" : "359e3051-ffdd-4184-98d2-8c3998534543",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "executeWMCustomProcedure-1--282256460"
       },
@@ -347,7 +619,7 @@
             "x-WM-TYPE_ARGUMENTS" : [ ]
           },
           "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.model.CustomQuery",
-          "x-WM-UUID" : "0ab1bae6-d72a-448c-9178-545417d0a2fe",
+          "x-WM-UUID" : "0a7a6cc1-386a-46da-bce1-2b762343c52f",
           "x-WM-EDITABLE" : true
         }, {
           "name" : "page",
@@ -385,7 +657,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "fe92a076-36ba-4174-98b1-a38ca1ada5fc",
+        "x-WM-OPERATION_UID" : "ec031ad0-9076-4d3b-aaab-6c0660c0b35c",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "executeWMCustomQuery-2-107741091"
       },
@@ -408,7 +680,7 @@
             "x-WM-TYPE_ARGUMENTS" : [ ]
           },
           "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.model.CustomQuery",
-          "x-WM-UUID" : "9b700066-f07d-410f-aa80-d3648ee02089",
+          "x-WM-UUID" : "4d948fe7-1d3b-46c2-945c-f04c6f075f76",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -420,7 +692,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "5bcd7db4-0b92-4920-9f9b-9c4ec62b954c",
+        "x-WM-OPERATION_UID" : "f39f0032-000e-41fb-b33b-f5d6581f17e9",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "executeWMCustomQuery-1--718813271"
       },
@@ -431,29 +703,6 @@
     }
   },
   "definitions" : {
-    "Users" : {
-      "allOf" : [ {
-        "$ref" : "#/definitions/Serializable"
-      }, {
-        "properties" : {
-          "username" : {
-            "type" : "string"
-          },
-          "id" : {
-            "type" : "integer",
-            "format" : "int32"
-          },
-          "role" : {
-            "type" : "string"
-          },
-          "password" : {
-            "type" : "string"
-          }
-        }
-      } ],
-      "x-WM-FULLY_QUALIFIED_NAME" : "com.bccontrolpanel.userdatabase.Users",
-      "x-WM-TAGS" : [ "UsersController" ]
-    },
     "Sort" : {
       "allOf" : [ {
         "$ref" : "#/definitions/Iterable"
@@ -473,11 +722,35 @@
         }
       } ],
       "x-WM-FULLY_QUALIFIED_NAME" : "org.springframework.data.domain.Sort",
-      "x-WM-TAGS" : [ "QueryExecutionController" ]
+      "x-WM-TAGS" : [ "UsersController" ]
+    },
+    "Users" : {
+      "allOf" : [ {
+        "$ref" : "#/definitions/Serializable"
+      }, {
+        "properties" : {
+          "username" : {
+            "type" : "string"
+          },
+          "id" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "role" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "password" : {
+            "type" : "string"
+          }
+        }
+      } ],
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.bccontrolpanel.userdatabase.Users",
+      "x-WM-TAGS" : [ "UsersController" ]
     },
     "Iterable" : {
       "x-WM-FULLY_QUALIFIED_NAME" : "java.lang.Iterable",
-      "x-WM-TAGS" : [ "QueryExecutionController" ]
+      "x-WM-TAGS" : [ "UsersController" ]
     },
     "CustomQueryParam" : {
       "properties" : {
@@ -535,7 +808,7 @@
         }
       },
       "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.runtime.data.expression.QueryFilter",
-      "x-WM-TAGS" : [ "UsersController" ]
+      "x-WM-TAGS" : [ "UsersController", "RolesController" ]
     },
     "Page" : {
       "allOf" : [ {
@@ -584,7 +857,7 @@
         }
       } ],
       "x-WM-FULLY_QUALIFIED_NAME" : "org.springframework.data.domain.Page",
-      "x-WM-TAGS" : [ "QueryExecutionController", "UsersController" ]
+      "x-WM-TAGS" : [ "UsersController", "RolesController", "QueryExecutionController" ]
     },
     "Sort$Order" : {
       "allOf" : [ {
@@ -608,11 +881,11 @@
         }
       } ],
       "x-WM-FULLY_QUALIFIED_NAME" : "org.springframework.data.domain.Sort.Order",
-      "x-WM-TAGS" : [ "QueryExecutionController" ]
+      "x-WM-TAGS" : [ "UsersController" ]
     },
     "Serializable" : {
       "x-WM-FULLY_QUALIFIED_NAME" : "java.io.Serializable",
-      "x-WM-TAGS" : [ "QueryExecutionController", "UsersController" ]
+      "x-WM-TAGS" : [ "UsersController", "RolesController" ]
     },
     "CustomQuery" : {
       "properties" : {
@@ -634,6 +907,23 @@
       },
       "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.runtime.data.model.CustomQuery",
       "x-WM-TAGS" : [ "QueryExecutionController" ]
+    },
+    "Roles" : {
+      "allOf" : [ {
+        "$ref" : "#/definitions/Serializable"
+      }, {
+        "properties" : {
+          "roleDescription" : {
+            "type" : "string"
+          },
+          "id" : {
+            "type" : "integer",
+            "format" : "int32"
+          }
+        }
+      } ],
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.bccontrolpanel.userdatabase.Roles",
+      "x-WM-TAGS" : [ "RolesController" ]
     },
     "CustomProcedureParam" : {
       "properties" : {
@@ -694,7 +984,7 @@
         }
       } ],
       "x-WM-FULLY_QUALIFIED_NAME" : "org.springframework.data.domain.Slice",
-      "x-WM-TAGS" : [ "QueryExecutionController" ]
+      "x-WM-TAGS" : [ "UsersController" ]
     }
   }
 }

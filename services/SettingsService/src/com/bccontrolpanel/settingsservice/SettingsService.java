@@ -54,7 +54,7 @@ public class SettingsService {
         return f;
     }
     
-    public int countFiles(String relativePath) throws IOException {
+    public int countFiles(String relativePath) throws IOException { 
         MimetypesFileTypeMap m = new MimetypesFileTypeMap();
         File[] files = fileServiceManager.listFiles(relativePath == null ? uploadDirectory : new File(uploadDirectory, relativePath));
 
@@ -72,12 +72,13 @@ public class SettingsService {
         File[] files = fileServiceManager.listFiles(relativePath == null ? uploadDirectory : new File(uploadDirectory, relativePath));
         
         String[] result = new String[files.length];
-        /* Iterate over every file, creating a WMFile object to be returned */
+        /* Iterate over every file, creating a WMFile object to be returned */ 
         //WMFile[] result = new WMFile[files.length]; 
-        for (int i = 0; i < files.length; i++) {
-            result[i] = files[i].getName(); 
+        for (int i = 0; i < files.length; i++) { 
+            result[i] = files[i].getName();  
         }
         return result;
+        
     }
 
     

@@ -119,6 +119,43 @@
     "redirectTo" : "Login",
     "useDefaultSuccessHandler" : true
   },
+  "SettingsServiceCountFiles" : {
+    "_id" : "wm-SettingsServiceCountFiles-wm.ServiceVariable-1452600085299",
+    "name" : "SettingsServiceCountFiles",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "type" : "integer",
+    "service" : "SettingsService",
+    "operation" : "countFiles",
+    "operationType" : "get",
+    "serviceType" : "JavaService",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/settings/countFiles",
+      "httpMethod" : "get",
+      "name" : "countFiles",
+      "parameters" : [ {
+        "name" : "relativePath",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "buildTreeFromDataSet" : true,
+    "controller" : "Settings"
+  },
   "SettingsServiceListFiles" : {
     "_id" : "wm-SettingsServiceListFiles-wm.ServiceVariable-1452599860216",
     "name" : "SettingsServiceListFiles",

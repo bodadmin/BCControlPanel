@@ -15,6 +15,38 @@
   } ],
   "schemes" : [ "http", "https" ],
   "paths" : {
+    "/settings/countFiles" : {
+      "get" : {
+        "tags" : [ "SettingsController" ],
+        "operationId" : "countFiles",
+        "parameters" : [ {
+          "name" : "relativePath",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "collectionFormat" : "multi",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "x-WM-UUID" : "ca8f9226-a481-4407-978c-cf025261c736",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "integer",
+              "format" : "int32"
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "b7f48b78-9a4e-4736-b3ba-53da395b11d9",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-METHOD_IDENTIFIER" : "countFiles-1-1195260122"
+      },
+      "x-WM-TAG" : "SettingsController",
+      "x-WM-BASE_PATH" : "/settings",
+      "x-WM-COMPLETE_PATH" : "//settings/countFiles",
+      "x-WM-RELATIVE_PATH" : "/countFiles"
+    },
     "/settings/files" : {
       "get" : {
         "tags" : [ "SettingsController" ],
@@ -26,7 +58,7 @@
           "type" : "string",
           "collectionFormat" : "multi",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
-          "x-WM-UUID" : "dfd0d7b4-efd6-4b92-ba75-5baafdfb7a61",
+          "x-WM-UUID" : "801a3008-c950-4147-8498-fdfec2c5ea42",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -41,7 +73,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "f59a6f78-b46f-4a2e-8560-642cd572a3d2",
+        "x-WM-OPERATION_UID" : "97829511-235b-40b7-93e3-0ded47acd37c",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "listFiles-1-1195260122"
       },

@@ -33,6 +33,8 @@ import org.slf4j.LoggerFactory;
  */
 @ExposeToClient
 public class SettingsService {
+    
+    private String 
 
     private static final Logger logger=LoggerFactory.getLogger(SettingsService.class);
     
@@ -53,6 +55,19 @@ public class SettingsService {
         return f;
     }
     
+    public int countFiles(String relativePath) throws IOException {
+        MimetypesFileTypeMap m = new MimetypesFileTypeMap();
+        File[] files = fileServiceManager.listFiles(relativePath == null ? uploadDirectory : new File(uploadDirectory, relativePath));
+
+
+        int result = files.length;
+        return result;
+    }
+    
+    
+    
+    
+    
     public String[] listFiles(String relativePath) throws IOException {
         MimetypesFileTypeMap m = new MimetypesFileTypeMap();
         File[] files = fileServiceManager.listFiles(relativePath == null ? uploadDirectory : new File(uploadDirectory, relativePath));
@@ -65,8 +80,6 @@ public class SettingsService {
         }
         return result;
     }
-    
-    
 
     
     

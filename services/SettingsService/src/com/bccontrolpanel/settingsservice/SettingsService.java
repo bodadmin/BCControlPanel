@@ -23,6 +23,7 @@ import java.io.InputStreamReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 import com.wavemaker.runtime.service.annotations.ExposeToClient;
 import org.slf4j.Logger;
@@ -58,7 +59,7 @@ public class SettingsService {
     
     public int countFiles(String relativePath) throws IOException { 
         MimetypesFileTypeMap m = new MimetypesFileTypeMap();
-        File[] files = fileServiceManager.listFiles(relativePath == null ? uploadDirectory : new File(uploadDirectory, relativePath));
+        File[] files = fileServiceManager.listFiles(relativePath == null ? uploadDirectory : new File(uploadDirectory, relativePath)); 
 
 
         int result = files.length;
@@ -81,23 +82,21 @@ public class SettingsService {
     
     public String openFile(String filename) throws IOException  {
      
-    String basedir = WMAppContext.getInstance().getContext().getRealPath("/resources/uploads");
+    String basedir = WMAppContext.getInstance().getContext().getRealPath("/resources/uploads");  
     String filepath = basedir + "/" + filename;
      
     File fl = new File(filepath);
     FileInputStream fin = new FileInputStream(fl);
     BufferedReader reader = new BufferedReader(new InputStreamReader(fin));
     StringBuilder sb = new StringBuilder();
+    String separator = System.getProperty( "line.separator" );
     String line = null;
     while ((line = reader.readLine()) != null) {
-      sb.append(line).append("\n");
+      sb.append(line);
+      sb.append("\r\n");
     }
     reader.close();
     return sb.toString();
-    
-    
-    
-    
     }
     
 

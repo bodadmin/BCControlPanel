@@ -71,8 +71,6 @@ public class SettingsService {
         File[] files = fileServiceManager.listFiles(relativePath == null ? uploadDirectory : new File(uploadDirectory, relativePath));
         
         String[] result = new String[files.length];
-        /* Iterate over every file, creating a WMFile object to be returned */ 
-        //WMFile[] result = new WMFile[files.length];  
         for (int i = 0; i < files.length; i++) { 
             result[i] = files[i].getName();  
         }
@@ -84,16 +82,17 @@ public class SettingsService {
      
     String basedir = WMAppContext.getInstance().getContext().getRealPath("/resources/uploads");  
     String filepath = basedir + "/" + filename;
+    
+    String newLine = System.getProperty("line.separator");
      
     File fl = new File(filepath);
     FileInputStream fin = new FileInputStream(fl);
     BufferedReader reader = new BufferedReader(new InputStreamReader(fin));
     StringBuilder sb = new StringBuilder();
-    String separator = System.getProperty( "line.separator" );
     String line = null;
     while ((line = reader.readLine()) != null) {
       sb.append(line);
-      sb.append("\r\n");
+      sb.append(newLine);
     }
     reader.close();
     return sb.toString();

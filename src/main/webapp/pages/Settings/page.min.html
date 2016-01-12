@@ -21,7 +21,13 @@ Application.$controller("SettingsPageController", ["$scope", function ($scope) {
          */
     };
 
-}]);
+
+        $scope.menu1Select = function($event, $isolateScope, $item){ 
+
+        };
+ 
+    }
+]);
 </script>
 <script id="Settings.variables.json">
 var _SettingsPage_Variables_ ={ }
@@ -31,7 +37,17 @@ var _SettingsPage_Variables_ ={ }
     <wm-header content="header" name="header1"></wm-header>
     <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav>
     <wm-content name="content1">
-        <wm-page-content columnwidth="12" name="page_content1"></wm-page-content>
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-container name="container2" width="600" height="50" horizontalalign="left" paddingunit="px" margintop="5">
+                <wm-composite name="composite3">
+                    <wm-label class="col-md-3" name="label3" caption="Select File Context:"></wm-label>
+                    <wm-container class="col-md-9" name="container4">
+                        <wm-select dataset="bind:Variables.SettingsServiceListFiles.dataSet" name="select3"></wm-select>
+                    </wm-container>
+                </wm-composite>
+            </wm-container>
+            <wm-richtexteditor name="richtexteditor1" datavalue="bind:Variables.SettingsServiceOpenFile.dataSet.value"></wm-richtexteditor>
+        </wm-page-content>
     </wm-content>
     <wm-footer content="footer" name="footer1"></wm-footer>
 </wm-page>

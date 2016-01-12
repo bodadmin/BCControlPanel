@@ -26,7 +26,7 @@
           "type" : "string",
           "collectionFormat" : "multi",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
-          "x-WM-UUID" : "3c9253d2-8c0d-4407-8958-a5ee2a5c459b",
+          "x-WM-UUID" : "c80d8276-dab9-486f-a120-5796cafc1839",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -38,7 +38,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "21c1749b-7a2f-4af9-b2fc-47e2fb05cd99",
+        "x-WM-OPERATION_UID" : "a28738ae-a609-41d1-beed-f0fcad59b237",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "countFiles-1-1195260122"
       },
@@ -58,7 +58,7 @@
           "type" : "string",
           "collectionFormat" : "multi",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
-          "x-WM-UUID" : "864a0900-9fcf-4399-b7f1-78d59590987f",
+          "x-WM-UUID" : "d8e777e9-5203-4bd6-a78a-480c1a9e6dae",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -73,7 +73,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "8ba2113b-0900-47a0-925a-5712a129d807",
+        "x-WM-OPERATION_UID" : "e85e052e-fd44-4f7f-82d3-2034f2f241d7",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "listFiles-1-1195260122"
       },
@@ -81,6 +81,38 @@
       "x-WM-BASE_PATH" : "/settings",
       "x-WM-COMPLETE_PATH" : "//settings/files",
       "x-WM-RELATIVE_PATH" : "/files"
+    },
+    "/settings/openFile" : {
+      "get" : {
+        "tags" : [ "SettingsController" ],
+        "operationId" : "openFile",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "filename",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "collectionFormat" : "multi",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "x-WM-UUID" : "b6819454-cd26-4589-99b3-0cede0d46e09",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "41d7307c-a4f7-4d92-bbd9-b1c5ecf6ec72",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-METHOD_IDENTIFIER" : "openFile-1-1195260122"
+      },
+      "x-WM-TAG" : "SettingsController",
+      "x-WM-BASE_PATH" : "/settings",
+      "x-WM-COMPLETE_PATH" : "//settings/openFile",
+      "x-WM-RELATIVE_PATH" : "/openFile"
     }
   },
   "definitions" : { }

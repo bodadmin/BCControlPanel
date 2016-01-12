@@ -29,4 +29,10 @@ public class SettingsController {
     public String[] listFiles(@RequestParam(value = "relativePath", required = false) String relativePath) throws IOException {
         return settingsservice.listFiles(relativePath);
     }
+
+    @RequestMapping(value = "/openFile", produces = "application/json", method = RequestMethod.GET)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    public String openFile(@RequestParam(value = "filename", required = false) String filename) throws IOException {
+        return settingsservice.openFile(filename);
+    }
 }

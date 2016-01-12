@@ -8,5 +8,9 @@
         <parameter name="relativePath" typeRef="java.lang.String" isList="false"/>
         <return typeRef="java.lang.String" isList="true"/>
     </operation>
+    <operation name="openFile">
+        <parameter name="filename" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
     <dataobjects/>
 </service>

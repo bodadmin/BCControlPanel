@@ -120,7 +120,7 @@
     "useDefaultSuccessHandler" : true
   },
   "SettingsServiceCountFiles" : {
-    "_id" : "wm-SettingsServiceCountFiles-wm.ServiceVariable-1452600085299",
+    "_id" : "wm-SettingsServiceCountFiles-wm.ServiceVariable-1452612449332",
     "name" : "SettingsServiceCountFiles",
     "owner" : "App",
     "category" : "wm.ServiceVariable",
@@ -157,7 +157,7 @@
     "controller" : "Settings"
   },
   "SettingsServiceListFiles" : {
-    "_id" : "wm-SettingsServiceListFiles-wm.ServiceVariable-1452602725358",
+    "_id" : "wm-SettingsServiceListFiles-wm.ServiceVariable-1452612584281",
     "name" : "SettingsServiceListFiles",
     "owner" : "App",
     "category" : "wm.ServiceVariable",
@@ -177,6 +177,48 @@
       } ]
     },
     "dataBinding" : [ ],
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "buildTreeFromDataSet" : true,
+    "controller" : "Settings"
+  },
+  "SettingsServiceOpenFile" : {
+    "_id" : "wm-SettingsServiceOpenFile-wm.ServiceVariable-1452614897035",
+    "name" : "SettingsServiceOpenFile",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "type" : "string",
+    "service" : "SettingsService",
+    "operation" : "openFile",
+    "operationType" : "get",
+    "serviceType" : "JavaService",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/settings/openFile",
+      "httpMethod" : "get",
+      "name" : "openFile",
+      "produces" : [ "application/json" ],
+      "parameters" : [ {
+        "name" : "filename",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "dataBinding" : [ {
+      "target" : "filename",
+      "type" : "string",
+      "value" : "bind:Widgets.select3.datavalue"
+    } ],
     "dataSet" : {
       "dataValue" : ""
     },

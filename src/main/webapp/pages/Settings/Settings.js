@@ -17,4 +17,10 @@ Application.$controller("SettingsPageController", ["$scope", function ($scope) {
          */
     };
 
-}]);
+
+        $scope.menu1Select = function($event, $isolateScope, $item){ 
+
+        };
+ 
+    }
+]);

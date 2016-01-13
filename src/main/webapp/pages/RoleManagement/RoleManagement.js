@@ -1,4 +1,4 @@
-Application.$controller("TestPage1PageController", ["$scope", function ($scope) {
+Application.$controller("RoleManagementPageController", ["$scope", function ($scope) {
     "use strict";
 
     /* perform any action with the variables inside this block(on-page-load) */
@@ -18,20 +18,3 @@ Application.$controller("TestPage1PageController", ["$scope", function ($scope) 
     };
 
 }]);
-
-
-
-
-Application.$controller("MenusGrid2Controller", ["$scope",
-	function($scope) {
-		"use strict";
-		$scope.ctrlScope = $scope;
-	}
-]);
-
-Application.$controller("MenusLiveform1Controller", ["$scope",
-	function($scope) {
-		"use strict";
-		$scope.ctrlScope = $scope;
-	}
-]);

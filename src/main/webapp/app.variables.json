@@ -50,6 +50,16 @@
     "pageName" : "Main",
     "pageTransitions" : "none"
   },
+  "goToPage_RoleManagement" : {
+    "_id" : "wm-goToPage_RoleManagement-wm.NavigationVariable-1452704886062",
+    "name" : "goToPage_RoleManagement",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "RoleManagement",
+    "pageTransitions" : "none"
+  },
   "goToPage_Settings" : {
     "_id" : "wm-goToPage_Settings-wm.NavigationVariable-1452530558917",
     "name" : "goToPage_Settings",
@@ -58,36 +68,6 @@
     "dataBinding" : [ ],
     "operation" : "gotoPage",
     "pageName" : "Settings",
-    "pageTransitions" : "none"
-  },
-  "goToPage_TestPage1" : {
-    "_id" : "wm-goToPage_TestPage1-wm.NavigationVariable-1452686844949",
-    "name" : "goToPage_TestPage1",
-    "owner" : "App",
-    "category" : "wm.NavigationVariable",
-    "dataBinding" : [ ],
-    "operation" : "gotoPage",
-    "pageName" : "TestPage1",
-    "pageTransitions" : "none"
-  },
-  "goToPage_TestPage2" : {
-    "_id" : "wm-goToPage_TestPage2-wm.NavigationVariable-1452686866873",
-    "name" : "goToPage_TestPage2",
-    "owner" : "App",
-    "category" : "wm.NavigationVariable",
-    "dataBinding" : [ ],
-    "operation" : "gotoPage",
-    "pageName" : "TestPage2",
-    "pageTransitions" : "none"
-  },
-  "goToPage_TestPage3" : {
-    "_id" : "wm-goToPage_TestPage3-wm.NavigationVariable-1452686891533",
-    "name" : "goToPage_TestPage3",
-    "owner" : "App",
-    "category" : "wm.NavigationVariable",
-    "dataBinding" : [ ],
-    "operation" : "gotoPage",
-    "pageName" : "TestPage3",
     "pageTransitions" : "none"
   },
   "goToPage_UserManagement" : {

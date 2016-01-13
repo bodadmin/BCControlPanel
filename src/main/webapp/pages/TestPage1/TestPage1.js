@@ -20,7 +20,16 @@ Application.$controller("TestPage1PageController", ["$scope", function ($scope) 
 }]);
 
 
-Application.$controller("grid1Controller", ["$scope",
+
+
+Application.$controller("MenusGrid2Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
+
+Application.$controller("MenusLiveform1Controller", ["$scope",
 	function($scope) {
 		"use strict";
 		$scope.ctrlScope = $scope;

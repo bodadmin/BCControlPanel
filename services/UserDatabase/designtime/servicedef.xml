@@ -9,6 +9,7 @@
         </dataobject>
         <dataobject javaType="com.bccontrolpanel.userdatabase.Menus">
             <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="menuItemIcon" typeRef="java.lang.String" allowNull="true"/>
             <element name="menuItemName" typeRef="java.lang.String" allowNull="true"/>
             <element name="menuId" typeRef="java.lang.Integer" allowNull="true"/>
             <element name="menuItemLink" typeRef="java.lang.String" allowNull="true"/>

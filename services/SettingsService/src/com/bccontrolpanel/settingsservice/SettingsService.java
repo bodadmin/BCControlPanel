@@ -103,13 +103,6 @@ public class SettingsService {
             output.close(); 
         }       
     } 
-    
-    public class Struct {
-        
-        String var1;
-        String var2; 
-    }
-    
         
     public List openFile(String filename) throws IOException  {
      

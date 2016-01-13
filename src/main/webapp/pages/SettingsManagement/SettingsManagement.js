@@ -1,4 +1,4 @@
-Application.$controller("UserManagementPageController", ["$scope", function ($scope) {
+Application.$controller("SettingsManagementPageController", ["$scope", function ($scope) {
     "use strict";
 
     /* perform any action with the variables inside this block(on-page-load) */
@@ -19,15 +19,6 @@ Application.$controller("UserManagementPageController", ["$scope", function ($sc
 
 }]);
 
-
-
-
-Application.$controller("liveform1Controller", ["$scope",
-	function($scope) {
-		"use strict";
-		$scope.ctrlScope = $scope;
-	}
-]);
 
 Application.$controller("grid1Controller", ["$scope",
 	function($scope) {

@@ -2,7 +2,14 @@
     <wm-header content="header" name="header1"></wm-header>
     <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav>
     <wm-content name="content1">
-        <wm-page-content columnwidth="12" name="page_content1"></wm-page-content>
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-grid name="grid1" dataset="bind:Variables.BCdataUsersData.dataSet" readonlygrid="false" insertrow="true" updaterow="true" deleterow="true">
+                <wm-grid-column binding="id" caption="Id" identity="" pcdisplay="true" mobiledisplay="true" integer="" readonly="false" primary-key="true"></wm-grid-column>
+                <wm-grid-column binding="userrname" caption="Userrname" assigned="" pcdisplay="true" mobiledisplay="true" string="" readonly="false"></wm-grid-column>
+                <wm-grid-column binding="password" caption="Password" assigned="" pcdisplay="true" mobiledisplay="true" string="" readonly="false"></wm-grid-column>
+                <wm-grid-column binding="role" caption="Role" assigned="" pcdisplay="true" mobiledisplay="true" string="" readonly="false"></wm-grid-column>
+            </wm-grid>
+        </wm-page-content>
     </wm-content>
     <wm-footer content="footer" name="footer1"></wm-footer>
 </wm-page>

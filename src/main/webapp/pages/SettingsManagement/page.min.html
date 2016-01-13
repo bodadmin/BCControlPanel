@@ -1,8 +1,8 @@
-<style id="RoleManagement.css">
+<style id="SettingsManagement.css">
 
 </style>
-<script id="RoleManagement.js">
-Application.$controller("RoleManagementPageController", ["$scope", function ($scope) {
+<script id="SettingsManagement.js">
+Application.$controller("SettingsManagementPageController", ["$scope", function ($scope) {
     "use strict";
 
     /* perform any action with the variables inside this block(on-page-load) */
@@ -31,18 +31,20 @@ Application.$controller("grid1Controller", ["$scope",
 	}
 ]);
 </script>
-<script id="RoleManagement.variables.json">
-var _RoleManagementPage_Variables_ ={};
+<script id="SettingsManagement.variables.json">
+var _SettingsManagementPage_Variables_ ={};
 </script>
-<script id="RoleManagement.html" type="text/ng-template">
-<wm-page name="page1" data-ng-controller="RoleManagementPageController" pagetitle="Role Management">
+<script id="SettingsManagement.html" type="text/ng-template">
+<wm-page name="page1" data-ng-controller="SettingsManagementPageController" pagetitle="Settings Management">
     <wm-header name="header1" content="header"></wm-header>
     <wm-top-nav name="top_nav1" content="topnav"></wm-top-nav>
     <wm-content name="content1">
         <wm-page-content name="page_content1" columnwidth="12">
-            <wm-grid name="grid1" dataset="bind:Variables.BCdataRoleData.dataSet" readonlygrid="false" insertrow="true" updaterow="true" deleterow="true">
+            <wm-grid name="grid1" dataset="bind:Variables.BCdataMenuSettingsData.dataSet" readonlygrid="false" insertrow="true" updaterow="true" deleterow="true">
                 <wm-grid-column binding="id" caption="Id" identity="" pcdisplay="true" mobiledisplay="true" integer="" readonly="false" primary-key="true"></wm-grid-column>
-                <wm-grid-column binding="role" caption="Role" assigned="" pcdisplay="true" mobiledisplay="true" string="" readonly="false"></wm-grid-column>
+                <wm-grid-column binding="menuItemLabel" caption="Menu Item Label" assigned="" pcdisplay="true" mobiledisplay="true" string="" readonly="false"></wm-grid-column>
+                <wm-grid-column binding="menuItemLink" caption="Menu Item Link" assigned="" pcdisplay="true" mobiledisplay="true" string="" readonly="false"></wm-grid-column>
+                <wm-grid-column binding="menuItemIcon" caption="Menu Item Icon" assigned="" pcdisplay="true" mobiledisplay="true" string="" readonly="false"></wm-grid-column>
             </wm-grid>
         </wm-page-content>
     </wm-content>

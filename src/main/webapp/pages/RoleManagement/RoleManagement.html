@@ -1,9 +1,13 @@
-<wm-page data-ng-controller="RoleManagementPageController" pagetitle="Role Management"> 
-    <wm-header content="header"></wm-header> 
-    <wm-top-nav content="topnav"></wm-top-nav> 
-    <wm-content> 
-        <wm-page-content columnwidth="12"> 
-        </wm-page-content> 
-    </wm-content> 
-    <wm-footer content="footer"></wm-footer> 
+<wm-page name="page1" data-ng-controller="RoleManagementPageController" pagetitle="Role Management">
+    <wm-header name="header1" content="header"></wm-header>
+    <wm-top-nav name="top_nav1" content="topnav"></wm-top-nav>
+    <wm-content name="content1">
+        <wm-page-content name="page_content1" columnwidth="12">
+            <wm-grid name="grid1" dataset="bind:Variables.BCdataRoleData.dataSet" readonlygrid="false" insertrow="true" updaterow="true" deleterow="true">
+                <wm-grid-column binding="id" caption="Id" identity="" pcdisplay="true" mobiledisplay="true" integer="" readonly="false" primary-key="true"></wm-grid-column>
+                <wm-grid-column binding="role" caption="Role" assigned="" pcdisplay="true" mobiledisplay="true" string="" readonly="false"></wm-grid-column>
+            </wm-grid>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer name="footer1" content="footer"></wm-footer>
 </wm-page>

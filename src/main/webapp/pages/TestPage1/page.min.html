@@ -1,0 +1,40 @@
+<style id="TestPage1.css">
+
+</style>
+<script id="TestPage1.js">
+Application.$controller("TestPage1PageController", ["$scope", function ($scope) {
+    "use strict";
+
+    /* perform any action with the variables inside this block(on-page-load) */
+    $scope.onPageVariablesReady = function () {
+        /*
+         * variables can be accessed through '$scope.Variables' property here
+         * e.g. $scope.Variables.staticVariable1.getData()
+         */
+    };
+    
+    /* perform any action with widgets inside this block */
+    $scope.onPageReady = function () {
+        /*
+         * widgets can be accessed through '$scope.Widgets' property here
+         * e.g. $scope.Widgets.byId(), $scope.Widgets.byName()or access widgets by $scope.Widgets.widgetName
+         */
+    };
+
+}]);
+
+</script>
+<script id="TestPage1.variables.json">
+var _TestPage1Page_Variables_ ={};
+</script>
+<script id="TestPage1.html" type="text/ng-template">
+<wm-page data-ng-controller="TestPage1PageController" pagetitle="Test Page 1"> 
+    <wm-header content="header"></wm-header> 
+    <wm-top-nav content="topnav"></wm-top-nav> 
+    <wm-content> 
+        <wm-page-content columnwidth="12"> 
+        </wm-page-content> 
+    </wm-content> 
+    <wm-footer content="footer"></wm-footer> 
+</wm-page>
+</script>

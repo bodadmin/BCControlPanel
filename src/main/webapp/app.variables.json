@@ -60,6 +60,36 @@
     "pageName" : "Settings",
     "pageTransitions" : "none"
   },
+  "goToPage_TestPage1" : {
+    "_id" : "wm-goToPage_TestPage1-wm.NavigationVariable-1452686844949",
+    "name" : "goToPage_TestPage1",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "TestPage1",
+    "pageTransitions" : "none"
+  },
+  "goToPage_TestPage2" : {
+    "_id" : "wm-goToPage_TestPage2-wm.NavigationVariable-1452686866873",
+    "name" : "goToPage_TestPage2",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "TestPage2",
+    "pageTransitions" : "none"
+  },
+  "goToPage_TestPage3" : {
+    "_id" : "wm-goToPage_TestPage3-wm.NavigationVariable-1452686891533",
+    "name" : "goToPage_TestPage3",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "TestPage3",
+    "pageTransitions" : "none"
+  },
   "goToPage_UserManagement" : {
     "_id" : "wm-goToPage_UserManagement-wm.NavigationVariable-1452532769225",
     "name" : "goToPage_UserManagement",
@@ -264,7 +294,7 @@
     "firstRow" : 0,
     "maxResults" : 20,
     "designMaxResults" : 10,
-    "startUpdate" : true,
+    "startUpdate" : false,
     "autoUpdate" : true,
     "inFlightBehavior" : "executeLast",
     "transformationRequired" : false,
@@ -329,7 +359,7 @@
       "primaryFields" : [ "id" ]
     },
     "isDefault" : true,
-    "bindCount" : 1,
+    "bindCount" : 0,
     "tableName" : "MENUS",
     "tableType" : "TABLE",
     "dbSystem" : "MySQL",

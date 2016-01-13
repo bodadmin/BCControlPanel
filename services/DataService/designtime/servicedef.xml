@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="DataService" class="com.bccontrolpanel.dataservice.DataService" type="JavaService" springFile="DataService.spring.xml">
-    <operation name="lol">
-        <return typeRef="com.bccontrolpanel.dataservice.DataService.Struct" isList="true"/>
-    </operation>
-    <dataobjects>
-        <dataobject javaType="com.bccontrolpanel.dataservice.DataService.Struct" name="Struct" supportsQuickData="false"/>
-    </dataobjects>
-</service>

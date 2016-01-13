@@ -32,6 +32,13 @@ Application.$controller("SettingsPageController", ["$scope", function($scope) {
     };
 
 }]);
+
+Application.$controller("grid1Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
 </script>
 <script id="Settings.variables.json">
 var _SettingsPage_Variables_ ={ }
@@ -51,6 +58,16 @@ var _SettingsPage_Variables_ ={ }
                 </wm-composite>
             </wm-container>
             <wm-message name="message1" width="500" caption="File Saved!" show="false"></wm-message>
+            <wm-grid readonlygrid="true" dataset="bind:Variables.SettingsServiceOpenFile.dataSet" name="grid1">
+                <wm-grid-column caption="Column1" pcdisplay="true" mobiledisplay="true" readonly="undefined"></wm-grid-column>
+                <wm-grid-column caption="Column2" pcdisplay="true" mobiledisplay="true" readonly="undefined"></wm-grid-column>
+                <wm-grid-column caption="Column3" pcdisplay="true" mobiledisplay="true" readonly="undefined"></wm-grid-column>
+                <wm-grid-column caption="Column4" pcdisplay="true" mobiledisplay="true" readonly="undefined"></wm-grid-column>
+                <wm-grid-column caption="Column5" pcdisplay="true" mobiledisplay="true" readonly="undefined"></wm-grid-column>
+            </wm-grid>
+            <wm-livelist listclass="list-group" itemclass="list-group-item" dataset="bind:Variables.SettingsServiceOpenFile.dataSet" name="livelist1">
+                <wm-listtemplate layout="blank" name="listtemplate1"></wm-listtemplate>
+            </wm-livelist>
         </wm-page-content>
     </wm-content>
     <wm-footer content="footer" name="footer1"></wm-footer>

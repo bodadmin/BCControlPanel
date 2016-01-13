@@ -1,5 +1,5 @@
 /*Copyright (c) 2016-2017 Business on Demand Ltd. All Rights Reserved. This software is the confidential and proprietary information of Business on Demand Ltd. You shall not disclose such Confidential Information and shall use it only in accordance 
- with the terms of the source code license agreement you entered into with Business on Demand Ltd.*/
+ with the terms of the source code license agreement you entered into with Business on Demand Ltd.*/   
 
 package com.bccontrolpanel.settingsservice; 
 
@@ -100,7 +100,7 @@ public class SettingsService {
         try {
             output.append(contents);
         } finally {
-            output.close();
+            output.close(); 
         }       
     } 
     
@@ -124,10 +124,14 @@ public class SettingsService {
         while ((line = reader.readLine()) != null) {  
             String match = "=";
             int index = line.indexOf(match);
-            int length = line.length(); 
+            int length = line.length();
+            String var1 = line.substring(0, index);
+            String var2 = line.substring(index + 1, length);
+            settings.add(var1);
+            settings.add(var2);
         }
-        reader.close();
-        return settings;
+        reader.close(); 
+        return settings; 
     }
 
     

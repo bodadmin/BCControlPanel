@@ -224,61 +224,30 @@
     "controller" : "Settings"
   },
   "SettingsServiceOpenFile" : {
-    "_id" : "wm-SettingsServiceOpenFile-wm.ServiceVariable-1452678202736",
+    "_id" : "wm-SettingsServiceOpenFile-wm.ServiceVariable-1452702760619",
     "name" : "SettingsServiceOpenFile",
     "owner" : "App",
     "category" : "wm.ServiceVariable",
-    "type" : "file",
+    "type" : "java.util.List",
     "service" : "SettingsService",
     "operation" : "openFile",
+    "operationType" : "get",
     "serviceType" : "JavaService",
     "wmServiceOperationInfo" : {
       "relativePath" : "/settings/openFile",
       "httpMethod" : "get",
       "name" : "openFile",
-      "produces" : [ "application/json" ],
       "parameters" : [ {
         "name" : "filename",
         "parameterType" : "query",
         "type" : "string"
       } ]
     },
-    "dataBinding" : [ ],
-    "dataSet" : {
-      "dataValue" : ""
-    },
-    "isList" : false,
-    "firstRow" : 0,
-    "maxResults" : 20,
-    "designMaxResults" : 10,
-    "startUpdate" : false,
-    "autoUpdate" : true,
-    "inFlightBehavior" : "executeLast",
-    "transformationRequired" : false,
-    "saveInPhonegap" : false,
-    "isDefault" : true
-  },
-  "SettingsServiceSubString" : {
-    "_id" : "wm-SettingsServiceSubString-wm.ServiceVariable-1452685850204",
-    "name" : "SettingsServiceSubString",
-    "owner" : "App",
-    "category" : "wm.ServiceVariable",
-    "type" : "Object",
-    "service" : "SettingsService",
-    "operation" : "subString",
-    "operationType" : "get",
-    "serviceType" : "JavaService",
-    "wmServiceOperationInfo" : {
-      "relativePath" : "/settings/subString",
-      "httpMethod" : "get",
-      "name" : "subString",
-      "parameters" : [ {
-        "name" : "str",
-        "parameterType" : "query",
-        "type" : "string"
-      } ]
-    },
-    "dataBinding" : [ ],
+    "dataBinding" : [ {
+      "target" : "filename",
+      "type" : "string",
+      "value" : "bind:Widgets.select3.datavalue"
+    } ],
     "dataSet" : {
       "dataValue" : ""
     },

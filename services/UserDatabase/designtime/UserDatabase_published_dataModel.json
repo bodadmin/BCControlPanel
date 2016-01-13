@@ -214,6 +214,23 @@
       "primaryKey" : false,
       "foreignKey" : false,
       "unique" : false
+    }, {
+      "name" : "MenuItemIcon",
+      "oldName" : "MenuItemIcon",
+      "fieldName" : "menuItemIcon",
+      "sqlType" : "string",
+      "hibernateType" : "string",
+      "length" : 255,
+      "precision" : 19,
+      "nullable" : true,
+      "defaultValue" : null,
+      "generator" : "assigned",
+      "sequenceName" : null,
+      "partOfAnyRelation" : false,
+      "partOfPrimaryKey" : false,
+      "primaryKey" : false,
+      "foreignKey" : false,
+      "unique" : false
     } ],
     "primaryKey" : {
       "name" : "PRIMARY",

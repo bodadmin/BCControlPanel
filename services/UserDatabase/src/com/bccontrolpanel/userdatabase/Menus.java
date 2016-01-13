@@ -37,6 +37,7 @@ public class Menus  implements java.io.Serializable {
     private Integer menuId;
     private String menuItemName;
     private String menuItemLink;
+    private String menuItemIcon;
 
     public Menus() {
     }
@@ -85,6 +86,17 @@ public class Menus  implements java.io.Serializable {
     
     public void setMenuItemLink(String menuItemLink) {
         this.menuItemLink = menuItemLink;
+    }
+
+    
+
+    @Column(name="`MenuItemIcon`")
+    public String getMenuItemIcon() {
+        return this.menuItemIcon;
+    }
+    
+    public void setMenuItemIcon(String menuItemIcon) {
+        this.menuItemIcon = menuItemIcon;
     }
 
 

@@ -22,7 +22,7 @@
       <column name="`USERNAME`" length="255" not-null="true" precision="19"/>
     </property>
     <property name="role" type="integer">
-      <column name="`ROLE`" length="255" not-null="true" precision="19" default="'0'"/>
+      <column name="`ROLE`" length="255" not-null="true" precision="19"/>
     </property>
   </class>
   <class table="`MENUS`" name="com.bccontrolpanel.userdatabase.Menus" entity-name="com.bccontrolpanel.userdatabase.Menus" schema="UserDatabase">

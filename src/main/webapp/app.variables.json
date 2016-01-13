@@ -360,7 +360,7 @@
     "firstRow" : 0,
     "maxResults" : 20,
     "designMaxResults" : 10,
-    "startUpdate" : false,
+    "startUpdate" : true,
     "autoUpdate" : true,
     "inFlightBehavior" : "executeLast",
     "transformationRequired" : false,
@@ -425,14 +425,14 @@
       "primaryFields" : [ "id" ]
     },
     "isDefault" : true,
-    "bindCount" : 0,
+    "bindCount" : 1,
     "tableName" : "MENUS",
     "tableType" : "TABLE",
     "dbSystem" : "MySQL",
     "package" : "com.bccontrolpanel.userdatabase.Menus"
   },
   "UserDatabaseRolesData" : {
-    "_id" : "wm-UserDatabaseRolesData-wm.LiveVariable-1452608682212",
+    "_id" : "wm-UserDatabaseRolesData-wm.LiveVariable-1452687857504",
     "name" : "UserDatabaseRolesData",
     "owner" : "App",
     "category" : "wm.LiveVariable",
@@ -466,8 +466,7 @@
         "length" : 255,
         "precision" : 19,
         "generator" : "identity",
-        "isRelated" : false,
-        "defaultValue" : ""
+        "isRelated" : false
       }, {
         "fieldName" : "roleDescription",
         "type" : "string",
@@ -493,7 +492,7 @@
     "package" : "com.bccontrolpanel.userdatabase.Roles"
   },
   "UserDatabaseUsersData" : {
-    "_id" : "wm-UserDatabaseUsersData-wm.LiveVariable-1452531736413",
+    "_id" : "wm-UserDatabaseUsersData-wm.LiveVariable-1452687857508",
     "name" : "UserDatabaseUsersData",
     "owner" : "App",
     "category" : "wm.LiveVariable",
@@ -508,7 +507,7 @@
     "firstRow" : 0,
     "maxResults" : 20,
     "designMaxResults" : 10,
-    "startUpdate" : true,
+    "startUpdate" : false,
     "autoUpdate" : true,
     "inFlightBehavior" : "executeLast",
     "transformationRequired" : false,
@@ -527,8 +526,7 @@
         "length" : 255,
         "precision" : 19,
         "generator" : "identity",
-        "isRelated" : false,
-        "defaultValue" : ""
+        "isRelated" : false
       }, {
         "fieldName" : "password",
         "type" : "string",
@@ -564,8 +562,7 @@
         "length" : 255,
         "precision" : 19,
         "generator" : "assigned",
-        "isRelated" : false,
-        "defaultValue" : "0"
+        "isRelated" : false
       } ],
       "entityName" : "Users",
       "fullyQualifiedName" : "com.bccontrolpanel.userdatabase.Users",
@@ -573,7 +570,6 @@
       "primaryFields" : [ "id" ]
     },
     "isDefault" : true,
-    "bindCount" : 1,
     "tableName" : "USERS",
     "tableType" : "TABLE",
     "dbSystem" : "MySQL",

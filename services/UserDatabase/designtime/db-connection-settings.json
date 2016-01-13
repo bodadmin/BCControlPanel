@@ -1,7 +1,7 @@
 {
   "username" : "{WM_CLOUD_MYSQL_USER_NAME}",
   "password" : "{WM_CLOUD_MYSQL_PASSWORD}",
-  "url" : "jdbc:mysql://{WM_CLOUD_MYSQL_HOST}/UserDatabase?useUnicode=yes&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&createDatabaseIfNotExist=true",
+  "url" : "jdbc:mysql://{WM_CLOUD_MYSQL_HOST}/UserDatabase?useUnicode=yes&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull",
   "driverClass" : "com.mysql.jdbc.Driver",
   "dialect" : "com.wavemaker.runtime.data.dialect.MySQLDialect",
   "serviceId" : "UserDatabase",
@@ -10,7 +10,7 @@
   "host" : "{WM_CLOUD_MYSQL_HOST}",
   "dbName" : "UserDatabase",
   "port" : "3306",
-  "tableFilter" : ".*",
+  "tableFilter" : "MENUS,ROLES,USERS",
   "schemaName" : "UserDatabase",
   "schemaFilter" : ".*",
   "revengNamingStrategyClassName" : "com.wavemaker.studio.core.data.hibernate.reveng.MySQLRevengNamingStrategy",

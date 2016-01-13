@@ -73,16 +73,16 @@
     </security:authentication-manager>
     <bean class="com.wavemaker.runtime.security.EnhancedJdbcDaoImpl" id="jdbcDaoImpl">
         <property name="dataSource">
-            <ref bean="UserDatabaseDataSource"/>
+            <ref bean="BCdataDataSource"/>
         </property>
         <property name="rolePrefix">
             <value>ROLE_</value>
         </property>
         <property name="usersByUsernameQuery">
-            <value>SELECT ID, PASSWORD, 1, USERNAME FROM USERS WHERE USERNAME = ?</value>
+            <value>SELECT ID, PASSWORD, 1, USERRNAME FROM users WHERE USERRNAME = ?</value>
         </property>
         <property name="authoritiesByUsernameQuery">
-            <value>SELECT ID, ROLE FROM USERS WHERE USERNAME = ?</value>
+            <value>SELECT ID, ROLE FROM users WHERE USERRNAME = ?</value>
         </property>
         <property name="usernameBasedPrimaryKey">
             <value>true</value>

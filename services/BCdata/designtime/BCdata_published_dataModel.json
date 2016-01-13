@@ -1,0 +1,7 @@
+{
+  "name" : "BCdata",
+  "description" : "BCdata",
+  "packageName" : "com.bccontrolpanel.bcdata",
+  "draft" : false,
+  "tables" : [ ]
+}

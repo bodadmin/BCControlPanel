@@ -419,6 +419,18 @@
         "precision" : 19,
         "generator" : "assigned",
         "isRelated" : false
+      }, {
+        "fieldName" : "menuItemIcon",
+        "type" : "string",
+        "hibernateType" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "MenuItemIcon",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 255,
+        "precision" : 19,
+        "generator" : "assigned",
+        "isRelated" : false
       } ],
       "entityName" : "Menus",
       "fullyQualifiedName" : "com.bccontrolpanel.userdatabase.Menus",

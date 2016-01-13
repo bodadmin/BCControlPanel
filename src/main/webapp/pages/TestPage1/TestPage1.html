@@ -1,10 +1,17 @@
 <wm-page name="page1" data-ng-controller="TestPage1PageController" pagetitle="Test Page 1">
-    <wm-header name="header1" content="header"></wm-header>
-    <wm-top-nav name="top_nav1" content="topnav"></wm-top-nav>
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav>
     <wm-content name="content1">
         <wm-page-content name="page_content1" columnwidth="12">
             <wm-html name="html1">Test Page 1</wm-html>
+            <wm-grid name="grid1" dataset="bind:Variables.UserDatabaseMenusData.dataSet" readonlygrid="false" deleterow="true" updaterow="true" insertrow="true">
+                <wm-grid-column readonly="false" caption="Id" primary-key="true" integer="" mobiledisplay="true" pcdisplay="true" identity="" binding="id"></wm-grid-column>
+                <wm-grid-column readonly="false" caption="Menu Id" integer="" mobiledisplay="true" pcdisplay="true" binding="menuId" assigned=""></wm-grid-column>
+                <wm-grid-column readonly="false" caption="Menu Item Name" string="" mobiledisplay="true" pcdisplay="true" binding="menuItemName" assigned=""></wm-grid-column>
+                <wm-grid-column readonly="false" caption="Menu Item Link" string="" mobiledisplay="true" pcdisplay="true" binding="menuItemLink" assigned=""></wm-grid-column>
+                <wm-grid-column readonly="false" caption="Menu Item Icon" string="" mobiledisplay="true" pcdisplay="true" binding="menuItemIcon" assigned=""></wm-grid-column>
+            </wm-grid>
         </wm-page-content>
     </wm-content>
-    <wm-footer name="footer1" content="footer"></wm-footer>
+    <wm-footer content="footer" name="footer1"></wm-footer>
 </wm-page>

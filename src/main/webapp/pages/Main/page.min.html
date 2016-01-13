@@ -28,99 +28,99 @@ Application.$controller("MainPageController", ["$scope", function ($scope) {
 var _MainPage_Variables_ ={ }
 </script>
 <script id="Main.html" type="text/ng-template">
-<wm-page data-ng-controller="MainPageController" pagetitle="Main" name="page1">
+<wm-page name="page1" data-ng-controller="MainPageController" pagetitle="Main">
     <wm-header content="header" name="header1"></wm-header>
     <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav>
     <wm-content name="content1">
-        <wm-page-content columnwidth="12" name="page_content1">
-            <wm-gridrow borderunit="px" paddingbottom="1" paddingunit="em" name="gridrow1">
-                <wm-gridcolumn paddingunit="em" paddingright=".5" paddingleft=".5" columnwidth="3" paddingtop=".5" paddingbottom=".5" name="gridcolumn1">
-                    <wm-tile bordertop="1" borderleft="1" borderright="1" borderbottom="1" borderunit="px" paddingleft="1" paddingright="1" paddingunit="em" paddingtop="1" paddingbottom="1" backgroundcolor="#aeeae2" name="tile1">
-                        <wm-layoutgrid opacity="1" marginunit="em" paddingunit="em" name="layoutgrid1">
-                            <wm-gridrow opacity="1" name="gridrow2">
-                                <wm-gridcolumn opacity="0.7" columnwidth="8" class="col-xs-8" name="gridcolumn2">
-                                    <wm-label paddingunit="em" width="100%" caption="File Count" class="text-uppercase h5" marginbottom="0" marginunit="em" margintop="0" name="label1"></wm-label>
-                                    <wm-label paddingunit="em" width="100%" caption="bind:Variables.SettingsServiceCountFiles.dataSet.value" class="h3" name="label2"></wm-label>
+        <wm-page-content name="page_content1" columnwidth="12">
+            <wm-gridrow name="gridrow1" paddingunit="em" paddingbottom="1" borderunit="px">
+                <wm-gridcolumn name="gridcolumn1" columnwidth="3" paddingunit="em" paddingbottom=".5" paddingtop=".5" paddingleft=".5" paddingright=".5">
+                    <wm-tile name="tile1" paddingunit="em" paddingbottom="1" borderunit="px" paddingtop="1" paddingleft="1" paddingright="1" backgroundcolor="#aeeae2" borderbottom="1" borderright="1" borderleft="1" bordertop="1" on-Click="goToPage_TestPage1">
+                        <wm-layoutgrid name="layoutgrid1" paddingunit="em" marginunit="em" opacity="1">
+                            <wm-gridrow name="gridrow2" opacity="1">
+                                <wm-gridcolumn class="col-xs-8" name="gridcolumn2" columnwidth="8" opacity="0.7">
+                                    <wm-label class="text-uppercase h5" name="label1" caption="File Count" width="100%" paddingunit="em" marginunit="em" margintop="0" marginbottom="0"></wm-label>
+                                    <wm-label class="h3" name="label2" caption="bind:Variables.SettingsServiceCountFiles.dataSet.value" width="100%" paddingunit="em"></wm-label>
                                 </wm-gridcolumn>
-                                <wm-gridcolumn opacity="0.7" paddingunit="em" paddingright=".5" fontunit="em" fontsize="3.5" columnwidth="4" class="col-xs-4" name="gridcolumn3">
-                                    <wm-icon showindevice="all" iconclass="glyphicon glyphicon-globe" class="pull-right" name="icon1"></wm-icon>
-                                </wm-gridcolumn>
-                            </wm-gridrow>
-                            <wm-gridrow opacity="1" name="gridrow3">
-                                <wm-gridcolumn opacity="1" columnwidth="12" name="gridcolumn4">
-                                    <wm-progress opacity="1" width="100%" height="4" type="info" name="progress1"></wm-progress>
-                                </wm-gridcolumn>
-                                <wm-gridcolumn opacity="0.6" columnwidth="12" name="gridcolumn5">
-                                    <wm-label paddingbottom="1" paddingunit="em" fontunit="em" fontsize="1" caption="Compared last week (70.1%)" class="h5" marginbottom="0" marginunit="em" name="label3"></wm-label>
+                                <wm-gridcolumn class="col-xs-4" name="gridcolumn3" columnwidth="4" paddingunit="em" paddingright=".5" opacity="0.7" fontsize="3.5" fontunit="em">
+                                    <wm-icon class="pull-right" name="icon1" iconclass="glyphicon glyphicon-globe" showindevice="all"></wm-icon>
                                 </wm-gridcolumn>
                             </wm-gridrow>
-                        </wm-layoutgrid>
-                    </wm-tile>
-                </wm-gridcolumn>
-                <wm-gridcolumn paddingunit="em" paddingright=".5" paddingleft=".5" columnwidth="3" paddingtop=".5" paddingbottom=".5" name="gridcolumn6">
-                    <wm-tile bordertop="1" borderleft="1" borderright="1" borderbottom="1" borderunit="px" paddingleft="1" paddingright="1" paddingunit="em" paddingtop="1" paddingbottom="1" backgroundcolor="#aed5ea" name="tile2">
-                        <wm-layoutgrid opacity="1" marginunit="em" paddingunit="em" name="layoutgrid2">
-                            <wm-gridrow opacity="1" name="gridrow4">
-                                <wm-gridcolumn opacity="0.7" columnwidth="8" class="col-xs-8" name="gridcolumn7">
-                                    <wm-label paddingunit="em" width="100%" caption="Unique Visits" class="text-uppercase h5" marginbottom="0" marginunit="em" margintop="0" name="label4"></wm-label>
-                                    <wm-label paddingunit="em" width="100%" caption="bind:Variables.SettingsServiceOpenFile.dataSet.value" class="h3" name="label5"></wm-label>
+                            <wm-gridrow name="gridrow3" opacity="1">
+                                <wm-gridcolumn name="gridcolumn4" columnwidth="12" opacity="1">
+                                    <wm-progress type="info" name="progress1" height="4" width="100%" opacity="1"></wm-progress>
                                 </wm-gridcolumn>
-                                <wm-gridcolumn opacity="0.7" paddingunit="em" paddingright=".5" fontunit="em" fontsize="3.5" columnwidth="4" class="col-xs-4" name="gridcolumn8">
-                                    <wm-icon showindevice="all" iconclass="glyphicon glyphicon-user" class="pull-right" name="icon2"></wm-icon>
-                                </wm-gridcolumn>
-                            </wm-gridrow>
-                            <wm-gridrow opacity="1" name="gridrow5">
-                                <wm-gridcolumn opacity="1" columnwidth="12" name="gridcolumn9">
-                                    <wm-progress opacity="1" width="100%" height="4" type="success" name="progress2"></wm-progress>
-                                </wm-gridcolumn>
-                                <wm-gridcolumn opacity="0.6" columnwidth="12" name="gridcolumn10">
-                                    <wm-label paddingbottom="1" paddingunit="em" fontunit="em" fontsize="1" caption="Compared last week (70.1%)" class="h5" marginbottom="0" marginunit="em" name="label6"></wm-label>
+                                <wm-gridcolumn name="gridcolumn5" columnwidth="12" opacity="0.6">
+                                    <wm-label class="h5" name="label3" caption="Compared last week (70.1%)" paddingunit="em" paddingbottom="1" marginunit="em" marginbottom="0" fontsize="1" fontunit="em"></wm-label>
                                 </wm-gridcolumn>
                             </wm-gridrow>
                         </wm-layoutgrid>
                     </wm-tile>
                 </wm-gridcolumn>
-                <wm-gridcolumn paddingunit="em" paddingright=".5" paddingleft=".5" columnwidth="3" paddingtop=".5" paddingbottom=".5" name="gridcolumn11">
-                    <wm-tile bordertop="1" borderleft="1" borderright="1" borderbottom="1" borderunit="px" paddingleft="1" paddingright="1" paddingunit="em" paddingtop="1" paddingbottom="1" backgroundcolor="#fff3bf" name="tile3">
-                        <wm-layoutgrid opacity="1" marginunit="em" paddingunit="em" name="layoutgrid3">
-                            <wm-gridrow opacity="1" name="gridrow6">
-                                <wm-gridcolumn opacity="0.7" columnwidth="8" class="col-xs-8" name="gridcolumn12">
-                                    <wm-label paddingunit="em" width="100%" caption="UpTime" class="text-uppercase h5" marginbottom="0" marginunit="em" margintop="0" name="label7"></wm-label>
-                                    <wm-label paddingunit="em" width="100%" caption="bind:Variables.SettingsServiceSubString.dataSet.value" class="h3" name="label8"></wm-label>
+                <wm-gridcolumn name="gridcolumn6" columnwidth="3" paddingunit="em" paddingbottom=".5" paddingtop=".5" paddingleft=".5" paddingright=".5">
+                    <wm-tile name="tile2" paddingunit="em" paddingbottom="1" borderunit="px" paddingtop="1" paddingleft="1" paddingright="1" backgroundcolor="#aed5ea" borderbottom="1" borderright="1" borderleft="1" bordertop="1">
+                        <wm-layoutgrid name="layoutgrid2" paddingunit="em" marginunit="em" opacity="1">
+                            <wm-gridrow name="gridrow4" opacity="1">
+                                <wm-gridcolumn class="col-xs-8" name="gridcolumn7" columnwidth="8" opacity="0.7">
+                                    <wm-label class="text-uppercase h5" name="label4" caption="Unique Visits" width="100%" paddingunit="em" marginunit="em" margintop="0" marginbottom="0"></wm-label>
+                                    <wm-label class="h3" name="label5" caption="bind:Variables.SettingsServiceOpenFile.dataSet.value" width="100%" paddingunit="em"></wm-label>
                                 </wm-gridcolumn>
-                                <wm-gridcolumn opacity="0.7" paddingunit="em" paddingright=".5" fontunit="em" fontsize="3.5" columnwidth="4" class="col-xs-4" name="gridcolumn13">
-                                    <wm-icon showindevice="all" iconclass="glyphicon glyphicon-cloud" class="pull-right" name="icon3"></wm-icon>
+                                <wm-gridcolumn class="col-xs-4" name="gridcolumn8" columnwidth="4" paddingunit="em" paddingright=".5" opacity="0.7" fontsize="3.5" fontunit="em">
+                                    <wm-icon class="pull-right" name="icon2" iconclass="glyphicon glyphicon-user" showindevice="all"></wm-icon>
                                 </wm-gridcolumn>
                             </wm-gridrow>
-                            <wm-gridrow opacity="1" name="gridrow7">
-                                <wm-gridcolumn opacity="1" columnwidth="12" name="gridcolumn14">
-                                    <wm-progress opacity="1" width="100%" height="4" datavalue="99" type="warning" name="progress3"></wm-progress>
+                            <wm-gridrow name="gridrow5" opacity="1">
+                                <wm-gridcolumn name="gridcolumn9" columnwidth="12" opacity="1">
+                                    <wm-progress type="success" name="progress2" height="4" width="100%" opacity="1"></wm-progress>
                                 </wm-gridcolumn>
-                                <wm-gridcolumn opacity="0.6" columnwidth="12" name="gridcolumn15">
-                                    <wm-label paddingbottom="1" paddingunit="em" fontunit="em" fontsize="1" caption="Compared last week (.1%)" class="h5" marginbottom="0" marginunit="em" name="label9"></wm-label>
+                                <wm-gridcolumn name="gridcolumn10" columnwidth="12" opacity="0.6">
+                                    <wm-label class="h5" name="label6" caption="Compared last week (70.1%)" paddingunit="em" paddingbottom="1" marginunit="em" marginbottom="0" fontsize="1" fontunit="em"></wm-label>
                                 </wm-gridcolumn>
                             </wm-gridrow>
                         </wm-layoutgrid>
                     </wm-tile>
                 </wm-gridcolumn>
-                <wm-gridcolumn paddingunit="em" paddingright=".5" paddingleft=".5" columnwidth="3" paddingtop=".5" paddingbottom=".5" name="gridcolumn16">
-                    <wm-tile bordertop="1" borderleft="1" borderright="1" borderbottom="1" borderunit="px" paddingleft="1" paddingright="1" paddingunit="em" paddingtop="1" paddingbottom="1" backgroundcolor="#d5283d" color="#fff" name="tile4">
-                        <wm-layoutgrid opacity="1" marginunit="em" paddingunit="em" name="layoutgrid4">
-                            <wm-gridrow opacity="1" name="gridrow8">
-                                <wm-gridcolumn opacity="0.7" columnwidth="8" class="col-xs-8" name="gridcolumn17">
-                                    <wm-label paddingunit="em" width="100%" caption="Attacks" class="text-uppercase h5" marginbottom="0" marginunit="em" margintop="0" name="label10"></wm-label>
-                                    <wm-label paddingunit="em" width="100%" caption="5" class="h3" name="label11"></wm-label>
+                <wm-gridcolumn name="gridcolumn11" columnwidth="3" paddingunit="em" paddingbottom=".5" paddingtop=".5" paddingleft=".5" paddingright=".5">
+                    <wm-tile name="tile3" paddingunit="em" paddingbottom="1" borderunit="px" paddingtop="1" paddingleft="1" paddingright="1" backgroundcolor="#fff3bf" borderbottom="1" borderright="1" borderleft="1" bordertop="1">
+                        <wm-layoutgrid name="layoutgrid3" paddingunit="em" marginunit="em" opacity="1">
+                            <wm-gridrow name="gridrow6" opacity="1">
+                                <wm-gridcolumn class="col-xs-8" name="gridcolumn12" columnwidth="8" opacity="0.7">
+                                    <wm-label class="text-uppercase h5" name="label7" caption="UpTime" width="100%" paddingunit="em" marginunit="em" margintop="0" marginbottom="0"></wm-label>
+                                    <wm-label class="h3" name="label8" caption="bind:Variables.SettingsServiceSubString.dataSet.value" width="100%" paddingunit="em"></wm-label>
                                 </wm-gridcolumn>
-                                <wm-gridcolumn opacity="0.7" paddingunit="em" paddingright=".5" fontunit="em" fontsize="3.5" columnwidth="4" class="col-xs-4" name="gridcolumn18">
-                                    <wm-icon showindevice="all" iconclass="glyphicon glyphicon-lock" class="pull-right" name="icon4"></wm-icon>
+                                <wm-gridcolumn class="col-xs-4" name="gridcolumn13" columnwidth="4" paddingunit="em" paddingright=".5" opacity="0.7" fontsize="3.5" fontunit="em">
+                                    <wm-icon class="pull-right" name="icon3" iconclass="glyphicon glyphicon-cloud" showindevice="all"></wm-icon>
                                 </wm-gridcolumn>
                             </wm-gridrow>
-                            <wm-gridrow opacity="1" name="gridrow9">
-                                <wm-gridcolumn opacity="1" columnwidth="12" name="gridcolumn19">
-                                    <wm-progress opacity="1" width="100%" height="4" datavalue="50" type="danger" name="progress4"></wm-progress>
+                            <wm-gridrow name="gridrow7" opacity="1">
+                                <wm-gridcolumn name="gridcolumn14" columnwidth="12" opacity="1">
+                                    <wm-progress type="warning" name="progress3" height="4" width="100%" opacity="1" datavalue="99"></wm-progress>
                                 </wm-gridcolumn>
-                                <wm-gridcolumn opacity="0.6" columnwidth="12" name="gridcolumn20">
-                                    <wm-label paddingbottom="1" paddingunit="em" fontunit="em" fontsize="1" caption="Compared last week (.1%)" class="h5" marginbottom="0" marginunit="em" name="label12"></wm-label>
+                                <wm-gridcolumn name="gridcolumn15" columnwidth="12" opacity="0.6">
+                                    <wm-label class="h5" name="label9" caption="Compared last week (.1%)" paddingunit="em" paddingbottom="1" marginunit="em" marginbottom="0" fontsize="1" fontunit="em"></wm-label>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                    </wm-tile>
+                </wm-gridcolumn>
+                <wm-gridcolumn name="gridcolumn16" columnwidth="3" paddingunit="em" paddingbottom=".5" paddingtop=".5" paddingleft=".5" paddingright=".5">
+                    <wm-tile name="tile4" color="#fff" paddingunit="em" paddingbottom="1" borderunit="px" paddingtop="1" paddingleft="1" paddingright="1" backgroundcolor="#d5283d" borderbottom="1" borderright="1" borderleft="1" bordertop="1">
+                        <wm-layoutgrid name="layoutgrid4" paddingunit="em" marginunit="em" opacity="1">
+                            <wm-gridrow name="gridrow8" opacity="1">
+                                <wm-gridcolumn class="col-xs-8" name="gridcolumn17" columnwidth="8" opacity="0.7">
+                                    <wm-label class="text-uppercase h5" name="label10" caption="Attacks" width="100%" paddingunit="em" marginunit="em" margintop="0" marginbottom="0"></wm-label>
+                                    <wm-label class="h3" name="label11" caption="5" width="100%" paddingunit="em"></wm-label>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn class="col-xs-4" name="gridcolumn18" columnwidth="4" paddingunit="em" paddingright=".5" opacity="0.7" fontsize="3.5" fontunit="em">
+                                    <wm-icon class="pull-right" name="icon4" iconclass="glyphicon glyphicon-lock" showindevice="all"></wm-icon>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow9" opacity="1">
+                                <wm-gridcolumn name="gridcolumn19" columnwidth="12" opacity="1">
+                                    <wm-progress type="danger" name="progress4" height="4" width="100%" opacity="1" datavalue="50"></wm-progress>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn name="gridcolumn20" columnwidth="12" opacity="0.6">
+                                    <wm-label class="h5" name="label12" caption="Compared last week (.1%)" paddingunit="em" paddingbottom="1" marginunit="em" marginbottom="0" fontsize="1" fontunit="em"></wm-label>
                                 </wm-gridcolumn>
                             </wm-gridrow>
                         </wm-layoutgrid>

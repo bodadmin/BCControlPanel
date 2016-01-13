@@ -137,7 +137,7 @@
       "hibernateType" : "string",
       "length" : 255,
       "precision" : 19,
-      "nullable" : true,
+      "nullable" : false,
       "defaultValue" : null,
       "generator" : "assigned",
       "sequenceName" : null,

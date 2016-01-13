@@ -4,21 +4,17 @@
             <wm-nav-item name="nav_item1">
                 <wm-anchor name="buttonHome" caption="Home" on-click="goToPage_Main" iconclass="glyphicon glyphicon-home"></wm-anchor>
             </wm-nav-item>
-            <wm-nav-item name="nav_item6"></wm-nav-item>
         </wm-nav>
         <wm-nav class="navbar-right" type="navbar" name="navRight">
-            <wm-nav-item name="nav_item2"></wm-nav-item>
-            <wm-nav-item name="nav_item3">
-                <wm-anchor name="buttonSettings" caption="Settings" on-click="goToPage_Settings" iconclass="fa fa-cog"></wm-anchor>
+            <wm-nav-item name="nav_item2">
+                <wm-menu linktarget="_self" itemlink="bind:$[data[$i].menuItemLink]" itemicon="bind:$[data[$i].menuItemIcon]" itemlabel="bind:$[data[$i].menuItemLabel]" dataset="bind:Variables.BCdataMenuSettingsData.dataSet" iconclass="fa fa-cog" type="anchor"
+                name="menuSettings" caption="Settings"></wm-menu>
             </wm-nav-item>
-            <wm-nav-item name="nav_item4">
+            <wm-nav-item name="nav_item3">
                 <wm-anchor name="buttonLogout" caption="Logout" on-click="logoutVariable" iconclass="glyphicon glyphicon-log-out"></wm-anchor>
             </wm-nav-item>
-            <wm-nav-item name="nav_item5">
+            <wm-nav-item name="nav_item4">
                 <wm-anchor name="buttonHelp" caption="Help" iconclass="glyphicon glyphicon-question-sign"></wm-anchor>
-            </wm-nav-item>
-            <wm-nav-item name="nav_item7">
-                <wm-menu itemlink="menuItemLink" itemicon="menuItemIcon" itemlabel="menuItemLabel" dataset="bind:Variables.BCdataMenuSettingsData.dataSet" iconclass="fa fa-cog" type="anchor" name="menuSettings" caption="Settings"></wm-menu>
             </wm-nav-item>
         </wm-nav>
     </wm-navbar>

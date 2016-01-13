@@ -67,7 +67,7 @@ public class MenuSettings  implements java.io.Serializable {
 
     
 
-    @Column(name="`menuItemLink`")
+    @Column(name="`menuItemLink`", nullable=false)
     public String getMenuItemLink() {
         return this.menuItemLink;
     }

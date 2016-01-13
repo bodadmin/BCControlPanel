@@ -19,6 +19,7 @@
         <security:intercept-url pattern="/index.html" access="isAuthenticated()"/>
         <security:intercept-url pattern="/j_spring_security_check" access="permitAll"/>
         <security:intercept-url pattern="/services/security/**" access="permitAll"/>
+        <security:intercept-url pattern="/**/*" requires-channel="https"/>
         <security:intercept-url pattern="/" access="isAuthenticated()"/>
         <security:intercept-url pattern="/**" access="isAuthenticated()"/>
         <security:request-cache ref="nullRequestCache"/>
@@ -62,7 +63,7 @@
     <bean class="com.wavemaker.runtime.security.WMAuthenticationFailureHandler" id="failureHandler"/>
     <bean class="com.wavemaker.runtime.security.WMSecurityConfigStore" id="WMSecurityConfigStore">
         <property name="enforceSecurity">
-            <value>false</value>
+            <value>true</value>
         </property>
         <property name="enforceIndexHtml">
             <value>true</value>

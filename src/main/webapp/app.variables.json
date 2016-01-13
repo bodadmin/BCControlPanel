@@ -224,14 +224,13 @@
     "controller" : "Settings"
   },
   "SettingsServiceOpenFile" : {
-    "_id" : "wm-SettingsServiceOpenFile-wm.ServiceVariable-1452616577618",
+    "_id" : "wm-SettingsServiceOpenFile-wm.ServiceVariable-1452678202736",
     "name" : "SettingsServiceOpenFile",
     "owner" : "App",
     "category" : "wm.ServiceVariable",
-    "type" : "string",
+    "type" : "file",
     "service" : "SettingsService",
     "operation" : "openFile",
-    "operationType" : "get",
     "serviceType" : "JavaService",
     "wmServiceOperationInfo" : {
       "relativePath" : "/settings/openFile",
@@ -244,11 +243,42 @@
         "type" : "string"
       } ]
     },
-    "dataBinding" : [ {
-      "target" : "filename",
-      "type" : "string",
-      "value" : "bind:Widgets.select3.datavalue"
-    } ],
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true
+  },
+  "SettingsServiceSubString" : {
+    "_id" : "wm-SettingsServiceSubString-wm.ServiceVariable-1452685850204",
+    "name" : "SettingsServiceSubString",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "type" : "Object",
+    "service" : "SettingsService",
+    "operation" : "subString",
+    "operationType" : "get",
+    "serviceType" : "JavaService",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/settings/subString",
+      "httpMethod" : "get",
+      "name" : "subString",
+      "parameters" : [ {
+        "name" : "str",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "dataBinding" : [ ],
     "dataSet" : {
       "dataValue" : ""
     },
@@ -262,8 +292,44 @@
     "transformationRequired" : false,
     "saveInPhonegap" : false,
     "isDefault" : true,
-    "buildTreeFromDataSet" : true,
     "controller" : "Settings"
+  },
+  "SettingsServiceWriteToFile" : {
+    "_id" : "wm-SettingsServiceWriteToFile-wm.ServiceVariable-1452685802502",
+    "name" : "SettingsServiceWriteToFile",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "service" : "SettingsService",
+    "operation" : "writeToFile",
+    "serviceType" : "JavaService",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/settings/writeToFile",
+      "httpMethod" : "get",
+      "name" : "writeToFile",
+      "parameters" : [ {
+        "name" : "filename",
+        "parameterType" : "query",
+        "type" : "string"
+      }, {
+        "name" : "contents",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true
   },
   "supportedLocale" : {
     "_id" : "wm-supportedLocale-wm.Variable1402640443182",

@@ -26,7 +26,7 @@
           "type" : "string",
           "collectionFormat" : "multi",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
-          "x-WM-UUID" : "fc5d1ad3-eb8c-48c6-b1f8-a44296822dae",
+          "x-WM-UUID" : "f1bbfdeb-0ee5-4b21-b656-507902b66115",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -38,7 +38,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "17c23f34-b409-48dc-83c9-f87c2facbd83",
+        "x-WM-OPERATION_UID" : "5dbe8c11-3631-4430-8963-526658b460ff",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "countFiles-1-1195260122"
       },
@@ -58,7 +58,7 @@
           "type" : "string",
           "collectionFormat" : "multi",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
-          "x-WM-UUID" : "4ea546b1-e204-4806-9e9e-4611e491018b",
+          "x-WM-UUID" : "09668f3d-a238-439e-a3c5-3881eb267b69",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -73,7 +73,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "c0169d72-46a4-4a6f-a4b8-3aecda51f4b3",
+        "x-WM-OPERATION_UID" : "86fba1cf-aa22-42be-9436-3ec7bc8d1773",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "listFiles-1-1195260122"
       },
@@ -94,7 +94,7 @@
           "type" : "string",
           "collectionFormat" : "multi",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
-          "x-WM-UUID" : "eb33d73e-8ca9-4680-9fe8-e08619188f0b",
+          "x-WM-UUID" : "763cf750-8a25-4a94-8ed2-ef9b908b6908",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -105,7 +105,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "287f995e-8907-4c19-8117-861fab629b4e",
+        "x-WM-OPERATION_UID" : "5c093fdf-9c2e-40c0-a5af-76953f4b08dc",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "openFile-1-1195260122"
       },
@@ -113,6 +113,46 @@
       "x-WM-BASE_PATH" : "/settings",
       "x-WM-COMPLETE_PATH" : "//settings/openFile",
       "x-WM-RELATIVE_PATH" : "/openFile"
+    },
+    "/settings/writeToFile" : {
+      "get" : {
+        "tags" : [ "SettingsController" ],
+        "operationId" : "writeToFile",
+        "parameters" : [ {
+          "name" : "filename",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "collectionFormat" : "multi",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "x-WM-UUID" : "80c71325-c846-4d2b-9ec2-91521a49f259",
+          "x-WM-EDITABLE" : true
+        }, {
+          "name" : "contents",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "collectionFormat" : "multi",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "x-WM-UUID" : "38b4f2fd-e2a4-4150-9dc3-b0b8f864dbb3",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "object"
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "fa201559-1abe-488e-96e3-835a08fae781",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-METHOD_IDENTIFIER" : "writeToFile-2--1824756249"
+      },
+      "x-WM-TAG" : "SettingsController",
+      "x-WM-BASE_PATH" : "/settings",
+      "x-WM-COMPLETE_PATH" : "//settings/writeToFile",
+      "x-WM-RELATIVE_PATH" : "/writeToFile"
     }
   },
   "definitions" : { }

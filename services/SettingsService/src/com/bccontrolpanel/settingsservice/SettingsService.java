@@ -1,7 +1,7 @@
 /*Copyright (c) 2016-2017 Business on Demand Ltd. All Rights Reserved. This software is the confidential and proprietary information of Business on Demand Ltd. You shall not disclose such Confidential Information and shall use it only in accordance 
  with the terms of the source code license agreement you entered into with Business on Demand Ltd.*/
 
-package com.bccontrolpanel.settingsservice;
+package com.bccontrolpanel.settingsservice; 
 
 import com.wavemaker.runtime.WMAppContext;
 import com.wavemaker.runtime.file.model.DownloadResponse;
@@ -24,6 +24,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.io.*;
 
 import com.wavemaker.runtime.service.annotations.ExposeToClient;
 import org.slf4j.Logger;
@@ -31,7 +32,7 @@ import org.slf4j.LoggerFactory;
 
 /**
  * This is a singleton class with all of its public methods exposed to the client via controller.
- * Their return values and parameters will be passed to the client or taken 
+ * Their return values and parameters will be passed to the client or taken  
  * from the client respectively.
  */
 @ExposeToClient
@@ -78,47 +79,69 @@ public class SettingsService {
         
     }
     
-    public String openFile(String filename) throws IOException  {
-     
-    String basedir = WMAppContext.getInstance().getContext().getRealPath("/resources/uploads");  
-    String filepath = basedir + "/" + filename;
+    public static void writeToFile(String filename, String contents) throws IOException {
+        
+        String basedir = WMAppContext.getInstance().getContext().getRealPath("/resources/uploads");  
+        String filepath = basedir + "/" + filename;
+        String encoding = "utf-8";
+        File file = new File(filepath);
+        
+        File parentDir = file.getParentFile();
+        if(!parentDir.exists()){
+            if(!parentDir.mkdirs()){
+                throw new IOException("Could not create directory: " + parentDir.getAbsolutePath());
+            }
+        }
+
+        OutputStream outStream = new FileOutputStream(file);
+ 
+        BufferedWriter output = new java.io.BufferedWriter(new OutputStreamWriter(outStream, encoding));
+        try {
+            output.append(contents);
+        } finally {
+            output.close();
+        }       
+    } 
     
-    String newLine = System.getProperty("line.separator");
-     
-    File fl = new File(filepath);
-    FileInputStream fin = new FileInputStream(fl);
-    BufferedReader reader = new BufferedReader(new InputStreamReader(fin));
-    StringBuilder sb = new StringBuilder();
-    String line = null;
-    while ((line = reader.readLine()) != null) {
-      sb.append(line);
-      sb.append(newLine);
-    }
-    reader.close();
-    return sb.toString();
+    public class Struct {
+        
+        String var1;
+        String var2; 
     }
     
+        
+    public ArrayList<String> openFile(String filename) throws IOException  {
+     
+        String basedir = WMAppContext.getInstance().getContext().getRealPath("/resources/uploads");  
+        String filepath = basedir + "/" + filename;
+        
+        ArrayList<String> settings = new ArrayList<>();
+        File fl = new File(filepath);
+        FileInputStream fin = new FileInputStream(fl);
+        BufferedReader reader = new BufferedReader(new InputStreamReader(fin));
+        String line = null;
+        while ((line = reader.readLine()) != null) {  
+            String match = "=";
+            int index = line.indexOf(match);
+            int length = line.length(); 
+        }
+        reader.close();
+        return settings;
+    }
 
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
 }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+

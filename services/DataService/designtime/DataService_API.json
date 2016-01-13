@@ -1,0 +1,67 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "Swagger API documentation for DataService",
+    "version" : "2.0",
+    "title" : "DataServiceService Swagger Documentation",
+    "x-WM-SERVICE_TYPE" : "JavaService",
+    "x-WM-SERVICE_ID" : "DataService"
+  },
+  "basePath" : "",
+  "tags" : [ {
+    "name" : "DataController",
+    "x-WM-FULLY_QUALIFIED_NAME" : "com.bccontrolpanel.dataservice.controller.DataController",
+    "x-WM-VERSION" : ""
+  } ],
+  "schemes" : [ "http", "https" ],
+  "paths" : {
+    "/data/lol" : {
+      "get" : {
+        "tags" : [ "DataController" ],
+        "operationId" : "lol",
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "array",
+              "uniqueItems" : false,
+              "items" : {
+                "$ref" : "#/definitions/DataService$Struct",
+                "x-WM-TYPE_ARGUMENTS" : [ ]
+              }
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "a4a2d04f-7634-409e-a8a5-68575a404956",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-METHOD_IDENTIFIER" : "lol-0-17"
+      },
+      "x-WM-TAG" : "DataController",
+      "x-WM-BASE_PATH" : "/data",
+      "x-WM-COMPLETE_PATH" : "//data/lol",
+      "x-WM-RELATIVE_PATH" : "/lol"
+    }
+  },
+  "definitions" : {
+    "DataService" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.bccontrolpanel.dataservice.DataService",
+      "x-WM-TAGS" : [ "DataController" ]
+    },
+    "DataService$Struct" : {
+      "properties" : {
+        "this$0" : {
+          "$ref" : "#/definitions/DataService",
+          "x-WM-TYPE_ARGUMENTS" : [ ]
+        },
+        "variable2" : {
+          "type" : "string"
+        },
+        "variable1" : {
+          "type" : "string"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.bccontrolpanel.dataservice.DataService.Struct",
+      "x-WM-TAGS" : [ "DataController" ]
+    }
+  }
+}

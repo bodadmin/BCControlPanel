@@ -26,7 +26,7 @@
           "type" : "string",
           "collectionFormat" : "multi",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
-          "x-WM-UUID" : "f1bbfdeb-0ee5-4b21-b656-507902b66115",
+          "x-WM-UUID" : "eb523a62-876b-4235-83ef-03527e5feb7b",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -38,7 +38,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "5dbe8c11-3631-4430-8963-526658b460ff",
+        "x-WM-OPERATION_UID" : "96503eab-2fb0-4ed3-b033-de102cab933d",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "countFiles-1-1195260122"
       },
@@ -58,7 +58,7 @@
           "type" : "string",
           "collectionFormat" : "multi",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
-          "x-WM-UUID" : "09668f3d-a238-439e-a3c5-3881eb267b69",
+          "x-WM-UUID" : "c77d82ae-ff04-4307-b09e-d40235da1ecf",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -73,7 +73,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "86fba1cf-aa22-42be-9436-3ec7bc8d1773",
+        "x-WM-OPERATION_UID" : "9dd05c4c-a3a3-4687-8c49-b356122b680b",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "listFiles-1-1195260122"
       },
@@ -86,7 +86,6 @@
       "get" : {
         "tags" : [ "SettingsController" ],
         "operationId" : "openFile",
-        "produces" : [ "application/json" ],
         "parameters" : [ {
           "name" : "filename",
           "in" : "query",
@@ -94,18 +93,19 @@
           "type" : "string",
           "collectionFormat" : "multi",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
-          "x-WM-UUID" : "763cf750-8a25-4a94-8ed2-ef9b908b6908",
+          "x-WM-UUID" : "b1c846b3-e37b-45ac-8863-5f81a5874331",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
           "200" : {
             "description" : "Success",
             "schema" : {
-              "type" : "string"
+              "$ref" : "#/definitions/List",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
             }
           }
         },
-        "x-WM-OPERATION_UID" : "5c093fdf-9c2e-40c0-a5af-76953f4b08dc",
+        "x-WM-OPERATION_UID" : "c05cb6fe-ec12-41ca-8a58-d74dd48315f0",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "openFile-1-1195260122"
       },
@@ -125,7 +125,7 @@
           "type" : "string",
           "collectionFormat" : "multi",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
-          "x-WM-UUID" : "80c71325-c846-4d2b-9ec2-91521a49f259",
+          "x-WM-UUID" : "d6208f19-a852-4713-9db6-442f06168398",
           "x-WM-EDITABLE" : true
         }, {
           "name" : "contents",
@@ -134,7 +134,7 @@
           "type" : "string",
           "collectionFormat" : "multi",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
-          "x-WM-UUID" : "38b4f2fd-e2a4-4150-9dc3-b0b8f864dbb3",
+          "x-WM-UUID" : "2542d45f-705c-41f1-b0bd-8b5489d1db15",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -145,7 +145,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "fa201559-1abe-488e-96e3-835a08fae781",
+        "x-WM-OPERATION_UID" : "2de35f76-e7fc-4ff9-a622-98b95c2347f2",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "writeToFile-2--1824756249"
       },
@@ -155,5 +155,36 @@
       "x-WM-RELATIVE_PATH" : "/writeToFile"
     }
   },
-  "definitions" : { }
+  "definitions" : {
+    "Collection" : {
+      "allOf" : [ {
+        "$ref" : "#/definitions/Iterable"
+      }, {
+        "properties" : {
+          "empty" : {
+            "type" : "boolean"
+          }
+        }
+      } ],
+      "x-WM-FULLY_QUALIFIED_NAME" : "java.util.Collection",
+      "x-WM-TAGS" : [ "SettingsController" ]
+    },
+    "Iterable" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "java.lang.Iterable",
+      "x-WM-TAGS" : [ "SettingsController" ]
+    },
+    "List" : {
+      "allOf" : [ {
+        "$ref" : "#/definitions/Collection"
+      }, {
+        "properties" : {
+          "empty" : {
+            "type" : "boolean"
+          }
+        }
+      } ],
+      "x-WM-FULLY_QUALIFIED_NAME" : "java.util.List",
+      "x-WM-TAGS" : [ "SettingsController" ]
+    }
+  }
 }

@@ -299,6 +299,7 @@
     "name" : "SettingsServiceWriteToFile",
     "owner" : "App",
     "category" : "wm.ServiceVariable",
+    "type" : "string",
     "service" : "SettingsService",
     "operation" : "writeToFile",
     "serviceType" : "JavaService",

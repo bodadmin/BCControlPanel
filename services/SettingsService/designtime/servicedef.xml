@@ -10,11 +10,13 @@
     </operation>
     <operation name="openFile">
         <parameter name="filename" typeRef="java.lang.String" isList="false"/>
-        <return typeRef="java.lang.String" isList="true"/>
+        <return typeRef="java.lang.Object" isList="true"/>
     </operation>
     <operation name="writeToFile">
         <parameter name="filename" typeRef="java.lang.String" isList="false"/>
         <parameter name="contents" typeRef="java.lang.String" isList="false"/>
     </operation>
-    <dataobjects/>
+    <dataobjects>
+        <dataobject javaType="java.lang.Object" name="Object" supportsQuickData="false"/>
+    </dataobjects>
 </service>

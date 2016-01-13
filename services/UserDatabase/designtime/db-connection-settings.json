@@ -10,7 +10,7 @@
   "host" : "{WM_CLOUD_MYSQL_HOST}",
   "dbName" : "UserDatabase",
   "port" : "3306",
-  "tableFilter" : "MENUS,ROLES,USERS",
+  "tableFilter" : "MENUS,ROLES,USERS, ROLES, USERS, MENUS",
   "schemaName" : "UserDatabase",
   "schemaFilter" : ".*",
   "revengNamingStrategyClassName" : "com.wavemaker.studio.core.data.hibernate.reveng.MySQLRevengNamingStrategy",

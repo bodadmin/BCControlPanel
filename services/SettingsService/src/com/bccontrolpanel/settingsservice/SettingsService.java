@@ -23,7 +23,7 @@ import java.io.InputStreamReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
+import java.util.Scanner; 
 import java.io.*;
 
 import com.wavemaker.runtime.service.annotations.ExposeToClient;
@@ -34,6 +34,7 @@ import org.slf4j.LoggerFactory;
  * This is a singleton class with all of its public methods exposed to the client via controller.
  * Their return values and parameters will be passed to the client or taken  
  * from the client respectively.
+ * 
  */
 @ExposeToClient
 public class SettingsService {
@@ -110,7 +111,7 @@ public class SettingsService {
     }
     
         
-    public ArrayList<String> openFile(String filename) throws IOException  {
+    public List openFile(String filename) throws IOException  {
      
         String basedir = WMAppContext.getInstance().getContext().getRealPath("/resources/uploads");  
         String filepath = basedir + "/" + filename;

@@ -22,11 +22,11 @@
       "defaultValue" : "",
       "generator" : "identity",
       "sequenceName" : null,
-      "unique" : true,
-      "foreignKey" : false,
       "partOfAnyRelation" : false,
       "partOfPrimaryKey" : true,
-      "primaryKey" : true
+      "primaryKey" : true,
+      "foreignKey" : false,
+      "unique" : true
     }, {
       "name" : "RoleDescription",
       "oldName" : "RoleDescription",
@@ -39,11 +39,11 @@
       "defaultValue" : null,
       "generator" : "assigned",
       "sequenceName" : null,
-      "unique" : false,
-      "foreignKey" : false,
       "partOfAnyRelation" : false,
       "partOfPrimaryKey" : false,
-      "primaryKey" : false
+      "primaryKey" : false,
+      "foreignKey" : false,
+      "unique" : false
     } ],
     "primaryKey" : {
       "name" : "PRIMARY",
@@ -73,11 +73,11 @@
       "defaultValue" : "",
       "generator" : "identity",
       "sequenceName" : null,
-      "unique" : true,
-      "foreignKey" : false,
       "partOfAnyRelation" : false,
       "partOfPrimaryKey" : true,
-      "primaryKey" : true
+      "primaryKey" : true,
+      "foreignKey" : false,
+      "unique" : true
     }, {
       "name" : "PASSWORD",
       "oldName" : "PASSWORD",
@@ -90,11 +90,11 @@
       "defaultValue" : null,
       "generator" : "assigned",
       "sequenceName" : null,
-      "unique" : false,
-      "foreignKey" : false,
       "partOfAnyRelation" : false,
       "partOfPrimaryKey" : false,
-      "primaryKey" : false
+      "primaryKey" : false,
+      "foreignKey" : false,
+      "unique" : false
     }, {
       "name" : "USERNAME",
       "oldName" : "USERNAME",
@@ -107,11 +107,11 @@
       "defaultValue" : null,
       "generator" : "assigned",
       "sequenceName" : null,
-      "unique" : false,
-      "foreignKey" : false,
       "partOfAnyRelation" : false,
       "partOfPrimaryKey" : false,
-      "primaryKey" : false
+      "primaryKey" : false,
+      "foreignKey" : false,
+      "unique" : false
     }, {
       "name" : "ROLE",
       "oldName" : "ROLE",
@@ -124,11 +124,11 @@
       "defaultValue" : "0",
       "generator" : "assigned",
       "sequenceName" : null,
-      "unique" : false,
-      "foreignKey" : false,
       "partOfAnyRelation" : false,
       "partOfPrimaryKey" : false,
-      "primaryKey" : false
+      "primaryKey" : false,
+      "foreignKey" : false,
+      "unique" : false
     } ],
     "primaryKey" : {
       "name" : "PRIMARY",
@@ -139,5 +139,90 @@
     "relations" : [ ],
     "constraints" : [ ],
     "fullyQualifiedName" : "com.bccontrolpanel.userdatabase.Users"
+  }, {
+    "name" : "MENUS",
+    "oldName" : "MENUS",
+    "entityName" : "Menus",
+    "type" : "TABLE",
+    "schema" : "UserDatabase",
+    "catalog" : "UserDatabase",
+    "columns" : [ {
+      "name" : "ID",
+      "oldName" : "ID",
+      "fieldName" : "id",
+      "sqlType" : "integer",
+      "hibernateType" : "integer",
+      "length" : 255,
+      "precision" : 19,
+      "nullable" : false,
+      "defaultValue" : "",
+      "generator" : "identity",
+      "sequenceName" : null,
+      "partOfAnyRelation" : false,
+      "partOfPrimaryKey" : true,
+      "primaryKey" : true,
+      "foreignKey" : false,
+      "unique" : true
+    }, {
+      "name" : "MenuID",
+      "oldName" : "MenuID",
+      "fieldName" : "menuId",
+      "sqlType" : "integer",
+      "hibernateType" : "integer",
+      "length" : 255,
+      "precision" : 19,
+      "nullable" : true,
+      "defaultValue" : "0",
+      "generator" : "assigned",
+      "sequenceName" : null,
+      "partOfAnyRelation" : false,
+      "partOfPrimaryKey" : false,
+      "primaryKey" : false,
+      "foreignKey" : false,
+      "unique" : false
+    }, {
+      "name" : "MenuItemName",
+      "oldName" : "MenuItemName",
+      "fieldName" : "menuItemName",
+      "sqlType" : "string",
+      "hibernateType" : "string",
+      "length" : 40,
+      "precision" : 19,
+      "nullable" : false,
+      "defaultValue" : null,
+      "generator" : "assigned",
+      "sequenceName" : null,
+      "partOfAnyRelation" : false,
+      "partOfPrimaryKey" : false,
+      "primaryKey" : false,
+      "foreignKey" : false,
+      "unique" : false
+    }, {
+      "name" : "MenuItemLink",
+      "oldName" : "MenuItemLink",
+      "fieldName" : "menuItemLink",
+      "sqlType" : "string",
+      "hibernateType" : "string",
+      "length" : 255,
+      "precision" : 19,
+      "nullable" : true,
+      "defaultValue" : null,
+      "generator" : "assigned",
+      "sequenceName" : null,
+      "partOfAnyRelation" : false,
+      "partOfPrimaryKey" : false,
+      "primaryKey" : false,
+      "foreignKey" : false,
+      "unique" : false
+    } ],
+    "primaryKey" : {
+      "name" : "PRIMARY",
+      "virtual" : false,
+      "columns" : [ "ID" ],
+      "composite" : false
+    },
+    "relations" : [ ],
+    "constraints" : [ ],
+    "fullyQualifiedName" : "com.bccontrolpanel.userdatabase.Menus"
   } ]
 }

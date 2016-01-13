@@ -7,6 +7,11 @@
             <element name="role" typeRef="java.lang.Integer" allowNull="true"/>
             <element name="password" typeRef="java.lang.String" allowNull="true"/>
         </dataobject>
+        <dataobject javaType="com.bccontrolpanel.userdatabase.Menus">
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="menuItemName" typeRef="java.lang.String" allowNull="true"/>
+            <element name="menuId" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
         <dataobject javaType="com.bccontrolpanel.userdatabase.Roles">
             <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
             <element name="roleDescription" typeRef="java.lang.String" allowNull="true"/>

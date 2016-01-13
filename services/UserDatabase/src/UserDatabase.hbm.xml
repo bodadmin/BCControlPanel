@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping package="com.bccontrolpanel.userdatabase">
-  <class table="`ROLES`" name="com.bccontrolpanel.userdatabase.Roles" entity-name="com.bccontrolpanel.userdatabase.Roles" schema="UserDatabase">
+  <class table="`ROLES`" entity-name="com.bccontrolpanel.userdatabase.Roles" schema="UserDatabase">
     <id name="id" type="integer">
       <column name="`ID`" length="255" not-null="true" precision="19"/>
       <generator class="identity"/>
@@ -10,7 +10,7 @@
       <column name="`RoleDescription`" length="255" not-null="false" precision="19"/>
     </property>
   </class>
-  <class table="`USERS`" name="com.bccontrolpanel.userdatabase.Users" entity-name="com.bccontrolpanel.userdatabase.Users" schema="UserDatabase">
+  <class table="`USERS`" entity-name="com.bccontrolpanel.userdatabase.Users" schema="UserDatabase">
     <id name="id" type="integer">
       <column name="`ID`" length="255" not-null="true" precision="19"/>
       <generator class="identity"/>
@@ -25,7 +25,7 @@
       <column name="`ROLE`" length="255" not-null="true" precision="19" default="'0'"/>
     </property>
   </class>
-  <class table="`MENUS`" name="com.bccontrolpanel.userdatabase.Menus" entity-name="com.bccontrolpanel.userdatabase.Menus" schema="UserDatabase">
+  <class table="`MENUS`" entity-name="com.bccontrolpanel.userdatabase.Menus" schema="UserDatabase">
     <id name="id" type="integer">
       <column name="`ID`" length="255" not-null="true" precision="19"/>
       <generator class="identity"/>

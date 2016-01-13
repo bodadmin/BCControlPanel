@@ -5,8 +5,7 @@
                 <wm-anchor name="buttonHome" caption="Home" on-click="goToPage_Main" iconclass="glyphicon glyphicon-home"></wm-anchor>
             </wm-nav-item>
             <wm-nav-item name="nav_item6">
-                <wm-menu type="anchor" name="menu1" caption="Test Menu" iconclass="glyphicon glyphicon-option-vertical" dataset="bind:Variables.UserDatabaseMenusData.dataSet" itemlabel="bind:$[data[$i].menuItemName]" itemlink="bind:$[data[$i].menuItemLink]"
-                linktarget="_self" itemicon="bind:$[data[$i].menuItemLink]"></wm-menu>
+                <wm-menu type="anchor" name="menu1" caption="Test Menu" iconclass="glyphicon glyphicon-option-vertical" dataset="bind:Variables.UserDatabaseMenusData.dataSet" itemlabel="menuItemName" itemlink="menuItemLink" linktarget="_self" itemicon="menuItemIcon"></wm-menu>
             </wm-nav-item>
         </wm-nav>
         <wm-nav class="navbar-right" type="navbar" name="navRight">

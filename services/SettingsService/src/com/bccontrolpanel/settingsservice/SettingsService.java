@@ -103,13 +103,23 @@ public class SettingsService {
             output.close(); 
         }       
     } 
+    
+    public class BoD_Setting {
+        String var1; 
+        String var2;
+        
+        BoD_Setting(String str1, String str2){
+            var1 = str1;
+            var2 = str2;
+        } 
+    }
         
     public List openFile(String filename) throws IOException  {
      
         String basedir = WMAppContext.getInstance().getContext().getRealPath("/resources/uploads");  
         String filepath = basedir + "/" + filename;
         
-        ArrayList<String> settings = new ArrayList<>();
+        ArrayList<BoD_Setting> settings = new ArrayList<BoD_Setting>();
         File fl = new File(filepath);
         FileInputStream fin = new FileInputStream(fl);
         BufferedReader reader = new BufferedReader(new InputStreamReader(fin));
@@ -118,10 +128,10 @@ public class SettingsService {
             String match = "=";
             int index = line.indexOf(match);
             int length = line.length();
-            String var1 = line.substring(0, index);
-            String var2 = line.substring(index + 1, length);
-            settings.add(var1);
-            settings.add(var2);
+            String substring1 = line.substring(0, index);
+            String substring2 = line.substring(index + 1, length);
+            BoD_Setting BOS = new BoD_Setting(substring1, substring2);
+            settings.add(BOS);
         }
         reader.close(); 
         return settings; 

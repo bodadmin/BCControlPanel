@@ -13,7 +13,7 @@
     "x-WM-FULLY_QUALIFIED_NAME" : "com.bccontrolpanel.settingsservice.controller.SettingsController",
     "x-WM-VERSION" : ""
   } ],
-  "schemes" : [ "http", "https" ],
+  "schemes" : [ "https", "http" ],
   "paths" : {
     "/settings/countFiles" : {
       "get" : {
@@ -26,7 +26,7 @@
           "type" : "string",
           "collectionFormat" : "multi",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
-          "x-WM-UUID" : "cd11a59e-6e85-4907-97aa-6b428eb3b19d",
+          "x-WM-UUID" : "a3401487-f570-4965-8a86-a0607e07a0b1",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -38,7 +38,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "82f8c193-7b84-4329-b7cf-f9c9c2cb3134",
+        "x-WM-OPERATION_UID" : "ab70f64f-75b9-41d7-8122-18e3dacd9ed1",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "countFiles-1-1195260122"
       },
@@ -58,7 +58,7 @@
           "type" : "string",
           "collectionFormat" : "multi",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
-          "x-WM-UUID" : "0faefad9-3947-43dc-9369-08e244bf0d74",
+          "x-WM-UUID" : "c1acfe8a-cf0a-468d-8636-88c0eb78ea6f",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -73,7 +73,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "b50d0828-75d5-4a57-aa2e-a748510ad9eb",
+        "x-WM-OPERATION_UID" : "7fd5fc64-89bf-4a79-846d-aa4eaa3d0c24",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "listFiles-1-1195260122"
       },
@@ -93,7 +93,7 @@
           "type" : "string",
           "collectionFormat" : "multi",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
-          "x-WM-UUID" : "06d0b0ea-1397-4b8e-92f6-bc65af496259",
+          "x-WM-UUID" : "c2ce7714-ddea-46d0-ace2-cf03f7cc4037",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -105,7 +105,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "d8161eeb-e015-4478-acae-c42dc8343530",
+        "x-WM-OPERATION_UID" : "e4e383ab-5b65-4680-a229-d5e128f18fcd",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "openFile-1-1195260122"
       },
@@ -125,7 +125,7 @@
           "type" : "string",
           "collectionFormat" : "multi",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
-          "x-WM-UUID" : "08d08756-ecc8-4b7b-889b-51e32f8697a2",
+          "x-WM-UUID" : "d6bf2f31-1378-4fa9-8db9-900ade68f0c4",
           "x-WM-EDITABLE" : true
         }, {
           "name" : "contents",
@@ -134,7 +134,7 @@
           "type" : "string",
           "collectionFormat" : "multi",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
-          "x-WM-UUID" : "a9276798-ab80-470f-bea3-ffb8ab5f9a5f",
+          "x-WM-UUID" : "22cc00b7-0d60-420c-9330-b97450fe0ca9",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -145,7 +145,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "ea87aec7-6c3e-4c08-805b-df049120b774",
+        "x-WM-OPERATION_UID" : "e4b3e099-1d17-4887-bf29-2e51e59f72c7",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "writeToFile-2--1824756249"
       },

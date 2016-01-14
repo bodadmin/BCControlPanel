@@ -11,20 +11,28 @@ import javax.mail.internet.*;
 import javax.activation.*;
 import java.util.Random;
 
-//import com.bccontrolpanel.mailservice.model.*;
 import com.wavemaker.runtime.service.annotations.ExposeToClient;
+import com.bccontrolpanel.bcdata.service.*;
+import com.bccontrolpanel.bcdata.Users;
+
+import org.springframework.beans.factory.annotation.Autowired;
+//import com.bccontrolpanel.mailservice.model.*;
 /**
- * This is a singleton class with all of its public methods exposed to the client via controller.
+ * This is a singleton class with all of its public methods exposed to the client via c ontroller.
  * Their return values and parameters will be passed to the client or taken
  * from the client respectively.
  */
 @ExposeToClient
 public class MailService {
+    
+    @Autowired
+    public UsersService usrsService;
+    public Users usrs;
 
     private static final Logger logger=LoggerFactory.getLogger(MailService.class);
 
     private String generateRandomPassword() {
-        String Characters = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrtsvuwxyz0123456789";
+        String Characters = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrtsvuwxyz01234567890";
         Random rnd = new Random();
         int len = 10;
         StringBuilder sb = new StringBuilder();
@@ -32,12 +40,20 @@ public class MailService {
             sb.append(Characters.charAt(rnd.nextInt(Characters.length())));
         return sb.toString(); 
     }
+    
+    public Users getUserByID(int usrID){
+        Users u = usrsService.findById(usrID);
+        return u;
+    }
 
-
-    public String sendPasswordReset(String toEmailAddress, String userID) {
+    public String sendPasswordReset(int userID) {
     try{
         
-        //Mysql update users password where id = userid;
+        Users usr2 = getUserByID(userID);
+        String RandomPW = generateRandomPassword();
+        usr2.setPassword(RandomPW);
+        usrsService.update(usr2);
+        String toEmailAddress = "MAKE NEW COLUMN IN DB TABLE AND THEN REFERENCE HERE";
         
         
         String username = "email username";
@@ -51,13 +67,11 @@ public class MailService {
         props.put("mail.smtp.starttls.required", "true");
         Session session = Session.getDefaultInstance(props,null);
         
-        String randomPW = generateRandomPassword();
-        
         MimeMessage message = new MimeMessage(session);
         message.setFrom(new InternetAddress("BoDConnect Control Panel"));
         message.addRecipient(Message.RecipientType.TO, new InternetAddress(toEmailAddress));
         message.setSubject("BoDConnect Control Panel Password Reset");
-        message.setContent("New Password :" + randomPW, "text/html");
+        message.setContent("New Password :" + RandomPW, "text/html");
         
         Transport tr = session.getTransport("smtp");
         tr.connect("smtp.gmail.com", 587, username, password);

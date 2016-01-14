@@ -2,6 +2,7 @@
 package com.bccontrolpanel.mailservice.controller;
 
 import com.bccontrolpanel.mailservice.MailService;
+import com.bccontrolpanel.bcdata.Users;
 import java.lang.String;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.http.MediaType;
@@ -19,7 +20,13 @@ public class MailController {
 
     @RequestMapping(value = "/sendPasswordReset", produces = "application/json", method = RequestMethod.GET)
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
-    public String sendPasswordReset(@RequestParam(value = "toEmailAddress", required = false) String toEmailAddress, @RequestParam(value = "userID", required = false) String userID) {
-        return mailService.sendPasswordReset(toEmailAddress, userID);
+    public String sendPasswordReset(@RequestParam(value = "userID", required = false) int userID) {
+        return mailService.sendPasswordReset(userID);
+    }
+
+    @RequestMapping(value = "/userByID", method = RequestMethod.GET)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    public Users getUserByID(@RequestParam(value = "usrID", required = false) int usrID) {
+        return mailService.getUserByID(usrID);
     }
 }

@@ -1,0 +1,52 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "Swagger API documentation for SimonService",
+    "version" : "2.0",
+    "title" : "SimonServiceService Swagger Documentation",
+    "x-WM-SERVICE_TYPE" : "JavaService",
+    "x-WM-SERVICE_ID" : "SimonService"
+  },
+  "basePath" : "",
+  "tags" : [ {
+    "name" : "SimonController",
+    "x-WM-FULLY_QUALIFIED_NAME" : "com.bccontrolpanel.simonservice.controller.SimonController",
+    "x-WM-VERSION" : ""
+  } ],
+  "schemes" : [ "https", "http" ],
+  "paths" : {
+    "/simon/sampleJavaOperation" : {
+      "get" : {
+        "tags" : [ "SimonController" ],
+        "operationId" : "sampleJavaOperation",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "name",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "collectionFormat" : "multi",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "x-WM-UUID" : "7226a2dc-3c84-444f-8456-3fe5c097293e",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "f028aabd-42ac-4473-b2f4-564b35f56b5b",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-METHOD_IDENTIFIER" : "sampleJavaOperation-1-1195260122"
+      },
+      "x-WM-TAG" : "SimonController",
+      "x-WM-BASE_PATH" : "/simon",
+      "x-WM-COMPLETE_PATH" : "//simon/sampleJavaOperation",
+      "x-WM-RELATIVE_PATH" : "/sampleJavaOperation"
+    }
+  },
+  "definitions" : { }
+}

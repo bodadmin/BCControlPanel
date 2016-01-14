@@ -29,20 +29,20 @@ var _MainPage_Variables_ ={ }
 </script>
 <script id="Main.html" type="text/ng-template">
 <wm-page name="page1" data-ng-controller="MainPageController" pagetitle="Main">
-    <wm-header content="header" name="header1"></wm-header>
-    <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav>
+    <wm-header name="header1" content="header"></wm-header>
+    <wm-top-nav name="top_nav1" content="topnav"></wm-top-nav>
     <wm-content name="content1">
         <wm-page-content name="page_content1" columnwidth="12">
-            <wm-gridrow name="gridrow1" paddingunit="em" paddingbottom="1" borderunit="px">
-                <wm-gridcolumn name="gridcolumn1" columnwidth="3" paddingunit="em" paddingbottom=".5" paddingtop=".5" paddingleft=".5" paddingright=".5">
-                    <wm-tile name="tile1" paddingunit="em" paddingbottom="1" borderunit="px" paddingtop="1" paddingleft="1" paddingright="1" backgroundcolor="#aeeae2" borderbottom="1" borderright="1" borderleft="1" bordertop="1" on-click="goToPage_TestPage1">
-                        <wm-layoutgrid name="layoutgrid1" paddingunit="em" marginunit="em" opacity="1">
+            <wm-gridrow name="gridrow1" borderunit="px" paddingbottom="1" paddingunit="em">
+                <wm-gridcolumn name="gridcolumn1" columnwidth="3" paddingbottom=".5" paddingunit="em" paddingright=".5" paddingleft=".5" paddingtop=".5">
+                    <wm-tile name="tile1" on-click="goToPage_TestPage1" borderunit="px" paddingbottom="1" paddingunit="em" paddingright="1" paddingleft="1" paddingtop="1" bordertop="1" borderleft="1" borderright="1" borderbottom="1" backgroundcolor="#aeeae2">
+                        <wm-layoutgrid name="layoutgrid1" paddingunit="em" opacity="1" marginunit="em">
                             <wm-gridrow name="gridrow2" opacity="1">
                                 <wm-gridcolumn class="col-xs-8" name="gridcolumn2" columnwidth="8" opacity="0.7">
-                                    <wm-label class="text-uppercase h5" name="label1" caption="File Count" width="100%" paddingunit="em" marginunit="em" margintop="0" marginbottom="0"></wm-label>
+                                    <wm-label class="text-uppercase h5" name="label1" caption="File Count" width="100%" paddingunit="em" marginunit="em" marginbottom="0" margintop="0"></wm-label>
                                     <wm-label class="h3" name="label2" caption="bind:Variables.SettingsServiceCountFiles.dataSet.value" width="100%" paddingunit="em"></wm-label>
                                 </wm-gridcolumn>
-                                <wm-gridcolumn class="col-xs-4" name="gridcolumn3" columnwidth="4" paddingunit="em" paddingright=".5" opacity="0.7" fontsize="3.5" fontunit="em">
+                                <wm-gridcolumn class="col-xs-4" name="gridcolumn3" columnwidth="4" paddingunit="em" paddingright=".5" opacity="0.7" fontunit="em" fontsize="3.5">
                                     <wm-icon class="pull-right" name="icon1" iconclass="glyphicon glyphicon-globe" showindevice="all"></wm-icon>
                                 </wm-gridcolumn>
                             </wm-gridrow>
@@ -51,21 +51,21 @@ var _MainPage_Variables_ ={ }
                                     <wm-progress type="info" name="progress1" height="4" width="100%" opacity="1"></wm-progress>
                                 </wm-gridcolumn>
                                 <wm-gridcolumn name="gridcolumn5" columnwidth="12" opacity="0.6">
-                                    <wm-label class="h5" name="label3" caption="Compared last week (70.1%)" paddingunit="em" paddingbottom="1" marginunit="em" marginbottom="0" fontsize="1" fontunit="em"></wm-label>
+                                    <wm-label class="h5" name="label3" caption="Compared last week (70.1%)" paddingbottom="1" paddingunit="em" marginunit="em" marginbottom="0" fontunit="em" fontsize="1"></wm-label>
                                 </wm-gridcolumn>
                             </wm-gridrow>
                         </wm-layoutgrid>
                     </wm-tile>
                 </wm-gridcolumn>
-                <wm-gridcolumn name="gridcolumn6" columnwidth="3" paddingunit="em" paddingbottom=".5" paddingtop=".5" paddingleft=".5" paddingright=".5">
-                    <wm-tile name="tile2" paddingunit="em" paddingbottom="1" borderunit="px" paddingtop="1" paddingleft="1" paddingright="1" backgroundcolor="#aed5ea" borderbottom="1" borderright="1" borderleft="1" bordertop="1">
-                        <wm-layoutgrid name="layoutgrid2" paddingunit="em" marginunit="em" opacity="1">
+                <wm-gridcolumn name="gridcolumn6" columnwidth="3" paddingbottom=".5" paddingunit="em" paddingright=".5" paddingleft=".5" paddingtop=".5">
+                    <wm-tile name="tile2" borderunit="px" paddingbottom="1" paddingunit="em" paddingright="1" paddingleft="1" paddingtop="1" bordertop="1" borderleft="1" borderright="1" borderbottom="1" backgroundcolor="#aed5ea">
+                        <wm-layoutgrid name="layoutgrid2" paddingunit="em" opacity="1" marginunit="em">
                             <wm-gridrow name="gridrow4" opacity="1">
                                 <wm-gridcolumn class="col-xs-8" name="gridcolumn7" columnwidth="8" opacity="0.7">
-                                    <wm-label class="text-uppercase h5" name="label4" caption="Unique Visits" width="100%" paddingunit="em" marginunit="em" margintop="0" marginbottom="0"></wm-label>
+                                    <wm-label class="text-uppercase h5" name="label4" caption="Unique Visits" width="100%" paddingunit="em" marginunit="em" marginbottom="0" margintop="0"></wm-label>
                                     <wm-label class="h3" name="label5" caption="" width="100%" paddingunit="em"></wm-label>
                                 </wm-gridcolumn>
-                                <wm-gridcolumn class="col-xs-4" name="gridcolumn8" columnwidth="4" paddingunit="em" paddingright=".5" opacity="0.7" fontsize="3.5" fontunit="em">
+                                <wm-gridcolumn class="col-xs-4" name="gridcolumn8" columnwidth="4" paddingunit="em" paddingright=".5" opacity="0.7" fontunit="em" fontsize="3.5">
                                     <wm-icon class="pull-right" name="icon2" iconclass="glyphicon glyphicon-user" showindevice="all"></wm-icon>
                                 </wm-gridcolumn>
                             </wm-gridrow>
@@ -74,21 +74,21 @@ var _MainPage_Variables_ ={ }
                                     <wm-progress type="success" name="progress2" height="4" width="100%" opacity="1"></wm-progress>
                                 </wm-gridcolumn>
                                 <wm-gridcolumn name="gridcolumn10" columnwidth="12" opacity="0.6">
-                                    <wm-label class="h5" name="label6" caption="Compared last week (70.1%)" paddingunit="em" paddingbottom="1" marginunit="em" marginbottom="0" fontsize="1" fontunit="em"></wm-label>
+                                    <wm-label class="h5" name="label6" caption="Compared last week (70.1%)" paddingbottom="1" paddingunit="em" marginunit="em" marginbottom="0" fontunit="em" fontsize="1"></wm-label>
                                 </wm-gridcolumn>
                             </wm-gridrow>
                         </wm-layoutgrid>
                     </wm-tile>
                 </wm-gridcolumn>
-                <wm-gridcolumn name="gridcolumn11" columnwidth="3" paddingunit="em" paddingbottom=".5" paddingtop=".5" paddingleft=".5" paddingright=".5">
-                    <wm-tile name="tile3" paddingunit="em" paddingbottom="1" borderunit="px" paddingtop="1" paddingleft="1" paddingright="1" backgroundcolor="#fff3bf" borderbottom="1" borderright="1" borderleft="1" bordertop="1">
-                        <wm-layoutgrid name="layoutgrid3" paddingunit="em" marginunit="em" opacity="1">
+                <wm-gridcolumn name="gridcolumn11" columnwidth="3" paddingbottom=".5" paddingunit="em" paddingright=".5" paddingleft=".5" paddingtop=".5">
+                    <wm-tile name="tile3" borderunit="px" paddingbottom="1" paddingunit="em" paddingright="1" paddingleft="1" paddingtop="1" bordertop="1" borderleft="1" borderright="1" borderbottom="1" backgroundcolor="#fff3bf">
+                        <wm-layoutgrid name="layoutgrid3" paddingunit="em" opacity="1" marginunit="em">
                             <wm-gridrow name="gridrow6" opacity="1">
                                 <wm-gridcolumn class="col-xs-8" name="gridcolumn12" columnwidth="8" opacity="0.7">
-                                    <wm-label class="text-uppercase h5" name="label7" caption="UpTime" width="100%" paddingunit="em" marginunit="em" margintop="0" marginbottom="0"></wm-label>
+                                    <wm-label class="text-uppercase h5" name="label7" caption="UpTime" width="100%" paddingunit="em" marginunit="em" marginbottom="0" margintop="0"></wm-label>
                                     <wm-label class="h3" name="label8" caption="bind:Variables.SettingsServiceSubString.dataSet.value" width="100%" paddingunit="em"></wm-label>
                                 </wm-gridcolumn>
-                                <wm-gridcolumn class="col-xs-4" name="gridcolumn13" columnwidth="4" paddingunit="em" paddingright=".5" opacity="0.7" fontsize="3.5" fontunit="em">
+                                <wm-gridcolumn class="col-xs-4" name="gridcolumn13" columnwidth="4" paddingunit="em" paddingright=".5" opacity="0.7" fontunit="em" fontsize="3.5">
                                     <wm-icon class="pull-right" name="icon3" iconclass="glyphicon glyphicon-cloud" showindevice="all"></wm-icon>
                                 </wm-gridcolumn>
                             </wm-gridrow>
@@ -97,21 +97,21 @@ var _MainPage_Variables_ ={ }
                                     <wm-progress type="warning" name="progress3" height="4" width="100%" opacity="1" datavalue="99"></wm-progress>
                                 </wm-gridcolumn>
                                 <wm-gridcolumn name="gridcolumn15" columnwidth="12" opacity="0.6">
-                                    <wm-label class="h5" name="label9" caption="Compared last week (.1%)" paddingunit="em" paddingbottom="1" marginunit="em" marginbottom="0" fontsize="1" fontunit="em"></wm-label>
+                                    <wm-label class="h5" name="label9" caption="Compared last week (.1%)" paddingbottom="1" paddingunit="em" marginunit="em" marginbottom="0" fontunit="em" fontsize="1"></wm-label>
                                 </wm-gridcolumn>
                             </wm-gridrow>
                         </wm-layoutgrid>
                     </wm-tile>
                 </wm-gridcolumn>
-                <wm-gridcolumn name="gridcolumn16" columnwidth="3" paddingunit="em" paddingbottom=".5" paddingtop=".5" paddingleft=".5" paddingright=".5">
-                    <wm-tile name="tile4" color="#fff" paddingunit="em" paddingbottom="1" borderunit="px" paddingtop="1" paddingleft="1" paddingright="1" backgroundcolor="#d5283d" borderbottom="1" borderright="1" borderleft="1" bordertop="1">
-                        <wm-layoutgrid name="layoutgrid4" paddingunit="em" marginunit="em" opacity="1">
+                <wm-gridcolumn name="gridcolumn16" columnwidth="3" paddingbottom=".5" paddingunit="em" paddingright=".5" paddingleft=".5" paddingtop=".5">
+                    <wm-tile name="tile4" color="#fff" borderunit="px" paddingbottom="1" paddingunit="em" paddingright="1" paddingleft="1" paddingtop="1" bordertop="1" borderleft="1" borderright="1" borderbottom="1" backgroundcolor="#d5283d">
+                        <wm-layoutgrid name="layoutgrid4" paddingunit="em" opacity="1" marginunit="em">
                             <wm-gridrow name="gridrow8" opacity="1">
                                 <wm-gridcolumn class="col-xs-8" name="gridcolumn17" columnwidth="8" opacity="0.7">
-                                    <wm-label class="text-uppercase h5" name="label10" caption="Attacks" width="100%" paddingunit="em" marginunit="em" margintop="0" marginbottom="0"></wm-label>
+                                    <wm-label class="text-uppercase h5" name="label10" caption="Attacks" width="100%" paddingunit="em" marginunit="em" marginbottom="0" margintop="0"></wm-label>
                                     <wm-label class="h3" name="label11" caption="5" width="100%" paddingunit="em"></wm-label>
                                 </wm-gridcolumn>
-                                <wm-gridcolumn class="col-xs-4" name="gridcolumn18" columnwidth="4" paddingunit="em" paddingright=".5" opacity="0.7" fontsize="3.5" fontunit="em">
+                                <wm-gridcolumn class="col-xs-4" name="gridcolumn18" columnwidth="4" paddingunit="em" paddingright=".5" opacity="0.7" fontunit="em" fontsize="3.5">
                                     <wm-icon class="pull-right" name="icon4" iconclass="glyphicon glyphicon-lock" showindevice="all"></wm-icon>
                                 </wm-gridcolumn>
                             </wm-gridrow>
@@ -120,7 +120,7 @@ var _MainPage_Variables_ ={ }
                                     <wm-progress type="danger" name="progress4" height="4" width="100%" opacity="1" datavalue="50"></wm-progress>
                                 </wm-gridcolumn>
                                 <wm-gridcolumn name="gridcolumn20" columnwidth="12" opacity="0.6">
-                                    <wm-label class="h5" name="label12" caption="Compared last week (.1%)" paddingunit="em" paddingbottom="1" marginunit="em" marginbottom="0" fontsize="1" fontunit="em"></wm-label>
+                                    <wm-label class="h5" name="label12" caption="Compared last week (.1%)" paddingbottom="1" paddingunit="em" marginunit="em" marginbottom="0" fontunit="em" fontsize="1"></wm-label>
                                 </wm-gridcolumn>
                             </wm-gridrow>
                         </wm-layoutgrid>
@@ -131,9 +131,9 @@ var _MainPage_Variables_ ={ }
                 <wm-gridcolumn name="gridcolumn30" columnwidth="4"></wm-gridcolumn>
                 <wm-gridcolumn name="gridcolumn31" columnwidth="4"></wm-gridcolumn>
             </wm-gridrow>
+            <wm-tabs name="tabs1"></wm-tabs>
         </wm-page-content>
     </wm-content>
-    <wm-footer content="footer" name="footer1"></wm-footer>
+    <wm-footer name="footer1" content="footer"></wm-footer>
 </wm-page>
-
 </script>

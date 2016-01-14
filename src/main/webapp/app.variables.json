@@ -15,7 +15,7 @@
     "firstRow" : 0,
     "maxResults" : 20,
     "designMaxResults" : 10,
-    "startUpdate" : true,
+    "startUpdate" : false,
     "autoUpdate" : true,
     "inFlightBehavior" : "executeLast",
     "transformationRequired" : false,
@@ -79,7 +79,7 @@
       "primaryFields" : [ "id" ]
     },
     "isDefault" : true,
-    "bindCount" : 1,
+    "bindCount" : 0,
     "tableName" : "menuSettings",
     "tableType" : "TABLE",
     "dbSystem" : "MySQL",

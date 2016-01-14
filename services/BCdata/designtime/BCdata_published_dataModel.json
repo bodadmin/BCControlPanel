@@ -22,11 +22,11 @@
       "defaultValue" : "",
       "generator" : "identity",
       "sequenceName" : null,
+      "unique" : true,
+      "foreignKey" : false,
       "partOfAnyRelation" : false,
       "partOfPrimaryKey" : true,
-      "primaryKey" : true,
-      "foreignKey" : false,
-      "unique" : true
+      "primaryKey" : true
     }, {
       "name" : "userrname",
       "oldName" : "userrname",
@@ -39,11 +39,11 @@
       "defaultValue" : null,
       "generator" : "assigned",
       "sequenceName" : null,
+      "unique" : false,
+      "foreignKey" : false,
       "partOfAnyRelation" : false,
       "partOfPrimaryKey" : false,
-      "primaryKey" : false,
-      "foreignKey" : false,
-      "unique" : false
+      "primaryKey" : false
     }, {
       "name" : "password",
       "oldName" : "password",
@@ -56,11 +56,11 @@
       "defaultValue" : null,
       "generator" : "assigned",
       "sequenceName" : null,
+      "unique" : false,
+      "foreignKey" : false,
       "partOfAnyRelation" : false,
       "partOfPrimaryKey" : false,
-      "primaryKey" : false,
-      "foreignKey" : false,
-      "unique" : false
+      "primaryKey" : false
     }, {
       "name" : "role",
       "oldName" : "role",
@@ -73,11 +73,11 @@
       "defaultValue" : null,
       "generator" : "assigned",
       "sequenceName" : null,
+      "unique" : false,
+      "foreignKey" : false,
       "partOfAnyRelation" : false,
       "partOfPrimaryKey" : false,
-      "primaryKey" : false,
-      "foreignKey" : false,
-      "unique" : false
+      "primaryKey" : false
     } ],
     "primaryKey" : {
       "name" : "PRIMARY",
@@ -107,11 +107,11 @@
       "defaultValue" : "",
       "generator" : "identity",
       "sequenceName" : null,
+      "unique" : true,
+      "foreignKey" : false,
       "partOfAnyRelation" : false,
       "partOfPrimaryKey" : true,
-      "primaryKey" : true,
-      "foreignKey" : false,
-      "unique" : true
+      "primaryKey" : true
     }, {
       "name" : "menuItemLabel",
       "oldName" : "menuItemLabel",
@@ -124,11 +124,11 @@
       "defaultValue" : null,
       "generator" : "assigned",
       "sequenceName" : null,
+      "unique" : false,
+      "foreignKey" : false,
       "partOfAnyRelation" : false,
       "partOfPrimaryKey" : false,
-      "primaryKey" : false,
-      "foreignKey" : false,
-      "unique" : false
+      "primaryKey" : false
     }, {
       "name" : "menuItemLink",
       "oldName" : "menuItemLink",
@@ -141,11 +141,11 @@
       "defaultValue" : null,
       "generator" : "assigned",
       "sequenceName" : null,
+      "unique" : false,
+      "foreignKey" : false,
       "partOfAnyRelation" : false,
       "partOfPrimaryKey" : false,
-      "primaryKey" : false,
-      "foreignKey" : false,
-      "unique" : false
+      "primaryKey" : false
     }, {
       "name" : "menuItemIcon",
       "oldName" : "menuItemIcon",
@@ -158,11 +158,11 @@
       "defaultValue" : null,
       "generator" : "assigned",
       "sequenceName" : null,
+      "unique" : false,
+      "foreignKey" : false,
       "partOfAnyRelation" : false,
       "partOfPrimaryKey" : false,
-      "primaryKey" : false,
-      "foreignKey" : false,
-      "unique" : false
+      "primaryKey" : false
     } ],
     "primaryKey" : {
       "name" : "PRIMARY",
@@ -192,11 +192,11 @@
       "defaultValue" : "",
       "generator" : "identity",
       "sequenceName" : null,
+      "unique" : true,
+      "foreignKey" : false,
       "partOfAnyRelation" : false,
       "partOfPrimaryKey" : true,
-      "primaryKey" : true,
-      "foreignKey" : false,
-      "unique" : true
+      "primaryKey" : true
     }, {
       "name" : "role",
       "oldName" : "role",
@@ -209,11 +209,11 @@
       "defaultValue" : null,
       "generator" : "assigned",
       "sequenceName" : null,
+      "unique" : false,
+      "foreignKey" : false,
       "partOfAnyRelation" : false,
       "partOfPrimaryKey" : false,
-      "primaryKey" : false,
-      "foreignKey" : false,
-      "unique" : false
+      "primaryKey" : false
     } ],
     "primaryKey" : {
       "name" : "PRIMARY",

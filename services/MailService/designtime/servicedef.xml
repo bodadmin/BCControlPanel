@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="MailService" class="com.bccontrolpanel.mailservice.MailService" type="JavaService" springFile="MailService.spring.xml">
+    <operation name="sendPasswordReset">
+        <parameter name="toEmailAddress" typeRef="java.lang.String" isList="false"/>
+        <parameter name="userID" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <dataobjects/>
+</service>

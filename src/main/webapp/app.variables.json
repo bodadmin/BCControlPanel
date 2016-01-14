@@ -373,6 +373,45 @@
     "redirectTo" : "Login",
     "useDefaultSuccessHandler" : true
   },
+  "MailServiceSendPasswordReset" : {
+    "_id" : "wm-MailServiceSendPasswordReset-wm.ServiceVariable-1452769444203",
+    "name" : "MailServiceSendPasswordReset",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "type" : "string",
+    "service" : "MailService",
+    "operation" : "sendPasswordReset",
+    "serviceType" : "JavaService",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/mail/sendPasswordReset",
+      "httpMethod" : "get",
+      "name" : "sendPasswordReset",
+      "produces" : [ "application/json" ],
+      "parameters" : [ {
+        "name" : "toEmailAddress",
+        "parameterType" : "query",
+        "type" : "string"
+      }, {
+        "name" : "userID",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true
+  },
   "SettingsServiceCountFiles" : {
     "_id" : "wm-SettingsServiceCountFiles-wm.ServiceVariable-1452612449332",
     "name" : "SettingsServiceCountFiles",

@@ -1,0 +1,61 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "Swagger API documentation for MailService",
+    "version" : "2.0",
+    "title" : "MailServiceService Swagger Documentation",
+    "x-WM-SERVICE_TYPE" : "JavaService",
+    "x-WM-SERVICE_ID" : "MailService"
+  },
+  "basePath" : "",
+  "tags" : [ {
+    "name" : "MailController",
+    "x-WM-FULLY_QUALIFIED_NAME" : "com.bccontrolpanel.mailservice.controller.MailController",
+    "x-WM-VERSION" : ""
+  } ],
+  "schemes" : [ "https", "http" ],
+  "paths" : {
+    "/mail/sendPasswordReset" : {
+      "get" : {
+        "tags" : [ "MailController" ],
+        "operationId" : "sendPasswordReset",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "toEmailAddress",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "collectionFormat" : "multi",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "x-WM-UUID" : "c0cd39fb-e4fa-462b-ac66-062446a32bd7",
+          "x-WM-EDITABLE" : true
+        }, {
+          "name" : "userID",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "collectionFormat" : "multi",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "x-WM-UUID" : "bcee9a4f-ea9e-42cc-8620-7b690a2905b7",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "c3ffb5f2-2be3-4881-a77d-a0113ad3239a",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-METHOD_IDENTIFIER" : "sendPasswordReset-2--1824756249"
+      },
+      "x-WM-TAG" : "MailController",
+      "x-WM-BASE_PATH" : "/mail",
+      "x-WM-COMPLETE_PATH" : "//mail/sendPasswordReset",
+      "x-WM-RELATIVE_PATH" : "/sendPasswordReset"
+    }
+  },
+  "definitions" : { }
+}

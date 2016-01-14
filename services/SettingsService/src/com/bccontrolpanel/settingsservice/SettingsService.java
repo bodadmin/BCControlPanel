@@ -103,12 +103,12 @@ public class SettingsService {
     } 
     
     public class BoD_Setting {
-        String var1; 
-        String var2;
+        String column1; 
+        String column2;
         
         BoD_Setting(String str1, String str2){
-            var1 = str1;
-            var2 = str2;
+            column1 = str1;
+            column2 = str2;
         } 
     }
         

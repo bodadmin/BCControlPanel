@@ -63,7 +63,6 @@ public class SettingsService {
         MimetypesFileTypeMap m = new MimetypesFileTypeMap();
         File[] files = fileServiceManager.listFiles(relativePath == null ? uploadDirectory : new File(uploadDirectory, relativePath)); 
 
-
         int result = files.length;
         return result;
     }
@@ -77,7 +76,6 @@ public class SettingsService {
             result[i] = files[i].getName();  
         }
         return result;
-        
     }
     
     public static void writeToFile(String filename, String contents) throws IOException {
@@ -119,7 +117,7 @@ public class SettingsService {
         String basedir = WMAppContext.getInstance().getContext().getRealPath("/resources/uploads");  
         String filepath = basedir + "/" + filename;
         
-        ArrayList<BoD_Setting> settings = new ArrayList<BoD_Setting>();
+        List<BoD_Setting> settings = new ArrayList<BoD_Setting>();
         File fl = new File(filepath);
         FileInputStream fin = new FileInputStream(fl);
         BufferedReader reader = new BufferedReader(new InputStreamReader(fin));
@@ -129,8 +127,8 @@ public class SettingsService {
             int index = line.indexOf(match);
             int length = line.length();
             String substring1 = line.substring(0, index);
-            String substring2 = line.substring(index + 1, length);
-            BoD_Setting BOS = new BoD_Setting(substring1, substring2);
+            String substring2 = line.substring(index + 1, length); 
+            BoD_Setting BOS = new BoD_Setting(substring1, substring2); 
             settings.add(BOS);
         }
         reader.close(); 

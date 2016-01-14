@@ -12,7 +12,7 @@
                 </wm-composite>
             </wm-container>
             <wm-message name="message1" width="500" caption="File Saved!" show="false"></wm-message>
-            <wm-grid readonlygrid="true" dataset="bind:Variables.SettingsServiceOpenFile.dataSet" name="grid2">
+            <wm-grid readonlygrid="true" dataset="bind:Variables.SettingsServiceOpenFile.dataSet" name="grid2" on-click="SettingsServiceOpenFile">
                 <wm-grid-column binding="column1" caption="Column1" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
                 <wm-grid-column binding="column2" caption="Column2" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
                 <wm-grid-column binding="column3" caption="Column3" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>

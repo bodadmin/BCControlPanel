@@ -9,19 +9,19 @@
   },
   "basePath" : "",
   "tags" : [ {
-    "name" : "UsersController",
-    "description" : "Exposes APIs to work with Users resource.",
-    "x-WM-FULLY_QUALIFIED_NAME" : "com.bccontrolpanel.bcdata.controller.UsersController",
-    "x-WM-VERSION" : ""
-  }, {
     "name" : "MenusettingsController",
     "description" : "Exposes APIs to work with Menusettings resource.",
     "x-WM-FULLY_QUALIFIED_NAME" : "com.bccontrolpanel.bcdata.controller.MenusettingsController",
     "x-WM-VERSION" : ""
   }, {
-    "name" : "QueryExecutionController",
-    "description" : "Controller class for query execution",
-    "x-WM-FULLY_QUALIFIED_NAME" : "com.bccontrolpanel.bcdata.controller.QueryExecutionController",
+    "name" : "ProcedureExecutionController",
+    "description" : "Controller class for procedure execution",
+    "x-WM-FULLY_QUALIFIED_NAME" : "com.bccontrolpanel.bcdata.controller.ProcedureExecutionController",
+    "x-WM-VERSION" : ""
+  }, {
+    "name" : "UsersController",
+    "description" : "Exposes APIs to work with Users resource.",
+    "x-WM-FULLY_QUALIFIED_NAME" : "com.bccontrolpanel.bcdata.controller.UsersController",
     "x-WM-VERSION" : ""
   }, {
     "name" : "RoleController",
@@ -29,13 +29,557 @@
     "x-WM-FULLY_QUALIFIED_NAME" : "com.bccontrolpanel.bcdata.controller.RoleController",
     "x-WM-VERSION" : ""
   }, {
-    "name" : "ProcedureExecutionController",
-    "description" : "Controller class for procedure execution",
-    "x-WM-FULLY_QUALIFIED_NAME" : "com.bccontrolpanel.bcdata.controller.ProcedureExecutionController",
+    "name" : "ContextfilesController",
+    "description" : "Exposes APIs to work with Contextfiles resource.",
+    "x-WM-FULLY_QUALIFIED_NAME" : "com.bccontrolpanel.bcdata.controller.ContextfilesController",
+    "x-WM-VERSION" : ""
+  }, {
+    "name" : "ContextController",
+    "description" : "Exposes APIs to work with Context resource.",
+    "x-WM-FULLY_QUALIFIED_NAME" : "com.bccontrolpanel.bcdata.controller.ContextController",
+    "x-WM-VERSION" : ""
+  }, {
+    "name" : "QueryExecutionController",
+    "description" : "Controller class for query execution",
+    "x-WM-FULLY_QUALIFIED_NAME" : "com.bccontrolpanel.bcdata.controller.QueryExecutionController",
     "x-WM-VERSION" : ""
   } ],
   "schemes" : [ "https", "http" ],
   "paths" : {
+    "/BCdata/Context/" : {
+      "get" : {
+        "tags" : [ "ContextController" ],
+        "description" : "Returns the list of Context instances.",
+        "operationId" : "getContexts",
+        "parameters" : [ {
+          "name" : "page",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : "0",
+          "format" : "int32",
+          "x-WM-EDITABLE" : false,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable"
+        }, {
+          "name" : "size",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : "20",
+          "format" : "int32",
+          "x-WM-EDITABLE" : false
+        }, {
+          "name" : "sort",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "x-WM-EDITABLE" : false
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Page",
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "$ref" : "#/definitions/Context",
+                "x-WM-TYPE_ARGUMENTS" : [ ]
+              } ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "87af4a5e-80ea-4518-ada3-1e196d5168fb",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-METHOD_IDENTIFIER" : "getContexts-1-934028971"
+      },
+      "post" : {
+        "tags" : [ "ContextController" ],
+        "description" : "Creates a new Context instance.",
+        "operationId" : "createContext",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "Context",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/Context",
+            "x-WM-TYPE_ARGUMENTS" : [ ]
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.bccontrolpanel.bcdata.Context",
+          "x-WM-UUID" : "a88f5fda-43c0-4bd1-9166-baa5cf531be7",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Context",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "fc608059-c6b7-427b-8663-0623bd7ecb38",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-METHOD_IDENTIFIER" : "createContext-1-1959683578"
+      },
+      "x-WM-TAG" : "ContextController",
+      "x-WM-BASE_PATH" : "/BCdata/Context",
+      "x-WM-COMPLETE_PATH" : "//BCdata/Context/",
+      "x-WM-RELATIVE_PATH" : "/"
+    },
+    "/BCdata/Context/count" : {
+      "get" : {
+        "tags" : [ "ContextController" ],
+        "description" : "Returns the total count of Context instances.",
+        "operationId" : "countAllContexts",
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "integer",
+              "format" : "int64"
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "5e10e7eb-a345-4135-925b-aceed08e1552",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-METHOD_IDENTIFIER" : "countAllContexts-0-17"
+      },
+      "x-WM-TAG" : "ContextController",
+      "x-WM-BASE_PATH" : "/BCdata/Context",
+      "x-WM-COMPLETE_PATH" : "//BCdata/Context/count",
+      "x-WM-RELATIVE_PATH" : "/count"
+    },
+    "/BCdata/Context/search" : {
+      "post" : {
+        "tags" : [ "ContextController" ],
+        "description" : "Returns the list of Context instances matching the search criteria.",
+        "operationId" : "findContexts",
+        "parameters" : [ {
+          "name" : "page",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : "0",
+          "format" : "int32",
+          "x-WM-EDITABLE" : false,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable"
+        }, {
+          "name" : "size",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : "20",
+          "format" : "int32",
+          "x-WM-EDITABLE" : false
+        }, {
+          "name" : "sort",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "x-WM-EDITABLE" : false
+        }, {
+          "in" : "body",
+          "name" : "QueryFilter",
+          "required" : true,
+          "schema" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/definitions/QueryFilter",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            },
+            "x-WM-IS_LIST" : false
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.expression.QueryFilter",
+          "x-WM-UUID" : "3fd07a15-7b31-45a2-901c-cb2c68222b59",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Page",
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "$ref" : "#/definitions/Context",
+                "x-WM-TYPE_ARGUMENTS" : [ ]
+              } ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "4fef08d8-07a5-46ef-8426-cc051c44c220",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-METHOD_IDENTIFIER" : "findContexts-2--1821969279"
+      },
+      "x-WM-TAG" : "ContextController",
+      "x-WM-BASE_PATH" : "/BCdata/Context",
+      "x-WM-COMPLETE_PATH" : "//BCdata/Context/search",
+      "x-WM-RELATIVE_PATH" : "/search"
+    },
+    "/BCdata/Context/{id:.+}" : {
+      "get" : {
+        "tags" : [ "ContextController" ],
+        "description" : "Returns the Context instance associated with the given id.",
+        "operationId" : "getContext",
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "collectionFormat" : "multi",
+          "format" : "int32",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
+          "x-WM-UUID" : "f1269df7-0c7b-45dd-9b87-e5ad433eadaa",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Context",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "d1aede5c-56f3-44f9-8173-c7c5005a0e85",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-METHOD_IDENTIFIER" : "getContext-1--2056816673"
+      },
+      "put" : {
+        "tags" : [ "ContextController" ],
+        "description" : "Updates the Context instance associated with the given id.",
+        "operationId" : "editContext",
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "collectionFormat" : "multi",
+          "format" : "int32",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
+          "x-WM-UUID" : "180d9478-6653-4226-989e-79d8f871b520",
+          "x-WM-EDITABLE" : true
+        }, {
+          "in" : "body",
+          "name" : "Context",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/Context",
+            "x-WM-TYPE_ARGUMENTS" : [ ]
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.bccontrolpanel.bcdata.Context",
+          "x-WM-UUID" : "9ee7f8e5-74bd-40aa-8ebe-bb5e77b04f6c",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Context",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "22897285-a4b7-48b4-93f3-103de86d6688",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-METHOD_IDENTIFIER" : "editContext-2--1128089920"
+      },
+      "delete" : {
+        "tags" : [ "ContextController" ],
+        "description" : "Deletes the Context instance associated with the given id.",
+        "operationId" : "deleteContext",
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "collectionFormat" : "multi",
+          "format" : "int32",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
+          "x-WM-UUID" : "a46bf8ca-933c-42ef-95a6-95c901f9c1f4",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "boolean"
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "1af055c9-338d-4170-a38a-b34099693bd9",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-METHOD_IDENTIFIER" : "deleteContext-1--2056816673"
+      },
+      "x-WM-TAG" : "ContextController",
+      "x-WM-BASE_PATH" : "/BCdata/Context",
+      "x-WM-COMPLETE_PATH" : "//BCdata/Context/{id:.+}",
+      "x-WM-RELATIVE_PATH" : "/{id:.+}"
+    },
+    "/BCdata/Contextfiles/" : {
+      "get" : {
+        "tags" : [ "ContextfilesController" ],
+        "description" : "Returns the list of Contextfiles instances.",
+        "operationId" : "getContextfiless",
+        "parameters" : [ {
+          "name" : "page",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : "0",
+          "format" : "int32",
+          "x-WM-EDITABLE" : false,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable"
+        }, {
+          "name" : "size",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : "20",
+          "format" : "int32",
+          "x-WM-EDITABLE" : false
+        }, {
+          "name" : "sort",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "x-WM-EDITABLE" : false
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Page",
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "$ref" : "#/definitions/Contextfiles",
+                "x-WM-TYPE_ARGUMENTS" : [ ]
+              } ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "efbea644-a48b-4178-a573-884c799fdf4a",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-METHOD_IDENTIFIER" : "getContextfiless-1-934028971"
+      },
+      "post" : {
+        "tags" : [ "ContextfilesController" ],
+        "description" : "Creates a new Contextfiles instance.",
+        "operationId" : "createContextfiles",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "Contextfiles",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/Contextfiles",
+            "x-WM-TYPE_ARGUMENTS" : [ ]
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.bccontrolpanel.bcdata.Contextfiles",
+          "x-WM-UUID" : "3a95b574-248e-4163-9767-d7b98e0cbec4",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Contextfiles",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "a67082ba-3f07-422f-9369-c691e6b4770f",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-METHOD_IDENTIFIER" : "createContextfiles-1-880460935"
+      },
+      "x-WM-TAG" : "ContextfilesController",
+      "x-WM-BASE_PATH" : "/BCdata/Contextfiles",
+      "x-WM-COMPLETE_PATH" : "//BCdata/Contextfiles/",
+      "x-WM-RELATIVE_PATH" : "/"
+    },
+    "/BCdata/Contextfiles/count" : {
+      "get" : {
+        "tags" : [ "ContextfilesController" ],
+        "description" : "Returns the total count of Contextfiles instances.",
+        "operationId" : "countAllContextfiless",
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "integer",
+              "format" : "int64"
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "01ec0afb-b2de-4621-b680-f2fc48c3bcaa",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-METHOD_IDENTIFIER" : "countAllContextfiless-0-17"
+      },
+      "x-WM-TAG" : "ContextfilesController",
+      "x-WM-BASE_PATH" : "/BCdata/Contextfiles",
+      "x-WM-COMPLETE_PATH" : "//BCdata/Contextfiles/count",
+      "x-WM-RELATIVE_PATH" : "/count"
+    },
+    "/BCdata/Contextfiles/search" : {
+      "post" : {
+        "tags" : [ "ContextfilesController" ],
+        "description" : "Returns the list of Contextfiles instances matching the search criteria.",
+        "operationId" : "findContextfiless",
+        "parameters" : [ {
+          "name" : "page",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : "0",
+          "format" : "int32",
+          "x-WM-EDITABLE" : false,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable"
+        }, {
+          "name" : "size",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : "20",
+          "format" : "int32",
+          "x-WM-EDITABLE" : false
+        }, {
+          "name" : "sort",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "x-WM-EDITABLE" : false
+        }, {
+          "in" : "body",
+          "name" : "QueryFilter",
+          "required" : true,
+          "schema" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/definitions/QueryFilter",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            },
+            "x-WM-IS_LIST" : false
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.expression.QueryFilter",
+          "x-WM-UUID" : "a43fad1f-5f31-4894-b8c2-975d4199eb38",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Page",
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "$ref" : "#/definitions/Contextfiles",
+                "x-WM-TYPE_ARGUMENTS" : [ ]
+              } ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "99b9e2af-3fc1-4459-9f1f-b354d32cabbd",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-METHOD_IDENTIFIER" : "findContextfiless-2--1821969279"
+      },
+      "x-WM-TAG" : "ContextfilesController",
+      "x-WM-BASE_PATH" : "/BCdata/Contextfiles",
+      "x-WM-COMPLETE_PATH" : "//BCdata/Contextfiles/search",
+      "x-WM-RELATIVE_PATH" : "/search"
+    },
+    "/BCdata/Contextfiles/{id:.+}" : {
+      "get" : {
+        "tags" : [ "ContextfilesController" ],
+        "description" : "Returns the Contextfiles instance associated with the given id.",
+        "operationId" : "getContextfiles",
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "collectionFormat" : "multi",
+          "format" : "int32",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
+          "x-WM-UUID" : "e62222d5-6788-4bae-bbc1-a1dd6a55a1b0",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Contextfiles",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "9e0b5a0f-cc0c-40f7-b4b1-8b3c074dcddc",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-METHOD_IDENTIFIER" : "getContextfiles-1--2056816673"
+      },
+      "put" : {
+        "tags" : [ "ContextfilesController" ],
+        "description" : "Updates the Contextfiles instance associated with the given id.",
+        "operationId" : "editContextfiles",
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "collectionFormat" : "multi",
+          "format" : "int32",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
+          "x-WM-UUID" : "4f4440bf-92a6-49b7-954d-8311d2804ebd",
+          "x-WM-EDITABLE" : true
+        }, {
+          "in" : "body",
+          "name" : "Contextfiles",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/Contextfiles",
+            "x-WM-TYPE_ARGUMENTS" : [ ]
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.bccontrolpanel.bcdata.Contextfiles",
+          "x-WM-UUID" : "918ea2b9-a15c-4312-8c53-058d100e2318",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Contextfiles",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "61b4a8eb-5e8c-494b-a019-b167415c85b9",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-METHOD_IDENTIFIER" : "editContextfiles-2-2087654733"
+      },
+      "delete" : {
+        "tags" : [ "ContextfilesController" ],
+        "description" : "Deletes the Contextfiles instance associated with the given id.",
+        "operationId" : "deleteContextfiles",
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "collectionFormat" : "multi",
+          "format" : "int32",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
+          "x-WM-UUID" : "9a00db19-8811-4fa2-8f17-553354898e0a",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "boolean"
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "f2aaa75d-8358-449b-8fd9-32ea25428118",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-METHOD_IDENTIFIER" : "deleteContextfiles-1--2056816673"
+      },
+      "x-WM-TAG" : "ContextfilesController",
+      "x-WM-BASE_PATH" : "/BCdata/Contextfiles",
+      "x-WM-COMPLETE_PATH" : "//BCdata/Contextfiles/{id:.+}",
+      "x-WM-RELATIVE_PATH" : "/{id:.+}"
+    },
     "/BCdata/Menusettings/" : {
       "get" : {
         "tags" : [ "MenusettingsController" ],
@@ -77,7 +621,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "8a365d4c-f144-4cce-9b02-66c65c79f429",
+        "x-WM-OPERATION_UID" : "561eea37-1505-4670-aa15-372ed02fc719",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "getMenusettingss-1-934028971"
       },
@@ -94,7 +638,7 @@
             "x-WM-TYPE_ARGUMENTS" : [ ]
           },
           "x-WM-FULLY_QUALIFIED_TYPE" : "com.bccontrolpanel.bcdata.Menusettings",
-          "x-WM-UUID" : "7d85fd45-17eb-4ffb-8a4e-cd7fdca4f9d0",
+          "x-WM-UUID" : "d43659d0-6126-4023-8dfd-74c18682cd2d",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -106,7 +650,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "c03fcc7e-b6b5-4b37-887c-cf4f25412f15",
+        "x-WM-OPERATION_UID" : "1cc112e0-b150-4aa9-86ca-6fca631b68da",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "createMenusettings-1-113249505"
       },
@@ -129,7 +673,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "b68bc844-a248-4bbb-b2f9-5a80fc74944f",
+        "x-WM-OPERATION_UID" : "daac410b-9ead-445c-b849-c8afdde4af08",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "countAllMenusettingss-0-17"
       },
@@ -179,7 +723,7 @@
             "x-WM-IS_LIST" : false
           },
           "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.expression.QueryFilter",
-          "x-WM-UUID" : "2a4cf2db-6345-4de6-8086-b39c7ecabae9",
+          "x-WM-UUID" : "4148db7f-e412-4526-a816-24be728a30b7",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -194,7 +738,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "8097d173-1549-4b43-b3f0-1b1a68711331",
+        "x-WM-OPERATION_UID" : "081dfa99-5002-4306-a7d0-d6d9b9b060ae",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "findMenusettingss-2--1821969279"
       },
@@ -216,7 +760,7 @@
           "collectionFormat" : "multi",
           "format" : "int32",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
-          "x-WM-UUID" : "6eafc253-6991-4ad5-aaf9-01a64843aa25",
+          "x-WM-UUID" : "08b7b3c6-7b55-4538-817a-cf002040a0c0",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -228,7 +772,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "c2a72a29-7ec1-433f-910f-d08a1917b19f",
+        "x-WM-OPERATION_UID" : "a4388032-8bee-4425-b33e-f3872b4527f5",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "getMenusettings-1--2056816673"
       },
@@ -244,7 +788,7 @@
           "collectionFormat" : "multi",
           "format" : "int32",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
-          "x-WM-UUID" : "47daa6df-6e4e-4ebf-8ebc-08f272834b5c",
+          "x-WM-UUID" : "d2924cfd-18fa-4a6d-8500-d60168e4e1cf",
           "x-WM-EDITABLE" : true
         }, {
           "in" : "body",
@@ -255,7 +799,7 @@
             "x-WM-TYPE_ARGUMENTS" : [ ]
           },
           "x-WM-FULLY_QUALIFIED_TYPE" : "com.bccontrolpanel.bcdata.Menusettings",
-          "x-WM-UUID" : "6ebe4693-1131-4ad3-b0dd-6e2da0a4c34a",
+          "x-WM-UUID" : "2d005594-9644-434e-9135-864b4fca3279",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -267,7 +811,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "bb65c5dd-5c5b-4943-b223-5648c10463aa",
+        "x-WM-OPERATION_UID" : "8170bcc5-a43e-4c03-b946-2fc6dc4118d1",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "editMenusettings-2-1320443303"
       },
@@ -283,7 +827,7 @@
           "collectionFormat" : "multi",
           "format" : "int32",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
-          "x-WM-UUID" : "c4e99403-4232-4c71-bff2-908c23aec695",
+          "x-WM-UUID" : "3432a38a-b6b7-41b8-9167-53fd3ad6cbb0",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -294,7 +838,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "4e0f3328-9c23-4a8d-8bed-369d624985ab",
+        "x-WM-OPERATION_UID" : "bf931a4e-30a1-4651-b11f-ee051a62a428",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "deleteMenusettings-1--2056816673"
       },
@@ -344,7 +888,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "4196b32f-69b1-431d-a8d0-b4db92aa5fe1",
+        "x-WM-OPERATION_UID" : "471a5e00-b764-4c8d-acc5-5a861a00ffa6",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "getRoles-1-934028971"
       },
@@ -361,7 +905,7 @@
             "x-WM-TYPE_ARGUMENTS" : [ ]
           },
           "x-WM-FULLY_QUALIFIED_TYPE" : "com.bccontrolpanel.bcdata.Role",
-          "x-WM-UUID" : "af12799d-3bc3-42f9-87f3-bde7c6323e1d",
+          "x-WM-UUID" : "c17f34a8-d4a9-47b0-9fce-39f2e3f4c7c1",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -373,7 +917,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "c60e2651-1cb7-4812-9c26-d502fc348fed",
+        "x-WM-OPERATION_UID" : "dbd227b5-be2e-4d2f-b16e-873f2846a078",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "createRole-1-357766357"
       },
@@ -396,7 +940,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "15091116-7ac8-489d-b1c4-ebedb25d24d4",
+        "x-WM-OPERATION_UID" : "e6b6e4b2-6ca5-413f-b23c-f525c66c50dd",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "countAllRoles-0-17"
       },
@@ -446,7 +990,7 @@
             "x-WM-IS_LIST" : false
           },
           "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.expression.QueryFilter",
-          "x-WM-UUID" : "875bfd7e-eb58-4c37-8426-398e0cecca71",
+          "x-WM-UUID" : "abe8eede-57c1-421e-ac2d-99078b07da42",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -461,7 +1005,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "4721741e-f7f3-4732-af5d-fc32b05d5d5a",
+        "x-WM-OPERATION_UID" : "3af76e7d-63f8-4d2e-9317-dd7d2b38290c",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "findRoles-2--1821969279"
       },
@@ -483,7 +1027,7 @@
           "collectionFormat" : "multi",
           "format" : "int32",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
-          "x-WM-UUID" : "1e668438-fd6c-4603-91f5-5e8500e9bd41",
+          "x-WM-UUID" : "e694864d-3cff-4f12-8110-e9f8685c6c74",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -495,7 +1039,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "e5d4e82f-8d6d-4dde-9c8f-d74821429bc6",
+        "x-WM-OPERATION_UID" : "bf9d6332-ba0e-4861-a4d8-b323c4a91b6f",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "getRole-1--2056816673"
       },
@@ -511,7 +1055,7 @@
           "collectionFormat" : "multi",
           "format" : "int32",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
-          "x-WM-UUID" : "99e28012-7e2a-4835-81cb-872169480c62",
+          "x-WM-UUID" : "d2bd3bd3-7e99-4beb-aba4-ed0b774b2f61",
           "x-WM-EDITABLE" : true
         }, {
           "in" : "body",
@@ -522,7 +1066,7 @@
             "x-WM-TYPE_ARGUMENTS" : [ ]
           },
           "x-WM-FULLY_QUALIFIED_TYPE" : "com.bccontrolpanel.bcdata.Role",
-          "x-WM-UUID" : "5e54e99d-4fd1-4a45-8e59-febe907c87e9",
+          "x-WM-UUID" : "ffa726cc-f4cf-4dd8-a208-31e208d80ce7",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -534,7 +1078,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "e29265f1-8358-4d9e-b860-eb8084493862",
+        "x-WM-OPERATION_UID" : "d588d4a9-4696-4f7a-9951-5b0c25b726ba",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "editRole-2-1564960155"
       },
@@ -550,7 +1094,7 @@
           "collectionFormat" : "multi",
           "format" : "int32",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
-          "x-WM-UUID" : "c846ff2d-69b4-4e1b-b353-ecff8e611355",
+          "x-WM-UUID" : "1b548202-515d-4a5e-b779-fca96894be94",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -561,7 +1105,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "41f2808b-c302-4afc-b7db-0b9aadefaf15",
+        "x-WM-OPERATION_UID" : "6205e2f3-f1b5-4812-9122-3b6c3261692d",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "deleteRole-1--2056816673"
       },
@@ -611,7 +1155,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "5577b7ef-d311-4dbc-a1a0-aada8beb9673",
+        "x-WM-OPERATION_UID" : "ba8f15c4-6c4b-403e-92f1-aa9f3aa5f785",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "getUserss-1-934028971"
       },
@@ -628,7 +1172,7 @@
             "x-WM-TYPE_ARGUMENTS" : [ ]
           },
           "x-WM-FULLY_QUALIFIED_TYPE" : "com.bccontrolpanel.bcdata.Users",
-          "x-WM-UUID" : "fd824908-3ab6-40ee-91f9-8af79eef36a5",
+          "x-WM-UUID" : "2d79383a-4059-428f-acaa-70828156a596",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -640,7 +1184,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "92835c3c-9280-4a91-af2d-08509a4cb269",
+        "x-WM-OPERATION_UID" : "94370a2d-dfc9-4173-b3c9-72422cc10947",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "createUsers-1--1791280173"
       },
@@ -663,7 +1207,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "458eef26-22c5-41bd-b6de-19bd7a4f57b4",
+        "x-WM-OPERATION_UID" : "7c2a15c9-f387-4810-8d46-74097d91c65a",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "countAllUserss-0-17"
       },
@@ -713,7 +1257,7 @@
             "x-WM-IS_LIST" : false
           },
           "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.expression.QueryFilter",
-          "x-WM-UUID" : "483fbf4b-d70e-4c87-8b21-2ec7175c6f0d",
+          "x-WM-UUID" : "8ca0c47a-2750-4216-86a4-84b1f54d19c4",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -728,7 +1272,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "2da5befe-c347-4ee0-856c-622872e01e54",
+        "x-WM-OPERATION_UID" : "ae9d98c5-8937-4a14-a88b-6f98b8a1d728",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "findUserss-2--1821969279"
       },
@@ -750,7 +1294,7 @@
           "collectionFormat" : "multi",
           "format" : "int32",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
-          "x-WM-UUID" : "00f1b99e-2d05-4aaf-bc93-ab58c7bf0cbf",
+          "x-WM-UUID" : "3d246f8a-12e1-449e-b5e8-820881449174",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -762,7 +1306,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "e698f1a8-46cd-447a-9839-a6bc1469cd64",
+        "x-WM-OPERATION_UID" : "afafd6ca-a294-4621-9a72-073cd013b53e",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "getUsers-1--2056816673"
       },
@@ -778,7 +1322,7 @@
           "collectionFormat" : "multi",
           "format" : "int32",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
-          "x-WM-UUID" : "af752c20-7500-4896-bdb1-e472fc46f961",
+          "x-WM-UUID" : "9671b7ee-6c39-4427-adb2-228f7d586a46",
           "x-WM-EDITABLE" : true
         }, {
           "in" : "body",
@@ -789,7 +1333,7 @@
             "x-WM-TYPE_ARGUMENTS" : [ ]
           },
           "x-WM-FULLY_QUALIFIED_TYPE" : "com.bccontrolpanel.bcdata.Users",
-          "x-WM-UUID" : "06e8ea87-4493-4f7d-95d3-6073cb837d7d",
+          "x-WM-UUID" : "ee63c815-7d2c-4042-948d-baf1da558c99",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -801,7 +1345,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "7c3f01b6-15d7-495c-91bc-67041194af80",
+        "x-WM-OPERATION_UID" : "dda10f08-e191-43dc-8dea-3afd9c9956a0",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "editUsers-2--584086375"
       },
@@ -817,7 +1361,7 @@
           "collectionFormat" : "multi",
           "format" : "int32",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
-          "x-WM-UUID" : "dcf1bf14-dce7-4fc4-9663-201372350523",
+          "x-WM-UUID" : "24721148-545a-4a10-b738-ab1143545605",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -828,7 +1372,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "d29b2822-87e4-42a7-adf1-9fcbfec964e8",
+        "x-WM-OPERATION_UID" : "84850aa1-09c0-4c7f-a5d4-25b27a82eed8",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "deleteUsers-1--2056816673"
       },
@@ -851,7 +1395,7 @@
             "x-WM-TYPE_ARGUMENTS" : [ ]
           },
           "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.model.CustomProcedure",
-          "x-WM-UUID" : "199dd846-272e-406d-a1b5-335df1316055",
+          "x-WM-UUID" : "85a32624-3888-4576-b121-35bfb44049f0",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -868,7 +1412,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "acc50acc-8884-4dcd-83a0-3bce5eb7128a",
+        "x-WM-OPERATION_UID" : "c2fc13fa-2dd8-46cd-a2b3-feac53617713",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "executeWMCustomProcedure-1--282256460"
       },
@@ -918,7 +1462,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "53413f5d-73e0-42ef-9418-eb2e6f44bd2f",
+        "x-WM-OPERATION_UID" : "e638bf04-8c65-44f5-93a8-37cc653f3524",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "executeMenusettings-1-934028971"
       },
@@ -941,7 +1485,7 @@
             "x-WM-TYPE_ARGUMENTS" : [ ]
           },
           "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.model.CustomQuery",
-          "x-WM-UUID" : "f9275c39-6ebd-4f5b-b6c3-101f1d58b108",
+          "x-WM-UUID" : "152afc86-cad8-4abe-a974-2c807c236105",
           "x-WM-EDITABLE" : true
         }, {
           "name" : "page",
@@ -979,7 +1523,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "b0f137ea-6891-4090-b68b-3b84787ab983",
+        "x-WM-OPERATION_UID" : "eb0dc956-0751-4eef-b9ce-e3fffba66012",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "executeWMCustomQuery-2-107741091"
       },
@@ -1002,7 +1546,7 @@
             "x-WM-TYPE_ARGUMENTS" : [ ]
           },
           "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.model.CustomQuery",
-          "x-WM-UUID" : "9b606da0-1647-416b-9ca9-ba4e4b017192",
+          "x-WM-UUID" : "e9b13bd0-183d-4081-be21-265f99c703b1",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -1014,7 +1558,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "46c63c41-5b64-4d84-acbe-426ea295cd52",
+        "x-WM-OPERATION_UID" : "be18fac0-4e66-4c43-aafc-e4ffdac09ed7",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "executeWMCustomQuery-1--718813271"
       },
@@ -1025,27 +1569,6 @@
     }
   },
   "definitions" : {
-    "Sort" : {
-      "allOf" : [ {
-        "$ref" : "#/definitions/Iterable"
-      }, {
-        "$ref" : "#/definitions/Serializable"
-      }, {
-        "properties" : {
-          "orders" : {
-            "type" : "array",
-            "uniqueItems" : false,
-            "items" : {
-              "$ref" : "#/definitions/Sort$Order",
-              "x-WM-TYPE_ARGUMENTS" : [ ]
-            },
-            "x-WM-IS_LIST" : true
-          }
-        }
-      } ],
-      "x-WM-FULLY_QUALIFIED_NAME" : "org.springframework.data.domain.Sort",
-      "x-WM-TAGS" : [ "UsersController" ]
-    },
     "Users" : {
       "allOf" : [ {
         "$ref" : "#/definitions/Serializable"
@@ -1069,9 +1592,26 @@
       "x-WM-FULLY_QUALIFIED_NAME" : "com.bccontrolpanel.bcdata.Users",
       "x-WM-TAGS" : [ "UsersController" ]
     },
-    "Iterable" : {
-      "x-WM-FULLY_QUALIFIED_NAME" : "java.lang.Iterable",
-      "x-WM-TAGS" : [ "UsersController" ]
+    "Sort" : {
+      "allOf" : [ {
+        "$ref" : "#/definitions/Iterable"
+      }, {
+        "$ref" : "#/definitions/Serializable"
+      }, {
+        "properties" : {
+          "orders" : {
+            "type" : "array",
+            "uniqueItems" : false,
+            "items" : {
+              "$ref" : "#/definitions/Sort$Order",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            },
+            "x-WM-IS_LIST" : true
+          }
+        }
+      } ],
+      "x-WM-FULLY_QUALIFIED_NAME" : "org.springframework.data.domain.Sort",
+      "x-WM-TAGS" : [ "ContextController" ]
     },
     "CustomQueryParam" : {
       "properties" : {
@@ -1092,24 +1632,6 @@
       "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.runtime.data.model.CustomQueryParam",
       "x-WM-TAGS" : [ "QueryExecutionController" ]
     },
-    "CustomProcedure" : {
-      "properties" : {
-        "procedureStr" : {
-          "type" : "string"
-        },
-        "procedureParams" : {
-          "type" : "array",
-          "uniqueItems" : false,
-          "items" : {
-            "$ref" : "#/definitions/CustomProcedureParam",
-            "x-WM-TYPE_ARGUMENTS" : [ ]
-          },
-          "x-WM-IS_LIST" : true
-        }
-      },
-      "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.runtime.data.model.CustomProcedure",
-      "x-WM-TAGS" : [ "ProcedureExecutionController" ]
-    },
     "QueryFilter" : {
       "properties" : {
         "attributeType" : {
@@ -1129,73 +1651,7 @@
         }
       },
       "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.runtime.data.expression.QueryFilter",
-      "x-WM-TAGS" : [ "UsersController", "MenusettingsController", "RoleController" ]
-    },
-    "Page" : {
-      "allOf" : [ {
-        "$ref" : "#/definitions/Slice"
-      }, {
-        "properties" : {
-          "size" : {
-            "type" : "integer",
-            "format" : "int32"
-          },
-          "numberOfElements" : {
-            "type" : "integer",
-            "format" : "int32"
-          },
-          "totalPages" : {
-            "type" : "integer",
-            "format" : "int32"
-          },
-          "first" : {
-            "type" : "boolean"
-          },
-          "totalElements" : {
-            "type" : "integer",
-            "format" : "int64"
-          },
-          "number" : {
-            "type" : "integer",
-            "format" : "int32"
-          },
-          "sort" : {
-            "$ref" : "#/definitions/Sort",
-            "x-WM-TYPE_ARGUMENTS" : [ ]
-          },
-          "content" : {
-            "type" : "array",
-            "uniqueItems" : false,
-            "items" : {
-              "$ref" : "#/definitions/Object",
-              "x-WM-TYPE_ARGUMENTS" : [ ]
-            },
-            "x-WM-IS_LIST" : true
-          },
-          "last" : {
-            "type" : "boolean"
-          }
-        }
-      } ],
-      "x-WM-FULLY_QUALIFIED_NAME" : "org.springframework.data.domain.Page",
-      "x-WM-TAGS" : [ "UsersController", "QueryExecutionController", "MenusettingsController", "RoleController" ]
-    },
-    "Role" : {
-      "allOf" : [ {
-        "$ref" : "#/definitions/Serializable"
-      }, {
-        "properties" : {
-          "role" : {
-            "type" : "string"
-          },
-          "id" : {
-            "type" : "integer",
-            "format" : "int32"
-          }
-        }
-      } ],
-      "x-WM-FULLY_QUALIFIED_NAME" : "com.bccontrolpanel.bcdata.Role",
-      "x-WM-TAGS" : [ "RoleController" ]
+      "x-WM-TAGS" : [ "ContextController", "ContextfilesController", "MenusettingsController", "UsersController", "RoleController" ]
     },
     "Sort$Order" : {
       "allOf" : [ {
@@ -1219,55 +1675,7 @@
         }
       } ],
       "x-WM-FULLY_QUALIFIED_NAME" : "org.springframework.data.domain.Sort.Order",
-      "x-WM-TAGS" : [ "UsersController" ]
-    },
-    "Serializable" : {
-      "x-WM-FULLY_QUALIFIED_NAME" : "java.io.Serializable",
-      "x-WM-TAGS" : [ "UsersController", "MenusettingsController", "RoleController" ]
-    },
-    "CustomQuery" : {
-      "properties" : {
-        "queryStr" : {
-          "type" : "string"
-        },
-        "nativeSql" : {
-          "type" : "boolean"
-        },
-        "queryParams" : {
-          "type" : "array",
-          "uniqueItems" : false,
-          "items" : {
-            "$ref" : "#/definitions/CustomQueryParam",
-            "x-WM-TYPE_ARGUMENTS" : [ ]
-          },
-          "x-WM-IS_LIST" : true
-        }
-      },
-      "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.runtime.data.model.CustomQuery",
-      "x-WM-TAGS" : [ "QueryExecutionController" ]
-    },
-    "Menusettings" : {
-      "allOf" : [ {
-        "$ref" : "#/definitions/Serializable"
-      }, {
-        "properties" : {
-          "menuItemLink" : {
-            "type" : "string"
-          },
-          "menuItemIcon" : {
-            "type" : "string"
-          },
-          "menuItemLabel" : {
-            "type" : "string"
-          },
-          "id" : {
-            "type" : "integer",
-            "format" : "int32"
-          }
-        }
-      } ],
-      "x-WM-FULLY_QUALIFIED_NAME" : "com.bccontrolpanel.bcdata.Menusettings",
-      "x-WM-TAGS" : [ "MenusettingsController" ]
+      "x-WM-TAGS" : [ "ContextController" ]
     },
     "CustomProcedureParam" : {
       "properties" : {
@@ -1328,7 +1736,190 @@
         }
       } ],
       "x-WM-FULLY_QUALIFIED_NAME" : "org.springframework.data.domain.Slice",
-      "x-WM-TAGS" : [ "UsersController" ]
+      "x-WM-TAGS" : [ "ContextController" ]
+    },
+    "Iterable" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "java.lang.Iterable",
+      "x-WM-TAGS" : [ "ContextController" ]
+    },
+    "CustomProcedure" : {
+      "properties" : {
+        "procedureStr" : {
+          "type" : "string"
+        },
+        "procedureParams" : {
+          "type" : "array",
+          "uniqueItems" : false,
+          "items" : {
+            "$ref" : "#/definitions/CustomProcedureParam",
+            "x-WM-TYPE_ARGUMENTS" : [ ]
+          },
+          "x-WM-IS_LIST" : true
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.runtime.data.model.CustomProcedure",
+      "x-WM-TAGS" : [ "ProcedureExecutionController" ]
+    },
+    "Context" : {
+      "allOf" : [ {
+        "$ref" : "#/definitions/Serializable"
+      }, {
+        "properties" : {
+          "contextenabled" : {
+            "type" : "boolean"
+          },
+          "contextvalue" : {
+            "type" : "string"
+          },
+          "contextname" : {
+            "type" : "string"
+          },
+          "contextId" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "id" : {
+            "type" : "integer",
+            "format" : "int32"
+          }
+        }
+      } ],
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.bccontrolpanel.bcdata.Context",
+      "x-WM-TAGS" : [ "ContextController" ]
+    },
+    "Contextfiles" : {
+      "allOf" : [ {
+        "$ref" : "#/definitions/Serializable"
+      }, {
+        "properties" : {
+          "filename" : {
+            "type" : "string"
+          },
+          "id" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "description" : {
+            "type" : "string"
+          }
+        }
+      } ],
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.bccontrolpanel.bcdata.Contextfiles",
+      "x-WM-TAGS" : [ "ContextfilesController" ]
+    },
+    "Page" : {
+      "allOf" : [ {
+        "$ref" : "#/definitions/Slice"
+      }, {
+        "properties" : {
+          "size" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "numberOfElements" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "totalPages" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "first" : {
+            "type" : "boolean"
+          },
+          "totalElements" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "number" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "sort" : {
+            "$ref" : "#/definitions/Sort",
+            "x-WM-TYPE_ARGUMENTS" : [ ]
+          },
+          "content" : {
+            "type" : "array",
+            "uniqueItems" : false,
+            "items" : {
+              "$ref" : "#/definitions/Object",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            },
+            "x-WM-IS_LIST" : true
+          },
+          "last" : {
+            "type" : "boolean"
+          }
+        }
+      } ],
+      "x-WM-FULLY_QUALIFIED_NAME" : "org.springframework.data.domain.Page",
+      "x-WM-TAGS" : [ "ContextController", "ContextfilesController", "QueryExecutionController", "MenusettingsController", "UsersController", "RoleController" ]
+    },
+    "Role" : {
+      "allOf" : [ {
+        "$ref" : "#/definitions/Serializable"
+      }, {
+        "properties" : {
+          "role" : {
+            "type" : "string"
+          },
+          "id" : {
+            "type" : "integer",
+            "format" : "int32"
+          }
+        }
+      } ],
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.bccontrolpanel.bcdata.Role",
+      "x-WM-TAGS" : [ "RoleController" ]
+    },
+    "Serializable" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "java.io.Serializable",
+      "x-WM-TAGS" : [ "ContextController", "ContextfilesController", "MenusettingsController", "UsersController", "RoleController" ]
+    },
+    "CustomQuery" : {
+      "properties" : {
+        "queryStr" : {
+          "type" : "string"
+        },
+        "nativeSql" : {
+          "type" : "boolean"
+        },
+        "queryParams" : {
+          "type" : "array",
+          "uniqueItems" : false,
+          "items" : {
+            "$ref" : "#/definitions/CustomQueryParam",
+            "x-WM-TYPE_ARGUMENTS" : [ ]
+          },
+          "x-WM-IS_LIST" : true
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.runtime.data.model.CustomQuery",
+      "x-WM-TAGS" : [ "QueryExecutionController" ]
+    },
+    "Menusettings" : {
+      "allOf" : [ {
+        "$ref" : "#/definitions/Serializable"
+      }, {
+        "properties" : {
+          "menuItemLink" : {
+            "type" : "string"
+          },
+          "menuItemIcon" : {
+            "type" : "string"
+          },
+          "menuItemLabel" : {
+            "type" : "string"
+          },
+          "id" : {
+            "type" : "integer",
+            "format" : "int32"
+          }
+        }
+      } ],
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.bccontrolpanel.bcdata.Menusettings",
+      "x-WM-TAGS" : [ "MenusettingsController" ]
     }
   }
 }

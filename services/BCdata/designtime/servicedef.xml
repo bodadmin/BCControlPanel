@@ -10,6 +10,18 @@
             <element name="password" typeRef="java.lang.String" allowNull="true"/>
             <element name="userrname" typeRef="java.lang.String" allowNull="true"/>
         </dataobject>
+        <dataobject javaType="com.bccontrolpanel.bcdata.Context">
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="contextId" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="contextenabled" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="contextvalue" typeRef="java.lang.String" allowNull="true"/>
+            <element name="contextname" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.bccontrolpanel.bcdata.Contextfiles">
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="description" typeRef="java.lang.String" allowNull="true"/>
+            <element name="filename" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
         <dataobject javaType="com.bccontrolpanel.bcdata.Role">
             <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
             <element name="role" typeRef="java.lang.String" allowNull="true"/>

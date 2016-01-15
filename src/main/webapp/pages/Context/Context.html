@@ -1,0 +1,21 @@
+<wm-page name="page1" data-ng-controller="ContextPageController" pagetitle="Context">
+    <wm-header name="header1" content="header"></wm-header>
+    <wm-top-nav name="top_nav1" content="topnav"></wm-top-nav>
+    <wm-content name="content1">
+        <wm-page-content name="page_content1" columnwidth="12">
+            <wm-label name="lblFileNames" caption="Context FileNames" fontsize="20"></wm-label>
+            <wm-grid name="grid2" dataset="bind:Variables.BCdataContextfilesData.dataSet" readonlygrid="false" deleterow="true" updaterow="true" insertrow="true">
+                <wm-grid-column type="integer" readonly="false" caption="Id" backgroundcolor="" primary-key="true" mobiledisplay="true" pcdisplay="true" binding="id" textcolor="" col-class="" col-ng-class="" search-placeholder="Search" disable-inline-editing="false"
+                is-related-pk="false"></wm-grid-column>
+                <wm-grid-column type="string" readonly="false" caption="Environment" width="40px" backgroundcolor="" generator="assigned" primary-key="" mobiledisplay="true" pcdisplay="true" binding="environment" textcolor="" col-class=""
+                col-ng-class="{'Dev':if row.Environment == Dev, 'Test':if row.Environment == Test, 'Prod':if row.environment = Prod}" search-placeholder="Search" disable-inline-editing="false" is-related-pk="false"></wm-grid-column>
+                <wm-grid-column type="string" readonly="false" caption="Filename" backgroundcolor="" primary-key="" mobiledisplay="true" pcdisplay="true" binding="filename" textcolor="" col-class="" col-ng-class="" search-placeholder="Search"
+                disable-inline-editing="false" is-related-pk="false"></wm-grid-column>
+                <wm-grid-column type="string" readonly="false" caption="Description" backgroundcolor="" primary-key="" mobiledisplay="true" pcdisplay="true" binding="description" textcolor="" col-class="" col-ng-class="" search-placeholder="Search"
+                disable-inline-editing="false" is-related-pk="false"></wm-grid-column>
+                <wm-grid-action class="btn-primary" show="true" iconclass="glyphicon glyphicon-plus" key="addNewRow" display-name="New" action="addNewRow()"></wm-grid-action>
+            </wm-grid>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer name="footer1" content="footer"></wm-footer>
+</wm-page>

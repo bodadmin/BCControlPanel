@@ -15,11 +15,11 @@ import com.wavemaker.runtime.data.dao.WMGenericDaoImpl;
 
 import com.bccontrolpanel.bcdata.*;
 /**
-* Specifies methods used to obtain and modify MenuSettings related information
+* Specifies methods used to obtain and modify Menusettings related information
 * which is stored in the database.
 */
-@Repository("BCdata.MenuSettingsDao")
-public class MenuSettingsDao extends WMGenericDaoImpl <MenuSettings, Integer> {
+@Repository("BCdata.MenusettingsDao")
+public class MenusettingsDao extends WMGenericDaoImpl <Menusettings, Integer> {
 
     @Autowired
     @Qualifier("BCdataTemplate")

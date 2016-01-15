@@ -16,7 +16,16 @@
       <column name="`role`" length="255" not-null="false" precision="19"/>
     </property>
   </class>
-  <class table="`menuSettings`" name="com.bccontrolpanel.bcdata.MenuSettings" entity-name="com.bccontrolpanel.bcdata.MenuSettings" schema="BCdata">
+  <class table="`role`" name="com.bccontrolpanel.bcdata.Role" entity-name="com.bccontrolpanel.bcdata.Role" schema="BCdata">
+    <id name="id" type="integer">
+      <column name="`ID`" length="255" not-null="true" precision="19"/>
+      <generator class="identity"/>
+    </id>
+    <property name="role" type="string">
+      <column name="`role`" length="255" not-null="false" precision="19"/>
+    </property>
+  </class>
+  <class table="`menusettings`" name="com.bccontrolpanel.bcdata.Menusettings" entity-name="com.bccontrolpanel.bcdata.Menusettings" schema="BCdata">
     <id name="id" type="integer">
       <column name="`ID`" length="255" not-null="true" precision="19"/>
       <generator class="identity"/>
@@ -29,15 +38,6 @@
     </property>
     <property name="menuItemIcon" type="string">
       <column name="`menuItemIcon`" length="255" not-null="false" precision="19"/>
-    </property>
-  </class>
-  <class table="`role`" name="com.bccontrolpanel.bcdata.Role" entity-name="com.bccontrolpanel.bcdata.Role" schema="BCdata">
-    <id name="id" type="integer">
-      <column name="`ID`" length="255" not-null="true" precision="19"/>
-      <generator class="identity"/>
-    </id>
-    <property name="role" type="string">
-      <column name="`role`" length="255" not-null="false" precision="19"/>
     </property>
   </class>
 </hibernate-mapping>

@@ -9,19 +9,19 @@
   },
   "basePath" : "",
   "tags" : [ {
+    "name" : "RoleController",
+    "description" : "Exposes APIs to work with Role resource.",
+    "x-WM-FULLY_QUALIFIED_NAME" : "com.bccontrolpanel.bcdata.controller.RoleController",
+    "x-WM-VERSION" : ""
+  }, {
+    "name" : "MenusettingsController",
+    "description" : "Exposes APIs to work with Menusettings resource.",
+    "x-WM-FULLY_QUALIFIED_NAME" : "com.bccontrolpanel.bcdata.controller.MenusettingsController",
+    "x-WM-VERSION" : ""
+  }, {
     "name" : "QueryExecutionController",
     "description" : "Controller class for query execution",
     "x-WM-FULLY_QUALIFIED_NAME" : "com.bccontrolpanel.bcdata.controller.QueryExecutionController",
-    "x-WM-VERSION" : ""
-  }, {
-    "name" : "MenuSettingsController",
-    "description" : "Exposes APIs to work with MenuSettings resource.",
-    "x-WM-FULLY_QUALIFIED_NAME" : "com.bccontrolpanel.bcdata.controller.MenuSettingsController",
-    "x-WM-VERSION" : ""
-  }, {
-    "name" : "ProcedureExecutionController",
-    "description" : "Controller class for procedure execution",
-    "x-WM-FULLY_QUALIFIED_NAME" : "com.bccontrolpanel.bcdata.controller.ProcedureExecutionController",
     "x-WM-VERSION" : ""
   }, {
     "name" : "UsersController",
@@ -29,18 +29,18 @@
     "x-WM-FULLY_QUALIFIED_NAME" : "com.bccontrolpanel.bcdata.controller.UsersController",
     "x-WM-VERSION" : ""
   }, {
-    "name" : "RoleController",
-    "description" : "Exposes APIs to work with Role resource.",
-    "x-WM-FULLY_QUALIFIED_NAME" : "com.bccontrolpanel.bcdata.controller.RoleController",
+    "name" : "ProcedureExecutionController",
+    "description" : "Controller class for procedure execution",
+    "x-WM-FULLY_QUALIFIED_NAME" : "com.bccontrolpanel.bcdata.controller.ProcedureExecutionController",
     "x-WM-VERSION" : ""
   } ],
   "schemes" : [ "https", "http" ],
   "paths" : {
-    "/BCdata/MenuSettings/" : {
+    "/BCdata/Menusettings/" : {
       "get" : {
-        "tags" : [ "MenuSettingsController" ],
-        "description" : "Returns the list of MenuSettings instances.",
-        "operationId" : "getMenuSettingss",
+        "tags" : [ "MenusettingsController" ],
+        "description" : "Returns the list of Menusettings instances.",
+        "operationId" : "getMenusettingss",
         "parameters" : [ {
           "name" : "page",
           "in" : "query",
@@ -71,55 +71,55 @@
             "schema" : {
               "$ref" : "#/definitions/Page",
               "x-WM-TYPE_ARGUMENTS" : [ {
-                "$ref" : "#/definitions/MenuSettings",
+                "$ref" : "#/definitions/Menusettings",
                 "x-WM-TYPE_ARGUMENTS" : [ ]
               } ]
             }
           }
         },
-        "x-WM-OPERATION_UID" : "b86669a0-774e-4d4e-8941-46937880c445",
+        "x-WM-OPERATION_UID" : "09d4d0e7-2b46-4e9d-b4f3-b44767f71515",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
-        "x-WM-METHOD_IDENTIFIER" : "getMenuSettingss-1-934028971"
+        "x-WM-METHOD_IDENTIFIER" : "getMenusettingss-1-934028971"
       },
       "post" : {
-        "tags" : [ "MenuSettingsController" ],
-        "description" : "Creates a new MenuSettings instance.",
-        "operationId" : "createMenuSettings",
+        "tags" : [ "MenusettingsController" ],
+        "description" : "Creates a new Menusettings instance.",
+        "operationId" : "createMenusettings",
         "parameters" : [ {
           "in" : "body",
-          "name" : "MenuSettings",
+          "name" : "Menusettings",
           "required" : true,
           "schema" : {
-            "$ref" : "#/definitions/MenuSettings",
+            "$ref" : "#/definitions/Menusettings",
             "x-WM-TYPE_ARGUMENTS" : [ ]
           },
-          "x-WM-FULLY_QUALIFIED_TYPE" : "com.bccontrolpanel.bcdata.MenuSettings",
-          "x-WM-UUID" : "b46fe012-ab9b-4b50-911a-92781ea46188",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.bccontrolpanel.bcdata.Menusettings",
+          "x-WM-UUID" : "cdf59a82-b67f-4349-b568-cdf90ad1b206",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
           "200" : {
             "description" : "Success",
             "schema" : {
-              "$ref" : "#/definitions/MenuSettings",
+              "$ref" : "#/definitions/Menusettings",
               "x-WM-TYPE_ARGUMENTS" : [ ]
             }
           }
         },
-        "x-WM-OPERATION_UID" : "2af7c572-df17-4f82-b208-c9ef457f3b65",
+        "x-WM-OPERATION_UID" : "1e71601a-3920-43c4-90d6-d8f97266b5a5",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
-        "x-WM-METHOD_IDENTIFIER" : "createMenuSettings-1-177893633"
+        "x-WM-METHOD_IDENTIFIER" : "createMenusettings-1-113249505"
       },
-      "x-WM-TAG" : "MenuSettingsController",
-      "x-WM-BASE_PATH" : "/BCdata/MenuSettings",
-      "x-WM-COMPLETE_PATH" : "//BCdata/MenuSettings/",
+      "x-WM-TAG" : "MenusettingsController",
+      "x-WM-BASE_PATH" : "/BCdata/Menusettings",
+      "x-WM-COMPLETE_PATH" : "//BCdata/Menusettings/",
       "x-WM-RELATIVE_PATH" : "/"
     },
-    "/BCdata/MenuSettings/count" : {
+    "/BCdata/Menusettings/count" : {
       "get" : {
-        "tags" : [ "MenuSettingsController" ],
-        "description" : "Returns the total count of MenuSettings instances.",
-        "operationId" : "countAllMenuSettingss",
+        "tags" : [ "MenusettingsController" ],
+        "description" : "Returns the total count of Menusettings instances.",
+        "operationId" : "countAllMenusettingss",
         "responses" : {
           "200" : {
             "description" : "Success",
@@ -129,20 +129,20 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "d1052e8b-912c-48f6-9925-b12cf937d851",
+        "x-WM-OPERATION_UID" : "f9ff8fb9-a5d8-44cf-a924-3cfeb35144c3",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
-        "x-WM-METHOD_IDENTIFIER" : "countAllMenuSettingss-0-17"
+        "x-WM-METHOD_IDENTIFIER" : "countAllMenusettingss-0-17"
       },
-      "x-WM-TAG" : "MenuSettingsController",
-      "x-WM-BASE_PATH" : "/BCdata/MenuSettings",
-      "x-WM-COMPLETE_PATH" : "//BCdata/MenuSettings/count",
+      "x-WM-TAG" : "MenusettingsController",
+      "x-WM-BASE_PATH" : "/BCdata/Menusettings",
+      "x-WM-COMPLETE_PATH" : "//BCdata/Menusettings/count",
       "x-WM-RELATIVE_PATH" : "/count"
     },
-    "/BCdata/MenuSettings/search" : {
+    "/BCdata/Menusettings/search" : {
       "post" : {
-        "tags" : [ "MenuSettingsController" ],
-        "description" : "Returns the list of MenuSettings instances matching the search criteria.",
-        "operationId" : "findMenuSettingss",
+        "tags" : [ "MenusettingsController" ],
+        "description" : "Returns the list of Menusettings instances matching the search criteria.",
+        "operationId" : "findMenusettingss",
         "parameters" : [ {
           "name" : "page",
           "in" : "query",
@@ -179,7 +179,7 @@
             "x-WM-IS_LIST" : false
           },
           "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.expression.QueryFilter",
-          "x-WM-UUID" : "29a48d99-ea6a-4498-ba2d-54090bdca6e5",
+          "x-WM-UUID" : "45dd1737-c8d0-42f1-b00e-64651f121f6d",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -188,26 +188,26 @@
             "schema" : {
               "$ref" : "#/definitions/Page",
               "x-WM-TYPE_ARGUMENTS" : [ {
-                "$ref" : "#/definitions/MenuSettings",
+                "$ref" : "#/definitions/Menusettings",
                 "x-WM-TYPE_ARGUMENTS" : [ ]
               } ]
             }
           }
         },
-        "x-WM-OPERATION_UID" : "1c44a6ca-697f-4ff5-a8ed-842b58a88c67",
+        "x-WM-OPERATION_UID" : "1986ea30-9c2f-4e52-a2b0-3d84a5376d44",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
-        "x-WM-METHOD_IDENTIFIER" : "findMenuSettingss-2--1821969279"
+        "x-WM-METHOD_IDENTIFIER" : "findMenusettingss-2--1821969279"
       },
-      "x-WM-TAG" : "MenuSettingsController",
-      "x-WM-BASE_PATH" : "/BCdata/MenuSettings",
-      "x-WM-COMPLETE_PATH" : "//BCdata/MenuSettings/search",
+      "x-WM-TAG" : "MenusettingsController",
+      "x-WM-BASE_PATH" : "/BCdata/Menusettings",
+      "x-WM-COMPLETE_PATH" : "//BCdata/Menusettings/search",
       "x-WM-RELATIVE_PATH" : "/search"
     },
-    "/BCdata/MenuSettings/{id:.+}" : {
+    "/BCdata/Menusettings/{id:.+}" : {
       "get" : {
-        "tags" : [ "MenuSettingsController" ],
-        "description" : "Returns the MenuSettings instance associated with the given id.",
-        "operationId" : "getMenuSettings",
+        "tags" : [ "MenusettingsController" ],
+        "description" : "Returns the Menusettings instance associated with the given id.",
+        "operationId" : "getMenusettings",
         "parameters" : [ {
           "name" : "id",
           "in" : "path",
@@ -216,26 +216,26 @@
           "collectionFormat" : "multi",
           "format" : "int32",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
-          "x-WM-UUID" : "16e8ded9-674c-4531-a077-f917ac250900",
+          "x-WM-UUID" : "08952efa-30fb-4630-81b8-56fb62f2d810",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
           "200" : {
             "description" : "Success",
             "schema" : {
-              "$ref" : "#/definitions/MenuSettings",
+              "$ref" : "#/definitions/Menusettings",
               "x-WM-TYPE_ARGUMENTS" : [ ]
             }
           }
         },
-        "x-WM-OPERATION_UID" : "3d5d2fed-a05c-4ee7-b4d8-e9bdc66b8e16",
+        "x-WM-OPERATION_UID" : "0297ded0-ff9d-4f26-9ee1-e10f532793e2",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
-        "x-WM-METHOD_IDENTIFIER" : "getMenuSettings-1--2056816673"
+        "x-WM-METHOD_IDENTIFIER" : "getMenusettings-1--2056816673"
       },
       "put" : {
-        "tags" : [ "MenuSettingsController" ],
-        "description" : "Updates the MenuSettings instance associated with the given id.",
-        "operationId" : "editMenuSettings",
+        "tags" : [ "MenusettingsController" ],
+        "description" : "Updates the Menusettings instance associated with the given id.",
+        "operationId" : "editMenusettings",
         "parameters" : [ {
           "name" : "id",
           "in" : "path",
@@ -244,37 +244,37 @@
           "collectionFormat" : "multi",
           "format" : "int32",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
-          "x-WM-UUID" : "ca74dc29-5bc2-4d2c-9a88-ec620d7c4156",
+          "x-WM-UUID" : "900f9fec-2087-46bc-a98f-115d32972964",
           "x-WM-EDITABLE" : true
         }, {
           "in" : "body",
-          "name" : "MenuSettings",
+          "name" : "Menusettings",
           "required" : true,
           "schema" : {
-            "$ref" : "#/definitions/MenuSettings",
+            "$ref" : "#/definitions/Menusettings",
             "x-WM-TYPE_ARGUMENTS" : [ ]
           },
-          "x-WM-FULLY_QUALIFIED_TYPE" : "com.bccontrolpanel.bcdata.MenuSettings",
-          "x-WM-UUID" : "edd831ad-3662-45f4-8b12-3a7c8ee59882",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.bccontrolpanel.bcdata.Menusettings",
+          "x-WM-UUID" : "1f935837-e822-4a94-bf56-ae7e3f944b97",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
           "200" : {
             "description" : "Success",
             "schema" : {
-              "$ref" : "#/definitions/MenuSettings",
+              "$ref" : "#/definitions/Menusettings",
               "x-WM-TYPE_ARGUMENTS" : [ ]
             }
           }
         },
-        "x-WM-OPERATION_UID" : "87f76b88-6fb3-49df-9a24-e097670d17a0",
+        "x-WM-OPERATION_UID" : "78ac8d0b-99b1-4e9d-b854-f1794e512787",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
-        "x-WM-METHOD_IDENTIFIER" : "editMenuSettings-2-1385087431"
+        "x-WM-METHOD_IDENTIFIER" : "editMenusettings-2-1320443303"
       },
       "delete" : {
-        "tags" : [ "MenuSettingsController" ],
-        "description" : "Deletes the MenuSettings instance associated with the given id.",
-        "operationId" : "deleteMenuSettings",
+        "tags" : [ "MenusettingsController" ],
+        "description" : "Deletes the Menusettings instance associated with the given id.",
+        "operationId" : "deleteMenusettings",
         "parameters" : [ {
           "name" : "id",
           "in" : "path",
@@ -283,7 +283,7 @@
           "collectionFormat" : "multi",
           "format" : "int32",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
-          "x-WM-UUID" : "39a6f03a-89f6-4877-bb21-66d8c762405c",
+          "x-WM-UUID" : "42de6839-4cea-49f0-8da0-891604108020",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -294,13 +294,13 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "6e0a7a95-583e-4130-977c-232be4ba24a6",
+        "x-WM-OPERATION_UID" : "7c19457e-2560-4377-a6cf-4ca3b06ae849",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
-        "x-WM-METHOD_IDENTIFIER" : "deleteMenuSettings-1--2056816673"
+        "x-WM-METHOD_IDENTIFIER" : "deleteMenusettings-1--2056816673"
       },
-      "x-WM-TAG" : "MenuSettingsController",
-      "x-WM-BASE_PATH" : "/BCdata/MenuSettings",
-      "x-WM-COMPLETE_PATH" : "//BCdata/MenuSettings/{id:.+}",
+      "x-WM-TAG" : "MenusettingsController",
+      "x-WM-BASE_PATH" : "/BCdata/Menusettings",
+      "x-WM-COMPLETE_PATH" : "//BCdata/Menusettings/{id:.+}",
       "x-WM-RELATIVE_PATH" : "/{id:.+}"
     },
     "/BCdata/Role/" : {
@@ -344,7 +344,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "d6e80017-fb30-43f2-a968-2e639739aad2",
+        "x-WM-OPERATION_UID" : "261774d7-1488-4fa8-85ad-b530c545d6e1",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "getRoles-1-934028971"
       },
@@ -361,7 +361,7 @@
             "x-WM-TYPE_ARGUMENTS" : [ ]
           },
           "x-WM-FULLY_QUALIFIED_TYPE" : "com.bccontrolpanel.bcdata.Role",
-          "x-WM-UUID" : "4db4eda0-2d10-4261-a2eb-013aad3c9996",
+          "x-WM-UUID" : "766b8490-cc2d-402e-9916-e70eeb81545c",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -373,7 +373,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "0d4443a2-d90e-4f4c-8fb4-0c7e328c34f6",
+        "x-WM-OPERATION_UID" : "3651333b-5c09-4456-bdf4-b8e453e2fed4",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "createRole-1-357766357"
       },
@@ -396,7 +396,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "7a3c4696-a48a-47a6-b998-5c628a9f5ac0",
+        "x-WM-OPERATION_UID" : "1c726428-8f83-4570-89a0-fbda97182e75",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "countAllRoles-0-17"
       },
@@ -446,7 +446,7 @@
             "x-WM-IS_LIST" : false
           },
           "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.expression.QueryFilter",
-          "x-WM-UUID" : "31a0d3c3-518b-4867-a6c6-743dbb481e4f",
+          "x-WM-UUID" : "cfa50e12-ef5d-41f6-865c-fe4587f40902",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -461,7 +461,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "029097b3-dabe-49e6-9a08-b484bd1fe032",
+        "x-WM-OPERATION_UID" : "c206aa91-1643-45d2-bbf9-5499fdaf66df",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "findRoles-2--1821969279"
       },
@@ -483,7 +483,7 @@
           "collectionFormat" : "multi",
           "format" : "int32",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
-          "x-WM-UUID" : "1627de39-24bf-45f7-9191-6a4d2199f0a8",
+          "x-WM-UUID" : "20f30b01-63c8-4ca7-b10b-f803648ccd60",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -495,7 +495,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "fa15842f-e23b-4cfc-b871-00bb9b94cd46",
+        "x-WM-OPERATION_UID" : "215c4ded-d57b-4010-b389-718182ad1f77",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "getRole-1--2056816673"
       },
@@ -511,7 +511,7 @@
           "collectionFormat" : "multi",
           "format" : "int32",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
-          "x-WM-UUID" : "75b7b88b-8201-40a3-b369-52111ef07aed",
+          "x-WM-UUID" : "a941909b-7ee0-4dc5-b99f-a45fab844fec",
           "x-WM-EDITABLE" : true
         }, {
           "in" : "body",
@@ -522,7 +522,7 @@
             "x-WM-TYPE_ARGUMENTS" : [ ]
           },
           "x-WM-FULLY_QUALIFIED_TYPE" : "com.bccontrolpanel.bcdata.Role",
-          "x-WM-UUID" : "22c6bcef-44e3-4e15-a83c-38bd6a3a956f",
+          "x-WM-UUID" : "fb8906f9-612d-4e1f-825f-17eba690926b",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -534,7 +534,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "d73d404f-ea97-4899-8987-bc821b1b4eaf",
+        "x-WM-OPERATION_UID" : "3905f53a-e2cf-4311-a721-e7b88c57e188",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "editRole-2-1564960155"
       },
@@ -550,7 +550,7 @@
           "collectionFormat" : "multi",
           "format" : "int32",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
-          "x-WM-UUID" : "702d8879-578c-4992-bc31-756e3a775512",
+          "x-WM-UUID" : "4203b949-7c36-46c4-8f34-c3d226e073b8",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -561,7 +561,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "f28dd1cf-9da4-4b67-8d4e-c92d00e06ebf",
+        "x-WM-OPERATION_UID" : "a0496ca9-a5d7-4879-bb6f-f943fb77e8c7",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "deleteRole-1--2056816673"
       },
@@ -611,7 +611,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "161f97be-de99-4fa8-82dc-d5e1a32d2511",
+        "x-WM-OPERATION_UID" : "8cb41656-bdb6-4721-9ee0-d3f25d748809",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "getUserss-1-934028971"
       },
@@ -628,7 +628,7 @@
             "x-WM-TYPE_ARGUMENTS" : [ ]
           },
           "x-WM-FULLY_QUALIFIED_TYPE" : "com.bccontrolpanel.bcdata.Users",
-          "x-WM-UUID" : "cf6739a7-5480-4bcf-93d1-8cb04a7fd945",
+          "x-WM-UUID" : "b681c925-1ca2-4ace-ab67-da46085ea0c8",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -640,7 +640,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "38a0a7f7-7616-4576-b532-0e9657fb16ec",
+        "x-WM-OPERATION_UID" : "e1605de7-13ba-4993-9af3-c4d8a12b3dac",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "createUsers-1--1791280173"
       },
@@ -663,7 +663,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "971171ac-22a5-4b2d-b041-1ab93b107547",
+        "x-WM-OPERATION_UID" : "6784e4da-c8e3-45f1-befb-7c85618eb32f",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "countAllUserss-0-17"
       },
@@ -713,7 +713,7 @@
             "x-WM-IS_LIST" : false
           },
           "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.expression.QueryFilter",
-          "x-WM-UUID" : "e89838f6-cb94-44b1-bf18-cdbaa9f7b550",
+          "x-WM-UUID" : "8bc3fe73-81d6-4577-905a-182247bed5fa",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -728,7 +728,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "ea3f0ee9-3698-4c25-a692-0e97efc8690b",
+        "x-WM-OPERATION_UID" : "0481e670-e31b-49f9-a1b4-a3fe4c5a3d2e",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "findUserss-2--1821969279"
       },
@@ -750,7 +750,7 @@
           "collectionFormat" : "multi",
           "format" : "int32",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
-          "x-WM-UUID" : "0bd74871-5b38-40c0-a289-bbe986ee4f8f",
+          "x-WM-UUID" : "79425dcf-d072-4efe-897d-8518175f1a80",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -762,7 +762,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "404204b6-9095-4768-ae6d-efe1bc77ba7f",
+        "x-WM-OPERATION_UID" : "cc29040f-2445-481e-87cc-8f7476c640a8",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "getUsers-1--2056816673"
       },
@@ -778,7 +778,7 @@
           "collectionFormat" : "multi",
           "format" : "int32",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
-          "x-WM-UUID" : "c2747544-77be-4b2d-9298-d2340e4ab03f",
+          "x-WM-UUID" : "a19c4a46-dbaf-4128-8dc7-7530ce1f01b1",
           "x-WM-EDITABLE" : true
         }, {
           "in" : "body",
@@ -789,7 +789,7 @@
             "x-WM-TYPE_ARGUMENTS" : [ ]
           },
           "x-WM-FULLY_QUALIFIED_TYPE" : "com.bccontrolpanel.bcdata.Users",
-          "x-WM-UUID" : "5c063af9-6a4b-457c-b45f-53a8c68b2ee8",
+          "x-WM-UUID" : "6ce4b091-2005-4dfb-afb6-45a774b4bb84",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -801,7 +801,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "8d2e309a-3a3c-47c6-b389-b460b777a69f",
+        "x-WM-OPERATION_UID" : "31827684-194c-4b2f-b64a-390b020a8e60",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "editUsers-2--584086375"
       },
@@ -817,7 +817,7 @@
           "collectionFormat" : "multi",
           "format" : "int32",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
-          "x-WM-UUID" : "ee048716-38ae-4204-a209-33b16e39961f",
+          "x-WM-UUID" : "a15db019-cc41-43de-902b-3db740b9077a",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -828,7 +828,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "055ce8ff-77be-46b2-b995-5ea094c01569",
+        "x-WM-OPERATION_UID" : "b8870a8e-c1ad-4bf3-8502-7d271c1dcab6",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "deleteUsers-1--2056816673"
       },
@@ -851,7 +851,7 @@
             "x-WM-TYPE_ARGUMENTS" : [ ]
           },
           "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.model.CustomProcedure",
-          "x-WM-UUID" : "e4811a83-fea3-410a-bc09-8dfb62d1b326",
+          "x-WM-UUID" : "b0de781e-7288-4173-9ddb-36a5f6bf5eb5",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -868,7 +868,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "d58bfef4-8cea-4c96-b894-05af93683180",
+        "x-WM-OPERATION_UID" : "f1ed4e69-882b-4ff5-b629-36897e1c51d4",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "executeWMCustomProcedure-1--282256460"
       },
@@ -891,7 +891,7 @@
             "x-WM-TYPE_ARGUMENTS" : [ ]
           },
           "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.model.CustomQuery",
-          "x-WM-UUID" : "ef3a9309-aa63-4a6d-85ba-62e3ce58b3cb",
+          "x-WM-UUID" : "0180d406-7b8a-4369-8384-1ef51f2478fb",
           "x-WM-EDITABLE" : true
         }, {
           "name" : "page",
@@ -929,7 +929,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "00edd055-92bb-484c-91a2-66f1af58c8d0",
+        "x-WM-OPERATION_UID" : "ae6d9e04-1fd2-4e4d-9d06-f735a9d6f791",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "executeWMCustomQuery-2-107741091"
       },
@@ -952,7 +952,7 @@
             "x-WM-TYPE_ARGUMENTS" : [ ]
           },
           "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.model.CustomQuery",
-          "x-WM-UUID" : "03e8d31c-7177-4489-8ac7-80b0c5ae4df7",
+          "x-WM-UUID" : "b3ddf4de-1bf7-4775-b575-0d7e92cd53c5",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -964,7 +964,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "5da19596-715f-41ab-a489-9162ca93ff8c",
+        "x-WM-OPERATION_UID" : "e3858c24-5c20-44fe-af67-6efd24f89d05",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "executeWMCustomQuery-1--718813271"
       },
@@ -975,27 +975,6 @@
     }
   },
   "definitions" : {
-    "Sort" : {
-      "allOf" : [ {
-        "$ref" : "#/definitions/Iterable"
-      }, {
-        "$ref" : "#/definitions/Serializable"
-      }, {
-        "properties" : {
-          "orders" : {
-            "type" : "array",
-            "uniqueItems" : false,
-            "items" : {
-              "$ref" : "#/definitions/Sort$Order",
-              "x-WM-TYPE_ARGUMENTS" : [ ]
-            },
-            "x-WM-IS_LIST" : true
-          }
-        }
-      } ],
-      "x-WM-FULLY_QUALIFIED_NAME" : "org.springframework.data.domain.Sort",
-      "x-WM-TAGS" : [ "UsersController" ]
-    },
     "Users" : {
       "allOf" : [ {
         "$ref" : "#/definitions/Serializable"
@@ -1019,9 +998,30 @@
       "x-WM-FULLY_QUALIFIED_NAME" : "com.bccontrolpanel.bcdata.Users",
       "x-WM-TAGS" : [ "UsersController" ]
     },
+    "Sort" : {
+      "allOf" : [ {
+        "$ref" : "#/definitions/Iterable"
+      }, {
+        "$ref" : "#/definitions/Serializable"
+      }, {
+        "properties" : {
+          "orders" : {
+            "type" : "array",
+            "uniqueItems" : false,
+            "items" : {
+              "$ref" : "#/definitions/Sort$Order",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            },
+            "x-WM-IS_LIST" : true
+          }
+        }
+      } ],
+      "x-WM-FULLY_QUALIFIED_NAME" : "org.springframework.data.domain.Sort",
+      "x-WM-TAGS" : [ "RoleController" ]
+    },
     "Iterable" : {
       "x-WM-FULLY_QUALIFIED_NAME" : "java.lang.Iterable",
-      "x-WM-TAGS" : [ "UsersController" ]
+      "x-WM-TAGS" : [ "RoleController" ]
     },
     "CustomQueryParam" : {
       "properties" : {
@@ -1079,7 +1079,7 @@
         }
       },
       "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.runtime.data.expression.QueryFilter",
-      "x-WM-TAGS" : [ "UsersController", "MenuSettingsController", "RoleController" ]
+      "x-WM-TAGS" : [ "RoleController", "UsersController", "MenusettingsController" ]
     },
     "Page" : {
       "allOf" : [ {
@@ -1128,7 +1128,7 @@
         }
       } ],
       "x-WM-FULLY_QUALIFIED_NAME" : "org.springframework.data.domain.Page",
-      "x-WM-TAGS" : [ "UsersController", "MenuSettingsController", "QueryExecutionController", "RoleController" ]
+      "x-WM-TAGS" : [ "RoleController", "QueryExecutionController", "UsersController", "MenusettingsController" ]
     },
     "Role" : {
       "allOf" : [ {
@@ -1169,34 +1169,11 @@
         }
       } ],
       "x-WM-FULLY_QUALIFIED_NAME" : "org.springframework.data.domain.Sort.Order",
-      "x-WM-TAGS" : [ "UsersController" ]
-    },
-    "MenuSettings" : {
-      "allOf" : [ {
-        "$ref" : "#/definitions/Serializable"
-      }, {
-        "properties" : {
-          "menuItemIcon" : {
-            "type" : "string"
-          },
-          "menuItemLabel" : {
-            "type" : "string"
-          },
-          "id" : {
-            "type" : "integer",
-            "format" : "int32"
-          },
-          "menuItemLink" : {
-            "type" : "string"
-          }
-        }
-      } ],
-      "x-WM-FULLY_QUALIFIED_NAME" : "com.bccontrolpanel.bcdata.MenuSettings",
-      "x-WM-TAGS" : [ "MenuSettingsController" ]
+      "x-WM-TAGS" : [ "RoleController" ]
     },
     "Serializable" : {
       "x-WM-FULLY_QUALIFIED_NAME" : "java.io.Serializable",
-      "x-WM-TAGS" : [ "UsersController", "MenuSettingsController", "RoleController" ]
+      "x-WM-TAGS" : [ "RoleController", "UsersController", "MenusettingsController" ]
     },
     "CustomQuery" : {
       "properties" : {
@@ -1218,6 +1195,29 @@
       },
       "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.runtime.data.model.CustomQuery",
       "x-WM-TAGS" : [ "QueryExecutionController" ]
+    },
+    "Menusettings" : {
+      "allOf" : [ {
+        "$ref" : "#/definitions/Serializable"
+      }, {
+        "properties" : {
+          "menuItemLink" : {
+            "type" : "string"
+          },
+          "menuItemIcon" : {
+            "type" : "string"
+          },
+          "menuItemLabel" : {
+            "type" : "string"
+          },
+          "id" : {
+            "type" : "integer",
+            "format" : "int32"
+          }
+        }
+      } ],
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.bccontrolpanel.bcdata.Menusettings",
+      "x-WM-TAGS" : [ "MenusettingsController" ]
     },
     "CustomProcedureParam" : {
       "properties" : {
@@ -1278,7 +1278,7 @@
         }
       } ],
       "x-WM-FULLY_QUALIFIED_NAME" : "org.springframework.data.domain.Slice",
-      "x-WM-TAGS" : [ "UsersController" ]
+      "x-WM-TAGS" : [ "RoleController" ]
     }
   }
 }

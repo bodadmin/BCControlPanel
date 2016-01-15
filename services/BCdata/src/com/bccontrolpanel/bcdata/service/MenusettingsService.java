@@ -17,11 +17,11 @@ import com.wavemaker.runtime.data.exception.EntityNotFoundException;
 import com.bccontrolpanel.bcdata.*;
 
 /**
- * Service object for domain model class MenuSettings.
- * @see com.bccontrolpanel.bcdata.MenuSettings
+ * Service object for domain model class Menusettings.
+ * @see com.bccontrolpanel.bcdata.Menusettings
  */
 
-public interface MenuSettingsService {
+public interface MenusettingsService {
    /**
 	 * Creates a new menusettings.
 	 * 
@@ -29,7 +29,7 @@ public interface MenuSettingsService {
 	 *            The information of the created menusettings.
 	 * @return The created menusettings.
 	 */
-	public MenuSettings create(MenuSettings created);
+	public Menusettings create(Menusettings created);
 
 	/**
 	 * Deletes a menusettings.
@@ -40,16 +40,16 @@ public interface MenuSettingsService {
 	 * @throws EntityNotFoundException
 	 *             if no menusettings is found with the given id.
 	 */
-	public MenuSettings delete(Integer menusettingsId) throws EntityNotFoundException;
+	public Menusettings delete(Integer menusettingsId) throws EntityNotFoundException;
 
 	/**
 	 * Finds all menusettingss.
 	 * 
 	 * @return A list of menusettingss.
 	 */
-	public Page<MenuSettings> findAll(QueryFilter[] queryFilters, Pageable pageable);
+	public Page<Menusettings> findAll(QueryFilter[] queryFilters, Pageable pageable);
 	
-	public Page<MenuSettings> findAll(Pageable pageable);
+	public Page<Menusettings> findAll(Pageable pageable);
 	
 	/**
 	 * Finds menusettings by id.
@@ -59,7 +59,7 @@ public interface MenuSettingsService {
 	 * @return The found menusettings. If no menusettings is found, this method returns
 	 *         null.
 	 */
-	public MenuSettings findById(Integer id) throws
+	public Menusettings findById(Integer id) throws
 	 EntityNotFoundException;
 	/**
 	 * Updates the information of a menusettings.
@@ -70,7 +70,7 @@ public interface MenuSettingsService {
 	 * @throws EntityNotFoundException
 	 *             if no menusettings is found with given id.
 	 */
-	public MenuSettings update(MenuSettings updated) throws EntityNotFoundException;
+	public Menusettings update(Menusettings updated) throws EntityNotFoundException;
 
 	/**
 	 * Retrieve the total count of the menusettingss in the repository.
@@ -83,7 +83,7 @@ public interface MenuSettingsService {
 	public long countAll();
 
 
-    public Page<MenuSettings> findAssociatedValues(Object value, String entityName, String key,  Pageable pageable);
+    public Page<Menusettings> findAssociatedValues(Object value, String entityName, String key,  Pageable pageable);
 
 
 }

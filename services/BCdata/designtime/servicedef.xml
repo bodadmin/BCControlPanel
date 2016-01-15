@@ -11,7 +11,7 @@
             <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
             <element name="role" typeRef="java.lang.String" allowNull="true"/>
         </dataobject>
-        <dataobject javaType="com.bccontrolpanel.bcdata.MenuSettings">
+        <dataobject javaType="com.bccontrolpanel.bcdata.Menusettings">
             <element name="menuItemLabel" typeRef="java.lang.String" allowNull="true"/>
             <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
             <element name="menuItemIcon" typeRef="java.lang.String" allowNull="true"/>

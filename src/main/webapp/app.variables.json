@@ -1,7 +1,7 @@
 {
-  "BCdataMenuSettingsData" : {
-    "_id" : "wm-BCdataMenuSettingsData-wm.LiveVariable-1452705091891",
-    "name" : "BCdataMenuSettingsData",
+  "BCdataMenusettingsData" : {
+    "_id" : "wm-BCdataMenusettingsData-wm.LiveVariable-1452795251598",
+    "name" : "BCdataMenusettingsData",
     "owner" : "App",
     "category" : "wm.LiveVariable",
     "operation" : "read",
@@ -9,7 +9,7 @@
       "dataValue" : ""
     },
     "dataBinding" : [ ],
-    "type" : "MenuSettings",
+    "type" : "Menusettings",
     "isList" : true,
     "saveInPhonegap" : false,
     "firstRow" : 0,
@@ -73,17 +73,16 @@
         "generator" : "assigned",
         "isRelated" : false
       } ],
-      "entityName" : "MenuSettings",
-      "fullyQualifiedName" : "com.bccontrolpanel.bcdata.MenuSettings",
+      "entityName" : "Menusettings",
+      "fullyQualifiedName" : "com.bccontrolpanel.bcdata.Menusettings",
       "tableType" : "TABLE",
       "primaryFields" : [ "id" ]
     },
     "isDefault" : true,
-    "bindCount" : 0,
-    "tableName" : "menuSettings",
+    "tableName" : "menusettings",
     "tableType" : "TABLE",
     "dbSystem" : "MySQL",
-    "package" : "com.bccontrolpanel.bcdata.MenuSettings"
+    "package" : "com.bccontrolpanel.bcdata.Menusettings"
   },
   "BCdataRoleData" : {
     "_id" : "wm-BCdataRoleData-wm.LiveVariable-1452705091893",

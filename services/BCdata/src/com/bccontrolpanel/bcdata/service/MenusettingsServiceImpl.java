@@ -26,40 +26,40 @@ import com.bccontrolpanel.bcdata.*;
 
 
 /**
- * ServiceImpl object for domain model class MenuSettings.
- * @see com.bccontrolpanel.bcdata.MenuSettings
+ * ServiceImpl object for domain model class Menusettings.
+ * @see com.bccontrolpanel.bcdata.Menusettings
  */
-@Service("BCdata.MenuSettingsService")
-public class MenuSettingsServiceImpl implements MenuSettingsService {
+@Service("BCdata.MenusettingsService")
+public class MenusettingsServiceImpl implements MenusettingsService {
 
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(MenuSettingsServiceImpl.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(MenusettingsServiceImpl.class);
 
     @Autowired
-    @Qualifier("BCdata.MenuSettingsDao")
-    private WMGenericDao<MenuSettings, Integer> wmGenericDao;
+    @Qualifier("BCdata.MenusettingsDao")
+    private WMGenericDao<Menusettings, Integer> wmGenericDao;
 
-    public void setWMGenericDao(WMGenericDao<MenuSettings, Integer> wmGenericDao){
+    public void setWMGenericDao(WMGenericDao<Menusettings, Integer> wmGenericDao){
         this.wmGenericDao = wmGenericDao;
     }
      @Transactional(readOnly = true, value = "BCdataTransactionManager")
-     public Page<MenuSettings> findAssociatedValues(Object value, String entityName, String key,  Pageable pageable){
+     public Page<Menusettings> findAssociatedValues(Object value, String entityName, String key,  Pageable pageable){
           LOGGER.debug("Fetching all associated");
           return this.wmGenericDao.getAssociatedObjects(value, entityName, key, pageable);
      }
 
     @Transactional(value = "BCdataTransactionManager")
     @Override
-    public MenuSettings create(MenuSettings menusettings) {
+    public Menusettings create(Menusettings menusettings) {
         LOGGER.debug("Creating a new menusettings with information: {}" , menusettings);
         return this.wmGenericDao.create(menusettings);
     }
 
     @Transactional(rollbackFor = EntityNotFoundException.class, value = "BCdataTransactionManager")
     @Override
-    public MenuSettings delete(Integer menusettingsId) throws EntityNotFoundException {
+    public Menusettings delete(Integer menusettingsId) throws EntityNotFoundException {
         LOGGER.debug("Deleting menusettings with id: {}" , menusettingsId);
-        MenuSettings deleted = this.wmGenericDao.findById(menusettingsId);
+        Menusettings deleted = this.wmGenericDao.findById(menusettingsId);
         if (deleted == null) {
             LOGGER.debug("No menusettings found with id: {}" , menusettingsId);
             throw new EntityNotFoundException(String.valueOf(menusettingsId));
@@ -70,23 +70,23 @@ public class MenuSettingsServiceImpl implements MenuSettingsService {
 
     @Transactional(readOnly = true, value = "BCdataTransactionManager")
     @Override
-    public Page<MenuSettings> findAll(QueryFilter[] queryFilters, Pageable pageable) {
+    public Page<Menusettings> findAll(QueryFilter[] queryFilters, Pageable pageable) {
         LOGGER.debug("Finding all menusettingss");
         return this.wmGenericDao.search(queryFilters, pageable);
     }
     
     @Transactional(readOnly = true, value = "BCdataTransactionManager")
     @Override
-    public Page<MenuSettings> findAll(Pageable pageable) {
+    public Page<Menusettings> findAll(Pageable pageable) {
         LOGGER.debug("Finding all menusettingss");
         return this.wmGenericDao.search(null, pageable);
     }
 
     @Transactional(readOnly = true, value = "BCdataTransactionManager")
     @Override
-    public MenuSettings findById(Integer id) throws EntityNotFoundException {
+    public Menusettings findById(Integer id) throws EntityNotFoundException {
         LOGGER.debug("Finding menusettings by id: {}" , id);
-        MenuSettings menusettings=this.wmGenericDao.findById(id);
+        Menusettings menusettings=this.wmGenericDao.findById(id);
         if(menusettings==null){
             LOGGER.debug("No menusettings found with id: {}" , id);
             throw new EntityNotFoundException(String.valueOf(id));
@@ -95,7 +95,7 @@ public class MenuSettingsServiceImpl implements MenuSettingsService {
     }
     @Transactional(rollbackFor = EntityNotFoundException.class, value = "BCdataTransactionManager")
     @Override
-    public MenuSettings update(MenuSettings updated) throws EntityNotFoundException {
+    public Menusettings update(Menusettings updated) throws EntityNotFoundException {
         LOGGER.debug("Updating menusettings with information: {}" , updated);
         this.wmGenericDao.update(updated);
 

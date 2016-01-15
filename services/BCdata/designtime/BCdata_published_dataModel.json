@@ -89,9 +89,60 @@
     "constraints" : [ ],
     "fullyQualifiedName" : "com.bccontrolpanel.bcdata.Users"
   }, {
-    "name" : "menuSettings",
-    "oldName" : "menuSettings",
-    "entityName" : "MenuSettings",
+    "name" : "role",
+    "oldName" : "role",
+    "entityName" : "Role",
+    "type" : "TABLE",
+    "schema" : "BCdata",
+    "catalog" : "BCdata",
+    "columns" : [ {
+      "name" : "ID",
+      "oldName" : "ID",
+      "fieldName" : "id",
+      "sqlType" : "integer",
+      "hibernateType" : "integer",
+      "length" : 255,
+      "precision" : 19,
+      "nullable" : false,
+      "defaultValue" : "",
+      "generator" : "identity",
+      "sequenceName" : null,
+      "unique" : true,
+      "foreignKey" : false,
+      "partOfAnyRelation" : false,
+      "partOfPrimaryKey" : true,
+      "primaryKey" : true
+    }, {
+      "name" : "role",
+      "oldName" : "role",
+      "fieldName" : "role",
+      "sqlType" : "string",
+      "hibernateType" : "string",
+      "length" : 255,
+      "precision" : 19,
+      "nullable" : true,
+      "defaultValue" : null,
+      "generator" : "assigned",
+      "sequenceName" : null,
+      "unique" : false,
+      "foreignKey" : false,
+      "partOfAnyRelation" : false,
+      "partOfPrimaryKey" : false,
+      "primaryKey" : false
+    } ],
+    "primaryKey" : {
+      "name" : "PRIMARY",
+      "virtual" : false,
+      "columns" : [ "ID" ],
+      "composite" : false
+    },
+    "relations" : [ ],
+    "constraints" : [ ],
+    "fullyQualifiedName" : "com.bccontrolpanel.bcdata.Role"
+  }, {
+    "name" : "menusettings",
+    "oldName" : "menusettings",
+    "entityName" : "Menusettings",
     "type" : "TABLE",
     "schema" : "BCdata",
     "catalog" : "BCdata",
@@ -172,57 +223,6 @@
     },
     "relations" : [ ],
     "constraints" : [ ],
-    "fullyQualifiedName" : "com.bccontrolpanel.bcdata.MenuSettings"
-  }, {
-    "name" : "role",
-    "oldName" : "role",
-    "entityName" : "Role",
-    "type" : "TABLE",
-    "schema" : "BCdata",
-    "catalog" : "BCdata",
-    "columns" : [ {
-      "name" : "ID",
-      "oldName" : "ID",
-      "fieldName" : "id",
-      "sqlType" : "integer",
-      "hibernateType" : "integer",
-      "length" : 255,
-      "precision" : 19,
-      "nullable" : false,
-      "defaultValue" : "",
-      "generator" : "identity",
-      "sequenceName" : null,
-      "unique" : true,
-      "foreignKey" : false,
-      "partOfAnyRelation" : false,
-      "partOfPrimaryKey" : true,
-      "primaryKey" : true
-    }, {
-      "name" : "role",
-      "oldName" : "role",
-      "fieldName" : "role",
-      "sqlType" : "string",
-      "hibernateType" : "string",
-      "length" : 255,
-      "precision" : 19,
-      "nullable" : true,
-      "defaultValue" : null,
-      "generator" : "assigned",
-      "sequenceName" : null,
-      "unique" : false,
-      "foreignKey" : false,
-      "partOfAnyRelation" : false,
-      "partOfPrimaryKey" : false,
-      "primaryKey" : false
-    } ],
-    "primaryKey" : {
-      "name" : "PRIMARY",
-      "virtual" : false,
-      "columns" : [ "ID" ],
-      "composite" : false
-    },
-    "relations" : [ ],
-    "constraints" : [ ],
-    "fullyQualifiedName" : "com.bccontrolpanel.bcdata.Role"
+    "fullyQualifiedName" : "com.bccontrolpanel.bcdata.Menusettings"
   } ]
 }

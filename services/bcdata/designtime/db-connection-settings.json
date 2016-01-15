@@ -1,7 +1,7 @@
 {
   "username" : "bodadmin",
   "password" : "7b6a43524a0a231f264d61681a1368744a32313a6b124c1a",
-  "url" : "jdbc:mysql://bodserv001.bodconnect.com:3306/bcdata?useUnicode=yes&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull",
+  "url" : "jdbc:mysql://bodserv001.bodconnect.com:3306/bcdata?useUnicode=yes&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&createDatabaseIfNotExist=true",
   "driverClass" : "com.mysql.jdbc.Driver",
   "dialect" : "com.wavemaker.runtime.data.dialect.MySQLDialect",
   "serviceId" : "bcdata",
@@ -10,7 +10,7 @@
   "host" : "bodserv001.bodconnect.com",
   "dbName" : "bcdata",
   "port" : "3306",
-  "tableFilter" : "contextfilename,menusettings,role,users",
+  "tableFilter" : ".*",
   "schemaName" : "bcdata",
   "schemaFilter" : ".*",
   "revengNamingStrategyClassName" : "com.wavemaker.studio.core.data.hibernate.reveng.MySQLRevengNamingStrategy",

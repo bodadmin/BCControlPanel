@@ -55,4 +55,22 @@
       <column name="`description`" length="255" not-null="false" precision="19"/>
     </property>
   </class>
+  <class table="`context`" name="com.bccontrolpanel.bcdata.Context" entity-name="com.bccontrolpanel.bcdata.Context" schema="bcdata">
+    <id name="id" type="integer">
+      <column name="`ID`" length="255" not-null="true" precision="19"/>
+      <generator class="identity"/>
+    </id>
+    <property name="contextfileId" type="integer">
+      <column name="`contextfileID`" length="255" not-null="true" precision="19"/>
+    </property>
+    <property name="contextname" type="string">
+      <column name="`contextname`" length="255" not-null="false" precision="19"/>
+    </property>
+    <property name="contextvalue" type="string">
+      <column name="`contextvalue`" length="255" not-null="false" precision="19"/>
+    </property>
+    <property name="contextenabled" type="java.lang.Boolean">
+      <column name="`contextenabled`" length="255" not-null="false" precision="19" default="false"/>
+    </property>
+  </class>
 </hibernate-mapping>

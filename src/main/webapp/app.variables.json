@@ -84,18 +84,6 @@
         "generator" : "assigned",
         "isRelated" : false,
         "defaultValue" : "false"
-      }, {
-        "fieldName" : "contextId",
-        "type" : "integer",
-        "hibernateType" : "integer",
-        "fullyQualifiedType" : "integer",
-        "columnName" : "contextID",
-        "isPrimaryKey" : false,
-        "notNull" : true,
-        "length" : 255,
-        "precision" : 19,
-        "generator" : "assigned",
-        "isRelated" : false
       } ],
       "entityName" : "Context",
       "fullyQualifiedName" : "com.bccontrolpanel.bcdata.Context",
@@ -381,7 +369,7 @@
     "firstRow" : 0,
     "maxResults" : 20,
     "designMaxResults" : 10,
-    "startUpdate" : false,
+    "startUpdate" : true,
     "autoUpdate" : true,
     "inFlightBehavior" : "executeLast",
     "transformationRequired" : false,
@@ -420,6 +408,7 @@
       "primaryFields" : [ "id" ]
     },
     "isDefault" : true,
+    "bindCount" : 1,
     "tableName" : "role",
     "tableType" : "TABLE",
     "dbSystem" : "MySQL",

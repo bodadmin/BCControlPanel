@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="ContextService" class="com.bccontrolpanel.contextservice.ContextService" type="JavaService" springFile="ContextService.spring.xml">
+    <operation name="countContextFiles">
+        <return typeRef="long" isList="false"/>
+    </operation>
+    <operation name="listContextFiles">
+        <return typeRef="java.lang.String" isList="true"/>
+    </operation>
+    <dataobjects/>
+</service>

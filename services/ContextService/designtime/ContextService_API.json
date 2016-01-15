@@ -1,0 +1,67 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "Swagger API documentation for ContextService",
+    "version" : "2.0",
+    "title" : "ContextServiceService Swagger Documentation",
+    "x-WM-SERVICE_TYPE" : "JavaService",
+    "x-WM-SERVICE_ID" : "ContextService"
+  },
+  "basePath" : "",
+  "tags" : [ {
+    "name" : "ContextController",
+    "x-WM-FULLY_QUALIFIED_NAME" : "com.bccontrolpanel.contextservice.controller.ContextController",
+    "x-WM-VERSION" : ""
+  } ],
+  "schemes" : [ "https", "http" ],
+  "paths" : {
+    "/context/contextFiles" : {
+      "get" : {
+        "tags" : [ "ContextController" ],
+        "operationId" : "listContextFiles",
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "array",
+              "uniqueItems" : false,
+              "items" : {
+                "type" : "string"
+              }
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "5acb14d9-3dc2-4bb6-aad2-ae8e914f1f61",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-METHOD_IDENTIFIER" : "listContextFiles-0-17"
+      },
+      "x-WM-TAG" : "ContextController",
+      "x-WM-BASE_PATH" : "/context",
+      "x-WM-COMPLETE_PATH" : "//context/contextFiles",
+      "x-WM-RELATIVE_PATH" : "/contextFiles"
+    },
+    "/context/countContextFiles" : {
+      "get" : {
+        "tags" : [ "ContextController" ],
+        "operationId" : "countContextFiles",
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "integer",
+              "format" : "int64"
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "57e8c896-5003-4205-b5bf-ef3703d7988c",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-METHOD_IDENTIFIER" : "countContextFiles-0-17"
+      },
+      "x-WM-TAG" : "ContextController",
+      "x-WM-BASE_PATH" : "/context",
+      "x-WM-COMPLETE_PATH" : "//context/countContextFiles",
+      "x-WM-RELATIVE_PATH" : "/countContextFiles"
+    }
+  },
+  "definitions" : { }
+}

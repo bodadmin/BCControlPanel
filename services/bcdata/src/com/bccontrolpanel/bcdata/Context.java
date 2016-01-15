@@ -38,6 +38,7 @@ public class Context  implements java.io.Serializable {
     private String contextname;
     private String contextvalue;
     private Boolean contextenabled;
+    private Integer contextId;
 
     public Context() {
     }
@@ -97,6 +98,17 @@ public class Context  implements java.io.Serializable {
     
     public void setContextenabled(Boolean contextenabled) {
         this.contextenabled = contextenabled;
+    }
+
+    
+
+    @Column(name="`contextID`", nullable=false)
+    public Integer getContextId() {
+        return this.contextId;
+    }
+    
+    public void setContextId(Integer contextId) {
+        this.contextId = contextId;
     }
 
 

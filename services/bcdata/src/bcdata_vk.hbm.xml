@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.bccontrolpanel.bcdata">
+  <class table="`users`" name="com.bccontrolpanel.bcdata.Users" entity-name="com.bccontrolpanel.bcdata.Users">
+    <id name="id" type="integer">
+      <column name="`ID`" length="255" not-null="true" precision="19"/>
+      <generator class="identity"/>
+    </id>
+    <property name="userrname" type="string">
+      <column name="`userrname`" length="255" not-null="false" precision="19"/>
+    </property>
+    <property name="password" type="string">
+      <column name="`password`" length="255" not-null="true" precision="19"/>
+    </property>
+    <property name="role" type="string">
+      <column name="`role`" length="255" not-null="false" precision="19"/>
+    </property>
+  </class>
+  <class table="`role`" name="com.bccontrolpanel.bcdata.Role" entity-name="com.bccontrolpanel.bcdata.Role">
+    <id name="id" type="integer">
+      <column name="`ID`" length="255" not-null="true" precision="19"/>
+      <generator class="identity"/>
+    </id>
+    <property name="role" type="string">
+      <column name="`role`" length="255" not-null="false" precision="19"/>
+    </property>
+  </class>
+  <class table="`menusettings`" name="com.bccontrolpanel.bcdata.Menusettings" entity-name="com.bccontrolpanel.bcdata.Menusettings">
+    <id name="id" type="integer">
+      <column name="`ID`" length="255" not-null="true" precision="19"/>
+      <generator class="identity"/>
+    </id>
+    <property name="menuItemLabel" type="string">
+      <column name="`menuItemLabel`" length="255" not-null="true" precision="19"/>
+    </property>
+    <property name="menuItemLink" type="string">
+      <column name="`menuItemLink`" length="255" not-null="true" precision="19"/>
+    </property>
+    <property name="menuItemIcon" type="string">
+      <column name="`menuItemIcon`" length="255" not-null="false" precision="19"/>
+    </property>
+  </class>
+</hibernate-mapping>

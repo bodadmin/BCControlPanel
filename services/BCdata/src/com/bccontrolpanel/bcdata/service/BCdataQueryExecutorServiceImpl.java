@@ -32,6 +32,13 @@ public class BCdataQueryExecutorServiceImpl implements BCdataQueryExecutorServic
 	@Qualifier("BCdataWMQueryExecutor")
 	private WMQueryExecutor queryExecutor;
 
+	@Transactional(value = "BCdataTransactionManager")
+	@Override
+	public Page<Object> executeMenusettings(Pageable pageable)
+	throws QueryParameterMismatchException{
+        Map<String, Object> params = new HashMap<String, Object>();
+        return queryExecutor.executeNamedQuery("menusettings", params, pageable);
+	}
 
 	@Transactional(value = "BCdataTransactionManager")
 	@Override

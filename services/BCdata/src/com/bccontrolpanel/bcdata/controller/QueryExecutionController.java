@@ -37,6 +37,15 @@ public class QueryExecutionController {
     @Autowired
     private BCdataQueryExecutorService queryService;
 
+    @ApiOperation(value = "Process request to execute queries")
+    @RequestMapping(value = "/queries/menusettings", method = RequestMethod.GET)
+    public Page<Object> executeMenusettings(Pageable pageable) {
+        LOGGER.debug("Executing named query menusettings");
+        Page<Object> result = queryService.executeMenusettings(pageable);
+        LOGGER.debug("got the result of named query {}", result);
+        return result;
+    }
+
     @RequestMapping(value = "/queries/wm_custom", method = RequestMethod.POST)
     @ApiOperation(value = "Process request to execute customer queries")
     public Page<Object> executeWMCustomQuery(@RequestBody CustomQuery query, Pageable pageable) {

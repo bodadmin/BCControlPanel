@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="BCdata" type="DataService" springFile="BCdata.spring.xml">
+    <operation operationType="nativequery" name="menusettings">
+        <return typeRef="BCdatamenusettingsrtnType" isList="false"/>
+    </operation>
     <dataobjects>
         <dataobject javaType="com.bccontrolpanel.bcdata.Users">
             <element name="id" typeRef="java.lang.Integer" allowNull="true"/>

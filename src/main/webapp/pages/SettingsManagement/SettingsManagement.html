@@ -3,11 +3,15 @@
     <wm-top-nav name="top_nav1" content="topnav"></wm-top-nav>
     <wm-content name="content1">
         <wm-page-content name="page_content1" columnwidth="12">
-            <wm-grid height="100%" name="grid1" dataset="bind:Variables.BCdataMenuSettingsData.dataSet" readonlygrid="false" insertrow="true" updaterow="true" deleterow="true">
-                <wm-grid-column binding="id" caption="Id" identity="" pcdisplay="true" mobiledisplay="true" integer="" readonly="false" primary-key="true"></wm-grid-column>
-                <wm-grid-column binding="menuItemLabel" caption="Menu Item Label" assigned="" pcdisplay="true" mobiledisplay="true" string="" readonly="false"></wm-grid-column>
-                <wm-grid-column binding="menuItemLink" caption="Menu Item Link" assigned="" pcdisplay="true" mobiledisplay="true" string="" readonly="false"></wm-grid-column>
-                <wm-grid-column binding="menuItemIcon" caption="Menu Item Icon" assigned="" pcdisplay="true" mobiledisplay="true" string="" readonly="false"></wm-grid-column>
+            <wm-grid name="grid1" height="100%" dataset="bind:Variables.BCdataMenusettingsData.dataSet" readonlygrid="false" deleterow="true" updaterow="true" insertrow="true">
+                <wm-grid-column type="integer" readonly="true" caption="Id" backgroundcolor="" generator="identity" primary-key="true" mobiledisplay="true" pcdisplay="true" binding="id" textcolor="" col-class="" col-ng-class="" search-placeholder="Search"
+                disable-inline-editing="false" is-related-pk="false"></wm-grid-column>
+                <wm-grid-column type="string" readonly="false" caption="Menu Item Label" backgroundcolor="" generator="assigned" primary-key="false" mobiledisplay="true" pcdisplay="true" binding="menuItemLabel" textcolor="" col-class=""
+                col-ng-class="" search-placeholder="Search" disable-inline-editing="false" is-related-pk="false"></wm-grid-column>
+                <wm-grid-column type="string" readonly="false" caption="Menu Item Link" backgroundcolor="" generator="assigned" primary-key="false" mobiledisplay="true" pcdisplay="true" binding="menuItemLink" textcolor="" col-class=""
+                col-ng-class="" search-placeholder="Search" disable-inline-editing="false" is-related-pk="false"></wm-grid-column>
+                <wm-grid-column type="string" readonly="false" caption="Menu Item Icon" backgroundcolor="" generator="assigned" primary-key="false" mobiledisplay="true" pcdisplay="true" binding="menuItemIcon" textcolor="" col-class=""
+                col-ng-class="" search-placeholder="Search" disable-inline-editing="false" is-related-pk="false"></wm-grid-column>
             </wm-grid>
         </wm-page-content>
     </wm-content>

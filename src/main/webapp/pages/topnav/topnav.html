@@ -7,8 +7,8 @@
         </wm-nav>
         <wm-nav class="navbar-right" type="navbar" name="navRight">
             <wm-nav-item name="nav_item2">
-                <wm-menu linktarget="_self" itemlink="bind:$[data[$i].menuItemLink]" itemicon="bind:$[data[$i].menuItemIcon]" itemlabel="bind:$[data[$i].menuItemLabel]" dataset="bind:Variables.BCdataMenuSettingsData.dataSet" iconclass="fa fa-cog" type="anchor"
-                name="menuSettings" caption="Settings"></wm-menu>
+                <wm-menu type="anchor" name="menuSettings" caption="Settings" iconclass="fa fa-cog" dataset="bind:Variables.BCdataMenusettingsData.dataSet" itemlabel="bind:$[data[$i].menuItemLabel]" itemicon="bind:$[data[$i].menuItemIcon]" itemlink="bind:$[data[$i].menuItemLink]"
+                linktarget="_self"></wm-menu>
             </wm-nav-item>
             <wm-nav-item name="nav_item3">
                 <wm-anchor name="buttonLogout" caption="Logout" on-click="logoutVariable" iconclass="glyphicon glyphicon-log-out"></wm-anchor>

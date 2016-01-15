@@ -3,9 +3,9 @@
     <wm-top-nav name="top_nav1" content="topnav"></wm-top-nav>
     <wm-content name="content1">
         <wm-page-content name="page_content1" columnwidth="12">
-            <wm-grid height="100%" name="grid1" dataset="bind:Variables.BCdataRoleData.dataSet" readonlygrid="false" insertrow="true" updaterow="true" deleterow="true">
-                <wm-grid-column binding="id" caption="Id" identity="" pcdisplay="true" mobiledisplay="true" integer="" readonly="false" primary-key="true"></wm-grid-column>
-                <wm-grid-column binding="role" caption="Role" assigned="" pcdisplay="true" mobiledisplay="true" string="" readonly="false"></wm-grid-column>
+            <wm-grid name="grid2" dataset="bind:Variables.BCdataRoleData.dataSet" readonlygrid="false" deleterow="true" updaterow="true" insertrow="true">
+                <wm-grid-column readonly="false" caption="Id" primary-key="true" integer="" mobiledisplay="true" pcdisplay="true" identity="" binding="id"></wm-grid-column>
+                <wm-grid-column readonly="false" caption="Role" string="" mobiledisplay="true" pcdisplay="true" binding="role" assigned=""></wm-grid-column>
             </wm-grid>
         </wm-page-content>
     </wm-content>

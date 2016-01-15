@@ -15,6 +15,7 @@ import com.wavemaker.runtime.data.model.CustomQuery;
 import com.wavemaker.runtime.data.exception.QueryParameterMismatchException;
 
 public interface BCdataQueryExecutorService {
+    Page<Object> executeMenusettings(Pageable pageable) throws QueryParameterMismatchException;
 
 	
 	Page<Object> executeWMCustomQuerySelect(CustomQuery query, Pageable pageable) ;

@@ -1,4 +1,46 @@
 {
+  "BCdataExecuteMenusettings" : {
+    "_id" : "wm-BCdataExecuteMenusettings-wm.ServiceVariable-1452853523256",
+    "name" : "BCdataExecuteMenusettings",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "type" : "BCdatamenusettingsrtnType",
+    "service" : "BCdata",
+    "operation" : "executeMenusettings",
+    "serviceType" : "DataService",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/BCdata/queryExecutor/queries/menusettings",
+      "httpMethod" : "get",
+      "name" : "executeMenusettings",
+      "parameters" : [ {
+        "name" : "page",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "size",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "sort",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true
+  },
   "BCdataMenusettingsData" : {
     "_id" : "wm-BCdataMenusettingsData-wm.LiveVariable-1452795251598",
     "name" : "BCdataMenusettingsData",
@@ -15,7 +57,7 @@
     "firstRow" : 0,
     "maxResults" : 20,
     "designMaxResults" : 10,
-    "startUpdate" : false,
+    "startUpdate" : true,
     "autoUpdate" : true,
     "inFlightBehavior" : "executeLast",
     "transformationRequired" : false,
@@ -79,6 +121,7 @@
       "primaryFields" : [ "id" ]
     },
     "isDefault" : true,
+    "bindCount" : 1,
     "tableName" : "menusettings",
     "tableType" : "TABLE",
     "dbSystem" : "MySQL",

@@ -20,7 +20,9 @@ Application.$controller("RoleManagementPageController", ["$scope", function ($sc
 }]);
 
 
-Application.$controller("grid1Controller", ["$scope",
+
+
+Application.$controller("grid2Controller", ["$scope",
 	function($scope) {
 		"use strict";
 		$scope.ctrlScope = $scope;

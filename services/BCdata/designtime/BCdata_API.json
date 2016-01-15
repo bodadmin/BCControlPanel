@@ -9,9 +9,9 @@
   },
   "basePath" : "",
   "tags" : [ {
-    "name" : "RoleController",
-    "description" : "Exposes APIs to work with Role resource.",
-    "x-WM-FULLY_QUALIFIED_NAME" : "com.bccontrolpanel.bcdata.controller.RoleController",
+    "name" : "UsersController",
+    "description" : "Exposes APIs to work with Users resource.",
+    "x-WM-FULLY_QUALIFIED_NAME" : "com.bccontrolpanel.bcdata.controller.UsersController",
     "x-WM-VERSION" : ""
   }, {
     "name" : "MenusettingsController",
@@ -19,14 +19,14 @@
     "x-WM-FULLY_QUALIFIED_NAME" : "com.bccontrolpanel.bcdata.controller.MenusettingsController",
     "x-WM-VERSION" : ""
   }, {
-    "name" : "UsersController",
-    "description" : "Exposes APIs to work with Users resource.",
-    "x-WM-FULLY_QUALIFIED_NAME" : "com.bccontrolpanel.bcdata.controller.UsersController",
-    "x-WM-VERSION" : ""
-  }, {
     "name" : "QueryExecutionController",
     "description" : "Controller class for query execution",
     "x-WM-FULLY_QUALIFIED_NAME" : "com.bccontrolpanel.bcdata.controller.QueryExecutionController",
+    "x-WM-VERSION" : ""
+  }, {
+    "name" : "RoleController",
+    "description" : "Exposes APIs to work with Role resource.",
+    "x-WM-FULLY_QUALIFIED_NAME" : "com.bccontrolpanel.bcdata.controller.RoleController",
     "x-WM-VERSION" : ""
   }, {
     "name" : "ProcedureExecutionController",
@@ -77,7 +77,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "91f6bb07-37dd-41b0-a9dd-b72fe84cfbc9",
+        "x-WM-OPERATION_UID" : "8a365d4c-f144-4cce-9b02-66c65c79f429",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "getMenusettingss-1-934028971"
       },
@@ -94,7 +94,7 @@
             "x-WM-TYPE_ARGUMENTS" : [ ]
           },
           "x-WM-FULLY_QUALIFIED_TYPE" : "com.bccontrolpanel.bcdata.Menusettings",
-          "x-WM-UUID" : "b8c33b08-c8f5-4bc5-ba03-b00b326b10af",
+          "x-WM-UUID" : "7d85fd45-17eb-4ffb-8a4e-cd7fdca4f9d0",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -106,7 +106,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "ee943b96-7c95-4b11-917b-a17cea192ffb",
+        "x-WM-OPERATION_UID" : "c03fcc7e-b6b5-4b37-887c-cf4f25412f15",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "createMenusettings-1-113249505"
       },
@@ -129,7 +129,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "5da1ec48-da27-4fa5-bb30-0fb3c4f98a58",
+        "x-WM-OPERATION_UID" : "b68bc844-a248-4bbb-b2f9-5a80fc74944f",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "countAllMenusettingss-0-17"
       },
@@ -179,7 +179,7 @@
             "x-WM-IS_LIST" : false
           },
           "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.expression.QueryFilter",
-          "x-WM-UUID" : "eda90901-5590-4db5-be56-1826b314f13f",
+          "x-WM-UUID" : "2a4cf2db-6345-4de6-8086-b39c7ecabae9",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -194,7 +194,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "4047fc64-f2dc-4bfe-b0b2-f0bddfbdd85c",
+        "x-WM-OPERATION_UID" : "8097d173-1549-4b43-b3f0-1b1a68711331",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "findMenusettingss-2--1821969279"
       },
@@ -216,7 +216,7 @@
           "collectionFormat" : "multi",
           "format" : "int32",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
-          "x-WM-UUID" : "ef7c259a-9dea-44d9-b0bc-71c572329e10",
+          "x-WM-UUID" : "6eafc253-6991-4ad5-aaf9-01a64843aa25",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -228,7 +228,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "5efd76c0-5b94-47e0-8aff-059444cd85e6",
+        "x-WM-OPERATION_UID" : "c2a72a29-7ec1-433f-910f-d08a1917b19f",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "getMenusettings-1--2056816673"
       },
@@ -244,7 +244,7 @@
           "collectionFormat" : "multi",
           "format" : "int32",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
-          "x-WM-UUID" : "2f701157-e776-4b3c-986a-6ac68ec7f527",
+          "x-WM-UUID" : "47daa6df-6e4e-4ebf-8ebc-08f272834b5c",
           "x-WM-EDITABLE" : true
         }, {
           "in" : "body",
@@ -255,7 +255,7 @@
             "x-WM-TYPE_ARGUMENTS" : [ ]
           },
           "x-WM-FULLY_QUALIFIED_TYPE" : "com.bccontrolpanel.bcdata.Menusettings",
-          "x-WM-UUID" : "a3c1306b-c01b-49ab-94a0-d8bc6c95f09b",
+          "x-WM-UUID" : "6ebe4693-1131-4ad3-b0dd-6e2da0a4c34a",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -267,7 +267,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "cd071ebd-0968-468c-8535-0e31f3ac497e",
+        "x-WM-OPERATION_UID" : "bb65c5dd-5c5b-4943-b223-5648c10463aa",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "editMenusettings-2-1320443303"
       },
@@ -283,7 +283,7 @@
           "collectionFormat" : "multi",
           "format" : "int32",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
-          "x-WM-UUID" : "def60915-036a-4e95-a846-331ba7df73d7",
+          "x-WM-UUID" : "c4e99403-4232-4c71-bff2-908c23aec695",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -294,7 +294,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "eb83e3c3-b59f-49fb-a388-7bd43362ccea",
+        "x-WM-OPERATION_UID" : "4e0f3328-9c23-4a8d-8bed-369d624985ab",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "deleteMenusettings-1--2056816673"
       },
@@ -344,7 +344,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "e29f76ae-8e74-4440-86ab-ec4a1e6152ab",
+        "x-WM-OPERATION_UID" : "4196b32f-69b1-431d-a8d0-b4db92aa5fe1",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "getRoles-1-934028971"
       },
@@ -361,7 +361,7 @@
             "x-WM-TYPE_ARGUMENTS" : [ ]
           },
           "x-WM-FULLY_QUALIFIED_TYPE" : "com.bccontrolpanel.bcdata.Role",
-          "x-WM-UUID" : "a176d416-d4d7-46d1-b666-4727c739bd85",
+          "x-WM-UUID" : "af12799d-3bc3-42f9-87f3-bde7c6323e1d",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -373,7 +373,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "11d33c4c-4dcd-461c-92e3-353b48437395",
+        "x-WM-OPERATION_UID" : "c60e2651-1cb7-4812-9c26-d502fc348fed",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "createRole-1-357766357"
       },
@@ -396,7 +396,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "4c1964a7-4b7f-4a05-9116-ffe468ce8779",
+        "x-WM-OPERATION_UID" : "15091116-7ac8-489d-b1c4-ebedb25d24d4",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "countAllRoles-0-17"
       },
@@ -446,7 +446,7 @@
             "x-WM-IS_LIST" : false
           },
           "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.expression.QueryFilter",
-          "x-WM-UUID" : "80867f14-2399-4c69-98bd-b781e48ad4de",
+          "x-WM-UUID" : "875bfd7e-eb58-4c37-8426-398e0cecca71",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -461,7 +461,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "6a54e20e-2f47-4399-bc86-c5fcca4959f5",
+        "x-WM-OPERATION_UID" : "4721741e-f7f3-4732-af5d-fc32b05d5d5a",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "findRoles-2--1821969279"
       },
@@ -483,7 +483,7 @@
           "collectionFormat" : "multi",
           "format" : "int32",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
-          "x-WM-UUID" : "441b4f3e-3b90-4476-b46f-27f7e0dd1d22",
+          "x-WM-UUID" : "1e668438-fd6c-4603-91f5-5e8500e9bd41",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -495,7 +495,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "8cdcf261-f31c-4cea-8162-ac8280a51b6b",
+        "x-WM-OPERATION_UID" : "e5d4e82f-8d6d-4dde-9c8f-d74821429bc6",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "getRole-1--2056816673"
       },
@@ -511,7 +511,7 @@
           "collectionFormat" : "multi",
           "format" : "int32",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
-          "x-WM-UUID" : "bba4d2d4-4725-4d7e-be0b-4032a5437329",
+          "x-WM-UUID" : "99e28012-7e2a-4835-81cb-872169480c62",
           "x-WM-EDITABLE" : true
         }, {
           "in" : "body",
@@ -522,7 +522,7 @@
             "x-WM-TYPE_ARGUMENTS" : [ ]
           },
           "x-WM-FULLY_QUALIFIED_TYPE" : "com.bccontrolpanel.bcdata.Role",
-          "x-WM-UUID" : "e7cb5e61-7d15-43ab-8496-dcfddc9fc8bf",
+          "x-WM-UUID" : "5e54e99d-4fd1-4a45-8e59-febe907c87e9",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -534,7 +534,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "bd8bd49b-66a8-45c1-aa54-57eaf81e7562",
+        "x-WM-OPERATION_UID" : "e29265f1-8358-4d9e-b860-eb8084493862",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "editRole-2-1564960155"
       },
@@ -550,7 +550,7 @@
           "collectionFormat" : "multi",
           "format" : "int32",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
-          "x-WM-UUID" : "3bdf3f4a-7ac4-4f96-b8a8-1d1606e3bde0",
+          "x-WM-UUID" : "c846ff2d-69b4-4e1b-b353-ecff8e611355",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -561,7 +561,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "e04376ce-2385-4df2-9e5f-eeec81eeb45d",
+        "x-WM-OPERATION_UID" : "41f2808b-c302-4afc-b7db-0b9aadefaf15",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "deleteRole-1--2056816673"
       },
@@ -611,7 +611,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "57702167-e410-42fe-881f-03d80d212b7b",
+        "x-WM-OPERATION_UID" : "5577b7ef-d311-4dbc-a1a0-aada8beb9673",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "getUserss-1-934028971"
       },
@@ -628,7 +628,7 @@
             "x-WM-TYPE_ARGUMENTS" : [ ]
           },
           "x-WM-FULLY_QUALIFIED_TYPE" : "com.bccontrolpanel.bcdata.Users",
-          "x-WM-UUID" : "ff2b472e-cd08-474e-8b67-3c869a4dd67f",
+          "x-WM-UUID" : "fd824908-3ab6-40ee-91f9-8af79eef36a5",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -640,7 +640,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "f1878d29-6b54-4b80-8070-e5be39016ffd",
+        "x-WM-OPERATION_UID" : "92835c3c-9280-4a91-af2d-08509a4cb269",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "createUsers-1--1791280173"
       },
@@ -663,7 +663,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "cd650c1b-10de-46d2-95bb-e17261af7601",
+        "x-WM-OPERATION_UID" : "458eef26-22c5-41bd-b6de-19bd7a4f57b4",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "countAllUserss-0-17"
       },
@@ -713,7 +713,7 @@
             "x-WM-IS_LIST" : false
           },
           "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.expression.QueryFilter",
-          "x-WM-UUID" : "c26a12bc-456a-4629-9fda-09a1192a6472",
+          "x-WM-UUID" : "483fbf4b-d70e-4c87-8b21-2ec7175c6f0d",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -728,7 +728,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "659abc17-d032-4457-b114-f8793706b607",
+        "x-WM-OPERATION_UID" : "2da5befe-c347-4ee0-856c-622872e01e54",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "findUserss-2--1821969279"
       },
@@ -750,7 +750,7 @@
           "collectionFormat" : "multi",
           "format" : "int32",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
-          "x-WM-UUID" : "9e408de4-4e30-4f25-a6a1-490cdaa7c41f",
+          "x-WM-UUID" : "00f1b99e-2d05-4aaf-bc93-ab58c7bf0cbf",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -762,7 +762,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "b4ec1a83-8706-4e15-adc7-163c4c8d26f3",
+        "x-WM-OPERATION_UID" : "e698f1a8-46cd-447a-9839-a6bc1469cd64",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "getUsers-1--2056816673"
       },
@@ -778,7 +778,7 @@
           "collectionFormat" : "multi",
           "format" : "int32",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
-          "x-WM-UUID" : "ac4221d3-21ce-4ac6-b498-b65203b6c1a8",
+          "x-WM-UUID" : "af752c20-7500-4896-bdb1-e472fc46f961",
           "x-WM-EDITABLE" : true
         }, {
           "in" : "body",
@@ -789,7 +789,7 @@
             "x-WM-TYPE_ARGUMENTS" : [ ]
           },
           "x-WM-FULLY_QUALIFIED_TYPE" : "com.bccontrolpanel.bcdata.Users",
-          "x-WM-UUID" : "df68c348-cbf0-4592-854e-afe0ebb1ebe9",
+          "x-WM-UUID" : "06e8ea87-4493-4f7d-95d3-6073cb837d7d",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -801,7 +801,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "c753bdd8-65da-4b2d-95fe-a01fea73a88d",
+        "x-WM-OPERATION_UID" : "7c3f01b6-15d7-495c-91bc-67041194af80",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "editUsers-2--584086375"
       },
@@ -817,7 +817,7 @@
           "collectionFormat" : "multi",
           "format" : "int32",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
-          "x-WM-UUID" : "f308dd39-6301-437f-962a-4ee1084c131a",
+          "x-WM-UUID" : "dcf1bf14-dce7-4fc4-9663-201372350523",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -828,7 +828,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "eb0eed27-5678-43b1-bf26-21c65a5800ce",
+        "x-WM-OPERATION_UID" : "d29b2822-87e4-42a7-adf1-9fcbfec964e8",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "deleteUsers-1--2056816673"
       },
@@ -851,7 +851,7 @@
             "x-WM-TYPE_ARGUMENTS" : [ ]
           },
           "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.model.CustomProcedure",
-          "x-WM-UUID" : "682ba479-88ea-41fb-9bf8-1421f6953120",
+          "x-WM-UUID" : "199dd846-272e-406d-a1b5-335df1316055",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -868,7 +868,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "1585c679-6ba7-4e5b-894c-9982b3126702",
+        "x-WM-OPERATION_UID" : "acc50acc-8884-4dcd-83a0-3bce5eb7128a",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "executeWMCustomProcedure-1--282256460"
       },
@@ -876,6 +876,56 @@
       "x-WM-BASE_PATH" : "/BCdata/procedureExecutor",
       "x-WM-COMPLETE_PATH" : "//BCdata/procedureExecutor/procedure/execute/wm_custom",
       "x-WM-RELATIVE_PATH" : "/procedure/execute/wm_custom"
+    },
+    "/BCdata/queryExecutor/queries/menusettings" : {
+      "get" : {
+        "tags" : [ "QueryExecutionController" ],
+        "description" : "Process request to execute queries",
+        "operationId" : "executeMenusettings",
+        "parameters" : [ {
+          "name" : "page",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : "0",
+          "format" : "int32",
+          "x-WM-EDITABLE" : false,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable"
+        }, {
+          "name" : "size",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : "20",
+          "format" : "int32",
+          "x-WM-EDITABLE" : false
+        }, {
+          "name" : "sort",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "x-WM-EDITABLE" : false
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Page",
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "$ref" : "#/definitions/Object",
+                "x-WM-TYPE_ARGUMENTS" : [ ]
+              } ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "53413f5d-73e0-42ef-9418-eb2e6f44bd2f",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-METHOD_IDENTIFIER" : "executeMenusettings-1-934028971"
+      },
+      "x-WM-TAG" : "QueryExecutionController",
+      "x-WM-BASE_PATH" : "/BCdata/queryExecutor",
+      "x-WM-COMPLETE_PATH" : "//BCdata/queryExecutor/queries/menusettings",
+      "x-WM-RELATIVE_PATH" : "/queries/menusettings"
     },
     "/BCdata/queryExecutor/queries/wm_custom" : {
       "post" : {
@@ -891,7 +941,7 @@
             "x-WM-TYPE_ARGUMENTS" : [ ]
           },
           "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.model.CustomQuery",
-          "x-WM-UUID" : "2a640e8d-edba-4491-ae0b-8b9ed1fed3ee",
+          "x-WM-UUID" : "f9275c39-6ebd-4f5b-b6c3-101f1d58b108",
           "x-WM-EDITABLE" : true
         }, {
           "name" : "page",
@@ -929,7 +979,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "dc7fe0d3-b36a-4060-940c-33dd79457dea",
+        "x-WM-OPERATION_UID" : "b0f137ea-6891-4090-b68b-3b84787ab983",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "executeWMCustomQuery-2-107741091"
       },
@@ -952,7 +1002,7 @@
             "x-WM-TYPE_ARGUMENTS" : [ ]
           },
           "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.model.CustomQuery",
-          "x-WM-UUID" : "c195fc13-5724-4032-9ee5-97d5fdc47546",
+          "x-WM-UUID" : "9b606da0-1647-416b-9ca9-ba4e4b017192",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -964,7 +1014,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "ceeee45c-2f1f-4110-ad6e-01ee3b79b6c9",
+        "x-WM-OPERATION_UID" : "46c63c41-5b64-4d84-acbe-426ea295cd52",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "executeWMCustomQuery-1--718813271"
       },
@@ -975,6 +1025,27 @@
     }
   },
   "definitions" : {
+    "Sort" : {
+      "allOf" : [ {
+        "$ref" : "#/definitions/Iterable"
+      }, {
+        "$ref" : "#/definitions/Serializable"
+      }, {
+        "properties" : {
+          "orders" : {
+            "type" : "array",
+            "uniqueItems" : false,
+            "items" : {
+              "$ref" : "#/definitions/Sort$Order",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            },
+            "x-WM-IS_LIST" : true
+          }
+        }
+      } ],
+      "x-WM-FULLY_QUALIFIED_NAME" : "org.springframework.data.domain.Sort",
+      "x-WM-TAGS" : [ "UsersController" ]
+    },
     "Users" : {
       "allOf" : [ {
         "$ref" : "#/definitions/Serializable"
@@ -998,30 +1069,9 @@
       "x-WM-FULLY_QUALIFIED_NAME" : "com.bccontrolpanel.bcdata.Users",
       "x-WM-TAGS" : [ "UsersController" ]
     },
-    "Sort" : {
-      "allOf" : [ {
-        "$ref" : "#/definitions/Iterable"
-      }, {
-        "$ref" : "#/definitions/Serializable"
-      }, {
-        "properties" : {
-          "orders" : {
-            "type" : "array",
-            "uniqueItems" : false,
-            "items" : {
-              "$ref" : "#/definitions/Sort$Order",
-              "x-WM-TYPE_ARGUMENTS" : [ ]
-            },
-            "x-WM-IS_LIST" : true
-          }
-        }
-      } ],
-      "x-WM-FULLY_QUALIFIED_NAME" : "org.springframework.data.domain.Sort",
-      "x-WM-TAGS" : [ "MenusettingsController" ]
-    },
     "Iterable" : {
       "x-WM-FULLY_QUALIFIED_NAME" : "java.lang.Iterable",
-      "x-WM-TAGS" : [ "MenusettingsController" ]
+      "x-WM-TAGS" : [ "UsersController" ]
     },
     "CustomQueryParam" : {
       "properties" : {
@@ -1079,7 +1129,7 @@
         }
       },
       "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.runtime.data.expression.QueryFilter",
-      "x-WM-TAGS" : [ "MenusettingsController", "RoleController", "UsersController" ]
+      "x-WM-TAGS" : [ "UsersController", "MenusettingsController", "RoleController" ]
     },
     "Page" : {
       "allOf" : [ {
@@ -1128,7 +1178,7 @@
         }
       } ],
       "x-WM-FULLY_QUALIFIED_NAME" : "org.springframework.data.domain.Page",
-      "x-WM-TAGS" : [ "MenusettingsController", "RoleController", "UsersController", "QueryExecutionController" ]
+      "x-WM-TAGS" : [ "UsersController", "QueryExecutionController", "MenusettingsController", "RoleController" ]
     },
     "Role" : {
       "allOf" : [ {
@@ -1169,11 +1219,11 @@
         }
       } ],
       "x-WM-FULLY_QUALIFIED_NAME" : "org.springframework.data.domain.Sort.Order",
-      "x-WM-TAGS" : [ "MenusettingsController" ]
+      "x-WM-TAGS" : [ "UsersController" ]
     },
     "Serializable" : {
       "x-WM-FULLY_QUALIFIED_NAME" : "java.io.Serializable",
-      "x-WM-TAGS" : [ "MenusettingsController", "RoleController", "UsersController" ]
+      "x-WM-TAGS" : [ "UsersController", "MenusettingsController", "RoleController" ]
     },
     "CustomQuery" : {
       "properties" : {
@@ -1278,7 +1328,7 @@
         }
       } ],
       "x-WM-FULLY_QUALIFIED_NAME" : "org.springframework.data.domain.Slice",
-      "x-WM-TAGS" : [ "MenusettingsController" ]
+      "x-WM-TAGS" : [ "UsersController" ]
     }
   }
 }

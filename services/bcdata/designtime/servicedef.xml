@@ -7,6 +7,12 @@
             <element name="password" typeRef="java.lang.String" allowNull="true"/>
             <element name="userrname" typeRef="java.lang.String" allowNull="true"/>
         </dataobject>
+        <dataobject javaType="com.bccontrolpanel.bcdata.Contextfilename">
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="environment" typeRef="java.lang.String" allowNull="true"/>
+            <element name="description" typeRef="java.lang.String" allowNull="true"/>
+            <element name="filename" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
         <dataobject javaType="com.bccontrolpanel.bcdata.Role">
             <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
             <element name="role" typeRef="java.lang.String" allowNull="true"/>

@@ -28,6 +28,7 @@ import javax.persistence.UniqueConstraint;
  */
 @Entity
 @Table(name="`role`"
+    ,schema="bcdata"
 )
 
 public class Role  implements java.io.Serializable {

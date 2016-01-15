@@ -131,11 +131,11 @@ var _UserManagementPage_Variables_ ={
     <wm-top-nav name="top_nav1" content="topnav"></wm-top-nav>
     <wm-content name="content1">
         <wm-page-content name="page_content1" columnwidth="12">
-            <wm-grid name="grid2" dataset="bind:Variables.BCdataUsersData.dataSet" readonlygrid="false" deleterow="true" updaterow="true" insertrow="true">
-                <wm-grid-column readonly="false" caption="Id" primary-key="true" integer="" mobiledisplay="true" pcdisplay="true" identity="" binding="id"></wm-grid-column>
-                <wm-grid-column readonly="false" caption="Userrname" string="" mobiledisplay="true" pcdisplay="true" binding="userrname" assigned=""></wm-grid-column>
-                <wm-grid-column readonly="false" caption="Password" string="" mobiledisplay="true" pcdisplay="true" binding="password" assigned=""></wm-grid-column>
-                <wm-grid-column readonly="false" caption="Role" string="" mobiledisplay="true" pcdisplay="true" binding="role" assigned=""></wm-grid-column>
+            <wm-grid name="grid2" dataset="bind:Variables.BcdataUsersData.dataSet" readonlygrid="false" deleterow="true" updaterow="true" insertrow="true">
+                <wm-grid-column mobiledisplay="true" pcdisplay="true" readonly="true" generator="identity" primary-key="true" type="integer" caption="Id" binding="id"></wm-grid-column>
+                <wm-grid-column readonly="false" mobiledisplay="true" pcdisplay="true" generator="assigned" primary-key="false" type="string" caption="Userrname" binding="userrname"></wm-grid-column>
+                <wm-grid-column readonly="false" mobiledisplay="true" pcdisplay="true" generator="assigned" primary-key="false" type="string" caption="Password" binding="password"></wm-grid-column>
+                <wm-grid-column readonly="false" mobiledisplay="true" pcdisplay="true" generator="assigned" primary-key="false" type="string" caption="Role" binding="role"></wm-grid-column>
             </wm-grid>
         </wm-page-content>
     </wm-content>

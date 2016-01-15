@@ -372,40 +372,6 @@
     "redirectTo" : "Login",
     "useDefaultSuccessHandler" : true
   },
-  "MailServiceGetUserByID" : {
-    "_id" : "wm-MailServiceGetUserByID-wm.ServiceVariable-1452787040813",
-    "name" : "MailServiceGetUserByID",
-    "owner" : "App",
-    "category" : "wm.ServiceVariable",
-    "type" : "com.bccontrolpanel.bcdata.Users",
-    "service" : "MailService",
-    "operation" : "getUserByID",
-    "serviceType" : "JavaService",
-    "wmServiceOperationInfo" : {
-      "relativePath" : "/mail/userByID",
-      "httpMethod" : "get",
-      "name" : "getUserByID",
-      "parameters" : [ {
-        "name" : "usrID",
-        "parameterType" : "query",
-        "type" : "integer"
-      } ]
-    },
-    "dataBinding" : [ ],
-    "dataSet" : {
-      "dataValue" : ""
-    },
-    "isList" : false,
-    "firstRow" : 0,
-    "maxResults" : 20,
-    "designMaxResults" : 10,
-    "startUpdate" : false,
-    "autoUpdate" : true,
-    "inFlightBehavior" : "executeLast",
-    "transformationRequired" : false,
-    "saveInPhonegap" : false,
-    "isDefault" : true
-  },
   "MailServiceSendPasswordReset" : {
     "_id" : "wm-MailServiceSendPasswordReset-wm.ServiceVariable-1452769444203",
     "name" : "MailServiceSendPasswordReset",
@@ -421,9 +387,9 @@
       "name" : "sendPasswordReset",
       "produces" : [ "application/json" ],
       "parameters" : [ {
-        "name" : "userID",
+        "name" : "userName",
         "parameterType" : "query",
-        "type" : "integer"
+        "type" : "string"
       } ]
     },
     "dataBinding" : [ ],

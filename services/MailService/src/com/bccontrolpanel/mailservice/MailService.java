@@ -16,6 +16,11 @@ import com.bccontrolpanel.bcdata.service.*;
 import com.bccontrolpanel.bcdata.Users;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.*;
+import com.wavemaker.runtime.data.expression.AttributeType;
+import com.wavemaker.runtime.data.expression.QueryFilter;
+import com.wavemaker.runtime.data.expression.Type;
 //import com.bccontrolpanel.mailservice.model.*;
 /**
  * This is a singleton class with all of its public methods exposed to the client via c ontroller.
@@ -41,18 +46,25 @@ public class MailService {
         return sb.toString(); 
     }
     
-    public Users getUserByID(int usrID){
-        Users u = usrsService.findById(usrID);
-        return u;
+    private Users getUserByUsername(String username) {
+        PageRequest page = new PageRequest(0, ((int) usrsService.countAll()));
+        QueryFilter[] queryFilters = new QueryFilter[1];
+        queryFilters[0]=new QueryFilter("userrname",username, Type.EQUALS, AttributeType.STRING); 
+
+        Page<Users> foundUsers = usrsService.findAll(queryFilters, page);
+        List<Users> listy = foundUsers.getContent();  
+        Users usr = listy.get(0);
+        return usr;
     }
 
-    public String sendPasswordReset(int userID) {
-    try{
+    public String sendPasswordReset(String userName) {
+    //try{
         
-        Users usr2 = getUserByID(userID);
+        Users usr2 = getUserByUsername(userName);
         String RandomPW = generateRandomPassword();
         usr2.setPassword(RandomPW);
         usrsService.update(usr2);
+        /*
         String toEmailAddress = "MAKE NEW COLUMN IN DB TABLE AND THEN REFERENCE HERE";
         
         
@@ -82,8 +94,8 @@ public class MailService {
         return "Mail Sent Successfully";
     } catch (MessagingException e) {
         return "Error" + e;
-    }
-        
+            */
+            return "lol";
     }
     
     

@@ -21,14 +21,13 @@
         "operationId" : "sendPasswordReset",
         "produces" : [ "application/json" ],
         "parameters" : [ {
-          "name" : "userID",
+          "name" : "userName",
           "in" : "query",
           "required" : false,
-          "type" : "integer",
+          "type" : "string",
           "collectionFormat" : "multi",
-          "format" : "int32",
-          "x-WM-FULLY_QUALIFIED_TYPE" : "int",
-          "x-WM-UUID" : "92be0c58-4ac5-44c0-92fd-7e609247c5b7",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "x-WM-UUID" : "5ab9872b-1343-4142-add8-004d55519cb2",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -39,76 +38,15 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "4b035c4a-2bbc-4a1a-9ab0-6ae024b6dad1",
+        "x-WM-OPERATION_UID" : "7c2e15c1-721c-43d4-9d84-d417d4281d42",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
-        "x-WM-METHOD_IDENTIFIER" : "sendPasswordReset-1-105060"
+        "x-WM-METHOD_IDENTIFIER" : "sendPasswordReset-1-1195260122"
       },
       "x-WM-TAG" : "MailController",
       "x-WM-BASE_PATH" : "/mail",
       "x-WM-COMPLETE_PATH" : "//mail/sendPasswordReset",
       "x-WM-RELATIVE_PATH" : "/sendPasswordReset"
-    },
-    "/mail/userByID" : {
-      "get" : {
-        "tags" : [ "MailController" ],
-        "operationId" : "getUserByID",
-        "parameters" : [ {
-          "name" : "usrID",
-          "in" : "query",
-          "required" : false,
-          "type" : "integer",
-          "collectionFormat" : "multi",
-          "format" : "int32",
-          "x-WM-FULLY_QUALIFIED_TYPE" : "int",
-          "x-WM-UUID" : "cde465bd-515b-41af-990f-9712b1b51dd9",
-          "x-WM-EDITABLE" : true
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "Success",
-            "schema" : {
-              "$ref" : "#/definitions/Users",
-              "x-WM-TYPE_ARGUMENTS" : [ ]
-            }
-          }
-        },
-        "x-WM-OPERATION_UID" : "e3ddab88-d66f-427e-9470-7d334fb8e5ad",
-        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
-        "x-WM-METHOD_IDENTIFIER" : "getUserByID-1-105060"
-      },
-      "x-WM-TAG" : "MailController",
-      "x-WM-BASE_PATH" : "/mail",
-      "x-WM-COMPLETE_PATH" : "//mail/userByID",
-      "x-WM-RELATIVE_PATH" : "/userByID"
     }
   },
-  "definitions" : {
-    "Users" : {
-      "allOf" : [ {
-        "$ref" : "#/definitions/Serializable"
-      }, {
-        "properties" : {
-          "id" : {
-            "type" : "integer",
-            "format" : "int32"
-          },
-          "role" : {
-            "type" : "string"
-          },
-          "password" : {
-            "type" : "string"
-          },
-          "userrname" : {
-            "type" : "string"
-          }
-        }
-      } ],
-      "x-WM-FULLY_QUALIFIED_NAME" : "com.bccontrolpanel.bcdata.Users",
-      "x-WM-TAGS" : [ "MailController" ]
-    },
-    "Serializable" : {
-      "x-WM-FULLY_QUALIFIED_NAME" : "java.io.Serializable",
-      "x-WM-TAGS" : [ "MailController" ]
-    }
-  }
+  "definitions" : { }
 }

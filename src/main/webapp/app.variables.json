@@ -430,7 +430,7 @@
     "firstRow" : 0,
     "maxResults" : 20,
     "designMaxResults" : 10,
-    "startUpdate" : false,
+    "startUpdate" : true,
     "autoUpdate" : true,
     "inFlightBehavior" : "executeLast",
     "transformationRequired" : false,
@@ -493,6 +493,7 @@
       "primaryFields" : [ "id" ]
     },
     "isDefault" : true,
+    "bindCount" : 1,
     "tableName" : "users",
     "tableType" : "TABLE",
     "dbSystem" : "MySQL",

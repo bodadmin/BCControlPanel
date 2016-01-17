@@ -25,7 +25,21 @@ Application.$controller("UploadInputFilesPageController", ["$scope", function ($
 
 </script>
 <script id="UploadInputFiles.variables.json">
-var _UploadInputFilesPage_Variables_ ={ }
+var _UploadInputFilesPage_Variables_ ={
+  "varInputDir" : {
+    "_id" : "wm-varInputDir-wm.Variable-1453066627455",
+    "name" : "varInputDir",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataSet" : {
+      "dataValue" : "D:/bodconnect/HTA/BankStatementUpload/input"
+    },
+    "dataBinding" : [ ],
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  }
+}
 </script>
 <script id="UploadInputFiles.html" type="text/ng-template">
 <wm-page name="page1" data-ng-controller="UploadInputFilesPageController" pagetitle="Upload Input Files">
@@ -33,7 +47,7 @@ var _UploadInputFilesPage_Variables_ ={ }
     <wm-top-nav name="top_nav1" content="topnav"></wm-top-nav>
     <wm-content name="content1">
         <wm-page-content name="page_content1" columnwidth="12">
-            <wm-fileupload mode="Select" maxfilesize="5" name="fileupload1" service="FileService" operation="uploadFile" destination="bind:Variables.BcdataContextData.dataSet.data[$i].contextname = &quot;inputDir&quot;"></wm-fileupload>
+            <wm-fileupload multiple="true" mode="Upload" maxfilesize="5" name="fileupload1" service="FileService" operation="uploadFile" destination="bind:Variables.varInputDir.dataSet.dataValue"></wm-fileupload>
         </wm-page-content>
     </wm-content>
     <wm-footer name="footer1" content="footer"></wm-footer>

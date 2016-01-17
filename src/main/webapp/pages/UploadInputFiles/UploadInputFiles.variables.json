@@ -1,1 +1,15 @@
-{ }
+{
+  "varInputDir" : {
+    "_id" : "wm-varInputDir-wm.Variable-1453066627455",
+    "name" : "varInputDir",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataSet" : {
+      "dataValue" : "D:/bodconnect/HTA/BankStatementUpload/input"
+    },
+    "dataBinding" : [ ],
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  }
+}

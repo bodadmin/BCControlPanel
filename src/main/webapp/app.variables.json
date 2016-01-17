@@ -930,7 +930,7 @@
     "owner" : "App",
     "category" : "wm.Variable",
     "dataSet" : {
-      "dataValue" : "Copyright © 2016 Business on Demand Ltd"
+      "dataValue" : "Copyright 2016 Business on Demand Ltd"
     },
     "dataBinding" : [ ],
     "type" : "string",

@@ -84,6 +84,18 @@
         "generator" : "assigned",
         "isRelated" : false,
         "defaultValue" : "false"
+      }, {
+        "fieldName" : "contextId",
+        "type" : "integer",
+        "hibernateType" : "integer",
+        "fullyQualifiedType" : "integer",
+        "columnName" : "contextID",
+        "isPrimaryKey" : false,
+        "notNull" : true,
+        "length" : 255,
+        "precision" : 19,
+        "generator" : "assigned",
+        "isRelated" : false
       } ],
       "entityName" : "Context",
       "fullyQualifiedName" : "com.bccontrolpanel.bcdata.Context",
@@ -709,7 +721,7 @@
     "saveInPhonegap" : false,
     "inFlightBehavior" : "executeLast",
     "transformationRequired" : false,
-    "redirectTo" : "Login",
+    "redirectTo" : "index.html",
     "useDefaultSuccessHandler" : true
   },
   "MailServiceSendPasswordReset" : {
@@ -906,6 +918,19 @@
     "category" : "wm.Variable",
     "dataSet" : {
       "en" : "English"
+    },
+    "dataBinding" : [ ],
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "varCopyright" : {
+    "_id" : "wm-varCopyright-wm.Variable-1453047847142",
+    "name" : "varCopyright",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataSet" : {
+      "dataValue" : "Copyright © 2016 Business on Demand Ltd"
     },
     "dataBinding" : [ ],
     "type" : "string",

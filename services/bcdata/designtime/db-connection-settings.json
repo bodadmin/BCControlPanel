@@ -10,7 +10,7 @@
   "host" : "bodserv001.bodconnect.com",
   "dbName" : "bcdata",
   "port" : "3306",
-  "tableFilter" : "context,contextfilename,contextfiles,menusettings,role,users, users, role, contextfiles, menusettings, contextfilename, context",
+  "tableFilter" : "context,contextfilename,contextfiles,menusettings,role,users",
   "schemaName" : "bcdata",
   "schemaFilter" : ".*",
   "revengNamingStrategyClassName" : "com.wavemaker.studio.core.data.hibernate.reveng.MySQLRevengNamingStrategy",

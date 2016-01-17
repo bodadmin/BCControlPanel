@@ -84,11 +84,8 @@
     <property name="contextvalue" type="string">
       <column name="`contextvalue`" length="255" not-null="false" precision="19"/>
     </property>
-    <property name="contextenabled" type="java.lang.Boolean">
-      <column name="`contextenabled`" length="255" not-null="false" precision="19" default="false"/>
-    </property>
-    <property name="contextId" type="integer">
-      <column name="`contextID`" length="255" not-null="true" precision="19"/>
+    <property name="contextenabled" type="character">
+      <column name="`contextenabled`" length="1" not-null="false" precision="19"/>
     </property>
   </class>
 </hibernate-mapping>

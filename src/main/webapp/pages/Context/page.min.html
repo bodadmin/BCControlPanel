@@ -76,31 +76,6 @@ var _ContextPage_Variables_ ={ }
                 <wm-grid-column readonly="undefined" mobiledisplay="true" pcdisplay="true" generator="assigned" type="boolean" caption="Enabled?" binding="contextenabled"></wm-grid-column>
                 <wm-grid-action action="addNewRow()" iconclass="glyphicon glyphicon-plus" class="btn-primary" show="true" display-name="New" key="addNewRow"></wm-grid-action>
             </wm-grid>
-            <wm-livelist name="livelist1" dataset="bind:Variables.BcdataContextData.dataSet" listclass="list-group" itemclass="list-group-item">
-                <wm-listtemplate name="listtemplate1" layout="blank">
-                    <wm-container name="container1" class="blank" data-template-ctr="true">
-                        <wm-layoutgrid name="layoutgrid1" class="gridlayout">
-                            <wm-gridrow name="gridrow1">
-                                <wm-gridcolumn name="gridcolumn1" class="col-xs-6" columnwidth="1">
-                                    <wm-label name="label3" width="100%" caption="bind:Variables.BcdataContextData.dataSet.id"></wm-label>
-                                </wm-gridcolumn>
-                                <wm-gridcolumn name="gridcolumn2" class="col-xs-6" columnwidth="1">
-                                    <wm-label name="label4" width="100%" caption="bind:Variables.BcdataContextData.dataSet.contextfileId"></wm-label>
-                                </wm-gridcolumn>
-                                <wm-gridcolumn name="gridcolumn3" class="col-xs-6" columnwidth="1">
-                                    <wm-label name="label5" width="100%" caption="bind:Variables.BcdataContextData.dataSet.contextname"></wm-label>
-                                </wm-gridcolumn>
-                                <wm-gridcolumn name="gridcolumn4" class="col-xs-6" columnwidth="1">
-                                    <wm-label name="label6" width="100%" caption="bind:Variables.BcdataContextData.dataSet.contextvalue"></wm-label>
-                                </wm-gridcolumn>
-                                <wm-gridcolumn name="gridcolumn5" class="col-xs-6" columnwidth="1">
-                                    <wm-label name="label7" width="100%" caption="bind:Variables.BcdataContextData.dataSet.contextenabled"></wm-label>
-                                </wm-gridcolumn>
-                            </wm-gridrow>
-                        </wm-layoutgrid>
-                    </wm-container>
-                </wm-listtemplate>
-            </wm-livelist>
         </wm-page-content>
     </wm-content>
     <wm-footer name="footer1" content="footer"></wm-footer>

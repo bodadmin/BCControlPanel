@@ -37,8 +37,7 @@ public class Context  implements java.io.Serializable {
     private Integer contextfileId;
     private String contextname;
     private String contextvalue;
-    private Boolean contextenabled;
-    private Integer contextId;
+    private Character contextenabled;
 
     public Context() {
     }
@@ -91,24 +90,13 @@ public class Context  implements java.io.Serializable {
 
     
 
-    @Column(name="`contextenabled`")
-    public Boolean getContextenabled() {
+    @Column(name="`contextenabled`", length=1)
+    public Character getContextenabled() {
         return this.contextenabled;
     }
     
-    public void setContextenabled(Boolean contextenabled) {
+    public void setContextenabled(Character contextenabled) {
         this.contextenabled = contextenabled;
-    }
-
-    
-
-    @Column(name="`contextID`", nullable=false)
-    public Integer getContextId() {
-        return this.contextId;
-    }
-    
-    public void setContextId(Integer contextId) {
-        this.contextId = contextId;
     }
 
 

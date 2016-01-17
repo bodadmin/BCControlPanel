@@ -73,26 +73,13 @@
         "isRelated" : false
       }, {
         "fieldName" : "contextenabled",
-        "type" : "boolean",
-        "hibernateType" : "boolean",
-        "fullyQualifiedType" : "boolean",
+        "type" : "character",
+        "hibernateType" : "character",
+        "fullyQualifiedType" : "character",
         "columnName" : "contextenabled",
         "isPrimaryKey" : false,
         "notNull" : false,
-        "length" : 255,
-        "precision" : 19,
-        "generator" : "assigned",
-        "isRelated" : false,
-        "defaultValue" : "false"
-      }, {
-        "fieldName" : "contextId",
-        "type" : "integer",
-        "hibernateType" : "integer",
-        "fullyQualifiedType" : "integer",
-        "columnName" : "contextID",
-        "isPrimaryKey" : false,
-        "notNull" : true,
-        "length" : 255,
+        "length" : 1,
         "precision" : 19,
         "generator" : "assigned",
         "isRelated" : false
@@ -635,6 +622,16 @@
     "pageName" : "Main",
     "pageTransitions" : "none"
   },
+  "goToPage_Page" : {
+    "_id" : "wm-goToPage_Page-wm.NavigationVariable-1453049917146",
+    "name" : "goToPage_Page",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Page",
+    "pageTransitions" : "none"
+  },
   "goToPage_RoleManagement" : {
     "_id" : "wm-goToPage_RoleManagement-wm.NavigationVariable-1452704886062",
     "name" : "goToPage_RoleManagement",
@@ -663,6 +660,16 @@
     "dataBinding" : [ ],
     "operation" : "gotoPage",
     "pageName" : "SettingsManagement",
+    "pageTransitions" : "none"
+  },
+  "goToPage_UploadInputFiles" : {
+    "_id" : "wm-goToPage_UploadInputFiles-wm.NavigationVariable-1453050664704",
+    "name" : "goToPage_UploadInputFiles",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "UploadInputFiles",
     "pageTransitions" : "none"
   },
   "goToPage_UserManagement" : {
@@ -721,7 +728,7 @@
     "saveInPhonegap" : false,
     "inFlightBehavior" : "executeLast",
     "transformationRequired" : false,
-    "redirectTo" : "index.html",
+    "redirectTo" : "Login",
     "useDefaultSuccessHandler" : true
   },
   "MailServiceSendPasswordReset" : {
@@ -918,6 +925,19 @@
     "category" : "wm.Variable",
     "dataSet" : {
       "en" : "English"
+    },
+    "dataBinding" : [ ],
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "varBCInputDirectory" : {
+    "_id" : "wm-varBCInputDirectory-wm.Variable-1453050416358",
+    "name" : "varBCInputDirectory",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataSet" : {
+      "dataValue" : "E:\\BoDconnect\\HTA\\BankStatementUpload\\input"
     },
     "dataBinding" : [ ],
     "type" : "string",

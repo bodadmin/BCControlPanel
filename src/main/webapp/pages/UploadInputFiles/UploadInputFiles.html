@@ -3,7 +3,7 @@
     <wm-top-nav name="top_nav1" content="topnav"></wm-top-nav>
     <wm-content name="content1">
         <wm-page-content name="page_content1" columnwidth="12">
-            <wm-fileupload destination="bind:Variables.varBCInputDirectory.dataSet.dataValue" operation="uploadFile" service="FileService" name="fileupload1"></wm-fileupload>
+            <wm-fileupload name="fileupload1" service="FileService" operation="uploadFile" destination='bind:Variables.BcdataContextData.dataSet.data[$i].contextname = "inputDir"'></wm-fileupload>
         </wm-page-content>
     </wm-content>
     <wm-footer name="footer1" content="footer"></wm-footer>

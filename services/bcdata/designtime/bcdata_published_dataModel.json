@@ -8,7 +8,7 @@
     "oldName" : "users",
     "entityName" : "Users",
     "type" : "TABLE",
-    "schema" : null,
+    "schema" : "bcdata",
     "catalog" : "bcdata",
     "columns" : [ {
       "name" : "ID",
@@ -93,7 +93,7 @@
     "oldName" : "role",
     "entityName" : "Role",
     "type" : "TABLE",
-    "schema" : null,
+    "schema" : "bcdata",
     "catalog" : "bcdata",
     "columns" : [ {
       "name" : "ID",
@@ -144,7 +144,7 @@
     "oldName" : "contextfile",
     "entityName" : "Contextfile",
     "type" : "TABLE",
-    "schema" : null,
+    "schema" : "bcdata",
     "catalog" : "bcdata",
     "columns" : [ {
       "name" : "ContextName",
@@ -229,7 +229,7 @@
     "oldName" : "menusettings",
     "entityName" : "Menusettings",
     "type" : "TABLE",
-    "schema" : null,
+    "schema" : "bcdata",
     "catalog" : "bcdata",
     "columns" : [ {
       "name" : "ID",
@@ -314,7 +314,7 @@
     "oldName" : "contextparameter",
     "entityName" : "Contextparameter",
     "type" : "TABLE",
-    "schema" : null,
+    "schema" : "bcdata",
     "catalog" : "bcdata",
     "columns" : [ {
       "name" : "ContextName",

@@ -1,4 +1,37 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="bcdata" type="DataService" springFile="bcdata.spring.xml">
-    <dataobjects/>
+    <dataobjects>
+        <dataobject javaType="com.bccontrolpanel.bcdata.Contextparameter">
+            <element name="enabled" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="parameter" typeRef="java.lang.String" allowNull="true"/>
+            <element name="value" typeRef="java.lang.String" allowNull="true"/>
+            <element name="contextFileName" typeRef="java.lang.String" allowNull="true"/>
+            <element name="contextName" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.bccontrolpanel.bcdata.Users">
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="role" typeRef="java.lang.String" allowNull="true"/>
+            <element name="password" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userrname" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.bccontrolpanel.bcdata.Role">
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="role" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.bccontrolpanel.bcdata.Contextfile">
+            <element name="description" typeRef="java.lang.String" allowNull="true"/>
+            <element name="contextDir" typeRef="java.lang.String" allowNull="true"/>
+            <element name="contextFileName" typeRef="java.lang.String" allowNull="true"/>
+            <element name="contextName" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.bccontrolpanel.bcdata.Menusettings">
+            <element name="menuItemLabel" typeRef="java.lang.String" allowNull="true"/>
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="menuItemIcon" typeRef="java.lang.String" allowNull="true"/>
+            <element name="menuItemLink" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="bcdataqContextValuertnType">
+            <element name="Value" typeRef="java.lang.String"/>
+        </dataobject>
+    </dataobjects>
 </service>

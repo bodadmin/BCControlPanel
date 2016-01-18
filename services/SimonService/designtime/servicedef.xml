@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="SimonService" class="com.bccontrolpanel.simonservice.SimonService" type="JavaService" springFile="SimonService.spring.xml">
-    <operation name="sampleJavaOperation">
-        <parameter name="name" typeRef="java.lang.String" isList="false"/>
-        <return typeRef="java.lang.String" isList="false"/>
-    </operation>
-    <dataobjects/>
-</service>

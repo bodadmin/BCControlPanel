@@ -12,6 +12,7 @@ import com.wavemaker.runtime.data.model.CustomQuery;
 import com.wavemaker.runtime.data.exception.QueryParameterMismatchException;
 
 public interface BcdataQueryExecutorService {
+    Page<Object> executeQueryContextValue(Pageable pageable, java.lang.String qParameter, java.lang.String qContextFileName) throws QueryParameterMismatchException;
 
 	
 	Page<Object> executeWMCustomQuerySelect(CustomQuery query, Pageable pageable) ;

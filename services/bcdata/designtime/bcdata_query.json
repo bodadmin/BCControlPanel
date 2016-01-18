@@ -1,5 +1,29 @@
 {
   "name" : "bcdata",
   "description" : "Queries for bcdata",
-  "queries" : [ ]
+  "queries" : [ {
+    "name" : "queryContextValue",
+    "query" : "select Value from contextParameter where Parameter = :qParameter and ContextFileName = :qContextFileName",
+    "comment" : "",
+    "description" : null,
+    "nativeSql" : true,
+    "returnsSingleResult" : false,
+    "update" : false,
+    "queryParams" : [ {
+      "paramName" : "qParameter",
+      "paramType" : "java.lang.String",
+      "testValue" : "archiveDir",
+      "systemParamName" : null,
+      "systemParam" : false,
+      "list" : false
+    }, {
+      "paramName" : "qContextFileName",
+      "paramType" : "java.lang.String",
+      "testValue" : "Dev.BankStatementUpload.context",
+      "systemParamName" : null,
+      "systemParam" : false,
+      "list" : false
+    } ],
+    "outputType" : null
+  } ]
 }

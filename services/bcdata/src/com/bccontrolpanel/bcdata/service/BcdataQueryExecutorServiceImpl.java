@@ -29,6 +29,15 @@ public class BcdataQueryExecutorServiceImpl implements BcdataQueryExecutorServic
 	@Qualifier("bcdataWMQueryExecutor")
 	private WMQueryExecutor queryExecutor;
 
+	@Transactional(value = "bcdataTransactionManager")
+	@Override
+	public Page<Object> executeQueryContextValue(Pageable pageable, java.lang.String qParameter, java.lang.String qContextFileName)
+	throws QueryParameterMismatchException{
+        Map<String, Object> params = new HashMap<String, Object>();
+        params.put("qParameter", qParameter);
+        params.put("qContextFileName", qContextFileName);
+        return queryExecutor.executeNamedQuery("queryContextValue", params, pageable);
+	}
 
 	@Transactional(value = "bcdataTransactionManager")
 	@Override

@@ -34,6 +34,15 @@ public class QueryExecutionController {
     @Autowired
     private BcdataQueryExecutorService queryService;
 
+    @ApiOperation(value = "Process request to execute queries")
+    @RequestMapping(value = "/queries/queryContextValue", method = RequestMethod.GET)
+    public Page<Object> executeQueryContextValue(@RequestParam(value = "qParameter", required = false) java.lang.String qParameter, @RequestParam(value = "qContextFileName", required = false) java.lang.String qContextFileName, Pageable pageable) throws QueryParameterMismatchException {
+        LOGGER.debug("Executing named query queryContextValue");
+        Page<Object> result = queryService.executeQueryContextValue(pageable, qParameter, qContextFileName);
+        LOGGER.debug("got the result of named query {}", result);
+        return result;
+    }
+
     @RequestMapping(value = "/queries/wm_custom", method = RequestMethod.POST)
     @ApiOperation(value = "Process request to execute customer queries")
     public Page<Object> executeWMCustomQuery(@RequestBody CustomQuery query, Pageable pageable) {

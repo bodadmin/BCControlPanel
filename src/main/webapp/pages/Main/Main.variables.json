@@ -1,1 +1,15 @@
-{ }
+{
+  "staticVariable1" : {
+    "_id" : "wm-staticVariable1-wm.Variable-1453111592949",
+    "name" : "staticVariable1",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "dataBinding" : [ ],
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  }
+}

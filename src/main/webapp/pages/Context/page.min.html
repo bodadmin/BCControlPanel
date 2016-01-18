@@ -65,16 +65,11 @@ var _ContextPage_Variables_ ={ }
             </wm-grid>
             <wm-label height="29" width="81" name="lblContext" caption="Context" fontsize="20"></wm-label>
             <wm-grid name="grid2_1" dataset="bind:Variables.BcdataContextData.dataSet" readonlygrid="false" insertrow="true" updaterow="true" deleterow="true">
-                <wm-grid-column readonly="false" mobiledisplay="true" pcdisplay="true" is-related-pk="false" disable-inline-editing="false" search-placeholder="Search" col-ng-class="" col-class="" primary-key="true" textcolor="" backgroundcolor="" type="integer"
-                caption="Id" binding="id"></wm-grid-column>
-                <wm-grid-column readonly="false" mobiledisplay="true" pcdisplay="true" is-related-pk="false" disable-inline-editing="false" search-placeholder="Search" col-ng-class="" col-class="" primary-key="" textcolor="" backgroundcolor=""
-                type="integer" caption="Contextfile Id" binding="contextfileId"></wm-grid-column>
-                <wm-grid-column readonly="false" mobiledisplay="true" pcdisplay="true" is-related-pk="false" disable-inline-editing="false" search-placeholder="Search" col-ng-class="" col-class="" primary-key="" textcolor="" backgroundcolor=""
-                type="string" caption="Contextname" binding="contextname"></wm-grid-column>
-                <wm-grid-column readonly="false" mobiledisplay="true" pcdisplay="true" is-related-pk="false" disable-inline-editing="false" search-placeholder="Search" col-ng-class="" col-class="" primary-key="" textcolor="" backgroundcolor=""
-                type="string" caption="Contextvalue" binding="contextvalue"></wm-grid-column>
-                <wm-grid-column readonly="undefined" mobiledisplay="true" pcdisplay="true" generator="assigned" type="boolean" caption="Enabled?" binding="contextenabled"></wm-grid-column>
-                <wm-grid-action action="addNewRow()" iconclass="glyphicon glyphicon-plus" class="btn-primary" show="true" display-name="New" key="addNewRow"></wm-grid-action>
+                <wm-grid-column binding="id" caption="Id" type="integer" primary-key="true" generator="identity" readonly="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                <wm-grid-column binding="contextfileId" caption="Contextfile Id" type="integer" primary-key="false" generator="assigned" pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+                <wm-grid-column binding="contextname" caption="Contextname" type="string" primary-key="false" generator="assigned" pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+                <wm-grid-column binding="contextvalue" caption="Contextvalue" type="string" primary-key="false" generator="assigned" pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+                <wm-grid-column binding="contextenabled" caption="Contextenabled" type="character" primary-key="false" generator="assigned" pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
             </wm-grid>
         </wm-page-content>
     </wm-content>

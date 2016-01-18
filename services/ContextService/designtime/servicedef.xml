@@ -3,6 +3,10 @@
     <operation name="countContextFiles">
         <return typeRef="long" isList="false"/>
     </operation>
+    <operation name="getContextFileID">
+        <parameter name="FileName" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
     <operation name="listContextFiles">
         <return typeRef="java.lang.String" isList="true"/>
     </operation>

@@ -8,14 +8,18 @@
     "dataSet" : {
       "dataValue" : ""
     },
-    "dataBinding" : [ ],
+    "dataBinding" : [ {
+      "target" : "contextfileId",
+      "type" : "number",
+      "value" : 2
+    } ],
     "type" : "Context",
     "isList" : true,
     "saveInPhonegap" : false,
     "firstRow" : 0,
     "maxResults" : 20,
     "designMaxResults" : 10,
-    "startUpdate" : false,
+    "startUpdate" : true,
     "autoUpdate" : true,
     "inFlightBehavior" : "executeLast",
     "transformationRequired" : false,
@@ -94,6 +98,7 @@
     "tableName" : "context",
     "tableType" : "TABLE",
     "dbSystem" : "MySQL",
+    "filterFields" : { },
     "package" : "com.bccontrolpanel.bcdata.Context"
   },
   "BcdataContextfilenameData" : {

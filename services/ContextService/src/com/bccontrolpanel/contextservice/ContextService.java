@@ -30,7 +30,7 @@ public class ContextService {
 
     @Autowired
     public ContextfilenameService contxtfilenameService;
-    //public Contextfilename contxtfilename;
+    public Contextfilename contxtfilename;
 
     public long countContextFiles() {
         long count = contxtfilenameService.countAll();
@@ -50,9 +50,32 @@ public class ContextService {
             
             result[i] = contextFilename + " - " + contextEnviroment; 
         }
-        return result;
+        return result; 
     }
     
+
+    public String getContextFileID(String FileName) {
+        
+        String match = "-";
+        int index = FileName.indexOf(match);
+        int length = FileName.length();
+        String parsedStringFileName = FileName.substring(0, index - 1); 
+        String parsedStringEnvironment = FileName.substring(index + 1, length);
+        
+        /*
+        PageRequest page = new PageRequest(0, ((int) countContextFiles()));
+        QueryFilter[] queryFilters = new QueryFilter[1]; 
+        queryFilters[0]=new QueryFilter("filename", parsedStringFileName, Type.EQUALS, AttributeType.STRING); 
+        queryFilters[0]=new QueryFilter("environment", parsedStringEnvironment, Type.EQUALS, AttributeType.STRING);  
+
+        Page<Contextfilename> contextFile = contxtfilenameService.findAll(queryFilters, page);    
+        List<Contextfilename> listy = contextFile.getContent();  
+        Contextfilename contxtfilename = listy.get(0);  
+        int result = contxtfilename.getId();  
+        //return result;  
+         */
+        return parsedStringFileName;
+    }
     
     
     

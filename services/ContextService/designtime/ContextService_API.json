@@ -15,6 +15,38 @@
   } ],
   "schemes" : [ "https", "http" ],
   "paths" : {
+    "/context/contextFileID" : {
+      "get" : {
+        "tags" : [ "ContextController" ],
+        "operationId" : "getContextFileID",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "FileName",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "collectionFormat" : "multi",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "x-WM-UUID" : "f3e7d764-e51f-45e3-a34a-1319f0e28b5c",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "10b72086-9f82-4b7f-9ca8-f243be674c9f",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-METHOD_IDENTIFIER" : "getContextFileID-1-1195260122"
+      },
+      "x-WM-TAG" : "ContextController",
+      "x-WM-BASE_PATH" : "/context",
+      "x-WM-COMPLETE_PATH" : "//context/contextFileID",
+      "x-WM-RELATIVE_PATH" : "/contextFileID"
+    },
     "/context/contextFiles" : {
       "get" : {
         "tags" : [ "ContextController" ],
@@ -31,7 +63,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "5acb14d9-3dc2-4bb6-aad2-ae8e914f1f61",
+        "x-WM-OPERATION_UID" : "ca6f3a4f-64c4-45ba-941e-668094db7541",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "listContextFiles-0-17"
       },
@@ -53,7 +85,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "57e8c896-5003-4205-b5bf-ef3703d7988c",
+        "x-WM-OPERATION_UID" : "49321d81-fa54-4315-bcf3-179a5e929fdb",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "x-WM-METHOD_IDENTIFIER" : "countContextFiles-0-17"
       },

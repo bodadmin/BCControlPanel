@@ -12,13 +12,8 @@
                 </wm-composite>
             </wm-container>
             <wm-message name="message1" width="500" caption="File Saved!" show="false"></wm-message>
-            <wm-grid readonlygrid="true" dataset="bind:Variables.SettingsServiceOpenFile.dataSet" name="grid2" on-click="SettingsServiceOpenFile">
-                <wm-grid-column binding="column1" caption="Column1" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
-                <wm-grid-column binding="column2" caption="Column2" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
-                <wm-grid-column binding="column3" caption="Column3" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
-                <wm-grid-column binding="column4" caption="Column4" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
-                <wm-grid-column binding="column5" caption="Column5" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
-            </wm-grid>
+            <wm-label name="label2" caption="bind:Variables.ContextServiceGetContextFileID.dataSet.value"></wm-label>
+            <wm-button class="btn-default" caption="Button" type="button" name="button1" on-click="ContextServiceGetContextFileID"></wm-button>
         </wm-page-content>
     </wm-content>
     <wm-footer content="footer" name="footer1"></wm-footer>

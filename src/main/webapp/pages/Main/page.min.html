@@ -25,7 +25,21 @@ Application.$controller("MainPageController", ["$scope", function ($scope) {
 
 </script>
 <script id="Main.variables.json">
-var _MainPage_Variables_ ={ }
+var _MainPage_Variables_ ={
+  "staticVariable1" : {
+    "_id" : "wm-staticVariable1-wm.Variable-1453111592949",
+    "name" : "staticVariable1",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "dataBinding" : [ ],
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  }
+}
 </script>
 <script id="Main.html" type="text/ng-template">
 <wm-page name="page1" data-ng-controller="MainPageController" pagetitle="Main">
@@ -86,7 +100,7 @@ var _MainPage_Variables_ ={ }
                             <wm-gridrow name="gridrow6" opacity="1">
                                 <wm-gridcolumn class="col-xs-8" name="gridcolumn12" columnwidth="8" opacity="0.7">
                                     <wm-label class="text-uppercase h5" name="label7" caption="UpTime" width="100%" paddingunit="em" marginunit="em" marginbottom="0" margintop="0"></wm-label>
-                                    <wm-label class="h3" name="label8" caption="bind:Variables.SettingsServiceSubString.dataSet.value" width="100%" paddingunit="em"></wm-label>
+                                    <wm-label class="h3" name="label8" caption="" width="100%" paddingunit="em"></wm-label>
                                 </wm-gridcolumn>
                                 <wm-gridcolumn class="col-xs-4" name="gridcolumn13" columnwidth="4" paddingunit="em" paddingright=".5" opacity="0.7" fontunit="em" fontsize="3.5">
                                     <wm-icon class="pull-right" name="icon3" iconclass="glyphicon glyphicon-cloud" showindevice="all"></wm-icon>

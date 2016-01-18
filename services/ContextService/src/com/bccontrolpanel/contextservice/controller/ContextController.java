@@ -17,6 +17,12 @@ public class ContextController {
     @Autowired
     private ContextService contextService;
 
+    @RequestMapping(value = "/contextFileID", produces = "application/json", method = RequestMethod.GET)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    public String getContextFileID(@RequestParam(value = "FileName", required = false) String FileName) {
+        return contextService.getContextFileID(FileName);
+    }
+
     @RequestMapping(value = "/contextFiles", method = RequestMethod.GET)
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
     public String[] listContextFiles() {

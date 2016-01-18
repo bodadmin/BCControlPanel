@@ -5,4 +5,5 @@
     <import resource="classpath:MailService.spring.xml"/>
     <import resource="classpath:SettingsService.spring.xml"/>
     <import resource="classpath:SimonService.spring.xml"/>
+    <import resource="classpath:bcdata.spring.xml"/>
 </beans>

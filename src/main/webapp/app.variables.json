@@ -267,6 +267,66 @@
     "dbSystem" : "MySQL",
     "package" : "com.bccontrolpanel.bcdata.Contextfiles"
   },
+  "BcdataExecuteQueryArchiveDir" : {
+    "_id" : "wm-BcdataExecuteQueryArchiveDir-wm.ServiceVariable-1453110412063",
+    "name" : "BcdataExecuteQueryArchiveDir",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "type" : "bcdataQueryArchiveDirrtnType",
+    "service" : "bcdata",
+    "operation" : "executeQueryArchiveDir",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/bcdata/queryExecutor/queries/QueryArchiveDir",
+      "httpMethod" : "get",
+      "name" : "executeQueryArchiveDir",
+      "parameters" : [ {
+        "name" : "qParam1",
+        "parameterType" : "query",
+        "type" : "string"
+      }, {
+        "name" : "qParam2",
+        "parameterType" : "query",
+        "type" : "string"
+      }, {
+        "name" : "page",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "size",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "sort",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "dataBinding" : [ {
+      "target" : "qParam1",
+      "type" : "string",
+      "value" : "archiveDir"
+    }, {
+      "target" : "qParam2",
+      "type" : "string",
+      "value" : "Dev.BankStatementUpload.context"
+    } ],
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "controller" : "QueryExecution"
+  },
   "BcdataMenusettingsData" : {
     "_id" : "wm-BcdataMenusettingsData-wm.LiveVariable-1452868646465",
     "name" : "BcdataMenusettingsData",

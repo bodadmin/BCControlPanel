@@ -1,6 +1,3 @@
-/*Copyright (c) 2016-2017 Business on Demand Ltd. All Rights Reserved. This software is the confidential and proprietary information of Business on Demand Ltd. You shall not disclose such Confidential Information and shall use it only in accordance
- with the terms of the source code license agreement you entered into with Business on Demand Ltd.*/
-
 
 package com.bccontrolpanel.bcdata.service;
 
@@ -32,6 +29,15 @@ public class BcdataQueryExecutorServiceImpl implements BcdataQueryExecutorServic
 	@Qualifier("bcdataWMQueryExecutor")
 	private WMQueryExecutor queryExecutor;
 
+	@Transactional(value = "bcdataTransactionManager")
+	@Override
+	public Page<Object> executeQueryArchiveDir(Pageable pageable, java.lang.String qParam1, java.lang.String qParam2)
+	throws QueryParameterMismatchException{
+        Map<String, Object> params = new HashMap<String, Object>();
+        params.put("qParam1", qParam1);
+        params.put("qParam2", qParam2);
+        return queryExecutor.executeNamedQuery("QueryArchiveDir", params, pageable);
+	}
 
 	@Transactional(value = "bcdataTransactionManager")
 	@Override

@@ -3,7 +3,13 @@
     <wm-top-nav name="top_nav1" content="topnav"></wm-top-nav>
     <wm-content name="content1">
         <wm-page-content name="page_content1" columnwidth="12">
-            <wm-fileupload multiple="true" mode="Upload" maxfilesize="5" name="fileupload1" service="FileService" operation="uploadFile" destination="bind:Variables.varInputDir.dataSet.dataValue"></wm-fileupload>
+            <wm-composite name="composite1">
+                <wm-label caption="bind:Variables.BcdataExecuteQueryArchiveDir.dataSet[$i].Value" name="label1" class="col-md-3"></wm-label>
+                <wm-container name="container1" class="col-md-9">
+                    <wm-text name="text1"></wm-text>
+                </wm-container>
+            </wm-composite>
+            <wm-fileupload destination="bind:Variables.BcdataExecuteQueryArchiveDir.dataSet[$i].Value" multiple="true" mode="Upload" maxfilesize="5" name="fileupload1" service="FileService" operation="uploadFile"></wm-fileupload>
         </wm-page-content>
     </wm-content>
     <wm-footer name="footer1" content="footer"></wm-footer>

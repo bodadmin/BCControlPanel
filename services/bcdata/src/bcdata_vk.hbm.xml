@@ -25,6 +25,22 @@
       <column name="`role`" length="255" not-null="false" precision="19"/>
     </property>
   </class>
+  <class table="`contextfile`" name="com.bccontrolpanel.bcdata.Contextfile" entity-name="com.bccontrolpanel.bcdata.Contextfile" schema="bcdata">
+    <composite-id mapped="true" class="ContextfileId">
+      <key-property name="contextName" type="string">
+        <column name="`ContextName`" length="64" not-null="true" precision="19"/>
+      </key-property>
+      <key-property name="contextFileName" type="string">
+        <column name="`ContextFileName`" length="255" not-null="true" precision="19"/>
+      </key-property>
+    </composite-id>
+    <property name="contextDir" type="string">
+      <column name="`ContextDir`" length="1024" not-null="true" precision="19"/>
+    </property>
+    <property name="description" type="string">
+      <column name="`Description`" length="1024" not-null="false" precision="19"/>
+    </property>
+  </class>
   <class table="`contextfiles`" name="com.bccontrolpanel.bcdata.Contextfiles" entity-name="com.bccontrolpanel.bcdata.Contextfiles" schema="bcdata">
     <id name="id" type="integer">
       <column name="`ID`" length="255" not-null="true" precision="19"/>
@@ -86,6 +102,25 @@
     </property>
     <property name="contextenabled" type="character">
       <column name="`contextenabled`" length="1" not-null="false" precision="19"/>
+    </property>
+  </class>
+  <class table="`contextparameter`" name="com.bccontrolpanel.bcdata.Contextparameter" entity-name="com.bccontrolpanel.bcdata.Contextparameter" schema="bcdata">
+    <composite-id mapped="true" class="ContextparameterId">
+      <key-property name="contextName" type="string">
+        <column name="`ContextName`" length="64" not-null="true" precision="19"/>
+      </key-property>
+      <key-property name="contextFileName" type="string">
+        <column name="`ContextFileName`" length="255" not-null="true" precision="19"/>
+      </key-property>
+      <key-property name="parameter" type="string">
+        <column name="`Parameter`" length="64" not-null="true" precision="19"/>
+      </key-property>
+    </composite-id>
+    <property name="value" type="string">
+      <column name="`Value`" length="1024" not-null="false" precision="19"/>
+    </property>
+    <property name="enabled" type="boolean">
+      <column name="`Enabled`" length="255" not-null="true" precision="19"/>
     </property>
   </class>
 </hibernate-mapping>
